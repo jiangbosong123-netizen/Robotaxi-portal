@@ -457,6 +457,7 @@ function init() {
     var hlContainer = document.getElementById('weeklyHL');
     
     function showFor(item) {
+      cancelHide();
       var src = item.querySelector('.hl-popup');
       if (!src) { popup.style.display = 'none'; return; }
       popup.innerHTML = src.innerHTML;
