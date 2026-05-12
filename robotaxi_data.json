@@ -1,0 +1,2209 @@
+{
+  "updated_at": "2026-05-12 18:11",
+  "total": 202,
+  "week_count": 46,
+  "date_from": "2026-02-10",
+  "date_to": "2026-05-12",
+  "companies": [
+    "小马智行",
+    "WeRide",
+    "黑芝麻智能",
+    "Aurora",
+    "Lucid",
+    "Motional",
+    "Nuro",
+    "Rivian",
+    "Sawyer Merritt",
+    "Tesla",
+    "Uber",
+    "Waymo",
+    "Wayve",
+    "Zoox",
+    "其他"
+  ],
+  "company_labels": {
+    "WeRide": "文远知行",
+    "小马智行": "小马智行",
+    "黑芝麻智能": "黑芝麻智能"
+  },
+  "sources": [
+    "TechCrunch",
+    "The Driverless Digest",
+    "Twitter",
+    "微信公众号(WeWeRSS)"
+  ],
+  "types": [
+    "合作",
+    "商业拓展",
+    "安全",
+    "技术进展",
+    "监管",
+    "融资",
+    "行业动态",
+    "诉讼",
+    "运营拓展"
+  ],
+  "company_stats": {
+    "小马智行": 41,
+    "Tesla": 33,
+    "Waymo": 29,
+    "Zoox": 17,
+    "Uber": 16,
+    "Nuro": 14,
+    "Wayve": 13,
+    "WeRide": 11,
+    "Aurora": 11,
+    "Motional": 4,
+    "Rivian": 3,
+    "Sawyer Merritt": 2,
+    "百度Apollo": 1,
+    "Lucid": 1
+  },
+  "source_stats": {
+    "Twitter": 101,
+    "TechCrunch": 43,
+    "微信公众号(WeWeRSS)": 41,
+    "The Driverless Digest": 17
+  },
+  "news": [
+    {
+      "id": 342,
+      "date": "2026-05-12",
+      "company": "Sawyer Merritt",
+      "title": "特斯拉FSD新功能构想：年费订阅、短期通行证与家庭计划",
+      "summary": "特斯拉车主提出四项FSD功能建议：1）年费订阅制，起价999美元/年，随FSD性能提升逐步涨价；2）短期通行证，面向租赁车队或Turo平台用户，提供数天短期订阅（如周末租车），首次使用者需完成快速教程；3）家庭计划，已拥有FSD车辆的家庭购买第二辆特斯拉时，可享折扣月费；4）FSD排行榜，特斯拉已通过显示总FSD里程数实现部分游戏化，可进一步推出排行榜功能。",
+      "source": "Twitter",
+      "url": "https://x.com/SawyerMerritt/status/2054005778210512981",
+      "type": "技术进展"
+    },
+    {
+      "id": 343,
+      "date": "2026-05-11",
+      "company": "Sawyer Merritt",
+      "title": "特斯拉柏林超级工厂Model Y在FSD模式下自主行驶里程累计达9.3万英里",
+      "summary": "特斯拉宣布，其柏林超级工厂（Giga Berlin）下线的Model Y车型，从生产线末端到出厂停车场的路段已累计实现9.3万英里的FSD（全自动驾驶）自主行驶。该工厂目前已累计生产75万辆汽车。特斯拉制造部门（gigafactories）展示了这一里程碑，凸显FSD技术在工厂物流环节的实际应用。",
+      "source": "Twitter",
+      "url": "https://x.com/SawyerMerritt/status/2053894315257057426",
+      "type": "技术进展"
+    },
+    {
+      "id": 340,
+      "date": "2026-05-11",
+      "company": "Tesla",
+      "title": "召唤你的Tesla，它会来接你——FSD v14.3.2让Smart Summon不再只是噱头",
+      "summary": "Owen Sparks（OwenSparks）表示，Tesla的Smart Summon功能在FSD v14.3.2版本下已不再像过去那样只是噱头。该版本能立即激活，在暴雨中也能正常工作，并且像Robotaxi一样自动靠边停车。",
+      "source": "Twitter",
+      "url": "https://x.com/Tesla/status/2053858969207427454",
+      "type": "技术进展"
+    },
+    {
+      "id": 338,
+      "date": "2026-05-11",
+      "company": "Aurora",
+      "title": "更多路线、更多里程、更多客户价值——Aurora网络扩展至Sun Belt地区12条路线",
+      "summary": "Aurora宣布其自动驾驶货运网络已扩展至美国Sun Belt地区的12条不同路线，新增两条关键线路：达拉斯至拉雷多（仅用6周完成无人驾驶运营验证）和达拉斯至俄克拉荷马城（已开始为沃尔沃自动驾驶解决方案的关键客户提供有监督的自动驾驶配送服务）。公司表示，正在通过扩大路线覆盖范围，为客户提供所需的物流网络，确保货物持续运输。$AUR",
+      "source": "Twitter",
+      "url": "https://x.com/aurora_inno/status/2053859000676991006",
+      "type": "运营拓展"
+    },
+    {
+      "id": 337,
+      "date": "2026-05-11",
+      "company": "Wayve",
+      "title": "倾听模式开启...看alexgkendall与MeryemArik9对话KanishkaNarayan，探讨主权AI如何成为AI初创企业的最佳伙伴",
+      "summary": "在本次对话中，alexgkendall和MeryemArik9与KanishkaNarayan共同探讨了主权AI（Sovereign AI）如何为AI初创企业提供最佳合作伙伴关系。他们强调，主权AI通过提供数据主权、本地化部署和合规支持，能够帮助初创企业克服资源限制，加速创新。对话还涉及了主权AI在推动区域AI生态发展中的关键作用，以及如何通过合作模式实现共赢。",
+      "source": "Twitter",
+      "url": "https://x.com/UKSovereignAI/status/2053767773654827177",
+      "type": "技术进展"
+    },
+    {
+      "id": 336,
+      "date": "2026-05-11",
+      "company": "Wayve",
+      "title": "Wayve AI驾驶员已覆盖500+城市，无需大量训练数据",
+      "summary": "Wayve宣布其AI驾驶员已在超过500个城市完成部署，且几乎无需依赖训练数据。这背后是Wayve严格的Fleet Operations团队，确保AI在真实世界复杂场景中的运行既高效又安全。团队通过精心设计的流程，让AI逐步适应各种驾驶环境，最终实现安全可靠的自动驾驶。",
+      "source": "Twitter",
+      "url": "https://x.com/wayve_ai/status/2053852630321889605",
+      "type": "技术进展"
+    },
+    {
+      "id": 335,
+      "date": "2026-05-11",
+      "company": "Zoox",
+      "title": "Zoox无人驾驶出租车助力Carlos在迈阿密创造温馨回忆",
+      "summary": "在迈阿密，得益于Zoox robotaxi的自动驾驶服务，Carlos无需亲自驾驶，得以通过FaceTime给粉丝们带来惊喜通话，将更多时间投入到自己热爱的事情中，创造了难忘的温馨时刻。",
+      "source": "Twitter",
+      "url": "https://x.com/WilliamsF1/status/2053838788422668650",
+      "type": "商业拓展"
+    },
+    {
+      "id": 333,
+      "date": "2026-05-11",
+      "company": "Zoox",
+      "title": "Zoox在拉斯维加斯新增Aria站点，免费robotaxi服务持续开放",
+      "summary": "Zoox宣布在拉斯维加斯新增Aria酒店作为robotaxi服务站点，乘客可在北代客泊车/拼车区上下车。此前Zoox已开通Fontainebleau Las Vegas站点服务。目前Zoox在拉斯维加斯的robotaxi服务仍为免费，用户只需下载Zoox应用并注册即可使用。",
+      "source": "Twitter",
+      "url": "https://x.com/seventensuited/status/2053957804176924807",
+      "type": "技术进展"
+    },
+    {
+      "id": 301,
+      "date": "2026-05-11",
+      "company": "Zoox",
+      "title": "Zoox副总裁谈自动驾驶规模化：独特路径与安全挑战",
+      "summary": "Zoox自动驾驶软件副总裁Marc Wimmershoff做客节目，深入解析Zoox独特的自动驾驶技术路线、行业演进趋势，以及实现robotaxi安全规模化部署所需的关键要素。",
+      "source": "The Driverless Digest",
+      "url": "https://www.thedriverlessdigest.com/p/zooxs-approach-to-scaling-autonomy",
+      "type": "运营拓展"
+    },
+    {
+      "id": 341,
+      "date": "2026-05-10",
+      "company": "Tesla",
+      "title": "特斯拉FSD V14.3.2创纪录：零干预完成纽约至洛杉矶2833英里自动驾驶",
+      "summary": "特斯拉车主Zack（BLKMDL3）驾驶搭载FSD Supervised V14.3.2的车辆，以49小时55分57秒完成纽约至洛杉矶的2833英里（约4560公里）全程自动驾驶，全程零人工干预或脱手。这一成绩打破了此前纪录约8.5小时。Zack感谢了同行的副驾驶DBurkland和AaronS5_，并表示完整视频即将发布。",
+      "source": "Twitter",
+      "url": "https://x.com/Tesla/status/2053496708198531538",
+      "type": "技术进展"
+    },
+    {
+      "id": 339,
+      "date": "2026-05-10",
+      "company": "Tesla",
+      "title": "黄仁勋：我有幸认识马斯克，曾助其打造Model 3与Model S首台计算机，并参与自动驾驶项目起步",
+      "summary": "英伟达CEO黄仁勋近日透露，他因与埃隆·马斯克的早期相识而倍感幸运，曾协助为特斯拉Model 3和Model S制造首台计算机，并在马斯克启动自动驾驶汽车研发时提供支持。这一表态凸显了两人在自动驾驶技术领域的长期合作渊源。",
+      "source": "Twitter",
+      "url": "https://x.com/joeroganhq/status/2053535541262778631",
+      "type": "技术进展"
+    },
+    {
+      "id": 334,
+      "date": "2026-05-10",
+      "company": "Zoox",
+      "title": "Zoox在拉斯维加斯新增两大接送点：枫丹白露酒店与MGM Grand",
+      "summary": "Zoox宣布其robotaxi服务在拉斯维加斯新增两个重要目的地：枫丹白露酒店（Fontainebleau Las Vegas）和MGM Grand。枫丹白露酒店的接送点位于北门代客泊车区，MGM Grand的接送点则设在地铁附近及自助停车区的共享乘车区域。目前该robotaxi服务仍免费开放，用户只需下载Zoox应用并注册即可使用。Zoox表示未来还将增加更多目的地。",
+      "source": "Twitter",
+      "url": "https://x.com/seventensuited/status/2053593957314207954",
+      "type": "技术进展"
+    },
+    {
+      "id": 21,
+      "date": "2026-05-10",
+      "company": "Uber",
+      "title": "Uber一直渴望超越出行服务，如今有了加速的理由",
+      "summary": "多年来，Uber一直谈论成为超级应用，但随着Waymo在旧金山开始载客，这一讨论变得更加紧迫。Uber正努力嵌入自动驾驶行业，扮演数据提供商、投资者和分发平台的角色，但面向消费者的布局同样关键。两周前，Uber在纽约举办年度GO-GET产品活动，宣布美国用户现可通过与Expedia Group的合作在Uber应用内预订酒店，可访问超过80万家酒店。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/05/10/uber-has-always-wanted-to-be-more-than-a-ride-now-it-has-reason-to-hurry/",
+      "type": "融资"
+    },
+    {
+      "id": 431,
+      "date": "2026-05-09",
+      "company": "Tesla",
+      "title": "特斯拉AI光子计数重建技术揭秘：夜间与强光下FSD为何看得如此清晰",
+      "summary": "特斯拉FSD在夜间或极端眩光条件下表现出色，其核心在于AI光子计数重建技术。对比图显示，人眼感知的RGB图像（图1）与特斯拉AI重建的光子计数图像（图2）差异显著。该技术通过精确捕捉和重建光子信息，大幅提升低光照和强光环境下的视觉感知能力，为自动驾驶提供更可靠的视觉输入。",
+      "source": "Twitter",
+      "url": "https://x.com/elonmusk/status/2053181971644416080",
+      "type": "技术进展"
+    },
+    {
+      "id": 430,
+      "date": "2026-05-09",
+      "company": "Tesla",
+      "title": "人眼所见 vs 特斯拉所见：FSD夜间与强光下的视觉优势",
+      "summary": "特斯拉CEO Elon Musk发布对比图，展示人眼感知的RGB图像（图1）与特斯拉AI光子计数重建图像（图2）的差异。他指出，这正是特斯拉FSD在夜间或极端眩光条件下仍能清晰“看见”的原因。",
+      "source": "Twitter",
+      "url": "https://x.com/Tesla/status/2053188146989609209",
+      "type": "技术进展"
+    },
+    {
+      "id": 428,
+      "date": "2026-05-08",
+      "company": "Uber",
+      "title": "Uber CEO Dara Khosrowshahi：打造“万能应用”，从亏损45亿美元到近100亿美元自由现金流",
+      "summary": "Uber CEO Dara Khosrowshahi在接受Molly O’Shea专访时，阐述了将Uber打造成“万能应用”的愿景：一个应用解决所有出行和配送需求。他回顾了Uber从2017年亏损45亿美元到如今实现近100亿美元自由现金流的转型历程。访谈涵盖多个关键议题：与Expedia的全面合作（酒店预订即将上线Uber）、新推出的“Shop For Me”服务、从Barry Diller学到的管理经验、自动驾驶平台战略（与Waymo、Zoox、WeRide的合作），以及为何Uber是为AI时代而建。此外，还分享了如何提升Uber评分的小技巧。",
+      "source": "Twitter",
+      "url": "https://x.com/dkhos/status/2052825046226255882",
+      "type": "运营拓展"
+    },
+    {
+      "id": 409,
+      "date": "2026-05-08",
+      "company": "Tesla",
+      "title": "与Robotaxi同行",
+      "summary": "本文探讨了自动驾驶出租车（robotaxi）在日常出行中的应用体验与行业前景。随着Waymo、Tesla等公司加速推进商业化运营，robotaxi正逐步从概念走向现实。文章分析了当前技术成熟度、监管挑战及用户接受度，指出尽管面临成本与安全争议，但robotaxi有望在未来十年内重塑城市交通格局。",
+      "source": "Twitter",
+      "url": "https://x.com/tesla_robotaxi/status/2052719570536816644",
+      "type": "商业拓展"
+    },
+    {
+      "id": 372,
+      "date": "2026-05-08",
+      "company": "Nuro",
+      "title": "Nuro获加州两项关键许可，推进与Uber和Lucid Motors的robotaxi项目",
+      "summary": "Nuro宣布已获得加州DMV无人驾驶许可和加州公共事业委员会（CPUC）许可，可在无安全驾驶员的情况下扩大公共道路验证，并启动载客试点项目。这是其与Uber和Lucid Motors合作的robotaxi项目下一阶段的关键进展。",
+      "source": "Twitter",
+      "url": "https://x.com/nuro/status/2052735768196735282",
+      "type": "运营拓展"
+    },
+    {
+      "id": 363,
+      "date": "2026-05-08",
+      "company": "Wayve",
+      "title": "Wayve的LA-Pose：为何德国乡村窄路对自动驾驶至关重要？",
+      "summary": "Wayve的自动驾驶车辆已在数百个城市的不同条件下行驶，积累了海量数据。核心问题在于：这些经验能否泛化到新城市或场景，而无需重新部署激光雷达或从头构建标注数据集？大多数3D感知系统无法做到，因为它们依赖精心策划的数据集和校准硬件，在已知条件下准确，但在未知条件下脆弱。Wayve的LA-Pose方案则不同：它利用大规模未标注视频中的信号构建丰富的几何先验，再通过少量针对性监督将这些先验锚定到度量现实。这从根本上改变了自动驾驶的泛化能力。",
+      "source": "Twitter",
+      "url": "https://x.com/wayve_ai/status/2052662844022227452",
+      "type": "运营拓展"
+    },
+    {
+      "id": 362,
+      "date": "2026-05-08",
+      "company": "Wayve",
+      "title": "Wayve CEO Alex Kendall 向TomMackenzieTV解释：伦敦复杂路况为何是训练自动驾驶汽车的理想之地",
+      "summary": "Wayve首席执行官Alex Kendall在接受TomMackenzieTV采访时指出，伦敦错综复杂的道路网络——包括狭窄街道、密集交通、多变的天气以及行人、自行车和车辆的混合通行——为训练自动驾驶系统提供了独特且真实的挑战。他认为，这种复杂性有助于提升AI模型的适应性和鲁棒性，使Wayve的自动驾驶技术能在全球范围内更有效地部署。Kendall强调，伦敦的驾驶环境比许多其他城市更具代表性，能加速从L2+到L4级自动驾驶的演进。",
+      "source": "Twitter",
+      "url": "https://x.com/business/status/2052661524557094921",
+      "type": "技术进展"
+    },
+    {
+      "id": 351,
+      "date": "2026-05-08",
+      "company": "Zoox",
+      "title": "Zoox推出“Find My Zoox”功能，用个性化灯光和声音助你识别同款robotaxi",
+      "summary": "Zoox深知其robotaxi外观一致，因此推出“Find My Zoox”功能。用户可在App中设置独特主题，通过个性化灯光和声音序列，轻松在街头找到自己的车辆。",
+      "source": "Twitter",
+      "url": "https://x.com/zoox/status/2052773078778982425",
+      "type": "商业拓展"
+    },
+    {
+      "id": 250,
+      "date": "2026-05-08",
+      "company": "小马智行",
+      "title": "小马智行五一假期订单量飙升544%，Robotaxi护送超3000名演唱会歌迷",
+      "summary": "小马智行在2026年五一假期期间，Robotaxi订单量同比增长544%。在时代少年团广州南沙演唱会四晚散场高峰时段（22:00至次日凌晨2:00），累计护送歌迷超3000人次，并首次作为官方交通疏导方案的一部分，被写入“广州南沙发布”的散场指南。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/wq9V_LDxEhyFNlPB0C4vFA",
+      "type": "行业动态"
+    },
+    {
+      "id": 154,
+      "date": "2026-05-08",
+      "company": "Waymo",
+      "title": "Bot Auto完成首次商业无人驾驶货运任务",
+      "summary": "Bot Auto的无人驾驶卡车成功完成首次美国商业货运，从休斯顿东北部出发，行驶230英里至德克萨斯州哈钦斯。此次夜间运输由首席执行官侯晓迪（Xiaodi Hou）主导，展示了robotaxi和FSD技术之外的自动驾驶货运潜力，但未使用lidar。",
+      "source": "The Driverless Digest",
+      "url": "https://www.thedriverlessdigest.com/p/bot-auto-completes-first-commercial",
+      "type": "运营拓展"
+    },
+    {
+      "id": 23,
+      "date": "2026-05-08",
+      "company": "Uber",
+      "title": "Uber合作伙伴Avride因自动驾驶事故被调查",
+      "summary": "美国国家公路交通安全管理局（NHTSA）已对与Uber合作的robotaxi公司Avride展开调查，此前发现其自动驾驶系统涉及16起碰撞事故及1起轻伤事件。调查指出，所有事故均与Avride系统在变道、同车道车辆响应及静止物体识别方面的能力缺陷有关，且事故均发生在车辆处于人工监督状态下。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/05/08/uber-partner-avride-is-under-investigation-for-self-driving-crashes/",
+      "type": "合作"
+    },
+    {
+      "id": 386,
+      "date": "2026-05-07",
+      "company": "Aurora",
+      "title": "Aurora推出新一代无人驾驶卡车：基于International® LT®系列，2026年底前在Sun Belt部署200+辆",
+      "summary": "Aurora宣布推出新一代无人驾驶卡车车队，基于International® LT®系列车辆，完全无人驾驶。该车队搭载第二代商用硬件套件，设计寿命达100万英里，成本降低50%以上。Aurora计划到2026年底在Sun Belt地区运营超过200辆无人驾驶卡车。$AUR",
+      "source": "Twitter",
+      "url": "https://x.com/aurora_inno/status/2052374164665676154",
+      "type": "融资"
+    },
+    {
+      "id": 373,
+      "date": "2026-05-07",
+      "company": "Nuro",
+      "title": "Nuro联合创始人兼联合CEO朱佳俊完成自动驾驶车辆操作员培训",
+      "summary": "Nuro联合创始人兼联合CEO朱佳俊近日完成了自动驾驶车辆操作员（AVO）培训，直接向日常管理工程车队的团队学习。观看他的首次操作！AVO在Nuro扮演重要角色，负责训练和测试Nuro Driver系统，同时在复杂道路环境中保障安全。如果你热爱驾驶并对前沿科技充满热情，我们正在招聘！nuro.ai/careers #自动驾驶 #无人驾驶 #drivenbynuro",
+      "source": "Twitter",
+      "url": "https://x.com/nuro/status/2052403082676596983",
+      "type": "技术进展"
+    },
+    {
+      "id": 364,
+      "date": "2026-05-07",
+      "company": "Wayve",
+      "title": "LA-Pose展示：暴雨中高速出口与环岛场景，性能优势显著",
+      "summary": "LA-Pose在暴雨天气下，面对道路几何变化和环岛导航时，保持稳定一致的姿态估计，而VGGT则出现明显变形。这一性能差距源于LA-Pose冻结逆动力学模型后，在其上训练轻量级姿态估计头，将潜在运动表征转化为精确3D估计（平移、旋转、视场角及度量尺度），单次前向传播即可完成。该方法相比最先进的前馈方法，姿态精度提升超10%，且所需标注数据量减少数个数量级。",
+      "source": "Twitter",
+      "url": "https://x.com/wayve_ai/status/2052406989251096959",
+      "type": "运营拓展"
+    },
+    {
+      "id": 353,
+      "date": "2026-05-07",
+      "company": "Zoox",
+      "title": "Zoox自动驾驶软件副总裁周一做客driverlessguy_播客",
+      "summary": "Zoox自动驾驶软件副总裁将于周一参加driverlessguy_播客节目，敬请关注。",
+      "source": "Twitter",
+      "url": "https://x.com/TheRideshareGuy/status/2052406721805484317",
+      "type": "技术进展"
+    },
+    {
+      "id": 352,
+      "date": "2026-05-07",
+      "company": "Zoox",
+      "title": "Zoox在拉斯维加斯解锁新目的地：Bellagio！新增5个站点",
+      "summary": "Zoox在拉斯维加斯新增5个robotaxi服务目的地，包括Bellagio、Fontainebleau、拉斯维加斯会议中心、Mandalay Bay和MGM Grand。目前Zoox在拉斯维加斯大道附近共有8个接送站点：Resorts World、AREA15、Fashion Show LV、Wynn、Topgolf、New York New York、Excalibur和Luxor。部分目的地等待时间显示超过45分钟。Zoox目前仍提供免费乘车服务，用户只需下载App即可使用。",
+      "source": "Twitter",
+      "url": "https://x.com/seventensuited/status/2052505738275414503",
+      "type": "技术进展"
+    },
+    {
+      "id": 1,
+      "date": "2026-05-07",
+      "company": "Aurora",
+      "title": "Aurora的Chris Urmson谈为何自动驾驶卡车终于准备好规模化",
+      "summary": "Aurora公司于去年4月启动商业无人驾驶运营，今年计划将车队从少量卡车扩展至数百辆。联合创始人兼CEO Chris Urmson在TechCrunch的Equity播客中，回顾了从实验室到高速公路的漫长历程，并解释了为何robotaxi和FSD技术仍需突破，而自动驾驶卡车已具备规模化条件。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/podcast/auroras-chris-urmson-on-why-self-driving-trucks-are-finally-ready-to-scale/",
+      "type": "运营拓展"
+    },
+    {
+      "id": 398,
+      "date": "2026-05-06",
+      "company": "WeRide",
+      "title": "文远知行：安全融入每一程，全无人Robotaxi在阿布扎比Yas Island运营",
+      "summary": "文远知行（WeRide）强调其全无人Robotaxi将安全设计贯穿于每一趟行程。车辆采用先进的感知与决策系统，能够在复杂的城市环境中安全运行。目前，该服务已在阿布扎比的Yas Island正式投入运营。",
+      "source": "Twitter",
+      "url": "https://x.com/WeRide_ai/status/2051905838911312131",
+      "type": "安全"
+    },
+    {
+      "id": 388,
+      "date": "2026-05-06",
+      "company": "Aurora",
+      "title": "美国最大分销商之一McLaneCo与Aurora Driver合作，将在德州启动无人驾驶运输",
+      "summary": "美国最大分销商之一McLaneCo已同意与Aurora Driver合作，在德克萨斯州启动无人驾驶运输服务。该协议基于双方过去三年为美国多家知名连锁餐厅运输冷藏货物、累计行驶28万英里自动驾驶里程的合作基础。Aurora表示，从验证到落地的进程正在加速。",
+      "source": "Twitter",
+      "url": "https://x.com/aurora_inno/status/2052011261118890129",
+      "type": "技术进展"
+    },
+    {
+      "id": 387,
+      "date": "2026-05-06",
+      "company": "Aurora",
+      "title": "Aurora加速驶向商业化：2026年Q2推出无人驾驶卡车车队，合作Hirschbach计划部署500辆",
+      "summary": "Aurora Innovation发布2025年Q1业务回顾，联合创始人兼CEO Chris Urmson详解关键里程碑。公司计划2026年Q2推出第二代硬件（Gen 2）无人驾驶卡车车队，实现完全无人驾驶运营。战略合作伙伴Hirschbach Motor Lines将拥有500辆Aurora Driver驱动的卡车。网络扩展至12条路线，包括达拉斯至拉雷多的无人驾驶验证路线，以及达拉斯至俄克拉荷马城的监督自动驾驶路线。加州监管进展使公司2028年可寻址市场（SAM）预计达到600亿车辆英里。",
+      "source": "Twitter",
+      "url": "https://x.com/aurora_inno/status/2052121155591372858",
+      "type": "运营拓展"
+    },
+    {
+      "id": 366,
+      "date": "2026-05-06",
+      "company": "Wayve",
+      "title": "我们的产品与交付副总裁Simone Fabris本周在Automotive Masterminds登台，参与欧洲自动驾驶规模化讨论",
+      "summary": "我们的产品与交付副总裁Simone Fabris本周在Automotive Masterminds活动上亮相，参与了一场关于欧洲自动驾驶规模化的小组讨论。他重点阐述了在全球Robotaxi市场中竞争所需的关键要素。",
+      "source": "Twitter",
+      "url": "https://x.com/wayve_ai/status/2051948033567322270",
+      "type": "技术进展"
+    },
+    {
+      "id": 365,
+      "date": "2026-05-06",
+      "company": "Wayve",
+      "title": "Wayve发布LA-Pose：无需昂贵3D标签的自监督相机位姿估计新方法",
+      "summary": "Wayve AI最新研究LA-Pose提出了一种自监督相机位姿估计方法，无需数百万个昂贵的3D标签即可让车辆自主理解自身运动。该技术通过创新算法实现高精度位姿估计，有望大幅降低自动驾驶系统对人工标注数据的依赖，推动L4级自动驾驶技术发展。",
+      "source": "Twitter",
+      "url": "https://x.com/Jamie_Shotton/status/2052154629589463292",
+      "type": "技术进展"
+    },
+    {
+      "id": 354,
+      "date": "2026-05-06",
+      "company": "Zoox",
+      "title": "Zoox联合创始人兼CTO Jesse Levinson接受《金融时报》专访：解析Zoox理念、差异化优势及robotaxi如何重塑出行未来",
+      "summary": "Zoox联合创始人兼CTO Jesse Levinson近日接受《金融时报》专访，深入阐述了Zoox的核心理念、与竞争对手的差异化策略，以及robotaxi将如何彻底改变网约车行业格局。该专访由Rafe Rosner-Uddin主持，完整视频可通过链接观看。",
+      "source": "Twitter",
+      "url": "https://x.com/zoox/status/2052067310706536648",
+      "type": "技术进展"
+    },
+    {
+      "id": 155,
+      "date": "2026-05-06",
+      "company": "Waymo",
+      "title": "『Waymo on Uber』体验：来自重度用户Ethan McKanna的反馈",
+      "summary": "本期播客中，自动驾驶汽车重度用户及行业观察者Ethan McKanna分享了他使用Waymo on Uber服务的体验，并透露其创建Robotaxi Tracker的初衷。作为Robotaxi Tracker的创始人，他通过数据追踪揭示了Waymo、Uber及Tesla FSD在robotaxi领域的竞争态势，并指出lidar技术仍是当前自动驾驶安全性的关键保障。",
+      "source": "The Driverless Digest",
+      "url": "https://www.thedriverlessdigest.com/p/the-waymo-on-uber-experience-feedback",
+      "type": "商业拓展"
+    },
+    {
+      "id": 71,
+      "date": "2026-05-06",
+      "company": "Aurora",
+      "title": "Aurora与McLane达成协议，在德克萨斯州运营无人驾驶卡车路线",
+      "summary": "Aurora Innovation与分销巨头McLane签署商业协议，将利用其自动驾驶技术，在达拉斯至休斯顿之间运营无人驾驶卡车运输货物。这些卡车将实现完全自主运行，无人类安全驾驶员，但车内仍会配备一名“人类观察员”。此举标志着Aurora在多年试点项目后，再次获得商业客户采用其robotaxi技术。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/05/06/aurora-lands-mclane-deal-to-run-driverless-truck-routes-in-texas/",
+      "type": "运营拓展"
+    },
+    {
+      "id": 25,
+      "date": "2026-05-06",
+      "company": "Uber",
+      "title": "Nuro获无人驾驶测试许可，为Uber robotaxi服务上线铺路",
+      "summary": "Nuro已获得加州公共道路无人驾驶测试许可，将使用搭载其自动驾驶技术的Lucid Gravity SUV，这些车辆未来将用于Uber的高端robotaxi服务。加州DMV于周二确认修改了Nuro的无人驾驶AV许可，新增Lucid Gravity车型。不过，这家由Nvidia和Uber支持的硅谷初创公司表示尚未准备就绪。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/05/05/nuro-receives-driverless-testing-permit-ahead-of-uber-robotaxi-service-launch/",
+      "type": "运营拓展"
+    },
+    {
+      "id": 432,
+      "date": "2026-05-05",
+      "company": "Tesla",
+      "title": "FSD v14.3.2在纽约市区零干预自动驾驶，还能自动找街边停车位",
+      "summary": "最新版FSD v14.3.2在纽约市复杂交通环境中实现全程零干预自动驾驶，并成功自动找到街边停车位，展示了特斯拉全自动驾驶系统在城市道路场景下的重大进步。",
+      "source": "Twitter",
+      "url": "https://x.com/BLKMDL3/status/2051698331227738153",
+      "type": "行业动态"
+    },
+    {
+      "id": 399,
+      "date": "2026-05-05",
+      "company": "WeRide",
+      "title": "瑞士苏黎世自动化出行峰会：WeRide展示L4级Robotaxi与Robobus",
+      "summary": "WeRide正在瑞士苏黎世参加Automated Mobility Summit，将于5月4日至5日展出其Robotaxi和Robobus，向全球展示其L4级自动驾驶技术。欢迎与会者前来交流。股票代码：$WRD。",
+      "source": "Twitter",
+      "url": "https://x.com/WeRide_ai/status/2051476364583473207",
+      "type": "技术进展"
+    },
+    {
+      "id": 394,
+      "date": "2026-05-05",
+      "company": "Motional",
+      "title": "Motional robotaxi现已接入Uber，ACTExpo参会者可体验",
+      "summary": "Motional宣布其robotaxi现已通过Uber平台提供服务。在拉斯维加斯参加ACTExpo的参会者，可通过Uber应用设置菜单中的“乘车偏好”选项选择加入，以增加匹配到Motional无人驾驶车辆的机会。",
+      "source": "Twitter",
+      "url": "https://x.com/motionaldrive/status/2051771404329099462",
+      "type": "技术进展"
+    },
+    {
+      "id": 389,
+      "date": "2026-05-05",
+      "company": "Aurora",
+      "title": "Aurora与Volvo Autonomous Solutions扩大自动驾驶货运网络",
+      "summary": "Aurora与Volvo Autonomous Solutions宣布扩大其自动驾驶货运网络。搭载Aurora Driver系统的Volvo VNL Autonomous卡车，现已在达拉斯至俄克拉荷马城之间一条全长200英里的新路线上，为V.A.S客户运输货物。该客户终端每日可覆盖数百英里的运输里程。完整公告详见：bit.ly/4tjnpgu",
+      "source": "Twitter",
+      "url": "https://x.com/aurora_inno/status/2051467454539337973",
+      "type": "运营拓展"
+    },
+    {
+      "id": 375,
+      "date": "2026-05-05",
+      "company": "Nuro",
+      "title": "AI驾驶员需要多少先验知识？行业分歧明显——Nuro联合创始人朱佳俊深度解析“地图之争”",
+      "summary": "与人类驾驶员类似，AI驾驶员也需要一定的世界先验知识才能运行。但究竟该赋予它们多少？行业内存在明显分歧。Nuro联合创始人朱佳俊在其“无人驾驶辩论”系列第二期——“地图之争”中，对此进行了深入剖析。该文探讨了自动驾驶技术中，依赖高精地图与依赖实时感知两种路线的优劣，为行业提供了富有洞察力的思考。",
+      "source": "Twitter",
+      "url": "https://x.com/nuro/status/2051678308476338475",
+      "type": "技术进展"
+    },
+    {
+      "id": 374,
+      "date": "2026-05-05",
+      "company": "Nuro",
+      "title": "Nuro联合创始人谈通用自动驾驶平台：自主移动出行的基础通用层",
+      "summary": "Nuro联合创始人dfergusonnz在StartupGrind与KindredVentures的stevejan对话中，阐述了Nuro的通用自动驾驶平台如何作为自主移动出行领域的基础通用层。该平台旨在为各类自动驾驶应用提供可扩展的底层技术，而非局限于特定场景。完整对话视频已上线。",
+      "source": "Twitter",
+      "url": "https://x.com/nuro/status/2051742572218048639",
+      "type": "技术进展"
+    },
+    {
+      "id": 367,
+      "date": "2026-05-05",
+      "company": "Wayve",
+      "title": "Wayve发布LA-Pose模型：通过大规模自监督学习推动3D感知泛化",
+      "summary": "Wayve推出最新模型LA-Pose，利用1020万段未标注驾驶视频片段进行大规模自监督学习，构建强大的运动表征用于3D感知。与当前依赖昂贵、精心标注的3D监督方法不同，LA-Pose仅需轻量级姿态头和少量标注数据，即可实现：最先进的相机姿态估计、跨多种驾驶场景的强零样本泛化能力，以及比全监督3D方法少数个数量级的标注数据需求。",
+      "source": "Twitter",
+      "url": "https://x.com/wayve_ai/status/2051701436090667047",
+      "type": "运营拓展"
+    },
+    {
+      "id": 412,
+      "date": "2026-05-04",
+      "company": "Tesla",
+      "title": "特斯拉Cybercab亮相巴黎，Eva McMillan热情推介",
+      "summary": "特斯拉粉丝Eva McMillan在巴黎展示Cybercab，称其将在全球范围内成为必需品。",
+      "source": "Twitter",
+      "url": "https://x.com/tesla_robotaxi/status/2051139827890827634",
+      "type": "技术进展"
+    },
+    {
+      "id": 411,
+      "date": "2026-05-04",
+      "company": "Tesla",
+      "title": "特斯拉Cybercab现身圣卡洛斯，Robotaxi时代加速到来",
+      "summary": "特斯拉Cybercab在加州圣卡洛斯被目击，标志着robotaxi时代正加速成为现实。这一进展表明自动驾驶技术的普及速度超出预期，引发市场对$TSLA的广泛关注。",
+      "source": "Twitter",
+      "url": "https://x.com/tesla_robotaxi/status/2051144309001335050",
+      "type": "运营拓展"
+    },
+    {
+      "id": 410,
+      "date": "2026-05-04",
+      "company": "Tesla",
+      "title": "Aaron Ng在旧金山首次目击Cybercab",
+      "summary": "Aaron Ng（localghost）在旧金山街头首次目击了特斯拉的Cybercab。",
+      "source": "Twitter",
+      "url": "https://x.com/tesla_robotaxi/status/2051144560202354756",
+      "type": "行业动态"
+    },
+    {
+      "id": 357,
+      "date": "2026-05-04",
+      "company": "Zoox",
+      "title": "Zoox在旧金山扩大robotaxi服务范围，覆盖North Beach至Noe Valley等多个社区",
+      "summary": "Zoox宣布其Zoox Explorers服务已扩展至旧金山更多社区，包括North Beach、Noe Valley等地，进一步扩大其robotaxi在城市中的运营足迹。",
+      "source": "Twitter",
+      "url": "https://x.com/zoox/status/2051323890107138206",
+      "type": "运营拓展"
+    },
+    {
+      "id": 356,
+      "date": "2026-05-04",
+      "company": "Zoox",
+      "title": "Zoox在拉斯维加斯扩大robotaxi服务范围！🎰🥂",
+      "summary": "Zoox宣布在拉斯维加斯扩大其robotaxi服务范围，乘客现在可以在拉斯维加斯大道及周边地区选择更多新站点。用户可通过Zoox应用查看新增目的地，详情请访问zoox.com/las-vegas/。",
+      "source": "Twitter",
+      "url": "https://x.com/zoox/status/2051380634426425433",
+      "type": "运营拓展"
+    },
+    {
+      "id": 355,
+      "date": "2026-05-04",
+      "company": "Zoox",
+      "title": "Zoox 大动作不断：robotaxi 驶入奥斯汀、迈阿密、拉斯维加斯机场，并扩大旧金山与拉斯维加斯运营范围",
+      "summary": "Zoox 在过去几周迎来重大进展，其 robotaxi 已正式进入奥斯汀、迈阿密、拉斯维加斯机场，并在旧金山和拉斯维加斯扩大了地理围栏运营范围。公司表示，看到多年努力与奉献的成果落地，令人无比振奋，并向团队致以敬意。",
+      "source": "Twitter",
+      "url": "https://x.com/aicha2evans/status/2051385386916855884",
+      "type": "技术进展"
+    },
+    {
+      "id": 156,
+      "date": "2026-05-04",
+      "company": "Waymo",
+      "title": "Uber与Waymo的合作关系即将终结吗？",
+      "summary": "在奥斯汀和亚特兰大，用户只能通过Uber应用叫到Waymo的robotaxi服务，该产品名为“Waymo on Uber”。这一合作对Uber意义重大，因为Waymo是美国唯一提供付费、完全无人驾驶出行服务的公司。然而，Uber已与多家自动驾驶公司签约，但Waymo是目前唯一能大规模提供实际服务的合作伙伴，因此短期内Uber的自动驾驶战略完全依赖Waymo。",
+      "source": "The Driverless Digest",
+      "url": "https://www.thedriverlessdigest.com/p/is-the-uber-x-waymo-partnership-coming",
+      "type": "技术进展"
+    },
+    {
+      "id": 433,
+      "date": "2026-05-03",
+      "company": "Tesla",
+      "title": "FSD Supervised累计行驶里程突破100亿英里",
+      "summary": "特斯拉宣布其FSD Supervised（全自动驾驶监督版）累计行驶里程已超过100亿英里。这一里程碑数据来自特斯拉官网fsd/safety页面，展示了其自动驾驶系统在实际道路上的大规模应用。",
+      "source": "Twitter",
+      "url": "https://x.com/Tesla/status/2050991662076477504",
+      "type": "安全"
+    },
+    {
+      "id": 358,
+      "date": "2026-05-03",
+      "company": "Zoox",
+      "title": "赛前routine是基础🧠 Carlos带你体验Zoox robotaxi的迈阿密之旅",
+      "summary": "在迈阿密，Carlos展示了他在Zoox robotaxi中的赛前routine，强调routine是成功的基础。通过乘坐Zoox的自动驾驶出租车，他充分利用了迈阿密的城市环境，将通勤时间转化为高效的赛前准备。这一体验不仅展现了robotaxi在日常生活中的实用性，也凸显了Zoox在自动驾驶出行领域的创新应用。",
+      "source": "Twitter",
+      "url": "https://x.com/WilliamsF1/status/2050847834572988704",
+      "type": "商业拓展"
+    },
+    {
+      "id": 2,
+      "date": "2026-05-03",
+      "company": "Waymo",
+      "title": "TechCrunch Mobility：如何给robotaxi开罚单？",
+      "summary": "本周加州发布了新的自动驾驶车辆测试与部署规定，这些州级政策可能对Uber、Waymo、Tesla等科技公司及初创企业产生广泛影响。本期TechCrunch Mobility深入探讨了robotaxi面临的法律与监管挑战，包括FSD和lidar技术在实际应用中的合规问题。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/05/03/techcrunch-mobility-how-do-you-issue-a-ticket-to-a-robotaxi/",
+      "type": "诉讼"
+    },
+    {
+      "id": 415,
+      "date": "2026-05-02",
+      "company": "Tesla",
+      "title": "特斯拉Cybercab现身斯坦福大学校园",
+      "summary": "特斯拉Cybercab在加州斯坦福大学校园内被目击。该车型是特斯拉计划推出的无人驾驶出租车，目前正处于测试阶段。此次现身引发了公众对其设计和技术进展的广泛关注。",
+      "source": "Twitter",
+      "url": "https://x.com/tesla_robotaxi/status/2050501826831638673",
+      "type": "技术进展"
+    },
+    {
+      "id": 414,
+      "date": "2026-05-02",
+      "company": "Tesla",
+      "title": "特斯拉荷兰车主俱乐部周末活动：Cybercab、Optimus、Cybertruck及FSD试驾亮相阿姆斯特丹",
+      "summary": "特斯拉荷兰车主俱乐部（Tesla Owners Club Nederland）在阿姆斯特丹举办周末家庭活动，展出Cybercab、Optimus机器人、Cybertruck，并提供FSD（全自动驾驶）试驾体验。活动详情可访问tesla.com/nl_nl/events。",
+      "source": "Twitter",
+      "url": "https://x.com/tesla_robotaxi/status/2050502222811677160",
+      "type": "行业动态"
+    },
+    {
+      "id": 413,
+      "date": "2026-05-02",
+      "company": "Tesla",
+      "title": "Tesla Cybercab不是未来，它将改变未来——无方向盘、无驾驶员",
+      "summary": "特斯拉Cybercab是一款完全无人驾驶的robotaxi，没有方向盘和驾驶员，旨在彻底改变出行方式。",
+      "source": "Twitter",
+      "url": "https://x.com/tesla_robotaxi/status/2050502339929194852",
+      "type": "技术进展"
+    },
+    {
+      "id": 27,
+      "date": "2026-05-02",
+      "company": "Uber",
+      "title": "Uber 计划将数百万司机转变为自动驾驶公司的传感器网络",
+      "summary": "Uber 首席技术官 Praveen Neppalli Naga 在 TechCrunch 的 StrictlyVC 活动上透露，公司长期目标是为人类司机的车辆配备传感器，为自动驾驶汽车公司及训练物理世界场景 AI 模型的企业收集真实数据。该计划是今年1月底宣布的 AV Labs 项目的自然延伸。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/05/01/uber-wants-to-turn-its-millions-of-drivers-into-a-sensor-grid-for-self-driving-companies/",
+      "type": "技术进展"
+    },
+    {
+      "id": 400,
+      "date": "2026-05-01",
+      "company": "WeRide",
+      "title": "文远知行北京车展2026展台迎多国政要，欧洲市场拓展获政府力挺",
+      "summary": "在2026北京车展上，文远知行（WeRide）展台迎来匈牙利大使Balázs Szite、英国贸易专员Lewis Neal、意大利大使Massimo Ambrosetti以及法国商务投资署高级官员。这些政要的发言鼓励文远知行进入欧洲市场，反映出随着文远知行在欧洲扩大自动驾驶业务，各国政府给予了强有力的支持。",
+      "source": "Twitter",
+      "url": "https://x.com/WeRide_ai/status/2050092855612608882",
+      "type": "运营拓展"
+    },
+    {
+      "id": 280,
+      "date": "2026-05-01",
+      "company": "小马智行",
+      "title": "文远知行WeRide五一致敬劳动者：自动驾驶照亮归途",
+      "summary": "五一国际劳动节之际，文远知行WeRide向所有守护城市运转的劳动者致敬。该公司专注于自动驾驶、无人驾驶及Robotaxi领域，以科技力量为城市出行保驾护航，照亮人们的归途。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/mVsBaeaq9tKTzZUqtldrlA",
+      "type": "行业动态"
+    },
+    {
+      "id": 157,
+      "date": "2026-05-01",
+      "company": "Waymo",
+      "title": "Uber与Hertz合作管理robotaxi车队",
+      "summary": "Uber与Hertz达成合作，由后者负责其Lucid Motors robotaxi的清洁、充电和维修服务。Hertz此前曾多次涉足新出行领域，但此次合作更贴近其核心业务。",
+      "source": "The Driverless Digest",
+      "url": "https://www.thedriverlessdigest.com/p/uber-partners-with-hertz-for-robotaxi",
+      "type": "运营拓展"
+    },
+    {
+      "id": 429,
+      "date": "2026-04-30",
+      "company": "Uber",
+      "title": "与Hertz及Oro Mobility达成两项战略车队合作，覆盖旧金山robotaxi自动驾驶车队及亚特兰大等地人工驾驶车队",
+      "summary": "我们与Hertz及其新附属公司Oro Mobility达成两项战略车队合作，涵盖即将在旧金山推出的自动驾驶robotaxi车队，以及亚特兰大、洛杉矶、旧金山和新泽西的人工驾驶车队。在自动驾驶方面，Oro将为配备nuro AV技术的LucidMotors自动驾驶车队提供充电、维护和维修等现场支持，该车队将于今年晚些时候在旧金山启动。在人工驾驶车队方面，Hertz已是全球最大的网约车租赁车队之一，我们将扩大合作，引入Oro雇佣的司机以满足更高的网约车需求。继亚特兰大试点成功后，我们已在洛杉矶和旧金山开展业务，新泽西北部将于春季启动。此次合作强化了我们的混合网络战略，即机器人车队与人工驾驶车队协同运营。",
+      "source": "Twitter",
+      "url": "https://x.com/andrewgordonmac/status/2049835861936656470",
+      "type": "运营拓展"
+    },
+    {
+      "id": 401,
+      "date": "2026-04-30",
+      "company": "WeRide",
+      "title": "文远知行Auto China 2026发力：五年内部署20万辆L4级自动驾驶车辆！",
+      "summary": "文远知行在2026年北京车展上宣布，计划五年内部署20万辆L4级自动驾驶车辆。该公司展示了L4级Robotaxi GXR、Robobus以及超过30辆搭载WRD 3.0系统的AION N60演示车辆，大规模展示自动驾驶技术。创始人兼CEO韩旭强调了文远知行的全球竞争力，同时宣布与芯擎科技和联想建立新的合作伙伴关系。",
+      "source": "Twitter",
+      "url": "https://x.com/WeRide_ai/status/2049722889642135839",
+      "type": "运营拓展"
+    },
+    {
+      "id": 395,
+      "date": "2026-04-30",
+      "company": "Motional",
+      "title": "周末去拉斯维加斯？解锁你的下一程！在Uber应用中独家呼叫Motional的IONIQ 5 robotaxi 🤖",
+      "summary": "本周末前往拉斯维加斯的用户，可通过Uber应用独家体验Motional的IONIQ 5 robotaxi服务。该自动驾驶出租车基于现代IONIQ 5车型，由Motional提供L4级自动驾驶技术，目前已在拉斯维加斯特定区域运营。用户只需在Uber应用中选择相应选项，即可呼叫无人驾驶车辆完成出行。",
+      "source": "Twitter",
+      "url": "https://x.com/motionaldrive/status/2049911661343977556",
+      "type": "商业拓展"
+    },
+    {
+      "id": 376,
+      "date": "2026-04-30",
+      "company": "Nuro",
+      "title": "全球robotaxi计划加速推进：Nuro驱动、Lucid Motors制造、Uber独家运营，即将上线",
+      "summary": "Uber全球robotaxi计划迎来新进展。该服务由Nuro提供自动驾驶技术，Lucid Motors负责车辆制造，并将在Uber平台独家运营。Uber同时宣布与Hertz及其新附属公司Oro Mobility达成两项战略合作：一是Oro将为今年晚些时候在旧金山推出的自动驾驶Lucid车队提供充电、维护和维修等地面支持；二是扩大与Hertz的合作，引入Oro雇佣的司机，以满足亚特兰大、洛杉矶、旧金山和新泽西等市场对人工驾驶车队的需求。",
+      "source": "Twitter",
+      "url": "https://x.com/nuro/status/2049961924390211810",
+      "type": "运营拓展"
+    },
+    {
+      "id": 345,
+      "date": "2026-04-30",
+      "company": "Waymo",
+      "title": "Waymo周自动驾驶出行量达50万次，前路仍长",
+      "summary": "Waymo每周自动驾驶出行量已突破50万次，这一里程碑标志着其商业化运营取得显著进展。尽管增长迅速，但Waymo仍面临技术、法规和市场竞争等多重挑战，未来需持续扩大服务覆盖范围并优化运营效率。",
+      "source": "Twitter",
+      "url": "https://x.com/Waymo/status/2049916882996625603",
+      "type": "技术进展"
+    },
+    {
+      "id": 344,
+      "date": "2026-04-30",
+      "company": "Waymo",
+      "title": "我在洛杉矶体验了首次Waymo无人驾驶之旅：未来出行令人震撼",
+      "summary": "作者在洛杉矶首次体验了Waymo的完全无人驾驶服务，称这是一次极其独特的经历。车辆在复杂的城市道路中自如行驶，无需任何人工干预，展现了自动驾驶技术的成熟度。作者感叹，如果这就是未来出行的模样，那么交通领域的变革将超乎想象。",
+      "source": "Twitter",
+      "url": "https://x.com/milinddeora/status/2049681844690403542",
+      "type": "技术进展"
+    },
+    {
+      "id": 281,
+      "date": "2026-04-30",
+      "company": "小马智行",
+      "title": "文远知行亮相2026北京车展：自动驾驶热潮中的核心玩家",
+      "summary": "在2026北京车展上，文远知行创始人韩旭公开驳斥“智驾终局论”，称中国智能驾驶竞赛仅处于“开始的结束”阶段。其推出的端到端方案WRD 3.0已在中国智驾大赛中实现史无前例的“四连冠”，并获广汽、奇瑞等近30个车型定点。公司同时展示了L4级Robotaxi GXR与L2++高阶智驾方案，凸显双线技术实力。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/ESkE3RKHjfEknA4uLbM1dA",
+      "type": "行业动态"
+    },
+    {
+      "id": 28,
+      "date": "2026-04-30",
+      "company": "Uber",
+      "title": "Uber携手Hertz为Lucid Motors robotaxi提供清洁、充电与维修服务",
+      "summary": "Uber与Lucid Motors及Nuro合作的豪华robotaxi服务迎来第四位合作伙伴Hertz。Hertz将通过新成立的附属公司Oro Mobility，负责车辆日常资产管理，包括充电、维护、维修、清洁及停车场人员配置。该服务计划于2026年底在旧金山湾区推出，采用Lucid的Gravity SUV及Nuro的自动驾驶技术。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/30/uber-taps-hertz-to-clean-charge-and-fix-its-lucid-motors-robotaxis/",
+      "type": "商业拓展"
+    },
+    {
+      "id": 416,
+      "date": "2026-04-29",
+      "company": "Tesla",
+      "title": "特斯拉Cybertruck车队整齐排列，Cyber风格十足",
+      "summary": "社交媒体用户reynow发布了一张特斯拉Cybertruck车队整齐排列的照片，并配文“Lined up fleet. 🫡 reynow (_Reynow) Cyber styyyyyyyle 😎”，展示了多辆Cybertruck的壮观阵容，凸显其独特的Cyber设计风格。",
+      "source": "Twitter",
+      "url": "https://x.com/tesla_robotaxi/status/2049366847674270125",
+      "type": "商业拓展"
+    },
+    {
+      "id": 378,
+      "date": "2026-04-29",
+      "company": "Nuro",
+      "title": "硅谷街头现身！Nuro工程车队在南湾地区频繁出没",
+      "summary": "Nuro工程车队在硅谷南湾地区频繁现身，成为当地一道熟悉的风景线。这支车队正在为合作伙伴的发布做准备，通过训练、测试和优化其通用自动驾驶平台，连接开发与部署环节。Nuro致力于打造自主驾驶技术，推动自动驾驶车辆的发展。",
+      "source": "Twitter",
+      "url": "https://x.com/nuro/status/2049503978912956813",
+      "type": "运营拓展"
+    },
+    {
+      "id": 377,
+      "date": "2026-04-29",
+      "company": "Nuro",
+      "title": "Nuro联合创始人：自动驾驶将成基础设施基石，带来巨大变革",
+      "summary": "Nuro联合创始人兼联合CEO dfergusonnz在StartupGrind 2026大会上表示，长期来看，自动驾驶出行将成为值得信赖的基础设施的一部分——一个社会可以在此基础上构建的基石。这将是一个巨大的转变。",
+      "source": "Twitter",
+      "url": "https://x.com/nuro/status/2049588935937200546",
+      "type": "技术进展"
+    },
+    {
+      "id": 251,
+      "date": "2026-04-29",
+      "company": "小马智行",
+      "title": "小马智行CEO彭军：规模化是未来五年核心，第七代Robotaxi成本降至23万元以下",
+      "summary": "小马智行CEO彭军近日接受彭博电视专访，强调未来五年将以“规模化”为关键词，推动Robotaxi车队、运营城市和商业化能力持续增长。公司宣布第七代Robotaxi成本控制取得进展，预计2027版整车总成本将降至23万元人民币以下。目前，小马智行计划年底前将Robotaxi车队规模扩大至3000辆以上，并实现全球超过20座城市的布局。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/1-XuVxPM5ya5eCiuY0PKZw",
+      "type": "行业动态"
+    },
+    {
+      "id": 396,
+      "date": "2026-04-28",
+      "company": "Motional",
+      "title": "Motional在拉斯维加斯开启全天测试",
+      "summary": "Motional的robotaxi车队已完成充电，准备在拉斯维加斯进行全天测试。该公司通过社交媒体邀请用户分享所在位置，并标注了#LasVegas #Motional #IONIQ5 #Robotaxis等话题标签。",
+      "source": "Twitter",
+      "url": "https://x.com/motionaldrive/status/2049174201571934289",
+      "type": "商业拓展"
+    },
+    {
+      "id": 390,
+      "date": "2026-04-28",
+      "company": "Aurora",
+      "title": "自动驾驶卡车已就位，Aurora CEO Chris Urmson 在#RideAI 探讨技术落地现实",
+      "summary": "Aurora（$AUR）CEO Chris Urmson 与 Ed Niedermeyer 在#RideAI 活动上深入探讨了自动驾驶卡车在真实世界部署的挑战与进展。讨论聚焦于技术从实验室走向商业化运营的关键节点，包括安全验证、法规适配及运营效率等核心议题。完整对话视频已上线。",
+      "source": "Twitter",
+      "url": "https://x.com/aurora_inno/status/2049153159788970290",
+      "type": "技术进展"
+    },
+    {
+      "id": 379,
+      "date": "2026-04-28",
+      "company": "Nuro",
+      "title": "从测试跑道到公共道路，每一英里都至关重要——Nuro工程车队如何训练、测试并优化通用自动驾驶平台",
+      "summary": "Nuro详细介绍了其工程车队如何通过从封闭测试跑道到真实公共道路的每一英里行驶，持续训练、测试并优化其通用自动驾驶平台。该平台正为即将与Uber和Lucid Motors合作推出的全球robotaxi服务提供关键支持。Nuro强调，这种从测试到部署的闭环流程，确保了其自动驾驶系统在复杂城市环境中的安全性与可靠性。",
+      "source": "Twitter",
+      "url": "https://x.com/nuro/status/2049141835780751471",
+      "type": "运营拓展"
+    },
+    {
+      "id": 359,
+      "date": "2026-04-28",
+      "company": "Zoox",
+      "title": "从传感器出发，再设计其余部分：Zoox如何打造其robotaxi",
+      "summary": "Zoox的robotaxi设计理念颠覆传统，从传感器布局而非车辆外形开始。其团队首先确定激光雷达、摄像头和雷达的最佳位置，以确保360度无死角感知，再围绕这些传感器构建车身。这种“传感器优先”的方法使得Zoox的车辆具备对称设计、双向行驶能力和无方向盘结构，旨在最大化乘客空间和安全性。文章详细介绍了Zoox在硬件集成、软件算法和制造工艺上的创新，展示了其如何通过独特的工程路径在自动驾驶领域脱颖而出。",
+      "source": "Twitter",
+      "url": "https://x.com/arstechnica/status/2049088486398111820",
+      "type": "技术进展"
+    },
+    {
+      "id": 346,
+      "date": "2026-04-28",
+      "company": "Waymo",
+      "title": "Waymo进军玫瑰之城！🌹 今日起车队在波特兰手动驾驶，为未来服务铺路",
+      "summary": "Waymo宣布正式进入波特兰市场。从今天开始，其自动驾驶车队将在波特兰进行手动驾驶测试，为后续的自动驾驶服务奠定基础。Waymo表示将与波特兰市民一起开启新的出行篇章。",
+      "source": "Twitter",
+      "url": "https://x.com/Waymo/status/2049142430390256100",
+      "type": "商业拓展"
+    },
+    {
+      "id": 252,
+      "date": "2026-04-28",
+      "company": "小马智行",
+      "title": "小马智行北京车展揭秘无人驾驶：后台无人操控，视障人士可用",
+      "summary": "小马智行在北京车展A3馆A311展位展示无人驾驶技术，直面公众对后台操控、视障人士使用便利性等核心疑问。活动将持续至5月3日，现场还提供限定POPO周边礼品，吸引众多参观者体验。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/-op8mLzn-UD4CQMOThNBdw",
+      "type": "行业动态"
+    },
+    {
+      "id": 368,
+      "date": "2026-04-27",
+      "company": "Wayve",
+      "title": "上线10天，听听现场的声音 👇",
+      "summary": "自上线以来已过去10天，我们邀请在场人士分享他们的真实反馈。",
+      "source": "Twitter",
+      "url": "https://x.com/UKSovereignAI/status/2048690598832472315",
+      "type": "运营拓展"
+    },
+    {
+      "id": 360,
+      "date": "2026-04-27",
+      "company": "Zoox",
+      "title": "Robotaxi服务让“自动驾驶”名副其实",
+      "summary": "本文探讨了Robotaxi服务如何真正实现“自动驾驶”的核心理念。与传统的ADAS系统不同，Robotaxi服务（如Waymo、Cruise等）完全去除了人类驾驶员，让车辆自主完成从接单到送达的全过程。文章分析了这种服务模式在技术、法规和用户体验上的挑战与突破，并指出Robotaxi正将“自动驾驶”从辅助功能转变为一种全新的出行方式。",
+      "source": "Twitter",
+      "url": "https://x.com/CARandDRIVER/status/2048568056096436412",
+      "type": "技术进展"
+    },
+    {
+      "id": 282,
+      "date": "2026-04-27",
+      "company": "小马智行",
+      "title": "北京车展打卡指南｜下一站，文远知行展位",
+      "summary": "2026北京车展上，文远知行展位迎来明星赵晓卉打卡“上班”，并吸引腾讯企鹅、新浪大眼仔两大IP互动。展位设有中国、新加坡、中东、欧洲四大区域成果相框，观众可体验大空间Robotaxi GXR等自动驾驶车辆。活动于4月24日至5月3日在首都国际会展中心B3馆B309举行。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/TFiqv_AGCjU_YysBuF-rHQ",
+      "type": "行业动态"
+    },
+    {
+      "id": 158,
+      "date": "2026-04-27",
+      "company": "其他",
+      "title": "美国城市自动驾驶：现实与未来（Curbivore 2026）",
+      "summary": "在刚刚结束的Curbivore会议上，专家小组讨论了自动驾驶技术在过去几年的进展、行业仍面临的挑战，以及随着Uber、Waymo、Tesla等公司的robotaxi服务开始规模化，加速发展所需的条件。加州公用事业委员会副执行主任Pat Tsen、Zoox城市政策主管Phillip Pierce及首席商务官Jon Miller等嘉宾参与了讨论，指出FSD和lidar等技术的应用仍需克服监管与成本障碍。",
+      "source": "The Driverless Digest",
+      "url": "https://www.thedriverlessdigest.com/p/urban-autonomy-in-america-whats-real",
+      "type": "监管"
+    },
+    {
+      "id": 419,
+      "date": "2026-04-26",
+      "company": "Tesla",
+      "title": "好莱坞入场券！Tesla Cybercab现身好莱坞Tesla Diner",
+      "summary": "Tesla Cybercab近日在好莱坞的Tesla Diner被目击，robotaxi氛围日益浓厚。",
+      "source": "Twitter",
+      "url": "https://x.com/tesla_robotaxi/status/2048420717998285227",
+      "type": "商业拓展"
+    },
+    {
+      "id": 418,
+      "date": "2026-04-26",
+      "company": "Tesla",
+      "title": "无人驾驶robotaxi初体验：坐在车里仍觉不真实！",
+      "summary": "一位体验者分享首次乘坐无人驾驶robotaxi的感受。尽管此前已看过大量反应视频，但真正坐进车内时，仍难以相信一辆无方向盘、无驾驶员的汽车正载着自己驶向目的地。这种颠覆性的体验让人既兴奋又震撼。",
+      "source": "Twitter",
+      "url": "https://x.com/durai_ashwin08/status/2048430996274430180",
+      "type": "商业拓展"
+    },
+    {
+      "id": 417,
+      "date": "2026-04-26",
+      "company": "Tesla",
+      "title": "光滑流畅！JoshWest247展示量产版Cybercab三点掉头，未启用FSD",
+      "summary": "用户JoshWest247发布视频，展示一辆量产版Cybercab（特斯拉Cybercab）完成三点掉头操作，并强调未使用FSD（全自动驾驶）功能。视频中车辆动作流畅，引发关注。",
+      "source": "Twitter",
+      "url": "https://x.com/tesla_robotaxi/status/2048494180180144495",
+      "type": "行业动态"
+    },
+    {
+      "id": 283,
+      "date": "2026-04-26",
+      "company": "小马智行",
+      "title": "文远知行北京车展秀肌肉：L4到L2++全系产品亮相，八国牌照加持",
+      "summary": "文远知行在2026北京车展上展示了从L4无人驾驶到L2++高阶辅助驾驶的全系列产品，包括Robotaxi GXR、Robobus和埃安N60三大明星车型。该公司已获得八国自动驾驶牌照，产品覆盖全球12国40余城。技术方面，文远知行推出了HPC3.0超级大脑、WRD 3.0多芯片架构适配系统以及GENESIS自研世界模型，其中WRD 3.0已在中国智驾大赛中取得四连冠。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/jZ4VaJjQsOkMSYztT4WIMg",
+      "type": "行业动态"
+    },
+    {
+      "id": 253,
+      "date": "2026-04-26",
+      "company": "小马智行",
+      "title": "小马智行北京车展大秀L4自动驾驶，商业化运营加速落地",
+      "summary": "在2024年北京车展上，小马智行（Pony.ai）成为焦点，展示了搭载第六代L4级自动驾驶系统的车型。该公司宣布其robotaxi已在北京、广州等城市开展商业化运营，自动驾驶测试里程突破3000万公里，进一步巩固了行业领先地位。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/gHtJe3w7kvrf-396pU8_bg",
+      "type": "行业动态"
+    },
+    {
+      "id": 421,
+      "date": "2026-04-25",
+      "company": "Tesla",
+      "title": "Tesla金色Cybercab屏幕微笑挥手，成奥斯汀街头焦点",
+      "summary": "特斯拉在奥斯汀市中心展示的金色Cybercab原型车引发关注，其车载屏幕始终面带微笑并向路人挥手致意。这款robotaxi被粉丝称为“视觉糖果”，在街头随处可见，成为当地一道亮丽风景线。特斯拉AI团队与粉丝互动频繁，Cybercab的互动式设计进一步提升了公众对特斯拉自动驾驶出租车服务的期待。",
+      "source": "Twitter",
+      "url": "https://x.com/RimaSukhadia/status/2047938426435989820",
+      "type": "技术进展"
+    },
+    {
+      "id": 420,
+      "date": "2026-04-25",
+      "company": "Tesla",
+      "title": "特斯拉Robotaxi在休斯顿连续三次为校车停车让行，表现惊艳",
+      "summary": "用户JC Christopher在社交媒体上发文称，今天下午在休斯顿，一辆特斯拉无人监督Robotaxi连续三次为正在接送孩子的校车停车让行。他对此表示“绝对惊艳”，并称赞了特斯拉AI的表现。",
+      "source": "Twitter",
+      "url": "https://x.com/tesla_robotaxi/status/2048121024688820648",
+      "type": "技术进展"
+    },
+    {
+      "id": 254,
+      "date": "2026-04-25",
+      "company": "小马智行",
+      "title": "小马智行发布新一代L4级自动驾驶域控制器，基于集成NVLink的NVIDIA DRIVE Hyperion平台",
+      "summary": "小马智行推出新一代自动驾驶域控制器，基于NVIDIA DRIVE Hyperion平台，由集成NVLink的DRIVE AGX Thor芯片驱动。该系统AI算力与能效大幅提升，综合最高性能达4000 FP4 TFLOPS，旨在加速全无人驾驶运营规模化及Robotaxi商业化落地。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/kN87NTSe-v37KY48ZaRXrA",
+      "type": "行业动态"
+    },
+    {
+      "id": 425,
+      "date": "2026-04-24",
+      "company": "Tesla",
+      "title": "特斯拉Robotaxi（自动驾驶出租车）布局成形",
+      "summary": "特斯拉正在加速推进其Robotaxi（自动驾驶出租车）项目的落地。该公司已获得多个州的测试许可，并计划在2025年推出商业化服务。特斯拉的FSD（全自动驾驶）系统将作为核心技术支撑，目标是在2026年实现大规模运营。这一布局标志着特斯拉在自动驾驶出行服务领域迈出关键一步，与Waymo、Zoox等竞争对手展开直接竞争。",
+      "source": "Twitter",
+      "url": "https://x.com/tesla_robotaxi/status/2047733383136977249",
+      "type": "商业拓展"
+    },
+    {
+      "id": 424,
+      "date": "2026-04-24",
+      "company": "Tesla",
+      "title": "特斯拉FSD：首个大规模拯救生命的AI，现实道路每日运行",
+      "summary": "特斯拉FSD（全自动驾驶）被宣称是首个在现实道路上每日大规模拯救生命的AI系统。全球每年道路事故导致119万人死亡，是5-29岁人群的头号死因，其中94%以上的事故由人为失误造成。特斯拉FSD（监督版）已积累超过97亿英里的真实道路数据，其安全性比人类驾驶员高出约9倍。若仅在美国推广，这种安全水平每年可挽救超过3.2万人的生命，并防止数百万起受伤事故。这并非基准测试或演示，而是正在发生的现实。",
+      "source": "Twitter",
+      "url": "https://x.com/tesla_robotaxi/status/2047734026396446745",
+      "type": "运营拓展"
+    },
+    {
+      "id": 423,
+      "date": "2026-04-24",
+      "company": "Tesla",
+      "title": "Sawyer Merritt 发布特斯拉Cybercab光滑外观视频",
+      "summary": "Sawyer Merritt在社交媒体上分享了一段特斯拉Cybercab的视频，展示了其光滑的外观设计。",
+      "source": "Twitter",
+      "url": "https://x.com/tesla_robotaxi/status/2047749202285883393",
+      "type": "行业动态"
+    },
+    {
+      "id": 422,
+      "date": "2026-04-24",
+      "company": "Tesla",
+      "title": "特斯拉Cybercab夜间量产版谍照曝光",
+      "summary": "特斯拉Cybercab量产版在夜间被拍到，展示了其独特的无方向盘、无踏板设计，以及为全自动驾驶优化的外观。该车型预计将作为robotaxi投入运营，但具体量产时间表尚未公布。",
+      "source": "Twitter",
+      "url": "https://x.com/AdanGuajardo/status/2047534878900580533",
+      "type": "行业动态"
+    },
+    {
+      "id": 403,
+      "date": "2026-04-24",
+      "company": "WeRide",
+      "title": "文远知行WRD 3.0支持多芯片部署，与芯擎科技达成战略合作",
+      "summary": "文远知行宣布其自动驾驶平台WRD 3.0现已支持跨NVIDIA DRIVE、高通Snapdragon及芯擎科技StarLight AD1000的多芯片部署。在2026年北京车展上，文远知行与芯片制造商芯擎科技签署战略合作协议，旨在加速高性能ADAS的规模化应用。",
+      "source": "Twitter",
+      "url": "https://x.com/WeRide_ai/status/2047618540958896203",
+      "type": "技术进展"
+    },
+    {
+      "id": 402,
+      "date": "2026-04-24",
+      "company": "WeRide",
+      "title": "🤝 我们在2026年北京车展宣布与联想合作，承诺从2026年起5年内全球部署多达20万辆自动驾驶汽车，包括Robotaxi——这是迄今为止规模化自动驾驶出行最激进的举措之一",
+      "summary": "在2026年北京车展上，我们宣布与联想达成合作，承诺从2026年起5年内全球部署多达20万辆自动驾驶汽车（AV），其中包括Robotaxi。这是迄今为止规模化自动驾驶出行最激进的举措之一。$WRD",
+      "source": "Twitter",
+      "url": "https://x.com/WeRide_ai/status/2047654287535440103",
+      "type": "运营拓展"
+    },
+    {
+      "id": 361,
+      "date": "2026-04-24",
+      "company": "Zoox",
+      "title": "Zoox在拉斯维加斯机场启动自动驾驶测试",
+      "summary": "Zoox今日宣布在拉斯维加斯哈里·里德国际机场（LAS）启动自动驾驶测试。初期阶段，往返机场的行程仅限Zoox员工参与，但公司表示将在不久的将来向公众开放服务。",
+      "source": "Twitter",
+      "url": "https://x.com/zoox/status/2047692058450882574",
+      "type": "技术进展"
+    },
+    {
+      "id": 285,
+      "date": "2026-04-24",
+      "company": "小马智行",
+      "title": "文远知行与联想深化合作，五年内计划全球部署20万辆自动驾驶车",
+      "summary": "文远知行与联想集团宣布升级全球战略合作，计划未来五年在全球部署20万辆自动驾驶车辆，加速L4级自动驾驶商业化落地。双方将融合文远知行的自动驾驶技术与联想的算力及供应链能力，打通云端到车端的关键链路。此前，双方已于2025年7月推出HPC 3.0高性能计算平台，并率先应用于文远知行新一代量产Robotaxi GXR。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/Ycw6QneVNDyP6D4YgCJqVw",
+      "type": "行业动态"
+    },
+    {
+      "id": 284,
+      "date": "2026-04-24",
+      "company": "小马智行",
+      "title": "文远知行WRD 3.0打通多芯片平台，推动L2++级高阶辅助驾驶普惠化",
+      "summary": "文远知行（NASDAQ: WRD，HKEX: 0800）宣布其WRD 3.0端到端辅助驾驶方案已适配NVIDIA DRIVE®、高通骁龙®及芯擎科技“星辰一号”等多芯片平台，覆盖不同算力与成本区间。在2026北京车展上，文远知行与芯擎科技达成战略合作，通过“芯片+算法”协同优化成本，推动L2++级高阶辅助驾驶方案在更广泛价格区间规模化落地。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/L4kLuX-DNjxkTaRu_feUmQ",
+      "type": "行业动态"
+    },
+    {
+      "id": 255,
+      "date": "2026-04-24",
+      "company": "小马智行",
+      "title": "小马智行北京车展发布：Robotaxi成本将降至23万元内，首发L4级无人轻卡",
+      "summary": "小马智行在2026北京车展上宣布，2027版Robotaxi整车总成本将降至23万元以内，低于部分L2级畅销车型。同时，公司发布了业内首款全车规全冗余L4级无人轻卡，旨在打通城市出行、配送与干线物流的全场景链条。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/AiMDxOrlQ_glXyzjGuOtSA",
+      "type": "行业动态"
+    },
+    {
+      "id": 160,
+      "date": "2026-04-24",
+      "company": "Waymo",
+      "title": "特斯拉在达拉斯和休斯顿推出Robotaxi服务",
+      "summary": "特斯拉本周在达拉斯和休斯顿正式推出Robotaxi服务，但初期可用车辆极少，截至周一上午服务基本瘫痪，仅周日出现短暂可用高峰。相比之下，特斯拉在奥斯汀的服务已有46辆可用车辆（据Robotaxi Tracker网站数据），这符合Robotaxi运营商在新城市通常从小规模起步的惯例。",
+      "source": "The Driverless Digest",
+      "url": "https://www.thedriverlessdigest.com/p/tesla-launches-robotaxi-service-in",
+      "type": "运营拓展"
+    },
+    {
+      "id": 30,
+      "date": "2026-04-24",
+      "company": "Uber",
+      "title": "Uber CTO Praveen Neppalli Naga加入4月30日StrictlyVC旧金山活动阵容，群星云集",
+      "summary": "Uber首席技术官Praveen Neppalli Naga将出席4月30日在旧金山Sentro Filipino文化中心举办的StrictlyVC活动，与参会者探讨AI时代的大规模运营。该活动作为TechCrunch今年系列活动的首站，已成为旧金山初创圈的热门盛会，门票需迅速抢购。活动旨在为创始人和投资者提供拓展人脉、深化社区联系及向行业领袖学习的理想平台。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/24/uber-cto-praveen-neppalli-naga-joins-stacked-strictlyvc-sf-lineup-for-april-30-event/",
+      "type": "运营拓展"
+    },
+    {
+      "id": 427,
+      "date": "2026-04-23",
+      "company": "Tesla",
+      "title": "金条新铸，令人惊叹",
+      "summary": "新铸造的金条闪闪发光，令人赞叹不已。",
+      "source": "Twitter",
+      "url": "https://x.com/tesla_robotaxi/status/2047410140551246280",
+      "type": "行业动态"
+    },
+    {
+      "id": 426,
+      "date": "2026-04-23",
+      "company": "Tesla",
+      "title": "Viv离开巢穴",
+      "summary": "一位名为Viv的用户（账号battleangelviv）发布了关于离开巢穴的动态。",
+      "source": "Twitter",
+      "url": "https://x.com/tesla_robotaxi/status/2047410290019491953",
+      "type": "行业动态"
+    },
+    {
+      "id": 256,
+      "date": "2026-04-23",
+      "company": "小马智行",
+      "title": "小马智行2026北京车展定调“新十年”：从技术验证转向行业变革",
+      "summary": "小马智行宣布将在2026北京车展（4月23日开幕）上，以“新十年，回答‘怎么变’”为主题，展示其技术进化新阶段。该公司位于首都国际会展中心A3馆-A311展位，标志着从过去十年验证技术可行性，转向未来十年探索行业变革方向。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/uulZNKQjV574uRX8tvrFCQ",
+      "type": "行业动态"
+    },
+    {
+      "id": 404,
+      "date": "2026-04-22",
+      "company": "WeRide",
+      "title": "文远知行接待瑞中友好协会代表团，展示Robotaxi与Robobus并探讨全球部署",
+      "summary": "文远知行（WeRide）近日接待了来自瑞士瑞中友好协会（GSCV）的代表团，邀请其体验公司的Robotaxi和Robobus，并就文远知行的全球部署计划进行交流。文远知行表示，在推进苏黎世Furttal地区的Robotaxi运营过程中，瑞士对自动驾驶汽车（AV）的强力支持令人鼓舞。",
+      "source": "Twitter",
+      "url": "https://x.com/WeRide_ai/status/2046877282162422265",
+      "type": "商业拓展"
+    },
+    {
+      "id": 391,
+      "date": "2026-04-22",
+      "company": "Aurora",
+      "title": "Phoenix扩张持续验证自动驾驶潜力：更安全运营、更高货运效率、更快长途干线物流",
+      "summary": "我们在Phoenix的扩张持续展示自动驾驶技术所能释放的价值：更安全的运营、更强的货运效率，以及更快的长途干线物流路径。",
+      "source": "Twitter",
+      "url": "https://x.com/aurora_inno/status/2047046800247304461",
+      "type": "运营拓展"
+    },
+    {
+      "id": 380,
+      "date": "2026-04-22",
+      "company": "Nuro",
+      "title": "Nuro自动驾驶车队在行动：今年晚些时候将在旧金山湾区推出无人驾驶出行服务",
+      "summary": "Nuro的Robotaxi工程车队正在全天候进行训练、测试和验证，目标是在今年晚些时候为旧金山湾区带来安全可靠的无人驾驶出行服务。该车队由Nuro驱动，Lucid Motors制造，并独家在Uber平台上运营。#自动驾驶汽车 #无人驾驶 #Nuro驱动",
+      "source": "Twitter",
+      "url": "https://x.com/nuro/status/2046967260854751350",
+      "type": "技术进展"
+    },
+    {
+      "id": 369,
+      "date": "2026-04-22",
+      "company": "Wayve",
+      "title": "与Tweetermeyer在RIDE_AI的深度对话：反传统技术与商业模式，为车队和车企提供全级别自动驾驶方案",
+      "summary": "我与Tweetermeyer在RIDE_AI进行了完整对话，深入探讨了我们的反传统技术策略和反传统商业模式，旨在为车队和汽车制造商的所有车辆提供全级别自动驾驶能力。",
+      "source": "Twitter",
+      "url": "https://x.com/alexgkendall/status/2047007339685851640",
+      "type": "技术进展"
+    },
+    {
+      "id": 286,
+      "date": "2026-04-22",
+      "company": "小马智行",
+      "title": "文远知行全明星阵容亮相2026北京车展，自动驾驶新成果引关注",
+      "summary": "文远知行宣布将携全明星产品阵容亮相2026北京车展，展示其在自动驾驶领域的最新成果。此次参展阵容涵盖多款自动驾驶车型，进一步巩固其在行业中的领先地位。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/2lAbkZ0Kw_IkF_E7nLwilA",
+      "type": "行业动态"
+    },
+    {
+      "id": 257,
+      "date": "2026-04-22",
+      "company": "小马智行",
+      "title": "小马智行Robotruck亮相北京车展，无人卡车重塑物流效率",
+      "summary": "小马智行将在北京车展展示其Robotruck无人卡车技术，旨在通过无人驾驶提升深夜货运和工厂到港口的物流效率。展会将于两天后在首都国际会展中心A3馆A311展位举行，主题为“新十年，再启程”，强调重卡轻装上阵以重塑供应链节奏。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/wamIuCQZzhsYB0o_JtqapA",
+      "type": "行业动态"
+    },
+    {
+      "id": 42,
+      "date": "2026-04-22",
+      "company": "Tesla",
+      "title": "特斯拉第一季度营收增长，受电动车销售及FSD订阅推动",
+      "summary": "特斯拉第一季度营收和利润同比上升，汽车业务收入及其他服务（包括全自动驾驶（监督版）高级驾驶辅助系统）增长显著，FSD活跃订阅量达128万。财报发布后，特斯拉盘后股价一度上涨4%，但随后在财报电话会议期间转跌。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/22/tesla-q1-revenue-rises-driven-by-ev-sales-and-fsd-subscriptions/",
+      "type": "技术进展"
+    },
+    {
+      "id": 41,
+      "date": "2026-04-22",
+      "company": "Tesla",
+      "title": "埃隆·马斯克承认数百万特斯拉车主需硬件升级才能实现真正的“全自动驾驶”",
+      "summary": "埃隆·马斯克周三表示，数百万特斯拉车主将需要硬件升级才能运行未来无需人类监督的“全自动驾驶”（FSD）软件版本——这与他和特斯拉多年来承诺的情况相悖。这一承认可能使公司面临来自客户的诉讼风险，这些客户购买特斯拉时相信车辆只需一次软件更新即可实现自动驾驶。马斯克在特斯拉季度财报电话会议上指出，搭载第三代驾驶辅助技术（即“硬件3”）的车辆将需要升级。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/22/elon-musk-admits-millions-of-tesla-owners-need-upgrades-for-true-full-self-driving/",
+      "type": "技术进展"
+    },
+    {
+      "id": 40,
+      "date": "2026-04-22",
+      "company": "Tesla",
+      "title": "特斯拉将支出计划提高至250亿美元——资金流向何处",
+      "summary": "特斯拉在2026年的资本支出将飙升至250亿美元，是此前年度预算的三倍，主要用于加速AI和机器人转型以应对竞争。这笔资金将投入物理资产，远超日常运营开支，凸显公司战略重心转移。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/22/tesla-just-increased-its-capex-to-25b-heres-where-the-money-is-going/",
+      "type": "技术进展"
+    },
+    {
+      "id": 405,
+      "date": "2026-04-21",
+      "company": "WeRide",
+      "title": "新加坡网红Xavier体验文远知行GXR Robotaxi首秀：三点掉头丝滑，全程平稳可控 $WRD",
+      "summary": "新加坡网红Xavier在榜鹅（Punggol）首次乘坐文远知行（WeRide）GXR Robotaxi。从流畅的三点掉头到平稳可控的全程行驶，展示了该自动驾驶车辆的实际表现。",
+      "source": "Twitter",
+      "url": "https://x.com/WeRide_ai/status/2046469456080306186",
+      "type": "商业拓展"
+    },
+    {
+      "id": 381,
+      "date": "2026-04-21",
+      "company": "Nuro",
+      "title": "Nuro推出混合端到端AI基础模型，兼顾自动驾驶安全与效率",
+      "summary": "Nuro发布其通用自动驾驶模型，这是一种混合端到端AI基础模型，专为驾驶场景设计。该模型在充分利用端到端学习优势的同时，不牺牲生产级自动驾驶所需的安全严谨性和工程纪律。Nuro通过这一创新，旨在平衡自动驾驶技术的性能提升与安全可靠性。更多技术细节可访问其官方博客。",
+      "source": "Twitter",
+      "url": "https://x.com/nuro/status/2046605399764369698",
+      "type": "技术进展"
+    },
+    {
+      "id": 258,
+      "date": "2026-04-21",
+      "company": "小马智行",
+      "title": "小马智行Robotaxi亮相2026北京车展，无人驾驶重塑出行体验",
+      "summary": "小马智行宣布将在2026北京车展上展示其Robotaxi服务，重点突出无人驾驶车辆在安全、隐私和效率方面的核心优势。该活动将于3天后在首都国际会展中心A3馆-A311展位举行，以“新十年，再启程”为主题，展现Robotaxi如何连接人与人的生活。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/gz33zsdSqSfzEHRdxwoLhg",
+      "type": "行业动态"
+    },
+    {
+      "id": 287,
+      "date": "2026-04-20",
+      "company": "小马智行",
+      "title": "文远知行创纪录四连冠，中国智驾大赛再添辉煌",
+      "summary": "文远知行在第二届中国智驾大赛芜湖站中，凭借与博世联合开发的一段式端到端辅助驾驶方案，搭载于奇瑞星途星纪元ET，以领先第二名超10分的优势夺冠，成为中国智驾大赛历史上首个“四连冠”得主。该技术基于L4级无人驾驶真实路况数据和自研的WeRide GENESIS仿真模型，通过系统化复现长尾场景持续优化算法，展现了在复杂城市场景下的技术领先性。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/J6CvaUZ4Sv-4V0900DahOg",
+      "type": "行业动态"
+    },
+    {
+      "id": 259,
+      "date": "2026-04-20",
+      "company": "小马智行",
+      "title": "小马智行双引擎战略加速：无人化Robotaxi落地迪拜，2026年迈向商业化运营",
+      "summary": "小马智行宣布在迪拜启动无人化Robotaxi测试，计划于2026年下半年推出面向公众的商业化服务，车队规模达数百辆。此举深化了与迪拜道路交通管理局（RTA）的合作，助力迪拜“2030智慧城市愿景”实现25%出行由自动驾驶完成的目标。小马智行通过“双引擎”战略，将国内验证的Robotaxi商业模式复制至海外，加速全球化布局。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/EbfuVxh4AQUvwNGsmGsDRg",
+      "type": "行业动态"
+    },
+    {
+      "id": 260,
+      "date": "2026-04-19",
+      "company": "小马智行",
+      "title": "小马智行加速出海，2026北京车展展示无人驾驶技术",
+      "summary": "小马智行宣布将亮相2026北京车展，展示其在中国多城市积累的无人驾驶技术。该公司正加速全球化布局，试图将在中国练就的自动驾驶能力推向世界市场。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/NX5se6TUgqVZlMp3qfMSkw",
+      "type": "行业动态"
+    },
+    {
+      "id": 261,
+      "date": "2026-04-18",
+      "company": "小马智行",
+      "title": "小马智行加速无人驾驶规模化，从“能跑”迈向“跑得好”",
+      "summary": "小马智行宣布其无人驾驶技术已进入“跑得好”阶段，正从极少数场景走向日常应用。该公司将在4月18日北京车展上展示最新成果，并推出“打一辆无人驾驶汽车”小程序服务，标志着robotaxi出行加速进入普通人生活。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/lzqyQnYn51OVNxtzqmu1_g",
+      "type": "行业动态"
+    },
+    {
+      "id": 43,
+      "date": "2026-04-18",
+      "company": "Tesla",
+      "title": "特斯拉将robotaxi服务扩展至达拉斯和休斯顿",
+      "summary": "特斯拉继去年在奥斯汀推出robotaxi服务，并于2026年1月开始提供无安全驾驶员乘车服务后，现已将业务拓展至达拉斯和休斯顿。目前该公司在德克萨斯州三个城市运营robotaxi服务。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/18/tesla-brings-its-robotaxi-service-to-dallas-and-houston/",
+      "type": "运营拓展"
+    },
+    {
+      "id": 406,
+      "date": "2026-04-17",
+      "company": "WeRide",
+      "title": "WeRide迎来第十年：从2017年起步到成为首家在美港上市的Robotaxi公司",
+      "summary": "自2017年成立以来，WeRide（文远知行）已成长为全球首家在美国和香港两地上市的Robotaxi公司，业务覆盖12个国家40多个城市。公司回顾十年发展历程，并展示关键成就。股票代码：$WRD。",
+      "source": "Twitter",
+      "url": "https://x.com/WeRide_ai/status/2044995042771906899",
+      "type": "技术进展"
+    },
+    {
+      "id": 397,
+      "date": "2026-04-17",
+      "company": "Motional",
+      "title": "下周参加Adobe峰会？入住拉斯维加斯Resorts World或Wynn Encore酒店，可通过Uber叫车，有机会匹配到Motional robotaxi",
+      "summary": "下周前往Adobe峰会的参会者注意：如果你入住拉斯维加斯的Resorts World或Wynn Encore酒店，可以通过Uber应用叫车，有机会被匹配到Motional的robotaxi。🎰 ✨",
+      "source": "Twitter",
+      "url": "https://x.com/motionaldrive/status/2045203078186463551",
+      "type": "商业拓展"
+    },
+    {
+      "id": 392,
+      "date": "2026-04-17",
+      "company": "Aurora",
+      "title": "Aurora总裁详解自动驾驶卡车规模化：从日间运营到全天候，安全优先的渐进之路",
+      "summary": "在#HumanX大会上，Aurora总裁ossaf分享了公司自2025年启动运营以来的快速扩张历程。从最初的日间运营，逐步扩展到全天候驾驶、突破服务时长限制的长途路线，以及应对复杂天气条件。她强调，自动驾驶卡车规模化需要采取审慎、安全优先的方法。完整演讲视频可点击链接观看。",
+      "source": "Twitter",
+      "url": "https://x.com/aurora_inno/status/2045194186903703896",
+      "type": "运营拓展"
+    },
+    {
+      "id": 370,
+      "date": "2026-04-17",
+      "company": "Wayve",
+      "title": "英国主权AI计划启动，Wayve成首批受益者",
+      "summary": "英国主权AI（UKSovereignAI）启动活动成功举办。该计划旨在支持下一代英国AI公司，帮助其在全球舞台上建设、扩展和竞争。活动由leicesterliz、KanishkaNarayan和Jameswise共同组织，在Wayve公司举行，Wayve创始人Alex Kendall出席。这一举措标志着英国在AI领域的主权战略布局。",
+      "source": "Twitter",
+      "url": "https://x.com/wayve_ai/status/2045097672579690975",
+      "type": "运营拓展"
+    },
+    {
+      "id": 288,
+      "date": "2026-04-17",
+      "company": "小马智行",
+      "title": "文远知行迈入第十年：累计投放1125辆Robotaxi，覆盖全球10余城",
+      "summary": "文远知行迎来成立九周年，公司已累计投放1125辆Robotaxi，服务覆盖全球10多座核心城市。公司强调“长期主义”理念，致力于在不同地区和场景下推动自动驾驶技术落地，以无人驾驶改变人类出行方式。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/6-mZHFvOwK1_HuNWfpDN9Q",
+      "type": "行业动态"
+    },
+    {
+      "id": 262,
+      "date": "2026-04-17",
+      "company": "小马智行",
+      "title": "小马智行与广汽领程达成战略合作，依托大湾区生态加速L4自动驾驶卡车规模化落地",
+      "summary": "小马智行与广汽领程在广州签署战略合作协议，双方将利用大湾区产业生态优势，通过“整车平台+自动驾驶系统集成+运营场景”协同模式，推动L4级自动驾驶卡车规模化落地。小马智行自动驾驶卡车累计运输量已超11.5亿吨公里，并在广东江门高新港实现纯电动自动驾驶集卡全无人运营。此次合作将深化双方在Robotruck领域的布局，并拓展至更多物流场景。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/TiknZhF6ZVWbsFIAmMHmrQ",
+      "type": "行业动态"
+    },
+    {
+      "id": 161,
+      "date": "2026-04-17",
+      "company": "Waymo",
+      "title": "Lucid获7.5亿美元融资，Uber追加2亿美元投资",
+      "summary": "Lucid宣布获得7.5亿美元新融资，其中Uber追加2亿美元投资，使其对Lucid的总投资额达到5亿美元。Uber还承诺额外购买至少3.5万辆Lucid车辆，专门用于其未来全球robotaxi服务。此举标志着Uber在自动驾驶领域的投资持续加码。",
+      "source": "The Driverless Digest",
+      "url": "https://www.thedriverlessdigest.com/p/lucid-lands-750-million-in-funding",
+      "type": "技术进展"
+    },
+    {
+      "id": 382,
+      "date": "2026-04-16",
+      "company": "Nuro",
+      "title": "Nuro携Uber与Lucid亮相Ride AI 2026，生产级robotaxi首秀",
+      "summary": "Nuro昨日与合作伙伴Uber和LucidMotors共同出席Ride AI 2026大会，与众多行业领袖、创新者及决策者共话自动驾驶出行未来。Nuro的生产级robotaxi也在现场首次公开亮相，展示了其在L4级自动驾驶领域的最新进展。",
+      "source": "Twitter",
+      "url": "https://x.com/nuro/status/2044792946063712534",
+      "type": "技术进展"
+    },
+    {
+      "id": 371,
+      "date": "2026-04-16",
+      "company": "Wayve",
+      "title": "AMD、Arm和高通风投投资Wayve，其“端到端”AI技术助力ADAS与robotaxi走向大众市场",
+      "summary": "AMD、Arm和高通风投成为最新投资Wayve的芯片制造商。Wayve声称其“端到端”AI技术能够帮助高级驾驶辅助系统（ADAS）和robotaxi实现大规模市场普及。",
+      "source": "Twitter",
+      "url": "https://x.com/AutoNewsEurope/status/2044825426309136880",
+      "type": "技术进展"
+    },
+    {
+      "id": 347,
+      "date": "2026-04-16",
+      "company": "Waymo",
+      "title": "Waymo在迈阿密高速公路开放首批公共乘客体验",
+      "summary": "Waymo宣布在迈阿密高速公路启动首批公共乘客服务，用户可通过Waymo应用表达兴趣。此举标志着Waymo在robotaxi服务领域的又一重要进展，将自动驾驶技术拓展至高速公路场景。",
+      "source": "Twitter",
+      "url": "https://x.com/Waymo/status/2044808077912781050",
+      "type": "行业动态"
+    },
+    {
+      "id": 289,
+      "date": "2026-04-16",
+      "company": "小马智行",
+      "title": "文远知行与广汽合作首车亮相，WRD 3.0赋能埃安N60",
+      "summary": "文远知行与广汽埃安合作的首款量产乘用车埃安N60开启预售，起售价11.58万元，全系标配智驾功能。该车搭载文远知行WRD 3.0一段式端到端辅助驾驶方案，支持城市、高速、泊车等全场景高阶辅助驾驶。文远知行成为业界首个在Nvidia Drive与高通骁龙两大主流车载算力平台上实现一段式端到端方案量产的智驾方案商。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/sE-sYVqwlD5nCf-XViYZKg",
+      "type": "行业动态"
+    },
+    {
+      "id": 263,
+      "date": "2026-04-16",
+      "company": "小马智行",
+      "title": "L2与L4，殊途同归？小马智行将在2026北京车展揭晓答案",
+      "summary": "小马智行指出，L2级辅助驾驶与L4级全无人驾驶的核心差异不仅在于“解放双手”，更在于对安全、成本和场景的重新定义。距离2026北京车展开幕还有8天，该公司将在首都国际会展中心A3馆-A311展位展示最新成果，并现场揭晓两者终点的最终答案。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/fdsjsFsFOY8Ebl-X9CgMkA",
+      "type": "行业动态"
+    },
+    {
+      "id": 407,
+      "date": "2026-04-15",
+      "company": "WeRide",
+      "title": "文远知行确认参展2026北京车展：现场演示L4 Robotaxi GXR与L2++广汽埃安N60",
+      "summary": "文远知行（WeRide）宣布将参加2026年北京国际汽车展览会（Auto China 2026）。届时，公司将在展台现场展示其L4级Robotaxi GXR，以及搭载WRD 3.0系统的L2++级广汽埃安N60车型。参观者可以体验实时演示、互动环节，并见证合作伙伴签约仪式。更多详情请见下方👇 $WRD",
+      "source": "Twitter",
+      "url": "https://x.com/WeRide_ai/status/2044225055304101968",
+      "type": "技术进展"
+    },
+    {
+      "id": 348,
+      "date": "2026-04-15",
+      "company": "Waymo",
+      "title": "Waymo在迈阿密和奥兰多全面开放robotaxi服务，无需代码无需等待",
+      "summary": "Waymo宣布即日起在迈阿密和奥兰多向所有用户开放完全无人驾驶打车服务。用户无需邀请码，无需排队等待，即可直接通过App叫到全无人驾驶的robotaxi。这标志着Waymo在佛罗里达州的商业化运营进入新阶段，也是其在美国扩张的重要一步。",
+      "source": "Twitter",
+      "url": "https://x.com/Waymo/status/2044454320414863840",
+      "type": "技术进展"
+    },
+    {
+      "id": 290,
+      "date": "2026-04-15",
+      "company": "小马智行",
+      "title": "文远知行携L2++与L4级自动驾驶阵容亮相2026北京车展",
+      "summary": "文远知行将在2026北京车展（4月24日-5月3日）B3馆B309展位展示其L2++与L4级自动驾驶技术，核心看点包括全新量产乘用车广汽埃安N60的首次亮相，以及Robotaxi GXR等旗舰车型的集结。展会期间，公司还将揭晓自动驾驶生态战略合作，并设置趣味互动环节，吸引观众体验。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/Uh0Kt1TGyHCFT9r4iz2MoQ",
+      "type": "行业动态"
+    },
+    {
+      "id": 264,
+      "date": "2026-04-15",
+      "company": "小马智行",
+      "title": "小马智行十年磨一剑，L4自动驾驶商业化突破",
+      "summary": "小马智行历经十年研发，其L4级自动驾驶技术已从道路测试迈向商业化运营，成功突破技术瓶颈并融入日常生活。该公司将于4月15日在北京车展上展示十年成果，用户可通过小程序体验无人驾驶服务。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/AEY0vGkrwhEnAiP9MiMFNQ",
+      "type": "行业动态"
+    },
+    {
+      "id": 107,
+      "date": "2026-04-15",
+      "company": "Wayve",
+      "title": "芯片巨头AMD、Arm和高通共同投资这家热门的自动驾驶技术初创公司",
+      "summary": "芯片制造商AMD、Arm和高通已向英国自动驾驶技术初创公司Wayve投资6000万美元，作为其近期12亿美元D轮融资的扩展部分。该轮融资还包括梅赛德斯-奔驰、日产、Stellantis等战略投资者，以及Nvidia、微软和Uber等现有支持者。Uber还承诺根据里程碑达成情况额外投资3亿美元。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/15/chipmakers-amd-arm-and-qualcomm-are-all-investing-in-this-buzzy-self-driving-tech-startup/",
+      "type": "融资"
+    },
+    {
+      "id": 408,
+      "date": "2026-04-14",
+      "company": "WeRide",
+      "title": "文远知行接待德中交流协会代表团，展示Robotaxi与Robobus最新进展",
+      "summary": "文远知行（WeRide_ai）近日接待了德中交流协会代表团，成员包括前德国驻沈阳总领事Dr. Peter Kreutzberger。代表团体验了文远知行的Robotaxi GXR和Robobus，并深入了解其最新自动驾驶技术进展。文远知行表示，期待随着在欧洲业务的扩展，继续推动中德之间的技术交流与合作。",
+      "source": "Twitter",
+      "url": "https://x.com/WeRide_ai/status/2043970559462257066",
+      "type": "运营拓展"
+    },
+    {
+      "id": 393,
+      "date": "2026-04-14",
+      "company": "Aurora",
+      "title": "Aurora Driver：从货运自动驾驶到未来多场景规模化部署",
+      "summary": "Aurora Driver旨在让任何车辆实现自动驾驶。目前，公司专注于自动驾驶货运领域，但未来这项技术有望拓展至更广泛的应用场景。上周在#HumanX大会上，Aurora CEO Chris Urmson与TechCrunch的Rebecca Bellan共同探讨了实现自动驾驶规模化部署所需的条件。完整对话视频可点击链接观看。",
+      "source": "Twitter",
+      "url": "https://x.com/aurora_inno/status/2044111015621865509",
+      "type": "运营拓展"
+    },
+    {
+      "id": 383,
+      "date": "2026-04-14",
+      "company": "Nuro",
+      "title": "Nuro联合创始人：L4自动驾驶不应依赖预建高精地图",
+      "summary": "Nuro联合创始人兼联合CEO朱佳俊发文探讨自动驾驶是否需要高精地图。他认为，拥有高精地图严格优于没有，但真正具备L4能力的车辆不应依赖预建高精地图才能运行。这一观点引发了行业对自动驾驶地图技术路线的讨论。",
+      "source": "Twitter",
+      "url": "https://x.com/nuro/status/2044069959362588934",
+      "type": "技术进展"
+    },
+    {
+      "id": 350,
+      "date": "2026-04-14",
+      "company": "Waymo",
+      "title": "Waymo在伦敦启动自动驾驶测试，配备安全驾驶员",
+      "summary": "Waymo宣布在伦敦正式启动自动驾驶测试，车辆将由经过培训的专业安全驾驶员操控。该公司计划于今年晚些时候为伦敦市民提供一种安静、便捷且神奇的出行方式，连接地铁、公交或最终目的地。",
+      "source": "Twitter",
+      "url": "https://x.com/Waymo/status/2043992660159987809",
+      "type": "技术进展"
+    },
+    {
+      "id": 349,
+      "date": "2026-04-14",
+      "company": "Waymo",
+      "title": "Waymo伦敦扩张计划启动，抢先注册体验",
+      "summary": "Waymo宣布在伦敦启动最新更新注册，邀请用户通过waymo.com/waymo-in-uk/报名，成为首批体验其robotaxi服务的用户。",
+      "source": "Twitter",
+      "url": "https://x.com/Waymo/status/2043992951328481388",
+      "type": "技术进展"
+    },
+    {
+      "id": 265,
+      "date": "2026-04-14",
+      "company": "小马智行",
+      "title": "小马智行十年磨一剑，2026北京车展亮相",
+      "summary": "小马智行宣布将于2026北京车展在首都国际会展中心A3馆A311展位亮相，距4月14日开幕仅剩10天。该公司宣称已坚持L4级自动驾驶研发十年，旨在为全球自动驾驶行业树立新坐标，开启下一个十年的新征程。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/09rbt6WcIQUX0UYDNp9K1w",
+      "type": "行业动态"
+    },
+    {
+      "id": 162,
+      "date": "2026-04-14",
+      "company": "Waymo",
+      "title": "基于“仅乘客”行驶里程分析Waymo的城市布局",
+      "summary": "Waymo每季度更新其安全影响页面，公布在洛杉矶、旧金山、凤凰城和奥斯汀等运营城市的“仅乘客”（Rider-Only）行驶里程数据。截至2026年3月的最新数据显示，与人类驾驶员相比，Waymo在严重伤害或更严重碰撞事故中减少了92%，涉及安全气囊弹出的碰撞事故减少了83%，导致受伤的事故减少了82%。",
+      "source": "The Driverless Digest",
+      "url": "https://www.thedriverlessdigest.com/p/analyzing-waymos-market-share-using",
+      "type": "技术进展"
+    },
+    {
+      "id": 44,
+      "date": "2026-04-14",
+      "company": "Tesla",
+      "title": "特斯拉新增“连续使用天数”等统计功能，追踪车主使用全自动驾驶软件频率",
+      "summary": "特斯拉推出全新自动驾驶应用，让车主更便捷订阅其全自动驾驶（FSD）软件，并查看使用频率与方式等统计数据。该应用将显示FSD使用信息，包括多日连续使用记录，为驾驶辅助软件增添游戏化元素。特斯拉在X平台发帖预告了这款重新设计的自动驾驶应用，以及即将在下一重大软件更新中推出的多项新功能。特斯拉的FSD（受监督版）是一款高级驾驶辅助系统，于2020年底启动公测。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/14/tesla-adds-streaks-and-other-stats-to-track-how-often-drivers-use-full-self-driving-software/",
+      "type": "技术进展"
+    },
+    {
+      "id": 4,
+      "date": "2026-04-14",
+      "company": "Waymo",
+      "title": "伦敦迈向首个robotaxi服务，Waymo启动测试",
+      "summary": "Waymo已开始在伦敦公共道路上测试其自动驾驶车辆，为今年在该市推出商业robotaxi服务做准备。约100辆搭载Waymo自动驾驶系统的全电动捷豹I-Pace目前配备人类安全操作员进行测试。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/14/london-gets-closer-to-its-first-robotaxi-service-as-waymo-begins-testing/",
+      "type": "商业拓展"
+    },
+    {
+      "id": 385,
+      "date": "2026-04-13",
+      "company": "Nuro",
+      "title": "Robotaxi里程碑达成：Uber员工现可通过Uber应用预约Robotaxi试乘！",
+      "summary": "Uber宣布达成Robotaxi里程碑，员工现可通过Uber应用预约Robotaxi试乘服务。Uber正与合作伙伴紧密协作，为今年晚些时候在旧金山湾区进行商业运营做准备。了解更多详情请访问nuro.ai/blog/robotaxi-employ… #自动驾驶 #无人驾驶 #Nuro驱动",
+      "source": "Twitter",
+      "url": "https://x.com/nuro/status/2043705623746064802",
+      "type": "运营拓展"
+    },
+    {
+      "id": 384,
+      "date": "2026-04-13",
+      "company": "Nuro",
+      "title": "Nuro与Lucid Motors达成里程碑：Uber员工可通过Uber应用在湾区体验robotaxi测试行程",
+      "summary": "Nuro与Lucid Motors宣布重要进展：Uber员工现可通过Uber应用在旧金山湾区预约robotaxi测试行程。这是Nuro与Uber合作推进商业化部署的关键一步，双方计划于今年晚些时候在湾区正式推出商业服务。Nuro在官方博客中表示，团队正与合作伙伴紧密协作，为后续的全面上线做准备。",
+      "source": "Twitter",
+      "url": "https://x.com/dkhos/status/2043713583100416306",
+      "type": "运营拓展"
+    },
+    {
+      "id": 33,
+      "date": "2026-04-13",
+      "company": "Uber",
+      "title": "Uber与Nuro在旧金山启动高端robotaxi服务测试",
+      "summary": "Uber员工现可通过Uber应用预约搭载Nuro自动驾驶系统的Lucid Gravity SUV robotaxi，车辆以自动驾驶模式运行但配备安全操作员。此次测试为今年晚些时候的公开上线铺路，标志着两家公司合作进入新阶段。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/13/uber-nuro-san-francisco-testing-premium-robotaxi-service/",
+      "type": "技术进展"
+    },
+    {
+      "id": 5,
+      "date": "2026-04-12",
+      "company": "Waymo",
+      "title": "TechCrunch Mobility：谁在挖走所有自动驾驶汽车人才？",
+      "summary": "自动驾驶领域正爆发新一轮人才争夺战，Waymo、Uber、Tesla等公司激烈竞争。七年前，一家自动驾驶公司创始人曾形容与Waymo抢人才“如同持刀搏斗”，如今这一局面再度升级。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/12/techcrunch-mobility-who-is-poaching-all-the-self-driving-vehicle-talent/",
+      "type": "技术进展"
+    },
+    {
+      "id": 267,
+      "date": "2026-04-10",
+      "company": "小马智行",
+      "title": "小马智行世界模型进化史：从虚拟驾校到物理AI引擎",
+      "summary": "小马智行回顾自动驾驶技术发展历程，指出其比围棋AI AlphaGo更具挑战性。2016年AlphaGo击败李世石后，业界曾乐观认为通过数据标注可快速实现L4级自动驾驶，但实际面临感知错误不可接受和驾驶交互复杂两大难题。直到2019年，行业仍未实现规模化无安全员城市道路自动驾驶，技术路线由此分化为模仿学习与强化学习两种方向。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/2kcfo_SZTOdQDWZKuoc_ng",
+      "type": "行业动态"
+    },
+    {
+      "id": 266,
+      "date": "2026-04-10",
+      "company": "小马智行",
+      "title": "小马智行发布PonyWorld世界模型2.0：可自主进化的物理AI引擎",
+      "summary": "小马智行推出PonyWorld世界模型2.0，具备自我诊断与定向进化能力，能自主识别短板并指导研发与数据采集。该技术已应用于L4级无人驾驶车队，旨在提升安全性、舒适性和通行效率，支持车队从百辆向千辆、万辆规模扩张。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/66YELo1ghyeoBb5hHKg1BA",
+      "type": "行业动态"
+    },
+    {
+      "id": 268,
+      "date": "2026-04-09",
+      "company": "小马智行",
+      "title": "小马智行联手Verne、Uber登陆克罗地亚，欧洲首个商业化Robotaxi服务上线",
+      "summary": "小马智行与Verne及Uber合作，在克罗地亚首都萨格勒布推出欧洲首个商业化Robotaxi服务，覆盖约90平方公里区域，包括中心城区和机场，运营时间为每日7:00至21:00。从宣布合作到上线仅两周，展现了小马智行的技术泛化与高效落地能力。此前，小马智行已在广州和深圳实现第七代Robotaxi单车经济模型盈亏平衡，此次欧洲拓展进一步验证了其技术与商业模式的全球可复制性。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/jhevXb4EoHRZygsM79RAJg",
+      "type": "行业动态"
+    },
+    {
+      "id": 6,
+      "date": "2026-04-09",
+      "company": "Waymo",
+      "title": "Waymo robotaxis追踪路面坑洼，数据将共享给Waze用户",
+      "summary": "Waymo与Waze宣布启动一项数据共享试点项目，将robotaxis收集的坑洼数据整合至Waze的城市服务平台。该试点初期覆盖奥斯汀、亚特兰大、洛杉矶、凤凰城和旧金山湾区五个市场，Waymo已在其中11个城市开展商业运营。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/09/waymo-robotaxis-are-tracking-potholes-and-sharing-that-data-with-waze-users/",
+      "type": "商业拓展"
+    },
+    {
+      "id": 269,
+      "date": "2026-04-08",
+      "company": "小马智行",
+      "title": "小马智行新加坡Robotaxi正式载客，双引擎驱动全球商业化提速",
+      "summary": "小马智行与康福德高于4月7日在新加坡启动自动驾驶载客运营，覆盖榜鹅地区12公里路线，连接居民区与商业设施。公司计划2025年在全球超20个城市部署3000辆以上Robotaxi，其中海外城市占比近半，加速从试点迈向商业运营。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/phaVhG9a1z-4NtKJOHsl7w",
+      "type": "行业动态"
+    },
+    {
+      "id": 7,
+      "date": "2026-04-08",
+      "company": "Uber",
+      "title": "大众汽车在洛杉矶启动自动驾驶微型巴士测试，为与Uber合作推出服务做准备",
+      "summary": "大众汽车子公司MOIA America与Uber于周三宣布，已在洛杉矶开始测试自动驾驶微型巴士，这是双方计划于2026年底前推出robotaxi服务的最新进展。测试将在未来几周内启动，约10辆搭载自动驾驶技术的ID. Buzz车型将在洛杉矶上路。此前，双方于一年前公布了未来十年在美国多个城市推出商业化robotaxi服务的宏伟计划，洛杉矶为首个试点城市。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/08/volkswagen-moia-uber-los-angeles-testing-self-driving-microbuses-id-buzz/",
+      "type": "运营拓展"
+    },
+    {
+      "id": 8,
+      "date": "2026-04-07",
+      "company": "Waymo",
+      "title": "Waymo在纳什维尔推出robotaxi服务，与Lyft达成合作",
+      "summary": "（2-3句关键数据）Waymo于周二正式向公众开放其在纳什维尔的robotaxi服务，使该市成为第11个可呼叫Waymo自动驾驶出租车的城市。公司表示将采取分阶段邀请乘客的方式逐步扩展服务，以确保“在提供优质体验的同时有序扩张”。此前Waymo已在当地进行了数月的道路测试，包括人工驾驶及配备安全操作员的自动驾驶测试。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/07/waymo-opens-robotaxi-service-in-nashville-partners-with-lyft/",
+      "type": "技术进展"
+    },
+    {
+      "id": 164,
+      "date": "2026-04-06",
+      "company": "其他",
+      "title": "DoorDash自动驾驶配送战略：对话Ashu Rege",
+      "summary": "DoorDash实验室副总裁Ashu Rege在本期播客中分享其从NVIDIA、Zoox到DoorDash的自动驾驶行业历程，并详解公司robotaxi与FSD技术布局。他透露DoorDash正与Uber、Waymo等企业合作测试无lidar配送方案，预计2025年前实现商业化运营。",
+      "source": "The Driverless Digest",
+      "url": "https://www.thedriverlessdigest.com/p/doordashs-autonomous-delivery-strategy",
+      "type": "技术进展"
+    },
+    {
+      "id": 9,
+      "date": "2026-04-05",
+      "company": "Waymo",
+      "title": "TechCrunch Mobility：'令人震惊的缺乏透明度'",
+      "summary": "上月国会听证会引发对Waymo在菲律宾使用远程协助人员的批评，该公司robotaxi现已在美国10个城市进行商业运营。TechCrunch Mobility深入报道了Waymo的远程协助与道路援助团队问题，并指出其FSD系统与lidar技术仍面临透明度质疑。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/05/techcrunch-mobility-a-stunning-lack-of-transparency/",
+      "type": "行业动态"
+    },
+    {
+      "id": 165,
+      "date": "2026-04-03",
+      "company": "Waymo",
+      "title": "中国Robotaxi系统故障致乘客滞留高速公路",
+      "summary": "本周，中国某Robotaxi服务出现大规模系统故障，导致多辆无人驾驶出租车在高速公路上停运，乘客被迫滞留。此次事件引发了对自动驾驶出租车安全性和可靠性的广泛关注。与此同时，无人机配送初创公司Zipline再获2亿美元融资，使其H轮融资总额达到8亿美元，计划今年扩展至美国至少四个州，包括休斯顿、凤凰城和西雅图等新市场。",
+      "source": "The Driverless Digest",
+      "url": "https://www.thedriverlessdigest.com/p/china-robotaxi-outage-leaves-passengers",
+      "type": "运营拓展"
+    },
+    {
+      "id": 47,
+      "date": "2026-04-03",
+      "company": "Tesla",
+      "title": "特斯拉Model X与S迎来终章，全押Cybercab",
+      "summary": "特斯拉正步入全新纪元，其未来成败将取决于Cybercab的推出与Optimus机器人的量产能力。随着Model X和Model S逐步退出历史舞台，这家电动车巨头正将全部赌注押在自动驾驶出租车和机器人技术上。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/03/the-final-days-of-the-tesla-model-x-and-s-are-here-all-bets-are-on-the-cybercab/",
+      "type": "运营拓展"
+    },
+    {
+      "id": 166,
+      "date": "2026-04-01",
+      "company": "其他",
+      "title": "伦敦司机市场将如何应对自动驾驶汽车？",
+      "summary": "Waymo在旧金山推出robotaxi服务仅20个月后，便成为该市第二大打车服务提供商，超越Lyft占据27%的市场份额。Waymo计划于今年9月进入伦敦市场。这一发展将如何影响伦敦的司机市场，以及传统打车服务提供商的应对策略，成为关注焦点。",
+      "source": "The Driverless Digest",
+      "url": "https://www.thedriverlessdigest.com/p/how-will-londons-driver-market-respond",
+      "type": "技术进展"
+    },
+    {
+      "id": 140,
+      "date": "2026-04-01",
+      "company": "百度Apollo",
+      "title": "系统故障致百度Robotaxi在中国陷入瘫痪",
+      "summary": "据多家媒体报道及大量视频和社交媒体帖子显示，百度Apollo Go运营的Robotaxi在中国武汉全城出现故障，部分乘客被困车内长达两小时。路透社报道称，当地警方表示这是一次“系统故障”，影响了至少100辆Robotaxi。目前警方仍在调查此事，百度未予回应。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/01/system-failure-paralyzes-baidu-robotaxis-in-china/",
+      "type": "技术进展"
+    },
+    {
+      "id": 35,
+      "date": "2026-03-31",
+      "company": "Uber",
+      "title": "Uber与WeRide在迪拜扩大robotaxi运营",
+      "summary": "Uber与中国自动驾驶公司WeRide在迪拜推出无需人类安全操作员的robotaxi服务，作为其在中东地区扩张的一部分。乘客现可通过Uber应用预订车辆，运营范围覆盖迪拜硅谷绿洲、迪拜投资园区第二区、杰贝阿里工业第一区等商业与工业区，以及郊区和海上贸易枢纽阿尔哈姆利亚港。该服务由阿联酋出行与车队运营商Tawasul负责本地运营。两家公司最初于2023年将robotaxi引入迪拜，但未配备FSD系统或lidar技术。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/31/uber-weride-dubai-robotaxi-partnership-equity/",
+      "type": "运营拓展"
+    },
+    {
+      "id": 11,
+      "date": "2026-03-31",
+      "company": "Waymo",
+      "title": "Waymo在圣安东尼奥国际机场启动robotaxi服务",
+      "summary": "Waymo的robotaxi服务今日正式登陆其第四座主要机场——圣安东尼奥国际机场，这是该公司在德克萨斯州服务的首个机场。车辆将在航站楼路边落客，并在指定网约车区域接载乘客。目前Waymo已在凤凰城、旧金山和圣何塞机场提供类似服务。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/31/waymo-starts-robotaxi-services-at-san-antonio-international-airport/",
+      "type": "技术进展"
+    },
+    {
+      "id": 10,
+      "date": "2026-03-31",
+      "company": "Waymo",
+      "title": "Robotaxi公司拒绝透露其自动驾驶车辆需要远程协助的频率",
+      "summary": "今年2月，参议员Ed Markey（民主党-马萨诸塞州）向七家美国自动驾驶技术公司（包括Aurora、May Mobility、Motional、Nuro、Tesla、Waymo和Zoox）发函，询问其车辆依赖远程工作人员输入的频率。根据周二公布的调查结果，这些公司均拒绝回答。Markey办公室发布的信息再次表明，自动驾驶汽车公司对公开其运营真实细节极为谨慎。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/31/robotaxi-companies-refuse-to-say-how-often-their-avs-need-remote-help/",
+      "type": "安全"
+    },
+    {
+      "id": 167,
+      "date": "2026-03-30",
+      "company": "其他",
+      "title": "驱动自动驾驶车辆运营的人类力量（Omar Zoubi，TaskUs）",
+      "summary": "（2-3句，包含关键数据）在本期节目中，TaskUs自动驾驶出行与网约车网络战略副总裁Omar Zoubi详解了该公司如何通过远程协助和处理当前AI系统仍难以应对的边缘案例，为Uber、Waymo、Tesla等自动驾驶车辆运营商提供幕后支持。他分析了robotaxi、FSD及lidar等技术在实际运营中的挑战，并揭示了人类操作员在确保自动驾驶安全与效率中的关键作用。",
+      "source": "The Driverless Digest",
+      "url": "https://www.thedriverlessdigest.com/p/the-humans-powering-autonomous-vehicle",
+      "type": "技术进展"
+    },
+    {
+      "id": 12,
+      "date": "2026-03-29",
+      "company": "Waymo",
+      "title": "TechCrunch Mobility：当robotaxi需要拨打911时",
+      "summary": "Waymo目前每周提供50万次付费robotaxi出行服务，虽然这一数字相较于Lyft和Uber等人类驾驶的网约车平台仍较小，但其出行量、新市场拓展速度以及与车队规模的对比引人关注。TechCrunch制作了一张图表，直观展示了这一快速增长的趋势。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/29/techcrunch-mobility-when-a-robotaxi-has-to-call-911/",
+      "type": "商业拓展"
+    },
+    {
+      "id": 168,
+      "date": "2026-03-27",
+      "company": "Waymo",
+      "title": "Waymo周订单量达50万次，累计行驶里程超400万英里",
+      "summary": "Waymo目前每周提供50万次付费出行服务，不到一年时间较25万次翻倍（链接）。今年仅过去一个季度，该公司已实现年底目标（每周100万次）的一半。尽管Waymo增长显著，但Uber和Lyft仅在纽约市市场每日就合计完成67.5万次行程，相比之下Waymo仍有巨大发展空间。",
+      "source": "The Driverless Digest",
+      "url": "https://www.thedriverlessdigest.com/p/waymo-hits-500000-weekly-rides-and",
+      "type": "技术进展"
+    },
+    {
+      "id": 95,
+      "date": "2026-03-27",
+      "company": "Rivian",
+      "title": "Rivian 再获大众10亿美元投资",
+      "summary": "大众集团与Rivian合资的首款车型VW ID.EVERY1已完成冬季测试，该车搭载了Rivian的软件和电气架构。此次测试进展为Rivian解锁了大众集团额外10亿美元投资，其中约7.5亿美元以股权投资形式注入，剩余2.5亿美元将根据大众提供的测试原型车情况，以股权或可转换债务形式支付。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/27/rivian-gets-another-1b-from-volkswagen/",
+      "type": "融资"
+    },
+    {
+      "id": 13,
+      "date": "2026-03-27",
+      "company": "Waymo",
+      "title": "Waymo载客量飙升：一张图表揭示惊人增长",
+      "summary": "Waymo目前每周在美国10个城市提供50万次付费robotaxi服务，较2024年5月的5万次增长十倍。这家Alphabet旗下公司的商业扩张速度远超市场预期，在不到两年内实现了载客量与运营城市的双重突破。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/27/waymo-skyrocketing-ridership-in-one-chart/",
+      "type": "技术进展"
+    },
+    {
+      "id": 270,
+      "date": "2026-03-26",
+      "company": "小马智行",
+      "title": "小马智行联手Verne、Uber，在克罗地亚推出欧洲首个商业化Robotaxi服务",
+      "summary": "小马智行与Verne、Uber达成战略合作，将在克罗地亚首都萨格勒布启动欧洲首个商业化Robotaxi服务，目前已进入初期部署阶段。该服务采用小马智行第七代自动驾驶系统，搭载北汽极狐阿尔法T5 Robotaxi车型，未来数年车队规模有望扩展至数千辆。三方计划逐步拓展至更多欧洲城市及其他市场，Uber拟作为战略合作伙伴对Verne进行投资。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/BI4zrqWVKAE737EkShXfRQ",
+      "type": "行业动态"
+    },
+    {
+      "id": 141,
+      "date": "2026-03-26",
+      "company": "Uber",
+      "title": "一家鲜为人知的克罗地亚初创公司携手Uber进军robotaxi市场",
+      "summary": "克罗地亚电动汽车制造商Rimac Group创始人Mate Rimac七年前开始研发电动robotaxi，如今其愿景通过Uber、中国自动驾驶公司Pony.ai及他旗下的robotaxi初创公司Verne的战略合作逐步实现。三家公司于周四宣布，计划在欧洲推出商业robotaxi服务，首站设在克罗地亚萨格勒布。Pony.ai将提供自动驾驶系统及与中国车企BAIC联合开发的robotaxi车型Arcfox Alpha T5，而Verne将负责车队的所有权与运营。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/26/uber-invests-verne-ponyai-robotaxi-europe/",
+      "type": "运营拓展"
+    },
+    {
+      "id": 14,
+      "date": "2026-03-25",
+      "company": "Waymo",
+      "title": "谁在驾驶Waymo的自动驾驶汽车？有时是警察。",
+      "summary": "去年8月，加州I-280公路附近发生火灾，导致交通堵塞，Waymo的robotaxi在应对警察指挥逆行时出现故障，试图驶上应急车道并最终完全停止不动。这一事件凸显了自动驾驶汽车在复杂交通场景中的挑战。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/25/waymo-robotaxi-roadside-assistance-emergency-first-responders/",
+      "type": "行业动态"
+    },
+    {
+      "id": 52,
+      "date": "2026-03-24",
+      "company": "Zoox",
+      "title": "Zoox将无人驾驶出租车引入奥斯汀和迈阿密",
+      "summary": "Zoox计划于今年晚些时候在得克萨斯州奥斯汀和佛罗里达州迈阿密推出其专用robotaxi，作为早期乘客计划的一部分。该公司还宣布将旧金山的服务区域扩大四倍，并在拉斯维加斯扩大服务范围，后者已向所有Zoox应用用户提供免费乘车服务。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/24/zoox-brings-its-robotaxis-to-austin-and-miami/",
+      "type": "商业拓展"
+    },
+    {
+      "id": 271,
+      "date": "2026-03-23",
+      "company": "小马智行",
+      "title": "楼天城邀清北学子参加小马智行校招宣讲会",
+      "summary": "小马智行创始人楼天城近日向清华、北大毕业生发出邀请，举办校招宣讲会。此次活动旨在招募自动驾驶领域的技术人才，吸引顶尖高校学子加入公司。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/WR3K7yD6DwF7Ym5fZQy-mg",
+      "type": "行业动态"
+    },
+    {
+      "id": 169,
+      "date": "2026-03-23",
+      "company": "其他",
+      "title": "CPUC如何管理自动驾驶汽车许可证、数据与执法（Pat Tsen）",
+      "summary": "（2-3句，包含关键数据）",
+      "source": "The Driverless Digest",
+      "url": "https://www.thedriverlessdigest.com/p/how-cpuc-handles-av-permits-data",
+      "type": "技术进展"
+    },
+    {
+      "id": 170,
+      "date": "2026-03-20",
+      "company": "Waymo",
+      "title": "Uber携手Rivian打造robotaxi，交易价值高达12.5亿美元",
+      "summary": "Uber与Rivian达成合作，计划基于Rivian即将推出的R2 SUV部署数千辆robotaxi。该交易初始阶段包括Uber投资3亿美元，并计划购买约1万辆全自动驾驶R2车辆，目标于2028年在旧金山和迈阿密率先推出。Uber还拥有额外购买多达4万辆自动驾驶R2 SUV的选择权。",
+      "source": "The Driverless Digest",
+      "url": "https://www.thedriverlessdigest.com/p/uber-taps-rivian-to-build-robotaxis",
+      "type": "运营拓展"
+    },
+    {
+      "id": 272,
+      "date": "2026-03-19",
+      "company": "小马智行",
+      "title": "小马智行与如祺出行联手组建Robotaxi车队，首批交付超百辆第七代无人车",
+      "summary": "小马智行向如祺出行交付首批超百辆搭载第七代自动驾驶系统的广汽埃安霸王龙Robotaxi，已接入平台并陆续投入运营。该车型自动驾驶套件成本较上一代降低70%，设计寿命达60万公里，并在广州、深圳实现单车运营盈利转正。双方计划通过“技术+运营”模式扩大车队规模，加速Robotaxi商业化落地。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/OUQi1clMW9tzKtrQ5KLR4A",
+      "type": "行业动态"
+    },
+    {
+      "id": 98,
+      "date": "2026-03-19",
+      "company": "Uber",
+      "title": "Uber携手Rivian打造robotaxi，交易金额高达12.5亿美元",
+      "summary": "Uber与Rivian达成合作，计划基于Rivian即将推出的R2 SUV打造数千辆robotaxi，交易总额可能高达12.5亿美元。Uber初始投资3亿美元，预计在2028年前采购1万辆全自动驾驶R2 robotaxi，并有权从2030年起再增购4万辆。双方计划在美国、加拿大和欧洲的25个城市推出服务。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/19/uber-taps-rivian-to-build-robotaxis-in-deal-worth-up-to-1-25b/",
+      "type": "技术进展"
+    },
+    {
+      "id": 97,
+      "date": "2026-03-19",
+      "company": "Rivian",
+      "title": "Rivian牺牲2027年盈利目标，全力推进自动驾驶技术",
+      "summary": "Rivian于周四披露，因在自动驾驶技术研发上投入巨大，不再预期能在2027年实现此前长期设定的盈利目标。公司表示，随着其加速开发自驾驶技术，研发成本上升，预计明年无法实现EBITDA盈利。这一消息深藏于一份文件中，该文件还详细介绍了Rivian与Uber的新合作，计划为其网约车网络打造基于即将推出的R2 SUV的robotaxi版本。Rivian拒绝对文件内容之外的事项置评。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/19/rivian-sacrifices-2027-profit-goal-to-push-deeper-into-autonomy/",
+      "type": "技术进展"
+    },
+    {
+      "id": 50,
+      "date": "2026-03-19",
+      "company": "Tesla",
+      "title": "美国联邦机构升级对特斯拉FSD（受监督）软件在低能见度条件下的调查",
+      "summary": "美国最高汽车安全监管机构已将对特斯拉Full Self-Driving（受监督）驾驶软件在低能见度条件下性能的调查升级为“工程分析”，这是其最高级别的审查。该调查始于2024年10月，通常是在要求企业发起召回前的必要步骤。这是ODI对特斯拉FSD进行的两项调查之一。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/19/feds-intensify-investigation-into-teslas-full-self-driving-supervised-software/",
+      "type": "技术进展"
+    },
+    {
+      "id": 171,
+      "date": "2026-03-18",
+      "company": "其他",
+      "title": "驱动自动驾驶的芯片——对话Augustin Friedel",
+      "summary": "（2-3句，含关键数据）本期节目特邀Autonomy Insiders播客主持人Daniel Abreu Marques，聚焦全球自动驾驶行业战略。对话深入探讨了Uber、Waymo、Tesla等公司如何利用芯片技术推动robotaxi与FSD发展，并分析了lidar在感知系统中的关键作用。数据显示，自动驾驶芯片市场预计到2030年将增长至数百亿美元规模。",
+      "source": "The Driverless Digest",
+      "url": "https://www.thedriverlessdigest.com/p/the-chips-powering-autonomous-driving",
+      "type": "技术进展"
+    },
+    {
+      "id": 99,
+      "date": "2026-03-15",
+      "company": "Rivian",
+      "title": "TechCrunch Mobility：Travis Kalanick的回归证明2016年真的回来了",
+      "summary": "Uber联合创始人兼前CEO Travis Kalanick在2017年因一系列争议辞职后，如今重返公众视野，宣布成立机器人公司Atoms，并即将收购专注于工业和采矿场地的自动驾驶初创公司Pronto。这一消息让人仿佛重回2016年的自动驾驶热潮。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/15/techcrunch-mobility-travis-kalanicks-return-proves-it-really-is-2016-again/",
+      "type": "技术进展"
+    },
+    {
+      "id": 273,
+      "date": "2026-03-13",
+      "company": "小马智行",
+      "title": "小马智行Robotaxi接入腾讯出行服务",
+      "summary": "小马智行于3月13日宣布，其Robotaxi服务正式接入“腾讯出行服务”小程序。在广州运营区域内，用户可通过该小程序或即将上线的腾讯地图App呼叫自动驾驶车辆。此次合作基于2025年4月双方签署的战略协议，旨在推动L4级自动驾驶规模化商业落地，并提升用户触达效率。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/akBmszbCwwaa0DujVoLIuQ",
+      "type": "行业动态"
+    },
+    {
+      "id": 152,
+      "date": "2026-03-13",
+      "company": "Uber",
+      "title": "Motional robotaxis 在重大调整两年后加入拉斯维加斯的 Uber 应用",
+      "summary": "Uber 在其不断扩展的 robotaxi 网络中新增了另一家公司的自动驾驶车辆。现代旗下 Motional 的 Ioniq 5 自动驾驶版现已可在拉斯维加斯五个区域提供接送服务，车内仍配备安全监控员。从周五开始，这些车辆将在拉斯维加斯大道的 Resorts World 和 Encore 酒店赌场，以及拉斯维加斯会议中心旁的 Westgate 等乘车区进行接送。Motional 的 AV 还将负责往返于机场附近的 Town Square 购物中心的行程。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/13/motional-robotaxis-join-the-uber-app-in-vegas-two-years-after-major-reset/",
+      "type": "运营拓展"
+    },
+    {
+      "id": 153,
+      "date": "2026-03-12",
+      "company": "Lucid",
+      "title": "Lucid Motors 展示名为“Lunar”的robotaxi概念车",
+      "summary": "Lucid Motors 在纽约投资者日上推出了一款名为“Lucid Lunar”的robotaxi概念车，该车为双座设计，无方向盘和踏板，基于其即将推出的“中型”电动汽车平台打造。临时CEO Marc Winterhoff表示公司已“着手”Lunar项目，但随后向TechCrunch澄清该车尚未进入实际开发阶段。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/12/lucid-motors-shows-off-robotaxi-concept-called-lunar/",
+      "type": "技术进展"
+    },
+    {
+      "id": 108,
+      "date": "2026-03-12",
+      "company": "Uber",
+      "title": "Uber、Wayve与日产计划今年在东京推出robotaxi服务",
+      "summary": "英国自动驾驶软件公司Wayve在完成12亿美元融资后，将与Uber和日产合作，于2026年底在东京试点推出robotaxi服务。该合作将把Wayve的AI驱动自动驾驶软件集成到日产Leaf车型中，并通过Uber的打车网络提供服务。这是Uber在日本的首个robotaxi合作项目，也是其与Wayve一系列合作中的最新进展。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/12/uber-wayve-and-nissan-plan-to-launch-a-robotaxi-service-in-tokyo-this-year/",
+      "type": "运营拓展"
+    },
+    {
+      "id": 53,
+      "date": "2026-03-11",
+      "company": "Uber",
+      "title": "Zoox计划今年在拉斯维加斯通过Uber应用提供robotaxi服务",
+      "summary": "亚马逊旗下Zoox宣布，计划今年晚些时候在拉斯维加斯通过Uber应用提供robotaxi服务。但在此之前，Zoox仍需获得联邦政府对其无方向盘、无踏板车型的商业部署批准，目前NHTSA已就其FMVSS豁免申请公开征求意见。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/11/zoox-plans-to-put-its-robotaxis-on-the-uber-app-in-vegas-this-year/",
+      "type": "技术进展"
+    },
+    {
+      "id": 54,
+      "date": "2026-03-09",
+      "company": "Zoox",
+      "title": "Zoox 开始在达拉斯和凤凰城为robotaxi绘制地图",
+      "summary": "Zoox已向德克萨斯州达拉斯和亚利桑那州凤凰城派遣少量丰田汉兰达SUV，用于绘制街道地图，为自动驾驶测试做准备。该公司计划先在这些SUV上测试其自动驾驶软件，随后切换至专用robotaxi。这两个新市场将帮助Zoox收集与密集都市区不同的数据。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/09/zoox-starts-mapping-dallas-and-phoenix-for-its-robotaxis/",
+      "type": "运营拓展"
+    },
+    {
+      "id": 274,
+      "date": "2026-03-08",
+      "company": "小马智行",
+      "title": "打车体验痛点调查：近半时间在“硬扛”",
+      "summary": "最新调查显示，当代人在打车过程中，近一半时间处于“硬扛”状态，包括忍受等待、沟通不畅或体验不佳等问题。数据表明，用户平均每次出行约50%的时间耗费在非舒适环节，反映出出行服务仍有较大优化空间。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/lGbedOxBtdvo406Ls8K0KA",
+      "type": "行业动态"
+    },
+    {
+      "id": 16,
+      "date": "2026-03-03",
+      "company": "Waymo",
+      "title": "三家公司主导上月1890亿美元风投市场",
+      "summary": "根据Crunchbase最新报告，2月份全球风投资本创纪录地流入初创企业，总额达1890亿美元，其中AI初创公司融资1710亿美元，占比90%。这一数字是1月份全球风投支出的三倍多，主要由三家公司主导：OpenAI、Anthropic和Waymo，其中OpenAI以1100亿美元融资领跑，成为史上最大私募轮次之一。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/03/openai-anthropic-waymo-dominated-189-billion-vc-investments-february-crunchbase-report/",
+      "type": "技术进展"
+    },
+    {
+      "id": 275,
+      "date": "2026-03-02",
+      "company": "小马智行",
+      "title": "小马智行第七代Robotaxi在深圳实现单车盈利，商业化进程加速",
+      "summary": "小马智行第七代Robotaxi于2026年2月在深圳实现月度单车运营盈利转正，成为继广州后第二座达成该目标的中国一线城市。截至2月28日，深圳单车日均净收入达338元，日均订单量23单，运营范围从21.7平方公里扩展至167.4平方公里。创始人彭军表示，这验证了技术成熟度与商业化战略，证明自动驾驶出行具备规模化运营的经济可持续性。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/v48_UXM7BYqRElEaZq5l_g",
+      "type": "行业动态"
+    },
+    {
+      "id": 276,
+      "date": "2026-02-27",
+      "company": "小马智行",
+      "title": "小马智行Pony.ai启动2026春季校园招聘，广纳自动驾驶人才",
+      "summary": "小马智行（Pony.ai）近日正式启动2026年春季校园招聘，面向应届毕业生开放多个技术及业务岗位。此次招聘旨在吸引优秀人才加入自动驾驶领域，推动技术创新与商业化落地。具体岗位信息及投递方式可通过官方渠道查询。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/_1tVzD85bLmaa4LCvNwVmg",
+      "type": "行业动态"
+    },
+    {
+      "id": 277,
+      "date": "2026-02-25",
+      "company": "小马智行",
+      "title": "小马智行无人车成深圳马年春节“科技年货”",
+      "summary": "马年春节期间，小马智行无人车在深圳填补司机返乡造成的运力缺口，服务覆盖前海、宝安、南山等地且不加价。截至除夕，2026年深圳付费订单数已超2025年全年总量，假期每日付费订单屡创新高，香港和台湾用户大幅增长。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/UDhsHFOyMs8XXRZgb7q4wg",
+      "type": "行业动态"
+    },
+    {
+      "id": 278,
+      "date": "2026-02-12",
+      "company": "小马智行",
+      "title": "小马智行跻身MSCI中国指数，成首家入选自动驾驶公司",
+      "summary": "小马智行（NASDAQ: PONY / HKEX: 2026）于2月11日被纳入MSCI中国指数，成为该指数中首家且唯一的自动驾驶企业。截至去年底，其Robotaxi车队规模已扩至1159辆，超额完成年度目标。此次纳入标志着公司商业模式获国际资本市场认可，并将吸引追踪MSCI指数的被动型基金在港股上市三个月内强制建仓。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/T_6xpILwT7Ld5CnPTPsHzw",
+      "type": "行业动态"
+    },
+    {
+      "id": 279,
+      "date": "2026-02-10",
+      "company": "小马智行",
+      "title": "小马智行推出马年营销活动，自动驾驶出行服务优惠升级",
+      "summary": "小马智行（Pony.ai）借马年契机推出“马年坐小马，一路都开挂”主题营销活动，并宣布“好礼加码”优惠升级。该活动通过微信公众号等渠道推广，旨在吸引用户关注其自动驾驶出行服务。具体加码礼遇内容及活动期限尚未详细披露。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/7yOVJtPyPlbXQQOxnawvFg",
+      "type": "行业动态"
+    }
+  ],
+  "weekly_report": {
+    "summary": "特斯拉本周实现重大技术突破，其FSD V14.3.2版本在2026年5月10日完成零干预纽约至洛杉矶2833英里自动驾驶，耗时49小时55分57秒，打破此前纪录约8.5小时。英伟达CEO黄仁勋同日透露曾协助马斯克打造Model 3和Model S首台计算机，并参与自动驾驶项目起步。特斯拉还展示了AI光子计数重建技术，该技术通过精确捕捉光子信息，显著提升夜间和强光环境下的视觉感知能力。Zoox在拉斯维加斯加速扩张，于5月7日新增Bellagio、枫丹白露酒店、拉斯维加斯会议中心、Mandalay Bay和MGM Grand共5个站点，使拉斯维加斯大道附近接送点增至8个。5月8日，Zoox推出“Find My Zoox”功能，允许用户通过个性化灯光和声音序列识别车辆。Wayve于5月6日发布LA-Pose自监督相机位姿估计方法，无需昂贵3D标签即可实现高精度位姿估计，并在暴雨天气下展示性能优势。5月8日，Wayve CEO Alex Kendall解释伦敦复杂路况对训练自动驾驶系统的独特价值。Aurora于5月7日推出基于International LT系列的新一代无人驾驶卡车，搭载第二代商用硬件套件，设计寿命达100万英里，成本降低50%以上，计划2026年底前在Sun Belt部署超200辆。5月6日，Aurora与分销巨头McLane达成协议，将在德克萨斯州达拉斯至休斯顿之间运营无人驾驶卡车运输。小马智行在2026年五一假期期间，Robotaxi订单量同比增长544%，在时代少年团广州南沙演唱会散场高峰时段累计护送歌迷超3000人次，首次被写入官方交通疏导方案。文远知行于5月6日强调其全无人Robotaxi在阿布扎比Yas Island的安全运营，并于5月5日至4日参加瑞士苏黎世自动化出行峰会，展示L4级Robotaxi和Robobus。",
+    "highlights": [
+      "特斯拉FSD V14.3.2完成零干预纽约至洛杉矶2833英里自动驾驶（Tesla）",
+      "Zoox在拉斯维加斯新增枫丹白露酒店和MGM Grand等5个站点（Zoox）",
+      "Wayve发布自监督相机位姿估计方法LA-Pose，降低对3D标签依赖（Wayve）",
+      "Aurora推出新一代无人驾驶卡车，计划2026年底前在Sun Belt部署200+辆（Aurora）",
+      "小马智行五一假期Robotaxi订单量飙升544%，护送超3000名歌迷（小马智行）",
+      "文远知行全无人Robotaxi在阿布扎比Yas Island运营，并参展瑞士苏黎世自动化出行峰会（文远知行）"
+    ],
+    "count": 44,
+    "date_range": "2026-05-04~2026-05-10"
+  },
+  "weekly_history": [
+    {
+      "summary": "特斯拉本周实现重大技术突破，其FSD V14.3.2版本在2026年5月10日完成零干预纽约至洛杉矶2833英里自动驾驶，耗时49小时55分57秒，打破此前纪录约8.5小时。英伟达CEO黄仁勋同日透露曾协助马斯克打造Model 3和Model S首台计算机，并参与自动驾驶项目起步。特斯拉还展示了AI光子计数重建技术，该技术通过精确捕捉光子信息，显著提升夜间和强光环境下的视觉感知能力。Zoox在拉斯维加斯加速扩张，于5月7日新增Bellagio、枫丹白露酒店、拉斯维加斯会议中心、Mandalay Bay和MGM Grand共5个站点，使拉斯维加斯大道附近接送点增至8个。5月8日，Zoox推出“Find My Zoox”功能，允许用户通过个性化灯光和声音序列识别车辆。Wayve于5月6日发布LA-Pose自监督相机位姿估计方法，无需昂贵3D标签即可实现高精度位姿估计，并在暴雨天气下展示性能优势。5月8日，Wayve CEO Alex Kendall解释伦敦复杂路况对训练自动驾驶系统的独特价值。Aurora于5月7日推出基于International LT系列的新一代无人驾驶卡车，搭载第二代商用硬件套件，设计寿命达100万英里，成本降低50%以上，计划2026年底前在Sun Belt部署超200辆。5月6日，Aurora与分销巨头McLane达成协议，将在德克萨斯州达拉斯至休斯顿之间运营无人驾驶卡车运输。小马智行在2026年五一假期期间，Robotaxi订单量同比增长544%，在时代少年团广州南沙演唱会散场高峰时段累计护送歌迷超3000人次，首次被写入官方交通疏导方案。文远知行于5月6日强调其全无人Robotaxi在阿布扎比Yas Island的安全运营，并于5月5日至4日参加瑞士苏黎世自动化出行峰会，展示L4级Robotaxi和Robobus。",
+      "highlights": [
+        "特斯拉FSD V14.3.2完成零干预纽约至洛杉矶2833英里自动驾驶（Tesla）",
+        "Zoox在拉斯维加斯新增枫丹白露酒店和MGM Grand等5个站点（Zoox）",
+        "Wayve发布自监督相机位姿估计方法LA-Pose，降低对3D标签依赖（Wayve）",
+        "Aurora推出新一代无人驾驶卡车，计划2026年底前在Sun Belt部署200+辆（Aurora）",
+        "小马智行五一假期Robotaxi订单量飙升544%，护送超3000名歌迷（小马智行）",
+        "文远知行全无人Robotaxi在阿布扎比Yas Island运营，并参展瑞士苏黎世自动化出行峰会（文远知行）"
+      ],
+      "count": 44,
+      "date_range": "2026-05-04~2026-05-10"
+    },
+    {
+      "summary": "特斯拉本周宣布其FSD Supervised累计行驶里程突破100亿英里，这一数据来自官网fsd/safety页面，标志着其自动驾驶系统在实际道路上的大规模应用。同时，特斯拉Cybercab在斯坦福大学校园内被目击，该车型是计划推出的无人驾驶出租车，目前处于测试阶段。荷兰车主俱乐部在阿姆斯特丹举办活动，展出Cybercab、Optimus机器人、Cybertruck并提供FSD试驾体验。特斯拉强调Cybercab没有方向盘和驾驶员，旨在彻底改变出行方式。此外，社交媒体上展示了多辆Cybertruck车队的壮观阵容。\n\nWaymo本周自动驾驶出行量达到每周50万次，这一里程碑标志着其商业化运营取得显著进展。一位用户在洛杉矶体验了首次完全无人驾驶之旅，称车辆在复杂城市道路中自如行驶，无需任何人工干预。Waymo宣布正式进入波特兰市场，从4月28日开始进行手动驾驶测试，为后续自动驾驶服务铺路。此外，加州发布了新的自动驾驶车辆测试与部署规定，可能对Waymo等公司产生广泛影响。\n\n小马智行CEO彭军接受彭博电视专访，强调未来五年以“规模化”为核心，推动Robotaxi车队、运营城市和商业化能力增长。公司宣布第七代Robotaxi成本控制取得进展，预计2027版整车总成本将降至23万元人民币以下。小马智行在北京车展A3馆A311展位展示无人驾驶技术，直面公众对后台操控、视障人士使用便利性等核心疑问，活动将持续至5月3日。\n\n文远知行在北京车展上宣布计划五年内部署20万辆L4级自动驾驶车辆，展示了L4级Robotaxi GXR、Robobus及超过30辆搭载WRD 3.0系统的AION N60演示车辆。创始人韩旭公开驳斥“智驾终局论”，称中国智能驾驶竞赛仅处于“开始的结束”阶段。文远知行展台还迎来匈牙利大使、英国贸易专员等多国政要，鼓励其进入欧洲市场。\n\nUber与Hertz达成合作，由后者负责其Lucid Motors robotaxi的清洁、充电和维修服务。Uber首席技术官透露，公司长期目标是为人类司机的车辆配备传感器，为自动驾驶汽车公司收集真实数据。Uber与Hertz及其新附属公司Oro Mobility达成两项战略车队合作，涵盖旧金山自动驾驶robotaxi车队及亚特兰大等地人工驾驶车队。\n\nNuro的工程车队在硅谷南湾地区频繁现身，为与Uber和Lucid Motors合作的全球robotaxi服务做准备。Nuro联合创始人表示，自动驾驶出行将成为值得信赖的基础设施的一部分。Uber全球robotaxi计划由Nuro提供自动驾驶技术，Lucid Motors负责车辆制造，并将在Uber平台独家运营，Hertz通过新附属公司Oro Mobility负责车辆日常资产管理。",
+      "highlights": [
+        "FSD Supervised累计行驶里程突破100亿英里（Tesla）",
+        "Waymo周自动驾驶出行量达50万次（Waymo）",
+        "小马智行第七代Robotaxi成本降至23万元以下（小马智行）",
+        "文远知行计划五年内部署20万辆L4级自动驾驶车辆（文远知行）",
+        "Uber与Hertz合作管理robotaxi车队（Uber）",
+        "Nuro驱动、Lucid Motors制造、Uber运营的全球robotaxi计划加速（Nuro）"
+      ],
+      "count": 32,
+      "date_range": "2026-04-27~2026-05-03"
+    },
+    {
+      "summary": "特斯拉本周在休斯顿和达拉斯推出Robotaxi服务，但初期可用车辆极少，截至周一上午服务基本瘫痪，仅周日出现短暂可用高峰；相比之下，奥斯汀已有46辆可用车辆。在休斯顿，一辆无人监督Robotaxi连续三次为校车停车让行，表现惊艳。此外，量产版Cybercab在未启用FSD的情况下完成三点掉头，动作流畅；金色Cybercab在奥斯汀街头成为焦点，其车载屏幕微笑挥手与路人互动。小马智行在北京车展上展示搭载第六代L4级自动驾驶系统的车型，宣布其robotaxi已在北京、广州等城市开展商业化运营，自动驾驶测试里程突破3000万公里，并推出基于NVIDIA DRIVE Hyperion平台的新一代域控制器，AI算力达4000 FP4 TFLOPS。文远知行在北京车展上展示从L4到L2++全系产品，包括Robotaxi GXR、Robobus和埃安N60，已获得八国自动驾驶牌照；同时宣布与联想升级全球战略合作，计划未来五年在全球部署20万辆自动驾驶车辆，其WRD 3.0端到端辅助驾驶方案已适配多芯片平台。Nuro宣布其Robotaxi工程车队正在全天候训练，目标今年晚些时候在旧金山湾区推出无人驾驶出行服务，并发布混合端到端AI基础模型，兼顾安全与效率。Zoox在拉斯维加斯哈里·里德国际机场启动自动驾驶测试，初期仅限员工参与，未来将向公众开放。Waymo在达拉斯和休斯顿推出Robotaxi服务，但可用车辆极少，服务基本瘫痪。",
+      "highlights": [
+        "特斯拉在休斯顿和达拉斯推出Robotaxi服务，但初期可用车辆极少，服务基本瘫痪（Tesla）",
+        "小马智行在北京车展展示第六代L4自动驾驶系统，商业化运营加速，测试里程突破3000万公里（小马智行）",
+        "文远知行与联想合作，计划五年内全球部署20万辆自动驾驶车，包括Robotaxi（WeRide）",
+        "Nuro宣布今年晚些时候在旧金山湾区推出无人驾驶出行服务，基于混合端到端AI模型（Nuro）",
+        "Zoox在拉斯维加斯机场启动自动驾驶测试，初期仅限员工参与（Zoox）",
+        "Waymo在达拉斯和休斯顿推出Robotaxi服务，但可用车辆极少，服务基本瘫痪（Waymo）"
+      ],
+      "count": 37,
+      "date_range": "2026-04-20~2026-04-26"
+    },
+    {
+      "summary": "小马智行本周宣布将亮相2026北京车展，展示其在中国多城市积累的无人驾驶技术，并推出“打一辆无人驾驶汽车”小程序服务，标志着robotaxi出行加速进入普通人生活。该公司还宣布与广汽领程达成战略合作，依托大湾区生态加速L4自动驾驶卡车规模化落地，其自动驾驶卡车累计运输量已超11.5亿吨公里。文远知行迎来成立九周年，累计投放1125辆Robotaxi，覆盖全球10余座核心城市，并确认参展2026北京车展，现场演示L4 Robotaxi GXR与搭载WRD 3.0系统的L2++广汽埃安N60车型，后者起售价11.58万元，全系标配智驾功能。Waymo在迈阿密和奥兰多全面开放完全无人驾驶打车服务，无需邀请码，并在迈阿密高速公路启动首批公共乘客服务，同时宣布在伦敦启动自动驾驶测试，配备安全驾驶员。Nuro与Uber及Lucid Motors在Ride AI 2026大会上首次公开亮相生产级robotaxi，Uber员工现可通过Uber应用在旧金山湾区预约robotaxi测试行程，为今年晚些时候的商业运营铺路。特斯拉继在奥斯汀推出robotaxi服务后，已将业务拓展至达拉斯和休斯顿，目前在德克萨斯州三个城市运营服务，并推出全新自动驾驶应用，追踪车主使用全自动驾驶软件频率。Wayve获得AMD、Arm和高通等芯片制造商6000万美元投资，作为其近期12亿美元D轮融资的扩展部分，其端到端AI技术旨在帮助ADAS和robotaxi实现大规模市场普及。",
+      "highlights": [
+        "小马智行宣布亮相2026北京车展并推出“打一辆无人驾驶汽车”小程序，加速无人驾驶规模化（小马智行）",
+        "文远知行累计投放1125辆Robotaxi，覆盖全球10余城，并与广汽埃安合作推出首款量产乘用车（文远知行）",
+        "Waymo在迈阿密和奥兰多全面开放robotaxi服务，无需邀请码，并在伦敦启动自动驾驶测试（Waymo）",
+        "Nuro与Uber及Lucid在Ride AI 2026展示生产级robotaxi，员工可通过Uber应用预约测试（Nuro）",
+        "特斯拉将robotaxi服务扩展至达拉斯和休斯顿，在德克萨斯州三个城市运营（特斯拉）",
+        "芯片巨头AMD、Arm和高通共同投资Wayve 6000万美元，助力其端到端AI技术商业化（Wayve）"
+      ],
+      "count": 32,
+      "date_range": "2026-04-13~2026-04-19"
+    },
+    {
+      "summary": "小马智行本周发布PonyWorld世界模型2.0，该模型具备自我诊断与定向进化能力，能自主识别短板并指导研发与数据采集，已应用于L4级无人驾驶车队，旨在支持车队从百辆向千辆、万辆规模扩张。公司回顾自动驾驶技术发展历程，指出其比围棋AI AlphaGo更具挑战性，2016年后业界曾乐观认为可通过数据标注快速实现L4级自动驾驶，但实际面临感知错误不可接受和驾驶交互复杂两大难题。在商业化方面，小马智行联手Verne及Uber在克罗地亚首都萨格勒布推出欧洲首个商业化Robotaxi服务，覆盖约90平方公里区域，运营时间为每日7:00至21:00，从宣布合作到上线仅两周。同时，小马智行与康福德高于4月7日在新加坡启动自动驾驶载客运营，覆盖榜鹅地区12公里路线，连接居民区与商业设施，公司计划2025年在全球超20个城市部署3000辆以上Robotaxi，其中海外城市占比近半。Waymo本周与Waze宣布启动数据共享试点项目，将robotaxis收集的坑洼数据整合至Waze城市服务平台，初期覆盖奥斯汀、亚特兰大、洛杉矶、凤凰城和旧金山湾区五个市场。Waymo于周二正式向公众开放其在纳什维尔的robotaxi服务，使该市成为第11个可呼叫Waymo自动驾驶出租车的城市，公司表示将采取分阶段邀请乘客的方式逐步扩展服务。Uber方面，大众汽车子公司MOIA America与Uber于周三宣布，已在洛杉矶开始测试自动驾驶微型巴士，约10辆搭载自动驾驶技术的ID. Buzz车型将在未来几周内启动测试，这是双方计划于2026年底前推出robotaxi服务的最新进展。",
+      "highlights": [
+        "小马智行发布PonyWorld世界模型2.0，具备自我诊断与定向进化能力（小马智行）",
+        "小马智行联手Verne、Uber在克罗地亚萨格勒布推出欧洲首个商业化Robotaxi服务（小马智行）",
+        "小马智行在新加坡启动自动驾驶载客运营，覆盖榜鹅地区12公里路线（小马智行）",
+        "Waymo与Waze启动数据共享试点，将坑洼数据整合至城市服务平台（Waymo）",
+        "Waymo在纳什维尔推出robotaxi服务，成为第11个运营城市（Waymo）",
+        "大众汽车与Uber在洛杉矶启动自动驾驶微型巴士测试，为2026年底推出服务做准备（Uber）"
+      ],
+      "count": 9,
+      "date_range": "2026-04-06~2026-04-12"
+    },
+    {
+      "summary": "Waymo于2026年3月31日在圣安东尼奥国际机场启动robotaxi服务，成为其第四座主要机场，车辆在航站楼路边落客并在指定网约车区域接载乘客，此前已在凤凰城、旧金山和圣何塞机场提供服务。然而，2026年4月5日TechCrunch Mobility报道指出，上月国会听证会批评Waymo在菲律宾使用远程协助人员缺乏透明度，该公司robotaxi现已在美国10个城市运营。此外，Waymo在旧金山推出服务仅20个月后，便占据27%市场份额，超越Lyft成为第二大打车服务提供商，并计划于2026年9月进入伦敦市场。百度Apollo于2026年4月1日在中国武汉全城出现系统故障，导致至少100辆Robotaxi停运，部分乘客被困车内长达两小时，当地警方确认系系统故障并仍在调查。特斯拉于2026年4月3日宣布Model X与Model S逐步退出历史舞台，未来将全力押注Cybercab自动驾驶出租车和Optimus机器人量产。Uber于2026年3月31日与中国自动驾驶公司文远知行在迪拜推出无需人类安全操作员的robotaxi服务，覆盖迪拜硅谷绿洲、迪拜投资园区第二区、杰贝阿里工业第一区等区域，乘客可通过Uber应用预订车辆。此外，2026年4月3日中国某Robotaxi服务出现大规模系统故障，导致多辆无人驾驶出租车在高速公路上停运，乘客滞留，引发对自动驾驶出租车安全性的广泛关注。",
+      "highlights": [
+        "Waymo在圣安东尼奥国际机场启动robotaxi服务，并面临远程协助透明度批评（Waymo）",
+        "百度Apollo在中国武汉发生大规模系统故障，导致至少100辆Robotaxi停运（百度Apollo）",
+        "特斯拉Model X与S逐步退出，全力押注Cybercab自动驾驶出租车（Tesla）",
+        "Uber与文远知行在迪拜扩大无需安全操作员的robotaxi运营（Uber）",
+        "中国某Robotaxi服务出现系统故障致乘客滞留高速公路（中国公司）",
+        "Waymo在旧金山市场份额达27%，超越Lyft成为第二大打车服务提供商（Waymo）"
+      ],
+      "count": 9,
+      "date_range": "2026-03-30~2026-04-05"
+    },
+    {
+      "summary": "Waymo本周宣布其每周付费robotaxi出行服务已达50万次，较2024年5月的5万次增长十倍，累计行驶里程超400万英里，并在美国10个城市运营，但TechCrunch指出其规模仍远小于Uber和Lyft在纽约市每日合计67.5万次的行程量。同时，Waymo的robotaxi在加州I-280公路因火灾导致交通堵塞时，面对警察指挥逆行出现故障，凸显了自动驾驶在复杂场景中的挑战。小马智行与Verne、Uber达成战略合作，在克罗地亚首都萨格勒布启动欧洲首个商业化Robotaxi服务，采用小马智行第七代自动驾驶系统及北汽极狐阿尔法T5 Robotaxi车型，未来数年车队规模有望扩展。此外，小马智行创始人楼天城邀请清华、北大毕业生参加校招宣讲会，以招募自动驾驶领域技术人才。Rivian因与大众集团合作的首款车型VW ID.EVERY1完成冬季测试，解锁了大众集团额外10亿美元投资，其中约7.5亿美元以股权投资形式注入，剩余2.5亿美元将根据后续进展支付。Uber通过与克罗地亚初创公司Verne及小马智行的合作，正式进军欧洲robotaxi市场，该合作由Rimac Group创始人Mate Rimac七年前启动的电动robotaxi项目延伸而来。Zoox计划于今年晚些时候在得克萨斯州奥斯汀和佛罗里达州迈阿密推出其专用robotaxi，作为早期乘客计划的一部分，同时将旧金山服务区域扩大四倍，并在拉斯维加斯向所有Zoox应用用户提供免费乘车服务。",
+      "highlights": [
+        "Waymo周订单量达50万次，累计行驶里程超400万英里（Waymo）",
+        "小马智行联手Verne、Uber在克罗地亚推出欧洲首个商业化Robotaxi服务（小马智行）",
+        "Rivian再获大众10亿美元投资，首款合作车型完成冬季测试（Rivian）",
+        "Uber与克罗地亚初创公司Verne及小马智行合作进军欧洲robotaxi市场（Uber）",
+        "Zoox计划在奥斯汀和迈阿密推出专用robotaxi，并扩大旧金山服务区域（Zoox）",
+        "小马智行创始人楼天城邀请清北学子参加校招宣讲会（小马智行）"
+      ],
+      "count": 10,
+      "date_range": "2026-03-23~2026-03-29"
+    },
+    {
+      "summary": "Uber于2026年3月19日宣布与Rivian达成合作，计划基于Rivian即将推出的R2 SUV部署数千辆robotaxi，交易总额高达12.5亿美元。初始阶段Uber投资3亿美元，并计划购买约1万辆全自动驾驶R2车辆，目标于2028年在旧金山和迈阿密率先推出，Uber还拥有额外采购权。小马智行于2026年3月19日向如祺出行交付首批超百辆搭载第七代自动驾驶系统的广汽埃安霸王龙Robotaxi，已接入平台并陆续投入运营。该车型自动驾驶套件成本较上一代降低70%，设计寿命达60万公里，并在广州、深圳实现单车运营盈利转正，双方计划通过技术+运营模式扩大车队规模。Rivian于2026年3月19日披露，因在自动驾驶技术研发上投入巨大，不再预期能在2027年实现此前长期设定的盈利目标，研发成本上升导致明年无法实现EBITDA盈利。Tesla于2026年3月19日面临美国最高汽车安全监管机构升级对其Full Self-Driving（受监督）软件在低能见度条件下性能的调查，该调查已升级为工程分析，这是最高级别审查，通常是在要求企业发起召回前的必要步骤。Waymo本周无独立新闻，但通过Uber与Rivian的合作间接参与robotaxi生态，其技术积累为行业提供参考。其他方面，2026年3月18日行业聚焦芯片技术驱动自动驾驶，Uber、Waymo、Tesla等公司利用芯片技术推动robotaxi与FSD部署，强调算力在低能见度等复杂场景中的关键作用。",
+      "highlights": [
+        "Uber与Rivian达成12.5亿美元robotaxi合作，计划2028年部署万辆R2车辆（Uber）",
+        "小马智行向如祺出行交付超百辆第七代无人车，自动驾驶套件成本降低70%（小马智行）",
+        "Rivian因自动驾驶研发投入放弃2027年盈利目标，EBITDA预期转负（Rivian）",
+        "美国联邦机构升级对特斯拉FSD在低能见度条件下性能的调查至最高级别（Tesla）",
+        "Waymo通过Uber合作间接参与Rivian robotaxi生态，但无直接独立新闻（Waymo）",
+        "行业芯片技术驱动robotaxi发展，Uber、Waymo、Tesla等公司加速部署（其他）"
+      ],
+      "count": 6,
+      "date_range": "2026-03-16~2026-03-22"
+    }
+  ]
+}
