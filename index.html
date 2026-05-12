@@ -383,7 +383,7 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
   <div class="filter-row">
     <span class="filter-label">搜索</span>
     <div class="search-wrap">
-      <input class="search" id="searchBox" placeholder="日期、公司名、关键词..." oninput="render()">
+      <input class="search" id="searchBox" placeholder="日期（年-月-日）、公司名、关键词" oninput="render()">
 
     </div>
   </div>
@@ -467,8 +467,13 @@ function init() {
       popup.style.left = left + 'px';
       popup.style.top = Math.max(8, rect.top - 10) + 'px';
     }
+    var hideTimer = null;
     function hidePopup() {
-      popup.style.display = 'none';
+      if (hideTimer) clearTimeout(hideTimer);
+      hideTimer = setTimeout(function() { popup.style.display = 'none'; }, 150);
+    }
+    function cancelHide() {
+      if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; }
     }
     
     // 事件委托：绑在容器上，DOM替换后依然有效
@@ -484,9 +489,7 @@ function init() {
     });
     
     // popup本身：移入取消隐藏，移出延时隐藏
-    popup.addEventListener('mouseenter', function() {
-      if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; }
-    });
+    popup.addEventListener('mouseenter', function() { cancelHide(); });
     popup.addEventListener('mouseleave', function() { hidePopup(); });
     
     // popup内点击新闻跳转
