@@ -1,0 +1,5 @@
+# 只保留门户文件
+*
+!index.html
+!robotaxi_data.json
+!.gitignore
