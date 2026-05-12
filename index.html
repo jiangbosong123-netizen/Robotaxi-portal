@@ -867,17 +867,16 @@ function downloadReport() {
         if (sel) sel.style.display = 'none';
         if (dlWrap) dlWrap.style.display = 'none';
         
-        // 固定960px宽度截图，比例不受屏幕尺寸影响
-        var origMaxW = el.style.maxWidth;
-        el.style.maxWidth = '960px';
+        // 收窄到720px，让内容自然变长，适合手机浏览
+        var origW = el.style.width;
+        el.style.width = '720px';
         
         html2canvas(el, {
           scale: 2,
           backgroundColor: '#ffffff',
           useCORS: true,
-          width: 960,
         }).then(function(c) {
-          el.style.maxWidth = origMaxW || '';
+          el.style.width = origW || '';
           if (sel) sel.style.display = '';
           if (dlWrap) dlWrap.style.display = '';
           c.toBlob(function(b) {
@@ -948,13 +947,13 @@ function exportPDF() {
   if (dlWrap) dlWrap.style.display = 'none';
   
   try {
-    var origMaxW = el.style.maxWidth;
-    el.style.maxWidth = '960px';
+    var origW = el.style.width;
+    el.style.width = '720px';
     
     html2canvas(el, {
-      scale: 2, backgroundColor: '#ffffff', useCORS: true, width: 960
+      scale: 2, backgroundColor: '#ffffff', useCORS: true
     }).then(function(canvas) {
-      el.style.maxWidth = origMaxW || '';
+      el.style.width = origW || '';
       if (sel) sel.style.display = '';
       if (dlWrap) dlWrap.style.display = '';
       
