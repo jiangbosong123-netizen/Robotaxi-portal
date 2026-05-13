@@ -279,16 +279,14 @@ input.search::placeholder { color:#a0aec0; }
   font-size:10px; font-weight:600; padding:2px 8px; border-radius:4px;
   letter-spacing:0.3px; margin-right:6px; display:inline-block;
 }
-.ct-技术进展 { background:#667eea22; color:#4c51bf; }
-.ct-运营拓展 { background:#38a16922; color:#276749; }
+.ct-技术突破 { background:#667eea22; color:#4c51bf; }
+.ct-商业拓展 { background:#38a16922; color:#276749; }
 .ct-行业动态 { background:#d69e2e22; color:#975a16; }
-.ct-商业拓展 { background:#e07c3e22; color:#b3622e; }
-.ct-融资     { background:#805ad522; color:#6b46c1; }
-.ct-安全     { background:#e53e3e22; color:#c53030; }
 .ct-合作     { background:#31979522; color:#285e61; }
-.ct-监管     { background:#e07c3e22; color:#9b5a2e; }
-.ct-诉讼     { background:#e53e3e22; color:#9b2c2c; }
-.ct-创业     { background:#667eea22; color:#4c51bf; }
+.ct-融资投资 { background:#805ad522; color:#6b46c1; }
+.ct-安全与监管 { background:#e53e3e22; color:#c53030; }
+.ct-财报     { background:#e07c3e22; color:#b3622e; }
+.ct-其他     { background:#a0aec022; color:#718096; }
 
 /* ===== Timeline ===== */
 .timeline { position:relative; padding-left:28px; }
@@ -930,9 +928,9 @@ function drawTypeChart(fromDate, toDate) {
   
   var sorted = Object.entries(byType).sort(function(a,b) { return b[1] - a[1]; }).slice(0, 7);
   var typeColors = {
-    '技术进展':'#667eea','运营拓展':'#38a169','行业动态':'#d69e2e',
-    '商业拓展':'#e07c3e','融资':'#805ad5','安全':'#e53e3e',
-    '合作':'#319795','监管':'#e07c3e','诉讼':'#e53e3e','创业':'#667eea'
+    '技术突破':'#667eea','商业拓展':'#38a169','行业动态':'#d69e2e',
+    '合作':'#319795','融资投资':'#805ad5','安全与监管':'#e53e3e',
+    '财报':'#e07c3e','其他':'#a0aec0'
   };
 
   _chartTypes = new Chart(document.getElementById('chartTypeDist'), {
