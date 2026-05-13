@@ -176,13 +176,23 @@ body {
   background:#f8f6ff; border-radius:8px; margin-top:4px;
 }
 .weekly-body-label {
-  font-size:13px; font-weight:600; color:#667eea; margin-bottom:8px;
+  font-size:14px; font-weight:700; color:#667eea; margin-bottom:10px;
   letter-spacing:0.5px;
 }
 .weekly-body .company-mention {
   font-weight:600; padding:0 8px; border-radius:4px;
   display:inline-block; font-size:12px;
   background:#667eea18; color:#4c51bf;
+}
+.weekly-body .summary-line {
+  display:block; padding:3px 0 3px 16px;
+  position:relative;
+  line-height:1.7;
+}
+.weekly-body .summary-line::before {
+  content:"•";
+  position:absolute; left:0;
+  color:#667eea; font-weight:bold;
 }
 .weekly-body .num-highlight {
   display:inline-block; background:rgba(102,126,234,0.08); color:#667eea;
@@ -370,6 +380,10 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
       </div>
     </div>
   </div>
+  <div class="weekly-body">
+    <div class="weekly-body-label">本周综述</div>
+    <div id="weeklyBody"></div>
+  </div>
   <div class="weekly-hl" id="weeklyHL"></div>
   <div class="weekly-charts">
     <div class="weekly-chart-box">
@@ -384,10 +398,6 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
       <div class="chart-title">分类分布</div>
       <canvas id="chartTypeDist"></canvas>
     </div>
-  </div>
-  <div class="weekly-body">
-    <div class="weekly-body-label">周报内容</div>
-    <div id="weeklyBody"></div>
   </div>
   <div class="footer" id="weeklyFooter"></div>
 </div>
@@ -729,19 +739,28 @@ function renderWeekly() {
         '<span class="hl-icon">📌</span>' + h + popup + '</div>';
     }).join('');
 
-  // Body text - clean single paragraph
+  // 周报内容 — 条列式
   _currentReport = r;
-  let body = (r.summary || '');
+  var body = (r.summary || '');
   // 去掉markdown加粗
   body = body.replace(/\*\*/g, '');
-  // 去掉多余的空白行
-  body = body.replace(/\n{2,}/g, ' ');
-  // 公司名提亮（统一颜色，Zoox不标以免与中文混排）
-var companies = ['Waymo','Zoox','Tesla','特斯拉','Wayve','Aurora','Nuro','Motional','WeRide','Uber','小马智行','文远知行','Pony.ai','Nvidia','Lucid','Rivian','Elon Musk'];
-  companies.forEach(function(n) {
-    body = body.replace(n, '<span class="company-mention">' + n + '</span>');
-  });
-  document.getElementById('weeklyBody').innerHTML = body;
+  
+  // 公司名提亮列表
+  var companies = ['Waymo','Zoox','Tesla','特斯拉','Wayve','Aurora','Nuro','Motional','WeRide','Uber','小马智行','文远知行','Nvidia','Lucid','Rivian'];
+  
+  // 按行分割，每条包装为summary-line
+  var lines = body.split('\n').filter(function(l) { return l.trim().length > 0; });
+  var html = lines.map(function(line) {
+    var l = line.trim();
+    // 去掉行首的•符号
+    l = l.replace(/^[\s•\-]*/, '');
+    // 公司名提亮
+    companies.forEach(function(n) {
+      l = l.replace(n, '<span class="company-mention">' + n + '</span>');
+    });
+    return '<span class="summary-line">' + l + '</span>';
+  }).join('');
+  document.getElementById('weeklyBody').innerHTML = html || body;
 
   // Meta
   document.getElementById('weeklyFooter').textContent =
@@ -818,12 +837,24 @@ function renderWeek(r) {
   
   // 正文
   _currentReport = r;
-  var body = (r.summary || '').replace(/\*\*/g, '').replace(/\n{2,}/g, ' ');
+  var body = (r.summary || '').replace(/\*\*/g, '');
   var companies = ['Waymo','Zoox','Tesla','特斯拉','Wayve','Aurora','Nuro','Motional','WeRide','Uber','小马智行','文远知行','Pony.ai','Nvidia','Lucid','Rivian'];
   companies.forEach(function(n) {
     body = body.replace(n, '<span class="company-mention">' + n + '</span>');
   });
-  document.getElementById('weeklyBody').innerHTML = body;
+  // 按行分割，每条包装为summary-line
+  var lines = body.split('\n').filter(function(l) { return l.trim().length > 0; });
+  var html = lines.map(function(line) {
+    var l = line.trim();
+    // 去掉行首的•符号
+    l = l.replace(/^[\s•\-]*/, '');
+    // 公司名提亮
+    companies.forEach(function(n) {
+      l = l.replace(n, '<span class="company-mention">' + n + '</span>');
+    });
+    return '<span class="summary-line">' + l + '</span>';
+  }).join('');
+  document.getElementById('weeklyBody').innerHTML = html || body;
   
   document.getElementById('weeklyFooter').textContent = (r.count || 0) + ' 条新闻';
   

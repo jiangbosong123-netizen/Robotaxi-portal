@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-05-14 02:06",
+  "updated_at": "2026-05-14 02:26",
   "total": 212,
-  "week_count": 43,
+  "week_count": 34,
   "date_from": "2026-02-10",
   "date_to": "2026-05-12",
   "companies": [
@@ -2213,28 +2213,28 @@
     }
   ],
   "weekly_report": {
-    "summary": "本周Robotaxi行业呈现商业化加速与技术创新并行的态势。中国公司小马智行在五一假期期间订单量同比飙升544%，并首次作为官方交通疏导方案的一部分，在演唱会散场高峰时段累计护送歌迷超3000人次，凸显其在国内市场的规模化落地能力。海外方面，Aurora宣布计划于2026年Q2推出第二代无人驾驶卡车车队，并与Hirschbach合作部署500辆，同时与分销巨头McLaneCo在德州启动无人运输，标志着自动驾驶卡车从验证走向大规模商业部署。Uber CEO强调公司正从出行平台向“万能应用”转型，自由现金流已接近100亿美元，但其合作伙伴Avride因16起碰撞事故被NHTSA调查，凸显行业安全挑战。技术层面，Wayve发布自监督相机位姿估计方法LA-Pose，旨在降低对高成本3D标签的依赖，推动L4级技术发展。此外，文远知行持续拓展海外布局，其全无人Robotaxi已在阿布扎比Yas Island运营，并亮相瑞士苏黎世峰会，展现中国自动驾驶企业的全球竞争力。",
+    "summary": "本周要点：\n• Aurora计划2026年Q2推出第二代无人驾驶卡车车队，与Hirschbach合作部署500辆（Aurora）\n• Uber CEO Dara Khosrowshahi阐述“万能应用”愿景，公司从亏损45亿美元转向近100亿美元自由现金流（Uber）\n• 小马智行五一假期Robotaxi订单量飙升544%，护送超3000名演唱会歌迷（小马智行）\n• Bot Auto完成首次商业无人驾驶货运任务，从休斯顿行驶230英里至德克萨斯州哈钦斯（Waymo）\n• Zoox在拉斯维加斯新增枫丹白露酒店与MGM Grand等5个接送站点，扩展Robotaxi服务网络（Zoox）\n• 美国分销巨头McLaneCo与Aurora Driver合作，将在德州启动无人驾驶运输服务（Aurora）\n\n• 特斯拉FSD V14.3.2创纪录，零干预完成纽约至洛杉矶2833英里全程自动驾驶，彰显技术领先性。\n• Aurora推出基于International LT系列的新一代无人驾驶卡车，计划2026年底在Sun Belt部署超200辆，加速商业化。\n• 小马智行五一假期订单量同比增长544%，",
     "highlights": [
-      "小马智行五一假期订单量飙升544%，Robotaxi护送超3000名演唱会歌迷（小马智行）",
-      "Aurora加速驶向商业化：2026年Q2推出无人驾驶卡车车队，合作Hirschbach计划部署500辆（Aurora）",
-      "Uber CEO Dara Khosrowshahi：打造“万能应用”，从亏损45亿美元到近100亿美元自由现金流（Uber）",
-      "Zoox在拉斯维加斯新增两大接送点：枫丹白露酒店与MGM Grand（Zoox）",
-      "Wayve发布LA-Pose：无需昂贵3D标签的自监督相机位姿估计新方法（Wayve）",
-      "文远知行全无人Robotaxi在阿布扎比Yas Island运营，并亮相瑞士苏黎世自动化出行峰会（WeRide）"
+      "Aurora计划2026年Q2推出第二代无人驾驶卡车车队，与Hirschbach合作部署500辆（Aurora）",
+      "Uber CEO Dara Khosrowshahi阐述“万能应用”愿景，公司从亏损45亿美元转向近100亿美元自由现金流（Uber）",
+      "小马智行五一假期Robotaxi订单量飙升544%，护送超3000名演唱会歌迷（小马智行）",
+      "Bot Auto完成首次商业无人驾驶货运任务，从休斯顿行驶230英里至德克萨斯州哈钦斯（Waymo）",
+      "Zoox在拉斯维加斯新增枫丹白露酒店与MGM Grand等5个接送站点，扩展Robotaxi服务网络（Zoox）",
+      "美国分销巨头McLaneCo与Aurora Driver合作，将在德州启动无人驾驶运输服务（Aurora）"
     ],
     "count": 45,
     "date_range": "2026-05-04~2026-05-10"
   },
   "weekly_history": [
     {
-      "summary": "本周Robotaxi行业呈现商业化加速与技术创新并行的态势。中国公司小马智行在五一假期期间订单量同比飙升544%，并首次作为官方交通疏导方案的一部分，在演唱会散场高峰时段累计护送歌迷超3000人次，凸显其在国内市场的规模化落地能力。海外方面，Aurora宣布计划于2026年Q2推出第二代无人驾驶卡车车队，并与Hirschbach合作部署500辆，同时与分销巨头McLaneCo在德州启动无人运输，标志着自动驾驶卡车从验证走向大规模商业部署。Uber CEO强调公司正从出行平台向“万能应用”转型，自由现金流已接近100亿美元，但其合作伙伴Avride因16起碰撞事故被NHTSA调查，凸显行业安全挑战。技术层面，Wayve发布自监督相机位姿估计方法LA-Pose，旨在降低对高成本3D标签的依赖，推动L4级技术发展。此外，文远知行持续拓展海外布局，其全无人Robotaxi已在阿布扎比Yas Island运营，并亮相瑞士苏黎世峰会，展现中国自动驾驶企业的全球竞争力。",
+      "summary": "本周要点：\n• Aurora计划2026年Q2推出第二代无人驾驶卡车车队，与Hirschbach合作部署500辆（Aurora）\n• Uber CEO Dara Khosrowshahi阐述“万能应用”愿景，公司从亏损45亿美元转向近100亿美元自由现金流（Uber）\n• 小马智行五一假期Robotaxi订单量飙升544%，护送超3000名演唱会歌迷（小马智行）\n• Bot Auto完成首次商业无人驾驶货运任务，从休斯顿行驶230英里至德克萨斯州哈钦斯（Waymo）\n• Zoox在拉斯维加斯新增枫丹白露酒店与MGM Grand等5个接送站点，扩展Robotaxi服务网络（Zoox）\n• 美国分销巨头McLaneCo与Aurora Driver合作，将在德州启动无人驾驶运输服务（Aurora）\n\n• 特斯拉FSD V14.3.2创纪录，零干预完成纽约至洛杉矶2833英里全程自动驾驶，彰显技术领先性。\n• Aurora推出基于International LT系列的新一代无人驾驶卡车，计划2026年底在Sun Belt部署超200辆，加速商业化。\n• 小马智行五一假期订单量同比增长544%，",
       "highlights": [
-        "小马智行五一假期订单量飙升544%，Robotaxi护送超3000名演唱会歌迷（小马智行）",
-        "Aurora加速驶向商业化：2026年Q2推出无人驾驶卡车车队，合作Hirschbach计划部署500辆（Aurora）",
-        "Uber CEO Dara Khosrowshahi：打造“万能应用”，从亏损45亿美元到近100亿美元自由现金流（Uber）",
-        "Zoox在拉斯维加斯新增两大接送点：枫丹白露酒店与MGM Grand（Zoox）",
-        "Wayve发布LA-Pose：无需昂贵3D标签的自监督相机位姿估计新方法（Wayve）",
-        "文远知行全无人Robotaxi在阿布扎比Yas Island运营，并亮相瑞士苏黎世自动化出行峰会（WeRide）"
+        "Aurora计划2026年Q2推出第二代无人驾驶卡车车队，与Hirschbach合作部署500辆（Aurora）",
+        "Uber CEO Dara Khosrowshahi阐述“万能应用”愿景，公司从亏损45亿美元转向近100亿美元自由现金流（Uber）",
+        "小马智行五一假期Robotaxi订单量飙升544%，护送超3000名演唱会歌迷（小马智行）",
+        "Bot Auto完成首次商业无人驾驶货运任务，从休斯顿行驶230英里至德克萨斯州哈钦斯（Waymo）",
+        "Zoox在拉斯维加斯新增枫丹白露酒店与MGM Grand等5个接送站点，扩展Robotaxi服务网络（Zoox）",
+        "美国分销巨头McLaneCo与Aurora Driver合作，将在德州启动无人驾驶运输服务（Aurora）"
       ],
       "count": 45,
       "date_range": "2026-05-04~2026-05-10"
