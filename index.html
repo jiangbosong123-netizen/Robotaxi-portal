@@ -759,7 +759,7 @@ function switchWeek(idx) {
   if (idx === '') return;
   var history = DATA.weekly_history || [];
   var r = history[parseInt(idx)];
-  if (!r) return;
+  if (!r) { console.warn('switchWeek: no report for idx', idx); return; }
   renderWeek(r);
 }
 
