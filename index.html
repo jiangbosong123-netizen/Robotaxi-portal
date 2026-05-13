@@ -999,7 +999,27 @@ function drawCompanyChart(fromDate, toDate) {
       indexAxis: 'y',
       responsive: true,
       maintainAspectRatio: false,
-      plugins: { legend: { display: false } },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#1a1a2e',
+          titleFont: { size: 11 },
+          bodyFont: { size: 12 },
+          padding: 8,
+          callbacks: {
+            label: function(ctx) {
+              var c = ctx.label;
+              var info = (DATA.company_info || {})[c] || '';
+              var label = (DATA.company_labels || {})[c] || c;
+              return label + ' ' + ctx.parsed.x + '条';
+            },
+            afterLabel: function(ctx) {
+              var info = (DATA.company_info || {})[ctx.label] || '';
+              return info ? '——' + info : '';
+            }
+          }
+        }
+      },
       scales: {
         x: { ticks: { font: { size: 10 }, color: '#a0aec0', stepSize: 1 }, grid: { color: '#f0f2f5' } },
         y: { ticks: { font: { size: 10 }, color: '#4a5568' }, grid: { display: false } }
