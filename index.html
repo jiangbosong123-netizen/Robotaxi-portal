@@ -399,6 +399,10 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
     <div class="filter-group" id="companyFilter"></div>
   </div>
   <div class="filter-row">
+    <span class="filter-label">来源</span>
+    <div class="filter-group" id="sourceFilter"></div>
+  </div>
+  <div class="filter-row">
     <span class="filter-label">分类</span>
     <div class="filter-group" id="typeFilter"></div>
   </div>
@@ -456,6 +460,10 @@ function init() {
   document.getElementById('companyFilter').innerHTML =
     '<button class="filter-btn active" onclick="setF(\'company\',\'all\',this)">全部</button>' +
     DATA.companies.map(c => `<button class="filter-btn" onclick="setF('company','${c}',this)">${companyLabel(c)}</button>`).join('');
+
+  document.getElementById('sourceFilter').innerHTML =
+    '<button class="filter-btn active" onclick="setF(\'source\',\'all\',this)">全部</button>' +
+    DATA.sources.map(s => `<button class="filter-btn" onclick="setF('source','${s}',this)">${s}</button>`).join('');
 
   document.getElementById('typeFilter').innerHTML =
     '<button class="filter-btn active" onclick="setF(\'type\',\'all\',this)">全部</button>' +
@@ -550,13 +558,16 @@ function selectCompany(comp) {
   if (activeCompany === comp) return;
   activeCompany = comp;
   activeType = 'all';
+  activeSource = 'all';
   // 更新所有按钮状态
   document.querySelectorAll('#companyFilter .filter-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('#sourceFilter .filter-btn').forEach(b => b.classList.remove('active'));
   document.querySelectorAll('#typeFilter .filter-btn').forEach(b => b.classList.remove('active'));
   // 找到对应公司按钮
   const btns = document.querySelectorAll('#companyFilter .filter-btn');
   const idx = DATA.companies.indexOf(comp);
   if (idx >= 0 && btns[idx + 1]) btns[idx + 1].classList.add('active');
+  document.querySelector('#sourceFilter .filter-btn:first-child').classList.add('active');
   document.querySelector('#typeFilter .filter-btn:first-child').classList.add('active');
   render();
   // 滚动到新闻列表
@@ -567,6 +578,7 @@ function getFiltered() {
   const kw = document.getElementById('searchBox').value.toLowerCase().trim();
   return DATA.news.filter(n => {
     if (activeCompany !== 'all' && n.company !== activeCompany) return false;
+    if (activeSource !== 'all' && n.source !== activeSource) return false;
     if (activeType !== 'all' && n.type !== activeType) return false;
     if (kw) {
       // 搜索：标题 + 摘要 + 日期 + 公司名
@@ -890,7 +902,7 @@ function drawCompanyChart() {
   weekAgo.setDate(weekAgo.getDate() - 7);
   const weekStr = weekAgo.toISOString().slice(0,10);
   
-  const weekNews = DATA.news.filter(n => n.date >= weekStr);
+  const weekNews = DATA.news.filter(n => n.date >= weekStr && n.company !== 'Sawyer Merritt');
   const byCompany = {};
   weekNews.forEach(n => {
     byCompany[n.company] = (byCompany[n.company] || 0) + 1;
