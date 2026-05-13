@@ -557,6 +557,18 @@ function setF(type, val, btn) {
 
 function selectCompany(comp) {
   if (activeCompany === comp) return;
+  // 处理公司名映射：如果comp不是一个数据库里的公司名，尝试反向映射
+  if (DATA.company_labels) {
+    var found = false;
+    for (var k in DATA.company_labels) {
+      if (k === comp) { found = true; break; }
+    }
+    if (!found) {
+      for (var k in DATA.company_labels) {
+        if (DATA.company_labels[k] === comp) { comp = k; break; }
+      }
+    }
+  }
   activeCompany = comp;
   activeType = 'all';
   activeSource = 'all';
@@ -772,10 +784,20 @@ function renderWeek(r) {
   }).join('~');
   document.getElementById('weekBadge').textContent = dr;
   
+  // 公司名映射（中文标签→数据库英文名）
+  function mapCompany(comp) {
+    if (!comp || !DATA.company_labels) return comp;
+    for (var k in DATA.company_labels) {
+      if (DATA.company_labels[k] === comp) return k;
+    }
+    return comp;
+  }
+  
   // 高亮
   document.getElementById('weeklyHL').innerHTML =
     (r.highlights||[]).map(function(h) {
       var comp = (h.match(/[（(]([^）)]+)[）)]\s*$/) || [])[1];
+      if (comp) comp = mapCompany(comp);
       var news = comp ? DATA.news.filter(function(n) { return n.company === comp; }).slice(0, 3) : [];
       var tooltip = news.length ? '<div class="hl-popup" data-comp="' + comp + '">' +
         '<div class="popup-title">相关新闻</div>' +
