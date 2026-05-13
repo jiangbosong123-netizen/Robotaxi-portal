@@ -203,6 +203,12 @@ body {
   padding-top:10px; border-top:1px solid #f0f2f5;
 }
 
+/* ===== 周报综述与图钉间距 ===== */
+#weeklyBody {
+  margin-bottom:20px;
+  line-height:1.9;
+}
+
 /* ===== Filters ===== */
 .filters {
   background:#fff; padding:14px 18px;
@@ -748,19 +754,12 @@ function renderWeekly() {
   // 公司名提亮列表
   var companies = ['Waymo','Zoox','Tesla','特斯拉','Wayve','Aurora','Nuro','Motional','WeRide','Uber','小马智行','文远知行','Nvidia','Lucid','Rivian'];
   
-  // 按行分割，每条包装为summary-line
-  var lines = body.split('\n').filter(function(l) { return l.trim().length > 0; });
-  var html = lines.map(function(line) {
-    var l = line.trim();
-    // 去掉行首的•符号
-    l = l.replace(/^[\s•\-]*/, '');
-    // 公司名提亮
-    companies.forEach(function(n) {
-      l = l.replace(n, '<span class="company-mention">' + n + '</span>');
-    });
-    return '<span class="summary-line">' + l + '</span>';
-  }).join('');
-  document.getElementById('weeklyBody').innerHTML = html || body;
+  // 正文：一段流畅的综述
+  body = body.replace(/\n+/g, ' ').replace(/^[\s•\-]*/, '');
+  companies.forEach(function(n) {
+    body = body.replace(n, '<span class="company-mention">' + n + '</span>');
+  });
+  document.getElementById('weeklyBody').innerHTML = body;
 
   // Meta
   document.getElementById('weeklyFooter').textContent =
@@ -842,19 +841,12 @@ function renderWeek(r) {
   companies.forEach(function(n) {
     body = body.replace(n, '<span class="company-mention">' + n + '</span>');
   });
-  // 按行分割，每条包装为summary-line
-  var lines = body.split('\n').filter(function(l) { return l.trim().length > 0; });
-  var html = lines.map(function(line) {
-    var l = line.trim();
-    // 去掉行首的•符号
-    l = l.replace(/^[\s•\-]*/, '');
-    // 公司名提亮
-    companies.forEach(function(n) {
-      l = l.replace(n, '<span class="company-mention">' + n + '</span>');
-    });
-    return '<span class="summary-line">' + l + '</span>';
-  }).join('');
-  document.getElementById('weeklyBody').innerHTML = html || body;
+  // 正文：一段流畅的综述
+  body = body.replace(/\n+/g, ' ').replace(/^[\s•\-]*/, '');
+  companies.forEach(function(n) {
+    body = body.replace(n, '<span class="company-mention">' + n + '</span>');
+  });
+  document.getElementById('weeklyBody').innerHTML = body;
   
   document.getElementById('weeklyFooter').textContent = (r.count || 0) + ' 条新闻';
   
