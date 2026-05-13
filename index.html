@@ -461,7 +461,11 @@ function init() {
   }
   document.getElementById('companyFilter').innerHTML =
     '<button class="filter-btn active" onclick="setF(\'company\',\'all\',this)">全部</button>' +
-    DATA.companies.map(c => `<button class="filter-btn" onclick="setF('company','${c}',this)">${companyLabel(c)}</button>`).join('');
+    DATA.companies.map(function(c) {
+      var label = companyLabel(c);
+      var info = (DATA.company_info || {})[c] || '';
+      return '<button class="filter-btn" onclick="setF(\'company\',\''+c+'\',this)" title="' + label + ' — ' + info + '">' + label + '</button>';
+    }).join('');
 
   document.getElementById('sourceFilter').innerHTML =
     '<button class="filter-btn active" onclick="setF(\'source\',\'all\',this)">全部</button>' +
@@ -746,9 +750,16 @@ var companies = ['Waymo','Zoox','Tesla','特斯拉','Wayve','Aurora','Nuro','Mot
     `${r.count || 0} 条新闻`;
 
   // ===== Charts =====
-  drawTrendChart();
-  drawCompanyChart();
-  drawTypeChart();
+  var parts = (r.date_range || '').split('~');
+  if (parts.length === 2) {
+    drawTrendChart(parts[0], parts[1]);
+    drawCompanyChart(parts[0], parts[1]);
+    drawTypeChart(parts[0], parts[1]);
+  } else {
+    drawTrendChart();
+    drawCompanyChart();
+    drawTypeChart();
+  }
 }
 
 // ===== 周报历史切换 =====
@@ -817,24 +828,52 @@ function renderWeek(r) {
   document.getElementById('weeklyBody').innerHTML = body;
   
   document.getElementById('weeklyFooter').textContent = (r.count || 0) + ' 条新闻';
+  
+  // 更新图表为历史周数据
+  var parts = (r.date_range || '').split('~');
+  if (parts.length === 2) {
+    drawTrendChart(parts[0], parts[1]);
+    drawCompanyChart(parts[0], parts[1]);
+    drawTypeChart(parts[0], parts[1]);
+  }
 }
 
-function drawTrendChart() {
-  const weekAgo = new Date();
-  weekAgo.setDate(weekAgo.getDate() - 13);
+// 全局图表实例，用于切换周报时销毁
+var _chartTrend = null, _chartCompanies = null, _chartTypes = null;
+
+function destroyCharts() {
+  if (_chartTrend) { _chartTrend.destroy(); _chartTrend = null; }
+  if (_chartCompanies) { _chartCompanies.destroy(); _chartCompanies = null; }
+  if (_chartTypes) { _chartTypes.destroy(); _chartTypes = null; }
+}
+
+function drawTrendChart(fromDate, toDate) {
+  destroyCharts();
   
-  const days = [];
-  const counts = [];
-  for (let i = 0; i < 14; i++) {
-    const d = new Date(weekAgo);
-    d.setDate(d.getDate() + i);
-    const dateStr = d.toISOString().slice(0,10);
-    const label = (i % 2 === 0) ? (d.getMonth()+1)+'/'+d.getDate() : '';
-    days.push(label);
-    counts.push(DATA.news.filter(n => n.date === dateStr).length);
+  var days = [], counts = [];
+  if (fromDate && toDate) {
+    // 历史周：显示该周每天的分布
+    var start = new Date(fromDate);
+    var end = new Date(toDate);
+    for (var d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
+      var ds = d.toISOString().slice(0,10);
+      days.push((d.getMonth()+1)+'/'+d.getDate());
+      counts.push(DATA.news.filter(function(n) { return n.date === ds; }).length);
+    }
+  } else {
+    // 默认：最近14天
+    var weekAgo = new Date();
+    weekAgo.setDate(weekAgo.getDate() - 13);
+    for (var i = 0; i < 14; i++) {
+      var d = new Date(weekAgo);
+      d.setDate(d.getDate() + i);
+      var ds = d.toISOString().slice(0,10);
+      days.push((i % 2 === 0) ? (d.getMonth()+1)+'/'+d.getDate() : '');
+      counts.push(DATA.news.filter(function(n) { return n.date === ds; }).length);
+    }
   }
 
-  new Chart(document.getElementById('chartTrend'), {
+  _chartTrend = new Chart(document.getElementById('chartTrend'), {
     type: 'line',
     data: {
       labels: days,
@@ -874,32 +913,36 @@ function drawTrendChart() {
   });
 }
 
-function drawTypeChart() {
-  const weekAgo = new Date();
-  weekAgo.setDate(weekAgo.getDate() - 7);
-  const weekStr = weekAgo.toISOString().slice(0,10);
+function drawTypeChart(fromDate, toDate) {
+  var weekNews;
+  if (fromDate && toDate) {
+    weekNews = DATA.news.filter(function(n) { return n.date >= fromDate && n.date <= toDate; });
+  } else {
+    var weekAgo = new Date();
+    weekAgo.setDate(weekAgo.getDate() - 7);
+    weekNews = DATA.news.filter(function(n) { return n.date >= weekAgo.toISOString().slice(0,10); });
+  }
   
-  const weekNews = DATA.news.filter(n => n.date >= weekStr);
-  const byType = {};
-  weekNews.forEach(n => {
+  var byType = {};
+  weekNews.forEach(function(n) {
     byType[n.type] = (byType[n.type] || 0) + 1;
   });
   
-  const sorted = Object.entries(byType).sort((a,b) => b[1] - a[1]).slice(0, 7);
-  const typeColors = {
+  var sorted = Object.entries(byType).sort(function(a,b) { return b[1] - a[1]; }).slice(0, 7);
+  var typeColors = {
     '技术进展':'#667eea','运营拓展':'#38a169','行业动态':'#d69e2e',
     '商业拓展':'#e07c3e','融资':'#805ad5','安全':'#e53e3e',
     '合作':'#319795','监管':'#e07c3e','诉讼':'#e53e3e','创业':'#667eea'
   };
 
-  new Chart(document.getElementById('chartTypeDist'), {
+  _chartTypes = new Chart(document.getElementById('chartTypeDist'), {
     type: 'doughnut',
     data: {
-      labels: sorted.map(s => s[0] + ' ' + s[1]),
+      labels: sorted.map(function(s) { return s[0] + ' ' + s[1]; }),
       datasets: [{
-        data: sorted.map(s => s[1]),
-        backgroundColor: sorted.map(s => (typeColors[s[0]]||'#a0aec0') + '99'),
-        borderColor: sorted.map(s => typeColors[s[0]]||'#a0aec0'),
+        data: sorted.map(function(s) { return s[1]; }),
+        backgroundColor: sorted.map(function(s) { return (typeColors[s[0]]||'#a0aec0') + '99'; }),
+        borderColor: sorted.map(function(s) { return typeColors[s[0]]||'#a0aec0'; }),
         borderWidth: 1,
       }]
     },
@@ -921,29 +964,33 @@ function drawTypeChart() {
   });
 }
 
-function drawCompanyChart() {
-  const weekAgo = new Date();
-  weekAgo.setDate(weekAgo.getDate() - 7);
-  const weekStr = weekAgo.toISOString().slice(0,10);
+function drawCompanyChart(fromDate, toDate) {
+  var weekNews;
+  if (fromDate && toDate) {
+    weekNews = DATA.news.filter(function(n) { return n.date >= fromDate && n.date <= toDate && n.company !== 'Sawyer Merritt'; });
+  } else {
+    var weekAgo = new Date();
+    weekAgo.setDate(weekAgo.getDate() - 7);
+    weekNews = DATA.news.filter(function(n) { return n.date >= weekAgo.toISOString().slice(0,10) && n.company !== 'Sawyer Merritt'; });
+  }
   
-  const weekNews = DATA.news.filter(n => n.date >= weekStr && n.company !== 'Sawyer Merritt');
-  const byCompany = {};
-  weekNews.forEach(n => {
+  var byCompany = {};
+  weekNews.forEach(function(n) {
     byCompany[n.company] = (byCompany[n.company] || 0) + 1;
   });
   
-  const sorted = Object.entries(byCompany).sort((a,b) => b[1] - a[1]).slice(0, 8);
-  const colors = ['#667eea','#e53e3e','#805ad5','#38a169','#d69e2e','#319795','#e07c3e','#5277e6'];
+  var sorted = Object.entries(byCompany).sort(function(a,b) { return b[1] - a[1]; }).slice(0, 8);
+  var colors = ['#667eea','#e53e3e','#805ad5','#38a169','#d69e2e','#319795','#e07c3e','#5277e6'];
 
-  new Chart(document.getElementById('chartCompanies'), {
+  _chartCompanies = new Chart(document.getElementById('chartCompanies'), {
     type: 'bar',
     data: {
-      labels: sorted.map(s => s[0]),
+      labels: sorted.map(function(s) { return s[0]; }),
       datasets: [{
         label: '新闻数',
-        data: sorted.map(s => s[1]),
-        backgroundColor: sorted.map((_, i) => colors[i % colors.length] + '33'),
-        borderColor: sorted.map((_, i) => colors[i % colors.length]),
+        data: sorted.map(function(s) { return s[1]; }),
+        backgroundColor: sorted.map(function(_, i) { return colors[i % colors.length] + '33'; }),
+        borderColor: sorted.map(function(_, i) { return colors[i % colors.length]; }),
         borderWidth: 1,
         borderRadius: 3,
       }]
