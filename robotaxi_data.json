@@ -1,19 +1,20 @@
 {
-  "updated_at": "2026-05-13 10:35",
-  "total": 204,
-  "week_count": 41,
+  "updated_at": "2026-05-13 12:40",
+  "total": 212,
+  "week_count": 43,
   "date_from": "2026-02-10",
   "date_to": "2026-05-12",
   "companies": [
     "小马智行",
     "WeRide",
+    "百度Apollo",
+    "滴滴出行",
     "黑芝麻智能",
     "Aurora",
     "Lucid",
     "Motional",
     "Nuro",
     "Rivian",
-    "Sawyer Merritt",
     "Tesla",
     "Uber",
     "Waymo",
@@ -24,6 +25,9 @@
   "company_labels": {
     "WeRide": "文远知行",
     "小马智行": "小马智行",
+    "百度Apollo": "百度萝卜快跑",
+    "滴滴出行": "滴滴出行",
+    "曹操出行": "曹操出行",
     "黑芝麻智能": "黑芝麻智能"
   },
   "sources": [
@@ -45,7 +49,7 @@
     "运营拓展"
   ],
   "company_stats": {
-    "小马智行": 41,
+    "小马智行": 48,
     "Tesla": 34,
     "Waymo": 30,
     "Zoox": 17,
@@ -56,14 +60,14 @@
     "Aurora": 11,
     "Motional": 4,
     "Rivian": 3,
-    "Sawyer Merritt": 2,
     "百度Apollo": 1,
+    "滴滴出行": 1,
     "Lucid": 1
   },
   "source_stats": {
     "Twitter": 101,
+    "微信公众号(WeWeRSS)": 49,
     "TechCrunch": 45,
-    "微信公众号(WeWeRSS)": 41,
     "The Driverless Digest": 17
   },
   "news": [
@@ -96,6 +100,16 @@
       "source": "Twitter",
       "url": "https://x.com/SawyerMerritt/status/2054005778210512981",
       "type": "技术进展"
+    },
+    {
+      "id": 436,
+      "date": "2026-05-11",
+      "company": "小马智行",
+      "title": "百度地图亮相2026北京车展：成为智能座舱和智能驾驶的关键基建与桥梁",
+      "summary": "百度地图亮相2026北京车展：成为智能座舱和智能驾驶的关键基建与桥梁",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/Tvg9wkDqhQfb3k1caIoakA",
+      "type": "行业动态"
     },
     {
       "id": 343,
@@ -236,6 +250,16 @@
       "source": "Twitter",
       "url": "https://x.com/Tesla/status/2053188146989609209",
       "type": "技术进展"
+    },
+    {
+      "id": 437,
+      "date": "2026-05-08",
+      "company": "小马智行",
+      "title": "滴滴自动驾驶论文入选全球人工智能顶会ICLR 2026",
+      "summary": "滴滴自动驾驶论文入选全球人工智能顶会ICLR 2026",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/uOUmVgc9yU--i3Fr2yHnNw",
+      "type": "行业动态"
     },
     {
       "id": 428,
@@ -688,6 +712,16 @@
       "type": "技术进展"
     },
     {
+      "id": 438,
+      "date": "2026-05-01",
+      "company": "小马智行",
+      "title": "这个假期目的地又多了！曹操出行4月新开4城",
+      "summary": "这个假期目的地又多了！曹操出行4月新开4城",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/2nWfhWoFUbP3iC94hcMUkQ",
+      "type": "行业动态"
+    },
+    {
       "id": 400,
       "date": "2026-05-01",
       "company": "WeRide",
@@ -716,6 +750,16 @@
       "source": "The Driverless Digest",
       "url": "https://www.thedriverlessdigest.com/p/uber-partners-with-hertz-for-robotaxi",
       "type": "运营拓展"
+    },
+    {
+      "id": 439,
+      "date": "2026-04-30",
+      "company": "小马智行",
+      "title": "曹操出行2026年五一安全保障公告",
+      "summary": "曹操出行2026年五一安全保障公告",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/IKolP9jO-O2NusC6nVytUQ",
+      "type": "行业动态"
     },
     {
       "id": 429,
@@ -1018,6 +1062,16 @@
       "type": "行业动态"
     },
     {
+      "id": 440,
+      "date": "2026-04-24",
+      "company": "小马智行",
+      "title": "中国首款原生开发Robotaxi原型车亮相北京车展，曹操出行定制版将于2027年量产",
+      "summary": "中国首款原生开发Robotaxi原型车亮相北京车展，曹操出行定制版将于2027年量产",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/A8jKE7Sr0DMyl5CX5dC_mQ",
+      "type": "行业动态"
+    },
+    {
       "id": 425,
       "date": "2026-04-24",
       "company": "Tesla",
@@ -1168,6 +1222,16 @@
       "type": "行业动态"
     },
     {
+      "id": 441,
+      "date": "2026-04-22",
+      "company": "小马智行",
+      "title": "曹操出行Robotaxi迎千名外宾体验，安全又稳定展现规模化运营能力",
+      "summary": "曹操出行Robotaxi迎千名外宾体验，安全又稳定展现规模化运营能力",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/PWot0LHgG6C52gTJsQc_Ew",
+      "type": "行业动态"
+    },
+    {
       "id": 404,
       "date": "2026-04-22",
       "company": "WeRide",
@@ -1256,6 +1320,16 @@
       "source": "TechCrunch",
       "url": "https://techcrunch.com/2026/04/22/tesla-just-increased-its-capex-to-25b-heres-where-the-money-is-going/",
       "type": "技术进展"
+    },
+    {
+      "id": 442,
+      "date": "2026-04-21",
+      "company": "小马智行",
+      "title": "中国首台原生开发Robotaxi原型车即将发布，曹操出行深度定制版计划27年量产",
+      "summary": "中国首台原生开发Robotaxi原型车即将发布，曹操出行深度定制版计划27年量产",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/mhnuyxUwjnm9EprzXEBdkQ",
+      "type": "行业动态"
     },
     {
       "id": 405,
@@ -1455,6 +1529,16 @@
       "summary": "小马智行指出，L2级辅助驾驶与L4级全无人驾驶的核心差异不仅在于“解放双手”，更在于对安全、成本和场景的重新定义。距离2026北京车展开幕还有8天，该公司将在首都国际会展中心A3馆-A311展位展示最新成果，并现场揭晓两者终点的最终答案。",
       "source": "微信公众号(WeWeRSS)",
       "url": "https://mp.weixin.qq.com/s/fdsjsFsFOY8Ebl-X9CgMkA",
+      "type": "行业动态"
+    },
+    {
+      "id": 445,
+      "date": "2026-04-15",
+      "company": "滴滴出行",
+      "title": "滴滴自动驾驶全球化布局加快，年内在阿联酋开展试点",
+      "summary": "滴滴自动驾驶全球化布局加快，年内在阿联酋开展试点",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://mp.weixin.qq.com/s/xx773qu2IGX1bSdwfA3wvA",
       "type": "行业动态"
     },
     {
@@ -2109,31 +2193,16 @@
     }
   ],
   "weekly_report": {
-    "summary": "特斯拉FSD V14.3.2于2026年5月10日创下纪录，以49小时55分57秒零干预完成纽约至洛杉矶2833英里自动驾驶，英伟达CEO黄仁勋同日透露曾协助马斯克打造Model 3与Model S首台计算机并参与自动驾驶项目起步。Zoox于2026年5月7日在拉斯维加斯新增包括Bellagio、Fontainebleau在内的五个目的地，使服务站点总数达8个，并于5月8日推出“Find My Zoox”功能以个性化灯光和声音帮助用户识别车辆。Wayve于2026年5月6日发布LA-Pose自监督相机位姿估计方法，无需昂贵3D标签即可实现高精度位姿估计，其CEO Alex Kendall于5月8日解释伦敦复杂路况对训练自动驾驶系统的独特价值。Aurora于2026年5月7日推出基于International LT系列的新一代无人驾驶卡车，计划2026年底前在Sun Belt部署超200辆，并于5月6日与分销巨头McLane签署协议在德州启动无人驾驶运输。小马智行于2026年5月8日公布五一假期Robotaxi订单量同比增长544%，在时代少年团广州南沙演唱会期间累计护送歌迷超3000人次，首次被写入官方交通疏导方案。文远知行于2026年5月6日强调其全无人Robotaxi在阿布扎比Yas Island运营，并于5月5日在瑞士苏黎世自动化出行峰会展示L4级Robotaxi与Robobus。",
+    "summary": "本周行业走向：自动驾驶技术加速商业化落地，特斯拉创下长距离零干预纪录，多家公司推进车队扩张与运营许可，中国公司小马智行订单量激增，行业从技术验证转向规模化应用。",
     "highlights": [
-      "特斯拉FSD V14.3.2完成零干预跨美自动驾驶纪录（Tesla）",
-      "Zoox在拉斯维加斯新增五个robotaxi服务目的地（Zoox）",
-      "Wayve发布自监督相机位姿估计方法LA-Pose（Wayve）",
-      "Aurora推出新一代无人驾驶卡车并计划部署200+辆（Aurora）",
-      "小马智行五一假期订单量飙升544%（小马智行）",
-      "文远知行在阿布扎比运营全无人Robotaxi（文远知行）"
+      "特斯拉FSD V14.3.2完成纽约至洛杉矶2833英里零干预自动驾驶，创下新纪录（Tesla）",
+      "Zoox在拉斯维加斯新增枫丹白露酒店与MGM Grand等5个robotaxi服务站点（Zoox）",
+      "Wayve发布自监督相机位姿估计方法LA-Pose，降低对3D标签依赖（Wayve）",
+      "Aurora推出新一代无人驾驶卡车，计划2026年底前在Sun Belt部署200+辆（Aurora）",
+      "小马智行五一假期Robotaxi订单量同比增长544%，护送超3000名歌迷（小马智行）",
+      "Nuro获加州无人驾驶测试许可，推进与Uber和Lucid Motors的robotaxi项目（Nuro）"
     ],
     "count": 44,
     "date_range": "2026-05-04~2026-05-10"
-  },
-  "weekly_history": [
-    {
-      "summary": "特斯拉FSD V14.3.2于2026年5月10日创下纪录，以49小时55分57秒零干预完成纽约至洛杉矶2833英里自动驾驶，英伟达CEO黄仁勋同日透露曾协助马斯克打造Model 3与Model S首台计算机并参与自动驾驶项目起步。Zoox于2026年5月7日在拉斯维加斯新增包括Bellagio、Fontainebleau在内的五个目的地，使服务站点总数达8个，并于5月8日推出“Find My Zoox”功能以个性化灯光和声音帮助用户识别车辆。Wayve于2026年5月6日发布LA-Pose自监督相机位姿估计方法，无需昂贵3D标签即可实现高精度位姿估计，其CEO Alex Kendall于5月8日解释伦敦复杂路况对训练自动驾驶系统的独特价值。Aurora于2026年5月7日推出基于International LT系列的新一代无人驾驶卡车，计划2026年底前在Sun Belt部署超200辆，并于5月6日与分销巨头McLane签署协议在德州启动无人驾驶运输。小马智行于2026年5月8日公布五一假期Robotaxi订单量同比增长544%，在时代少年团广州南沙演唱会期间累计护送歌迷超3000人次，首次被写入官方交通疏导方案。文远知行于2026年5月6日强调其全无人Robotaxi在阿布扎比Yas Island运营，并于5月5日在瑞士苏黎世自动化出行峰会展示L4级Robotaxi与Robobus。",
-      "highlights": [
-        "特斯拉FSD V14.3.2完成零干预跨美自动驾驶纪录（Tesla）",
-        "Zoox在拉斯维加斯新增五个robotaxi服务目的地（Zoox）",
-        "Wayve发布自监督相机位姿估计方法LA-Pose（Wayve）",
-        "Aurora推出新一代无人驾驶卡车并计划部署200+辆（Aurora）",
-        "小马智行五一假期订单量飙升544%（小马智行）",
-        "文远知行在阿布扎比运营全无人Robotaxi（文远知行）"
-      ],
-      "count": 44,
-      "date_range": "2026-05-04~2026-05-10"
-    }
-  ]
+  }
 }

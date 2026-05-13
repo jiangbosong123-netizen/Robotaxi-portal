@@ -158,7 +158,7 @@ body {
 
 /* Charts row */
 .weekly-charts {
-  display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:20px;
+  display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; margin-bottom:20px;
 }
 .weekly-chart-box {
   background:#fafbfc; border:1px solid #e8ecf1; border-radius:8px; padding:14px;
@@ -248,7 +248,9 @@ input.search::placeholder { color:#a0aec0; }
 .cc-Motional { background:#e07c3e22; color:#b3622e; }
 .cc-WeRide { background:#5277e622; color:#3a5fc8; }
 .cc-Uber { background:#1c1c1c22; color:#1c1c1c; }
-.cc-Sawyer { background:#9f7aea22; color:#6b46c1; }
+.cc-百度Apollo { background:#e53e3e22; color:#c53030; }
+.cc-滴滴出行 { background:#38a16922; color:#276749; }
+.cc-曹操出行 { background:#d69e2e22; color:#975a16; }
 
 /* ===== Cards ===== */
 .card-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(360px,1fr)); gap:14px; }
@@ -270,6 +272,22 @@ input.search::placeholder { color:#a0aec0; }
 .card-source { font-size:10px; color:#718096; }
 .card-link { font-size:11px; color:#667eea; text-decoration:none; font-weight:500; }
 .card-link:hover { text-decoration:underline; }
+
+/* ===== Type Badges ===== */
+.card-type {
+  font-size:10px; font-weight:600; padding:2px 8px; border-radius:4px;
+  letter-spacing:0.3px; margin-right:6px; display:inline-block;
+}
+.ct-技术进展 { background:#667eea22; color:#4c51bf; }
+.ct-运营拓展 { background:#38a16922; color:#276749; }
+.ct-行业动态 { background:#d69e2e22; color:#975a16; }
+.ct-商业拓展 { background:#e07c3e22; color:#b3622e; }
+.ct-融资     { background:#805ad522; color:#6b46c1; }
+.ct-安全     { background:#e53e3e22; color:#c53030; }
+.ct-合作     { background:#31979522; color:#285e61; }
+.ct-监管     { background:#e07c3e22; color:#9b5a2e; }
+.ct-诉讼     { background:#e53e3e22; color:#9b2c2c; }
+.ct-创业     { background:#667eea22; color:#4c51bf; }
 
 /* ===== Timeline ===== */
 .timeline { position:relative; padding-left:28px; }
@@ -362,6 +380,10 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
       <div class="chart-title">公司覆盖</div>
       <canvas id="chartCompanies"></canvas>
     </div>
+    <div class="weekly-chart-box">
+      <div class="chart-title">分类分布</div>
+      <canvas id="chartTypeDist"></canvas>
+    </div>
   </div>
   <div class="weekly-body">
     <div class="weekly-body-label">周报内容</div>
@@ -377,8 +399,8 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
     <div class="filter-group" id="companyFilter"></div>
   </div>
   <div class="filter-row">
-    <span class="filter-label">来源</span>
-    <div class="filter-group" id="sourceFilter"></div>
+    <span class="filter-label">分类</span>
+    <div class="filter-group" id="typeFilter"></div>
   </div>
   <div class="filter-row">
     <span class="filter-label">搜索</span>
@@ -404,7 +426,7 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
 <script>
 let DATA = null;
 var _currentReport = null;
-let activeCompany = 'all', activeSource = 'all';
+let activeCompany = 'all', activeSource = 'all', activeType = 'all';
 
 async function loadData() {
   document.getElementById('cardGrid').innerHTML = '<div class="loading"><div class="spinner"></div><div>加载数据中...</div></div>';
@@ -423,7 +445,7 @@ function init() {
   
   document.getElementById('statBar').innerHTML = [
     [DATA.total, '总新闻'], [DATA.week_count, '本周新增'],
-    [DATA.companies.length, '覆盖公司'], [DATA.sources.length, '数据源'],
+    [DATA.companies.length, '覆盖公司'],
     [DATA.news.filter(n=>n.date>=((d=>{d.setDate(d.getDate()-7);return d.toISOString().slice(0,10)})(new Date()))).length, '本周更新']
   ].map(s => `<div class="stat-card"><span class="num">${s[0]}</span><span class="label">${s[1]}</span></div>`).join('');
 
@@ -435,9 +457,9 @@ function init() {
     '<button class="filter-btn active" onclick="setF(\'company\',\'all\',this)">全部</button>' +
     DATA.companies.map(c => `<button class="filter-btn" onclick="setF('company','${c}',this)">${companyLabel(c)}</button>`).join('');
 
-  document.getElementById('sourceFilter').innerHTML =
-    '<button class="filter-btn active" onclick="setF(\'source\',\'all\',this)">全部</button>' +
-    DATA.sources.map(s => `<button class="filter-btn" onclick="setF('source','${s}',this)">${s}</button>`).join('');
+  document.getElementById('typeFilter').innerHTML =
+    '<button class="filter-btn active" onclick="setF(\'type\',\'all\',this)">全部</button>' +
+    DATA.types.map(t => `<button class="filter-btn" onclick="setF('type','${t}',this)">${t}</button>`).join('');
 
   renderWeekly();
   initWeekSelector();
@@ -517,6 +539,7 @@ function init() {
 
 function setF(type, val, btn) {
   if (type === 'company') activeCompany = val;
+  else if (type === 'type') activeType = val;
   else activeSource = val;
   document.querySelectorAll(`#${type}Filter .filter-btn`).forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
@@ -524,17 +547,17 @@ function setF(type, val, btn) {
 }
 
 function selectCompany(comp) {
-  if (activeCompany === comp) return; // 已选中
+  if (activeCompany === comp) return;
   activeCompany = comp;
-  activeSource = 'all';
+  activeType = 'all';
   // 更新所有按钮状态
   document.querySelectorAll('#companyFilter .filter-btn').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('#sourceFilter .filter-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('#typeFilter .filter-btn').forEach(b => b.classList.remove('active'));
   // 找到对应公司按钮
   const btns = document.querySelectorAll('#companyFilter .filter-btn');
   const idx = DATA.companies.indexOf(comp);
   if (idx >= 0 && btns[idx + 1]) btns[idx + 1].classList.add('active');
-  document.querySelector('#sourceFilter .filter-btn:first-child').classList.add('active');
+  document.querySelector('#typeFilter .filter-btn:first-child').classList.add('active');
   render();
   // 滚动到新闻列表
   document.querySelector('.card-grid')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -544,7 +567,7 @@ function getFiltered() {
   const kw = document.getElementById('searchBox').value.toLowerCase().trim();
   return DATA.news.filter(n => {
     if (activeCompany !== 'all' && n.company !== activeCompany) return false;
-    if (activeSource !== 'all' && n.source !== activeSource) return false;
+    if (activeType !== 'all' && n.type !== activeType) return false;
     if (kw) {
       // 搜索：标题 + 摘要 + 日期 + 公司名
       var inTitle = n.title.toLowerCase().includes(kw);
@@ -565,7 +588,7 @@ function getFiltered() {
 
 function cc(c) {
   const m = {'Waymo':'cc-Waymo','Tesla':'cc-Tesla','Zoox':'cc-Zoox','Wayve':'cc-Wayve','Aurora':'cc-Aurora',
-    'Nuro':'cc-Nuro','Motional':'cc-Motional','WeRide':'cc-WeRide','Uber':'cc-Uber','Sawyer Merritt':'cc-Sawyer'};
+    'Nuro':'cc-Nuro','Motional':'cc-Motional','WeRide':'cc-WeRide','Uber':'cc-Uber','百度Apollo':'cc-百度Apollo','滴滴出行':'cc-滴滴出行','曹操出行':'cc-曹操出行'};
   return m[c] || '';
 }
 
@@ -575,11 +598,15 @@ function render() {
   if (!items.length) { grid.innerHTML = '<div class="loading">没有符合条件的新闻</div>'; }
   else {
     function cl(c) { const m = DATA.company_labels||{}; return m[c]||c; }
+    function tc(t) { return 'ct-' + t.replace(/\s+/g,''); }
     grid.innerHTML = items.map(n => `
       <div class="card" onclick="window.open('${n.url}','_blank')">
         <div class="card-top">
           <span class="card-date">${n.date}</span>
-          <span class="card-company ${cc(n.company)}">${cl(n.company)}</span>
+          <span style="display:flex;gap:4px;align-items:center;">
+            <span class="card-type ${tc(n.type)}">${n.type}</span>
+            <span class="card-company ${cc(n.company)}">${cl(n.company)}</span>
+          </span>
         </div>
         <div class="card-title">${n.title}</div>
         <div class="card-summary">${n.summary}</div>
@@ -695,6 +722,7 @@ var companies = ['Waymo','Zoox','Tesla','特斯拉','Wayve','Aurora','Nuro','Mot
   // ===== Charts =====
   drawTrendChart();
   drawCompanyChart();
+  drawTypeChart();
 }
 
 // ===== 周报历史切换 =====
@@ -806,6 +834,53 @@ function drawTrendChart() {
         y: { ticks: { font: { size: 10 }, color: '#a0aec0', stepSize: 1 }, grid: { color: '#f0f2f5' } }
       },
       hover: { mode: 'index', intersect: false }
+    }
+  });
+}
+
+function drawTypeChart() {
+  const weekAgo = new Date();
+  weekAgo.setDate(weekAgo.getDate() - 7);
+  const weekStr = weekAgo.toISOString().slice(0,10);
+  
+  const weekNews = DATA.news.filter(n => n.date >= weekStr);
+  const byType = {};
+  weekNews.forEach(n => {
+    byType[n.type] = (byType[n.type] || 0) + 1;
+  });
+  
+  const sorted = Object.entries(byType).sort((a,b) => b[1] - a[1]).slice(0, 7);
+  const typeColors = {
+    '技术进展':'#667eea','运营拓展':'#38a169','行业动态':'#d69e2e',
+    '商业拓展':'#e07c3e','融资':'#805ad5','安全':'#e53e3e',
+    '合作':'#319795','监管':'#e07c3e','诉讼':'#e53e3e','创业':'#667eea'
+  };
+
+  new Chart(document.getElementById('chartTypeDist'), {
+    type: 'doughnut',
+    data: {
+      labels: sorted.map(s => s[0] + ' ' + s[1]),
+      datasets: [{
+        data: sorted.map(s => s[1]),
+        backgroundColor: sorted.map(s => (typeColors[s[0]]||'#a0aec0') + '99'),
+        borderColor: sorted.map(s => typeColors[s[0]]||'#a0aec0'),
+        borderWidth: 1,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: 'right',
+          labels: { font: { size: 10 }, color: '#4a5568', padding: 8 }
+        },
+        tooltip: {
+          callbacks: {
+            label: function(ctx) { return ctx.parsed + ' 条'; }
+          }
+        }
+      }
     }
   });
 }
