@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-05-14 02:34",
-  "total": 212,
-  "week_count": 34,
+  "updated_at": "2026-05-14 10:49",
+  "total": 224,
+  "week_count": 46,
   "date_from": "2026-02-10",
-  "date_to": "2026-05-12",
+  "date_to": "2026-05-14",
   "companies": [
     "小马智行",
     "WeRide",
@@ -68,29 +68,149 @@
     "财报"
   ],
   "company_stats": {
-    "Tesla": 34,
+    "Tesla": 37,
+    "Waymo": 31,
     "小马智行": 30,
-    "Waymo": 30,
-    "WeRide": 22,
-    "Zoox": 17,
+    "WeRide": 24,
+    "Zoox": 19,
     "Uber": 16,
-    "Nuro": 14,
-    "Wayve": 13,
+    "Nuro": 15,
+    "Wayve": 14,
     "Aurora": 11,
     "曹操出行": 5,
-    "Motional": 4,
-    "Rivian": 3,
+    "Motional": 5,
+    "Rivian": 4,
     "百度Apollo": 2,
     "滴滴出行": 2,
     "Lucid": 1
   },
   "source_stats": {
-    "Twitter": 101,
+    "Twitter": 112,
     "微信公众号(WeWeRSS)": 49,
-    "TechCrunch": 45,
+    "TechCrunch": 46,
     "The Driverless Digest": 17
   },
   "news": [
+    {
+      "id": 456,
+      "date": "2026-05-14",
+      "company": "WeRide",
+      "title": "Q1 2026财报亮眼：营收同比增长58%至1650万美元，自动驾驶业务加速全球扩张",
+      "summary": "昨日Q1 2026财报电话会议公布强劲业绩，营收同比增长58%至1650万美元。目前业务已覆盖12个国家40余座城市，凭借强大的合作伙伴关系和增长势头，持续扩大全球自动驾驶出行规模。$WRD",
+      "source": "Twitter",
+      "url": "https://x.com/WeRide_ai/status/2054743943175434271",
+      "type": "商业拓展"
+    },
+    {
+      "id": 458,
+      "date": "2026-05-13",
+      "company": "Tesla",
+      "title": "FSD Supervised救人一命：David Sharette称FSD可能救下一名儿童",
+      "summary": "特斯拉车主David Sharette在社交媒体上分享，其车辆搭载的FSD（完全自动驾驶）系统可能成功避免了一起儿童事故。他表示，FSD Supervised功能在关键时刻主动介入，避免了与一名突然闯入道路的儿童相撞。这一事件再次引发公众对自动驾驶辅助系统安全性的讨论，但需注意FSD仍为L2级辅助驾驶，驾驶员需全程监控。",
+      "source": "Twitter",
+      "url": "https://x.com/Tesla/status/2054395805902270738",
+      "type": "行业动态"
+    },
+    {
+      "id": 457,
+      "date": "2026-05-13",
+      "company": "WeRide",
+      "title": "WeRide发布2026年Q1财报：营收强劲增长，Robotaxi大规模商业化稳步推进",
+      "summary": "WeRide公布了2026年第一季度财务业绩，数据显示公司营收实现强劲增长，并在大规模Robotaxi商业化进程中取得稳步进展。具体财务细节及业务亮点详见下文。",
+      "source": "Twitter",
+      "url": "https://x.com/WeRide_ai/status/2054498935360897506",
+      "type": "技术突破"
+    },
+    {
+      "id": 451,
+      "date": "2026-05-13",
+      "company": "Zoox",
+      "title": "Zoox自动驾驶软件副总裁Marc Wimmershoff深度解析：AV行业现状、定制化robotaxi设计优势及未来规模化路径",
+      "summary": "Zoox自动驾驶软件副总裁Marc Wimmershoff近日接受TheRideshareGuy播客专访，就自动驾驶行业当前发展态势、Zoox专为robotaxi设计的定制化车辆如何构建差异化竞争优势，以及公司下一阶段规模化扩张计划展开讨论。完整播客内容现已上线。",
+      "source": "Twitter",
+      "url": "https://x.com/zoox/status/2054658827853918681",
+      "type": "技术突破"
+    },
+    {
+      "id": 450,
+      "date": "2026-05-13",
+      "company": "Waymo",
+      "title": "Waymo在迈阿密扩张，奥斯汀、亚特兰大、休斯顿和旧金山湾区紧随其后，即将覆盖11座城市超1400平方英里",
+      "summary": "Waymo宣布在迈阿密扩展服务，并计划下一步进入奥斯汀、亚特兰大、休斯顿和旧金山湾区。届时，其服务面积将超过1400平方英里，覆盖11座城市，致力于为更多人提供安全、无缝的出行体验。",
+      "source": "Twitter",
+      "url": "https://x.com/Waymo/status/2054563561653846026",
+      "type": "商业拓展"
+    },
+    {
+      "id": 449,
+      "date": "2026-05-13",
+      "company": "Rivian",
+      "title": "Rivian旗下Mind Robotics再获4亿美元融资",
+      "summary": "Rivian分拆出的机器人公司Mind Robotics（最初于2025年底披露）至今累计融资已超过10亿美元。该公司最新一轮融资达4亿美元，进一步巩固了其在自动驾驶及机器人领域的研发实力。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/05/13/rivian-spinoff-mind-robotics-raises-another-400m/",
+      "type": "技术突破"
+    },
+    {
+      "id": 460,
+      "date": "2026-05-12",
+      "company": "Tesla",
+      "title": "无臂司机：FSD监督模式是改变人生的无障碍技术",
+      "summary": "一位天生无臂的司机分享了他使用特斯拉FSD（全自动驾驶）监督模式的体验。他一生都用脚驾驶，拥有正式驾照，传统上左脚控制方向盘、右脚控制油门和刹车。由于先天性缺陷导致髋部严重关节炎，过去七年驾驶Model 3已极大延长了他的独立生活能力。最近升级到Model Y并启用FSD后，驾驶体验彻底改变——大幅减少了身体压力和疲劳，帮助他保持了自由行动的能力。",
+      "source": "Twitter",
+      "url": "https://x.com/Tesla/status/2054253402163486804",
+      "type": "技术突破"
+    },
+    {
+      "id": 459,
+      "date": "2026-05-12",
+      "company": "Tesla",
+      "title": "特斯拉FSD获Ron DeSantis推荐：朋友已实现“零触碰方向盘”",
+      "summary": "佛罗里达州州长Ron DeSantis在社交媒体上推荐特斯拉FSD（完全自动驾驶）功能，称其朋友因该技术已不再需要手动驾驶。他呼吁用户通过Tesla.com/drive体验FSD Supervised版本。",
+      "source": "Twitter",
+      "url": "https://x.com/Tesla/status/2054330399816646656",
+      "type": "行业动态"
+    },
+    {
+      "id": 455,
+      "date": "2026-05-12",
+      "company": "Motional",
+      "title": "Uber与Motional联手在拉斯维加斯推出robotaxi服务，EDC Week期间可免费乘坐",
+      "summary": "Uber与Motional合作，在拉斯维加斯Encore酒店推出robotaxi服务。用户通过Uber应用叫车，若匹配到Motional的自动驾驶车辆，即可免费乘坐。该服务正值EDC Week期间，为参与者提供便捷的出行选择。",
+      "source": "Twitter",
+      "url": "https://x.com/motionaldrive/status/2054262881026199822",
+      "type": "商业拓展"
+    },
+    {
+      "id": 454,
+      "date": "2026-05-12",
+      "company": "Nuro",
+      "title": "模块化vs端到端、AV 1.0 vs AV 2.0：真正的争论是什么？Nuro联合创始人朱佳俊详解系统架构无需在安全与性能间取舍",
+      "summary": "Nuro联合创始人朱佳俊在最新博文中指出，关于自动驾驶系统架构的讨论不应陷入\"模块化vs端到端\"或\"AV 1.0 vs AV 2.0\"的二元对立。他认为，一个精心设计的系统架构完全可以在不牺牲安全性的前提下实现高性能。朱佳俊强调，真正的关键在于如何构建能够同时兼顾安全冗余与算法效率的架构，而非简单地在两种方法论之间做选择。该文深入探讨了自动驾驶技术演进中的核心设计哲学，为行业提供了新的思考视角。",
+      "source": "Twitter",
+      "url": "https://x.com/nuro/status/2054215027184271682",
+      "type": "技术突破"
+    },
+    {
+      "id": 453,
+      "date": "2026-05-12",
+      "company": "Wayve",
+      "title": "Wayve与英国商业贸易部签署合作，助力英国抢占自动驾驶技术前沿",
+      "summary": "Wayve与英国商业贸易部（biztradegovuk）签署合作协议，旨在将英国置于自动驾驶技术的前沿。该合作将支持共享研究、未来部署以及发展世界领先的英国AI驱动出行生态系统。",
+      "source": "Twitter",
+      "url": "https://x.com/wayve_ai/status/2054203361495322971",
+      "type": "技术突破"
+    },
+    {
+      "id": 452,
+      "date": "2026-05-12",
+      "company": "Zoox",
+      "title": "Zoox robotaxi新功能：无人评判你的“罪恶快感”歌单",
+      "summary": "Zoox为其robotaxi推出ZooxCast功能，乘客可连接手机将车内变成私人音乐会，无需担心他人评判自己的播放列表。",
+      "source": "Twitter",
+      "url": "https://x.com/zoox/status/2054229680300146688",
+      "type": "商业拓展"
+    },
     {
       "id": 435,
       "date": "2026-05-12",
@@ -2213,28 +2333,28 @@
     }
   ],
   "weekly_report": {
-    "summary": "本周行业动态聚焦于商业化落地加速与生态整合。小马智行在五一假期期间订单量同比增长544%，并首次作为官方交通疏导方案参与大型活动，凸显中国Robotaxi在场景化运营上的突破。Aurora宣布计划于2026年Q2推出第二代无人驾驶卡车车队，并与Hirschbach合作部署500辆，同时与分销巨头McLaneCo在德州启动运输服务，标志着自动驾驶卡车从验证迈向规模化。Uber CEO强调其从亏损45亿美元到近100亿美元自由现金流的转型，并加速构建“万能应用”生态，但合作伙伴Avride因事故被NHTSA调查，凸显行业安全监管压力。Zoox在拉斯维加斯持续扩张服务站点，Nuro获得加州无人驾驶及载客许可，文远知行在阿布扎比推进全无人运营，显示全球Robotaxi服务网络正加速铺开。",
+    "summary": "本周行业动态聚焦于商业化加速与生态整合。小马智行五一期间订单量同比飙升544%，并成功融入大型活动官方交通疏导方案，验证了中国Robotaxi在复杂场景下的运营能力。Aurora宣布将于2026年Q2推出第二代硬件无人驾驶卡车车队，并与Hirschbach合作部署500辆，标志着自动驾驶货运从验证进入规模化部署阶段。Uber CEO强调公司正从出行平台向“万能应用”转型，同时通过投资与接入Nuro、Motional等企业，加速构建自动驾驶服务分发网络。此外，Zoox在拉斯维加斯持续扩张服务站点，文远知行在阿布扎比推进全无人运营，显示全球Robotaxi落地节奏正在加快。",
     "highlights": [
       "小马智行五一假期订单量飙升544%，Robotaxi护送超3000名演唱会歌迷（小马智行）",
       "Aurora加速驶向商业化：2026年Q2推出无人驾驶卡车车队，合作Hirschbach计划部署500辆（Aurora）",
       "Uber CEO Dara Khosrowshahi：打造“万能应用”，从亏损45亿美元到近100亿美元自由现金流（Uber）",
       "Zoox在拉斯维加斯新增两大接送点：枫丹白露酒店与MGM Grand（Zoox）",
-      "Nuro获加州两项关键许可，推进与Uber和Lucid Motors的robotaxi项目（Nuro）",
-      "文远知行全无人Robotaxi在阿布扎比Yas Island运营，安全融入每一程（文远知行）"
+      "Nuro获加州无人驾驶测试许可，为Uber robotaxi服务上线铺路（Nuro）",
+      "文远知行全无人Robotaxi在阿布扎比Yas Island运营（WeRide）"
     ],
     "count": 45,
     "date_range": "2026-05-04~2026-05-10"
   },
   "weekly_history": [
     {
-      "summary": "本周行业动态聚焦于商业化落地加速与生态整合。小马智行在五一假期期间订单量同比增长544%，并首次作为官方交通疏导方案参与大型活动，凸显中国Robotaxi在场景化运营上的突破。Aurora宣布计划于2026年Q2推出第二代无人驾驶卡车车队，并与Hirschbach合作部署500辆，同时与分销巨头McLaneCo在德州启动运输服务，标志着自动驾驶卡车从验证迈向规模化。Uber CEO强调其从亏损45亿美元到近100亿美元自由现金流的转型，并加速构建“万能应用”生态，但合作伙伴Avride因事故被NHTSA调查，凸显行业安全监管压力。Zoox在拉斯维加斯持续扩张服务站点，Nuro获得加州无人驾驶及载客许可，文远知行在阿布扎比推进全无人运营，显示全球Robotaxi服务网络正加速铺开。",
+      "summary": "本周行业动态聚焦于商业化加速与生态整合。小马智行五一期间订单量同比飙升544%，并成功融入大型活动官方交通疏导方案，验证了中国Robotaxi在复杂场景下的运营能力。Aurora宣布将于2026年Q2推出第二代硬件无人驾驶卡车车队，并与Hirschbach合作部署500辆，标志着自动驾驶货运从验证进入规模化部署阶段。Uber CEO强调公司正从出行平台向“万能应用”转型，同时通过投资与接入Nuro、Motional等企业，加速构建自动驾驶服务分发网络。此外，Zoox在拉斯维加斯持续扩张服务站点，文远知行在阿布扎比推进全无人运营，显示全球Robotaxi落地节奏正在加快。",
       "highlights": [
         "小马智行五一假期订单量飙升544%，Robotaxi护送超3000名演唱会歌迷（小马智行）",
         "Aurora加速驶向商业化：2026年Q2推出无人驾驶卡车车队，合作Hirschbach计划部署500辆（Aurora）",
         "Uber CEO Dara Khosrowshahi：打造“万能应用”，从亏损45亿美元到近100亿美元自由现金流（Uber）",
         "Zoox在拉斯维加斯新增两大接送点：枫丹白露酒店与MGM Grand（Zoox）",
-        "Nuro获加州两项关键许可，推进与Uber和Lucid Motors的robotaxi项目（Nuro）",
-        "文远知行全无人Robotaxi在阿布扎比Yas Island运营，安全融入每一程（文远知行）"
+        "Nuro获加州无人驾驶测试许可，为Uber robotaxi服务上线铺路（Nuro）",
+        "文远知行全无人Robotaxi在阿布扎比Yas Island运营（WeRide）"
       ],
       "count": 45,
       "date_range": "2026-05-04~2026-05-10"
