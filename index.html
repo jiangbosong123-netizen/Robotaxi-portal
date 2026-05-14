@@ -2132,11 +2132,7 @@ function downloadReport() {
 
         
 
-        // 收窄到720px，让内容自然变长，适合手机浏览
-
-        var origW = el.style.width;
-
-        el.style.width = '720px';
+        // 保持原始宽度导出，图表比例不失真
 
         
 
@@ -2150,7 +2146,7 @@ function downloadReport() {
 
         }).then(function(c) {
 
-          el.style.width = origW || '';
+          /* export at natural width */
 
           if (sel) sel.style.display = '';
 
