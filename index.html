@@ -1,2333 +1,1185 @@
-﻿<!DOCTYPE html>
-
+<!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Robotaxi 琛屼笟鍔ㄦ€?/title>
-
+<title>Robotaxi 行业动态</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
-
 <style>
-
 /* ===== Reset & Base ===== */
-
 * { margin:0; padding:0; box-sizing:border-box; }
-
 body {
-
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
-
   background:#f4f6f9; color:#1a1a2e; line-height:1.6;
-
 }
-
 .container { max-width:1400px; margin:0 auto; padding:20px 28px; }
 
-
-
 /* ===== Top Bar ===== */
-
 .top-bar {
-
   display:flex; align-items:baseline; gap:16px;
-
   padding:10px 0 14px; margin-bottom:20px; border-bottom:2px solid #e2e8f0;
-
 }
-
 .top-bar h1 {
-
   font-size:35px; font-weight:700; color:#1a1a2e; letter-spacing:0.5px;
-
   line-height:1.2;
-
 }
-
 .top-bar h1 span { color:#667eea; }
-
 .top-bar .update-badge {
-
   font-size:11px; color:#718096; background:#f0f2f5;
-
   padding:3px 10px; border-radius:5px;
-
 }
-
-
 
 /* ===== Stats Row ===== */
-
 .stats {
-
   display:flex; gap:12px; margin-bottom:24px; flex-wrap:wrap;
-
 }
-
 .stat-card {
-
   background:#fff; border-radius:10px; padding:14px 22px;
-
   box-shadow:0 1px 3px rgba(0,0,0,0.06); flex:1; min-width:100px;
-
   text-align:center; border:1px solid #e8ecf1;
-
 }
-
 .stat-card .num { font-size:22px; font-weight:700; color:#667eea; display:block; }
-
 .stat-card .label { font-size:11px; color:#718096; margin-top:2px; text-transform:uppercase; letter-spacing:0.5px; }
 
-
-
 /* ===== Weekly Report ===== */
-
 .weekly {
-
   background:#fff; border-radius:12px; padding:20px 24px; margin-bottom:24px;
-
   border:1px solid #e8ecf1; box-shadow:0 1px 3px rgba(0,0,0,0.04);
-
   position:relative;
-
 }
-
 .weekly .header {
-
   display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;
-
   padding-bottom:14px; border-bottom:2px solid #f0f2f5;
-
 }
-
 .weekly .header .title {
-
   font-size:20px; font-weight:700; color:#1a1a2e;
-
   display:flex; align-items:center; gap:8px;
-
   flex-wrap:nowrap; min-width:600px;
-
 }
-
 .weekly .header .week-select {
-
   font-size:11px; padding:2px 8px; border:1px solid #e2e8f0;
-
   border-radius:4px; background:#fff; color:#4a5568;
-
   cursor:pointer; outline:none; margin-left:4px;
-
 }
-
 .weekly .header .week-select:hover { border-color:#667eea; }
-
 .weekly .header .dl-btn {
-
   font-size:11px; padding:3px 10px; border:1px solid #667eea;
-
   border-radius:4px; background:#667eea; color:#fff;
-
   cursor:pointer; outline:none; margin-left:8px; font-weight:500;
-
   transition:all .15s;
-
 }
-
 .weekly .header .dl-btn:hover { background:#5a6fd6; }
-
 .dl-wrap { position:relative; display:inline-block; }
-
 .dl-menu {
-
   display:none; position:absolute; top:100%; right:0; z-index:20;
-
   background:#fff; border:1px solid #e2e8f0; border-radius:6px;
-
   box-shadow:0 4px 12px rgba(0,0,0,0.1); min-width:120px; margin-top:4px;
-
   overflow:hidden;
-
 }
-
 .dl-menu.show { display:block; }
-
 .dl-option {
-
   padding:8px 14px; font-size:12px; color:#4a5568; cursor:pointer;
-
   transition:background .1s;
-
 }
-
 .dl-option:hover { background:#f7fafc; color:#667eea; }
-
 .dl-option + .dl-option { border-top:1px solid #f0f2f5; }
 
-
-
-/* ===== 鎵撳嵃/PDF鏍峰紡 ===== */
-
+/* ===== 打印/PDF样式 ===== */
 @media print {
-
   @page { margin: 15mm; size: A4; }
-
   body { background:#fff; }
-
   .top-bar, .stats, .filters, .view-tabs, .view-panel, .weekly .header .week-select, .weekly .header .dl-btn, footer { display:none !important; }
-
   .container { max-width:none; padding:0; }
-
   .weekly { box-shadow:none; border:none; padding:0; break-inside:avoid; }
-
   .weekly-hl .hl-item { break-inside:avoid; }
-
   .weekly-chart-box canvas { max-height:200px; }
-
   .weekly-body { background:#f8f6ff !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
-
   .weekly .header .title-badge { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
-
   .company-mention { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
-
 }
-
 .weekly .header .title-badge {
-
   background:linear-gradient(135deg,#667eea,#764ba2);
-
   color:#fff; font-size:12px; padding:3px 12px; border-radius:5px;
-
   font-weight:600; letter-spacing:0.3px;
-
   margin-top:3px;
-
 }
-
 .weekly .header .meta { font-size:11px; color:#a0aec0; }
 
-
-
 /* Highlights row */
-
 .weekly-hl {
-
   display:flex; flex-wrap:wrap; gap:10px; margin-bottom:20px;
-
   justify-content:center;
-
 }
-
 .weekly-hl .hl-item {
-
   flex:0 1 calc(33.33% - 10px); min-width:200px;
-
 }
-
 .weekly-hl .hl-item {
-
   background:#f7fafc; border:1px solid #e8ecf1; border-radius:8px;
-
   padding:12px 14px; font-size:12.5px; line-height:1.6; color:#2d3748;
-
   cursor:pointer; transition:all .15s; position:relative;
-
 }
-
 .weekly-hl .hl-item:hover {
-
   border-color:#667eea; background:#eff3fe;
-
   transform:translateY(-1px); box-shadow:0 2px 6px rgba(102,126,234,0.12);
-
 }
-
 .weekly-hl .hl-item .hl-icon { margin-right:6px; }
 
-
-
 /* Popup tooltip - floating card */
-
 .hl-popup {
-
   display:none; position:fixed; z-index:999; min-width:360px; max-width:400px;
-
   background:#fff; border:1px solid #d0d5dd; border-radius:10px;
-
   padding:14px 16px; box-shadow:0 8px 24px rgba(0,0,0,0.15);
-
 }
-
-/* 榛樿闅愯棌popup锛岀敱JS鎺у埗娴姩寮瑰嚭 */
-
+/* 默认隐藏popup，由JS控制浮动弹出 */
 .hl-popup { display: none; }
-
 .hl-popup .popup-title {
-
   font-size:13px; font-weight:600; color:#1a1a2e; margin-bottom:10px;
-
   padding-bottom:8px; border-bottom:2px solid #667eea;
-
 }
-
 .hl-popup .popup-item {
-
   padding:6px 0; border-bottom:1px solid #f0f2f5;
-
 }
-
 .hl-popup .popup-item:last-child { border-bottom:none; }
-
 .hl-popup .popup-item .pi-date {
-
   font-size:10px; color:#a0aec0; margin-bottom:2px;
-
 }
-
 .hl-popup .popup-item .pi-title {
-
   font-size:12.5px; color:#2d3748; line-height:1.5;
-
   cursor:pointer; transition:color .15s;
-
 }
-
 .hl-popup .popup-item .pi-title:hover {
-
   color:#667eea; text-decoration:underline;
-
 }
-
 .hl-popup .popup-item .pi-source {
-
   font-size:10px; color:#718096; margin-top:2px;
-
 }
-
-
 
 /* Charts row */
-
 .weekly-charts {
-
-  display:grid; grid-template-columns:1fr 1fr 1fr; grid-template-rows:220px; gap:16px; margin-bottom:20px;
-
+  display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; margin-bottom:20px;
 }
-
 .weekly-chart-box {
-
   background:#fafbfc; border:1px solid #e8ecf1; border-radius:8px; padding:14px;
-  overflow:hidden;
-
 }
-
 .weekly-chart-box .chart-title {
-
   font-size:11px; color:#718096; font-weight:600; margin-bottom:8px;
-
   text-transform:uppercase; letter-spacing:0.3px;
-
 }
-
-.weekly-chart-box canvas { width:100% !important; min-height:180px; max-height:200px; }
-
-
+.weekly-chart-box canvas { width:100% !important; min-height:180px; }
 
 /* Body text */
-
 .weekly-body {
-
   font-size:12.5px; line-height:1.9; color:#4a5568;
-
   padding:16px 20px; border-top:1px solid #f0f2f5;
-
-  background:#f8f6ff; border-radius:8px; margin:0 10px 16px 10px;
-
+  background:#f8f6ff; border-radius:8px; margin-top:4px;
 }
-
 .weekly-body-label {
-
   font-size:14px; font-weight:700; color:#667eea; margin-bottom:10px;
-
   letter-spacing:0.5px;
-
 }
-
 .weekly-body .company-mention {
-
   font-weight:600; padding:0 8px; border-radius:4px;
-
   display:inline-block; font-size:12px;
-
   background:#667eea18; color:#4c51bf;
-
 }
-
 .weekly-body .weekly-body p {
-
   margin:0; line-height:1.9;
-
 }
-
 .weekly-body .num-highlight {
-
   display:inline-block; background:rgba(102,126,234,0.08); color:#667eea;
-
   font-weight:600; padding:0 5px; border-radius:3px;
-
 }
-
 .weekly .footer {
-
   font-size:11px; color:#a0aec0; margin-top:10px;
-
   padding-top:10px; border-top:1px solid #f0f2f5;
-
 }
 
-
-
-/* ===== 鍛ㄦ姤缁艰堪鏍峰紡 ===== */
-
+/* ===== 周报综述样式 ===== */
 #weeklyBody {
-
   margin-bottom:24px;
-
   line-height:1.9;
-
   font-size:13px;
-
   color:#2d3748;
-
   padding:0;
-
 }
-
-
 
 /* ===== Filters ===== */
-
 .filters {
-
   background:#fff; padding:14px 18px;
-
   border-radius:10px; border:1px solid #e8ecf1; box-shadow:0 1px 2px rgba(0,0,0,0.04);
-
   margin-bottom:20px;
-
 }
-
 .filter-row {
-
   display:flex; align-items:flex-start; gap:10px;
-
   padding:5px 0;
-
 }
-
 .filter-row + .filter-row {
-
   border-top:1px solid #f0f2f5; margin-top:4px; padding-top:9px;
-
 }
-
 .filter-label {
-
   font-size:12px; color:#4a5568; font-weight:600;
-
   min-width:36px; line-height:28px; flex-shrink:0;
-
 }
-
 .filter-group { display:flex; gap:3px; flex-wrap:wrap; flex:1; }
-
 .filter-btn {
-
   padding:4px 12px; border-radius:6px; font-size:12px; cursor:pointer;
-
   color:#4a5568; border:1px solid transparent; background:#f7fafc; transition:all .15s;
-
 }
-
 .filter-btn:hover { background:#edf2f7; border-color:#e2e8f0; }
-
 .filter-btn.active { background:#667eea; color:#fff; border-color:#667eea; }
-
 .search-wrap { flex:1; display:flex; gap:8px; align-items:center; }
-
 input.search {
-
   background:#f7fafc; border:1px solid #e2e8f0; border-radius:6px;
-
   padding:6px 14px; font-size:12px; outline:none; width:240px; transition:border .2s;
-
 }
-
 input.search:focus { border-color:#667eea; background:#fff; }
-
 input.search::placeholder { color:#a0aec0; }
 
 
-
-
-
 /* ===== View Tabs ===== */
-
 .view-tabs { display:flex; gap:4px; margin-bottom:16px; }
-
 .view-tab {
-
   padding:7px 18px; font-size:12px; cursor:pointer; color:#4a5568;
-
   background:#fff; border:1px solid #e2e8f0; border-radius:6px; transition:all .15s;
-
   font-weight:500;
-
 }
-
 .view-tab:hover { border-color:#667eea; color:#667eea; }
-
 .view-tab.active { background:#667eea; color:#fff; border-color:#667eea; }
-
 .view-panel { display:none; }
-
 .view-panel.active { display:block; }
 
-
-
 /* ===== Company colors ===== */
-
 .cc-Waymo { background:#3182ce22; color:#2b6cb0; }
-
 .cc-Tesla { background:#e53e3e22; color:#c53030; }
-
 .cc-Zoox { background:#805ad522; color:#6b46c1; }
-
 .cc-Wayve { background:#38a16922; color:#276749; }
-
 .cc-Aurora { background:#d69e2e22; color:#975a16; }
-
 .cc-Nuro { background:#31979522; color:#285e61; }
-
 .cc-Motional { background:#e07c3e22; color:#b3622e; }
-
 .cc-WeRide { background:#5277e622; color:#3a5fc8; }
-
 .cc-Uber { background:#1c1c1c22; color:#1c1c1c; }
-
-.cc-鐧惧害Apollo { background:#e53e3e22; color:#c53030; }
-
-.cc-婊存淮鍑鸿 { background:#38a16922; color:#276749; }
-
-.cc-鏇规搷鍑鸿 { background:#d69e2e22; color:#975a16; }
-
+.cc-百度Apollo { background:#e53e3e22; color:#c53030; }
+.cc-滴滴出行 { background:#38a16922; color:#276749; }
+.cc-曹操出行 { background:#d69e2e22; color:#975a16; }
 .cc-Momenta { background:#e53e3e22; color:#c53030; }
 
-
-
 /* ===== Cards ===== */
-
 .card-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(360px,1fr)); gap:14px; }
-
 .card {
-
   background:#fff; border-radius:10px; border:1px solid #e8ecf1;
-
   padding:18px 20px; cursor:pointer; transition:all .2s;
-
   box-shadow:0 1px 2px rgba(0,0,0,0.04);
-
 }
-
 .card:hover { box-shadow:0 4px 12px rgba(102,126,234,0.15); border-color:#667eea44; transform:translateY(-2px); }
-
 .card-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
-
 .card-date { font-size:11px; color:#a0aec0; }
-
 .card-company {
-
   font-size:10px; font-weight:600; padding:2px 10px; border-radius:4px;
-
   letter-spacing:0.3px;
-
 }
-
 .card-title { font-size:14.5px; font-weight:600; color:#1a1a2e; margin-bottom:6px; line-height:1.45; }
-
 .card-summary { font-size:12.5px; color:#4a5568; line-height:1.65; }
-
 .card-bottom { display:flex; justify-content:space-between; align-items:center; margin-top:10px; padding-top:10px; border-top:1px solid #edf2f7; }
-
 .card-source { font-size:10px; color:#718096; }
-
 .card-link { font-size:11px; color:#667eea; text-decoration:none; font-weight:500; }
-
 .card-link:hover { text-decoration:underline; }
 
-
-
 /* ===== Type Badges ===== */
-
 .card-type {
-
   font-size:10px; font-weight:600; padding:2px 8px; border-radius:4px;
-
   letter-spacing:0.3px; margin-right:6px; display:inline-block;
-
 }
-
-.ct-鎶€鏈獊鐮?{ background:#667eea22; color:#4c51bf; }
-
-.ct-鍟嗕笟鎷撳睍 { background:#38a16922; color:#276749; }
-
-.ct-琛屼笟鍔ㄦ€?{ background:#d69e2e22; color:#975a16; }
-
-.ct-鍚堜綔     { background:#31979522; color:#285e61; }
-
-.ct-铻嶈祫鎶曡祫 { background:#805ad522; color:#6b46c1; }
-
-.ct-瀹夊叏涓庣洃绠?{ background:#e53e3e22; color:#c53030; }
-
-.ct-璐㈡姤     { background:#e07c3e22; color:#b3622e; }
-
-.ct-鍏朵粬     { background:#a0aec022; color:#718096; }
-
-
+.ct-技术突破 { background:#667eea22; color:#4c51bf; }
+.ct-商业拓展 { background:#38a16922; color:#276749; }
+.ct-行业动态 { background:#d69e2e22; color:#975a16; }
+.ct-合作     { background:#31979522; color:#285e61; }
+.ct-融资投资 { background:#805ad522; color:#6b46c1; }
+.ct-安全与监管 { background:#e53e3e22; color:#c53030; }
+.ct-财报     { background:#e07c3e22; color:#b3622e; }
+.ct-其他     { background:#a0aec022; color:#718096; }
 
 /* ===== Timeline ===== */
-
 .timeline { position:relative; padding-left:28px; }
-
 .timeline::before {
-
   content:''; position:absolute; left:6px; top:0; bottom:0; width:2px;
-
   background:linear-gradient(180deg,#667eea,#e2e8f0);
-
 }
-
 .tl-item { position:relative; margin-bottom:20px; }
-
 .tl-item::before {
-
   content:''; position:absolute; left:-26px; top:8px; width:12px; height:12px;
-
   border-radius:50%; background:#667eea; border:2px solid #f4f6f9;
-
 }
-
 .tl-card {
-
   background:#fff; border:1px solid #e8ecf1; border-radius:8px;
-
   padding:14px 18px; box-shadow:0 1px 2px rgba(0,0,0,0.04);
-
   cursor:pointer; transition:all .15s;
-
 }
-
 .tl-card:hover {
-
   box-shadow:0 4px 12px rgba(102,126,234,0.15); border-color:#667eea44;
-
   transform:translateY(-1px);
-
 }
-
 .tl-date { font-size:12px; color:#718096; margin-bottom:4px; font-weight:500; }
-
 .tl-title { font-size:14px; font-weight:600; color:#1a1a2e; }
-
 .tl-meta { font-size:11px; color:#a0aec0; margin:4px 0; }
-
 .tl-summary { font-size:12px; color:#4a5568; }
-
 .tl-date-header {
-
   font-size:13px; font-weight:600; color:#667eea; margin:16px 0 8px;
-
   letter-spacing:0.3px;
-
 }
-
-
 
 /* ===== Loading & Empty ===== */
-
 .loading { text-align:center; padding:60px; color:#a0aec0; font-size:13px; }
-
 .spinner {
-
   display:inline-block; width:28px; height:28px; border:3px solid #e2e8f0;
-
   border-top-color:#667eea; border-radius:50%; animation:spin .7s linear infinite; margin-bottom:10px;
-
 }
-
 @keyframes spin { to { transform:rotate(360deg); } }
 
-
-
 /* ===== Footer ===== */
-
 footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padding:16px; border-top:1px solid #e2e8f0; }
 
-
-
 /* ===== Responsive ===== */
-
 @media(max-width:768px) {
-
   .container { padding:12px; }
-
   .card-grid { grid-template-columns:1fr; }
-
   .top-bar { flex-direction:column; gap:6px; }
-
   .stats { gap:8px; }
-
   .stat-card { min-width:80px; padding:10px 14px; }
-
   .stat-card .num { font-size:18px; }
-
 }
-
 </style>
-
 </head>
-
 <body>
-
 <div class="container">
 
-
-
 <!-- Top Bar -->
-
 <div class="top-bar">
-
-  <h1><span>Robotaxi</span> 琛屼笟鍔ㄦ€?/h1>
-
-  <div class="update-badge" id="updateBadge">鍔犺浇涓?..</div>
-
+  <h1><span>Robotaxi</span> 行业动态</h1>
+  <div class="update-badge" id="updateBadge">加载中...</div>
   <!-- v1.2.0 -->
-
 </div>
-
-
 
 <!-- Stats -->
-
 <div class="stats" id="statBar"></div>
 
-
-
 <!-- Weekly Report -->
-
 <div class="weekly" id="weeklyBlock">
-
   <div class="header">
-
     <div class="title">
-
-      Robotaxi琛屼笟鍛ㄦ姤
-
-      <span class="title-badge" id="weekBadge">绗?9鍛?/span>
-
+      Robotaxi行业周报
+      <span class="title-badge" id="weekBadge">第19周</span>
       <select class="week-select" id="weekSelect" onchange="switchWeek(this.value)">
-
-        <option value="">閫夋嫨鍘嗗彶鍛ㄦ姤...</option>
-
+        <option value="">选择历史周报...</option>
       </select>
-
       <div class="dl-wrap">
-
-        <button class="dl-btn" onclick="toggleDL()">涓嬭浇 鈻?/button>
-
+        <button class="dl-btn" onclick="toggleDL()">下载 ▾</button>
         <div class="dl-menu" id="dlMenu">
-
-          <div class="dl-option" onclick="downloadReport();hideDL()">瀵煎嚭涓哄浘鐗?/div>
-
-          <div class="dl-option" onclick="exportPDF();hideDL()">瀵煎嚭涓篜DF</div>
-
+          <div class="dl-option" onclick="downloadReport();hideDL()">导出为图片</div>
+          <div class="dl-option" onclick="exportPDF();hideDL()">导出为PDF</div>
         </div>
-
       </div>
-
     </div>
-
   </div>
-
   <div class="weekly-body">
-
-    <div class="weekly-body-label">鏈懆缁艰堪</div>
-
+    <div class="weekly-body-label">本周综述</div>
     <div id="weeklyBody"></div>
-
   </div>
-
   <div class="weekly-hl" id="weeklyHL"></div>
-
   <div class="weekly-charts">
-
     <div class="weekly-chart-box">
-
-      <div class="chart-title">鏂伴椈瓒嬪娍</div>
-
+      <div class="chart-title">新闻趋势</div>
       <canvas id="chartTrend"></canvas>
-
     </div>
-
     <div class="weekly-chart-box">
-
-      <div class="chart-title">鍏徃瑕嗙洊</div>
-
+      <div class="chart-title">公司覆盖</div>
       <canvas id="chartCompanies"></canvas>
-
     </div>
-
     <div class="weekly-chart-box">
-
-      <div class="chart-title">鍒嗙被鍒嗗竷</div>
-
+      <div class="chart-title">分类分布</div>
       <canvas id="chartTypeDist"></canvas>
-
     </div>
-
   </div>
-
   <div class="footer" id="weeklyFooter"></div>
-
 </div>
-
-
 
 <!-- Filters -->
-
 <div class="filters">
-
   <div class="filter-row">
-
-    <span class="filter-label">鍏徃</span>
-
+    <span class="filter-label">公司</span>
     <div class="filter-group" id="companyFilter"></div>
-
   </div>
-
   <div class="filter-row">
-
-    <span class="filter-label">鏉ユ簮</span>
-
+    <span class="filter-label">来源</span>
     <div class="filter-group" id="sourceFilter"></div>
-
   </div>
-
   <div class="filter-row">
-
-    <span class="filter-label">鍒嗙被</span>
-
+    <span class="filter-label">分类</span>
     <div class="filter-group" id="typeFilter"></div>
-
   </div>
-
   <div class="filter-row">
-
-    <span class="filter-label">鎼滅储</span>
-
+    <span class="filter-label">搜索</span>
     <div class="search-wrap">
-
-      <input class="search" id="searchBox" placeholder="鏃ユ湡锛堝勾-鏈?鏃ワ級銆佸叕鍙稿悕銆佸叧閿瘝" oninput="render()">
-
-
+      <input class="search" id="searchBox" placeholder="日期（年-月-日）、公司名、关键词" oninput="render()">
 
     </div>
-
   </div>
-
 </div>
-
-
 
 <!-- View Tabs -->
-
 <div class="view-tabs">
-
-  <div class="view-tab active" onclick="switchView('cards',this)">鍗＄墖瑙嗗浘</div>
-
-  <div class="view-tab" onclick="switchView('timeline',this)">鏃堕棿绾?/div>
-
+  <div class="view-tab active" onclick="switchView('cards',this)">卡片视图</div>
+  <div class="view-tab" onclick="switchView('timeline',this)">时间线</div>
 </div>
-
-
 
 <div id="view-cards" class="view-panel active"><div class="card-grid" id="cardGrid"></div></div>
-
 <div id="view-timeline" class="view-panel"><div class="timeline" id="timelineContent"></div></div>
 
-
-
-<footer>Robotaxi 琛屼笟鍔ㄦ€?| 鏁版嵁姣忔棩鏇存柊</footer>
-
+<footer>Robotaxi 行业动态 | 数据每日更新</footer>
 </div>
 
-
-
 <script>
-
 let DATA = null;
-
 var _currentReport = null;
-
 let activeCompany = 'all', activeSource = 'all', activeType = 'all';
 
-
-
 async function loadData() {
-
-  document.getElementById('cardGrid').innerHTML = '<div class="loading"><div class="spinner"></div><div>鍔犺浇鏁版嵁涓?..</div></div>';
-
+  document.getElementById('cardGrid').innerHTML = '<div class="loading"><div class="spinner"></div><div>加载数据中...</div></div>';
   try {
-
     const r = await fetch('robotaxi_data.json');
-
     DATA = await r.json();
-
     init();
-
   } catch(e) {
-
-    document.getElementById('cardGrid').innerHTML = '<div class="loading">鍔犺浇澶辫触锛岃纭 robotaxi_data.json 瀛樺湪</div>';
-
+    document.getElementById('cardGrid').innerHTML = '<div class="loading">加载失败，请确认 robotaxi_data.json 存在</div>';
   }
-
 }
-
-
 
 function init() {
-
   document.getElementById('updateBadge').textContent =
-
-    `鏇存柊浜?${DATA.updated_at}`;
-
+    `更新于 ${DATA.updated_at}`;
   
-
   document.getElementById('statBar').innerHTML = [
-
-    [DATA.total, '鎬绘柊闂?], [DATA.week_count, '鏈懆鏂板'],
-
-    [DATA.companies.length, '瑕嗙洊鍏徃'],
-
-    [DATA.news.filter(n=>n.date>=((d=>{d.setDate(d.getDate()-7);return d.toISOString().slice(0,10)})(new Date()))).length, '鏈懆鏇存柊']
-
+    [DATA.total, '总新闻'], [DATA.week_count, '本周新增'],
+    [DATA.companies.length, '覆盖公司'],
+    [DATA.news.filter(n=>n.date>=((d=>{d.setDate(d.getDate()-7);return d.toISOString().slice(0,10)})(new Date()))).length, '本周更新']
   ].map(s => `<div class="stat-card"><span class="num">${s[0]}</span><span class="label">${s[1]}</span></div>`).join('');
 
-
-
   function companyLabel(c) {
-
     const labels = DATA.company_labels || {};
-
     return labels[c] || c;
-
   }
-
   document.getElementById('companyFilter').innerHTML =
-
-    '<button class="filter-btn active" onclick="setF(\'company\',\'all\',this)">鍏ㄩ儴</button>' +
-
+    '<button class="filter-btn active" onclick="setF(\'company\',\'all\',this)">全部</button>' +
     DATA.companies.map(function(c) {
-
       var label = companyLabel(c);
-
       var info = (DATA.company_info || {})[c] || '';
-
-      return '<button class="filter-btn" onclick="setF(\'company\',\''+c+'\',this)" title="' + label + ' 鈥?' + info + '">' + label + '</button>';
-
+      return '<button class="filter-btn" onclick="setF(\'company\',\''+c+'\',this)" title="' + label + ' — ' + info + '">' + label + '</button>';
     }).join('');
-
-
 
   document.getElementById('sourceFilter').innerHTML =
-
-    '<button class="filter-btn active" onclick="setF(\'source\',\'all\',this)">鍏ㄩ儴</button>' +
-
+    '<button class="filter-btn active" onclick="setF(\'source\',\'all\',this)">全部</button>' +
     DATA.sources.map(s => `<button class="filter-btn" onclick="setF('source','${s}',this)">${s}</button>`).join('');
 
-
-
   document.getElementById('typeFilter').innerHTML =
-
-    '<button class="filter-btn active" onclick="setF(\'type\',\'all\',this)">鍏ㄩ儴</button>' +
-
+    '<button class="filter-btn active" onclick="setF(\'type\',\'all\',this)">全部</button>' +
     DATA.types.map(t => `<button class="filter-btn" onclick="setF('type','${t}',this)">${t}</button>`).join('');
 
-
-
   renderWeekly();
-
   initWeekSelector();
-
   render();
 
-
-
-  // 楂樹寒鍗＄墖寮瑰嚭浜や簰锛堥€愰」缁戝畾锛岀畝鍗曠洿鎺ワ級
-
+  // 高亮卡片弹出交互（逐项绑定，简单直接）
   (function() {
-
     var popup = document.getElementById('floatingPopup');
-
     if (!popup) {
-
       popup = document.createElement('div');
-
       popup.id = 'floatingPopup';
-
       popup.className = 'hl-popup';
-
       popup.style.display = 'none';
-
       document.body.appendChild(popup);
-
     }
-
     
-
     var hlContainer = document.getElementById('weeklyHL');
-
     
-
     function showFor(item) {
-
       cancelHide();
-
       var src = item.querySelector('.hl-popup');
-
       if (!src) { popup.style.display = 'none'; return; }
-
       popup.innerHTML = src.innerHTML;
-
       popup.style.display = 'block';
-
       var rect = item.getBoundingClientRect();
-
       var left = rect.right + 12;
-
       if (left + 380 > window.innerWidth) left = Math.max(8, rect.left - 380 - 12);
-
       popup.style.left = left + 'px';
-
       popup.style.top = Math.max(8, rect.top - 10) + 'px';
-
     }
-
     var hideTimer = null;
-
     function hidePopup() {
-
       if (hideTimer) clearTimeout(hideTimer);
-
       hideTimer = setTimeout(function() { popup.style.display = 'none'; }, 150);
-
     }
-
     function cancelHide() {
-
       if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; }
-
     }
-
     
-
-    // 浜嬩欢濮旀墭锛氱粦鍦ㄥ鍣ㄤ笂锛孌OM鏇挎崲鍚庝緷鐒舵湁鏁?    hlContainer.addEventListener('mouseover', function(e) {
-
+    // 事件委托：绑在容器上，DOM替换后依然有效
+    hlContainer.addEventListener('mouseover', function(e) {
       var item = e.target.closest('.hl-item');
-
       if (!item) { hidePopup(); return; }
-
       showFor(item);
-
     });
-
     hlContainer.addEventListener('mouseout', function(e) {
-
       var related = e.relatedTarget;
-
       if (related && related.closest && (related.closest('.hl-item') || related.closest('#floatingPopup'))) return;
-
       hidePopup();
-
     });
-
     
-
-    // popup鏈韩锛氱Щ鍏ュ彇娑堥殣钘忥紝绉诲嚭寤舵椂闅愯棌
-
+    // popup本身：移入取消隐藏，移出延时隐藏
     popup.addEventListener('mouseenter', function() { cancelHide(); });
-
     popup.addEventListener('mouseleave', function() { hidePopup(); });
-
     
-
-    // popup鍐呯偣鍑绘柊闂昏烦杞?    popup.addEventListener('click', function(e) {
-
+    // popup内点击新闻跳转
+    popup.addEventListener('click', function(e) {
       var pi = e.target.closest('.popup-item');
-
       if (pi) {
-
         var url = pi.getAttribute('data-url');
-
         if (url) window.open(url, '_blank');
-
       }
-
     });
-
     
-
-    // 鐐瑰嚮楂樹寒鍗＄瓫閫?    document.getElementById('weeklyHL').addEventListener('click', function(e) {
-
+    // 点击高亮卡筛选
+    document.getElementById('weeklyHL').addEventListener('click', function(e) {
       var item = e.target.closest('.hl-item');
-
       if (!item) return;
-
       var comp = item.getAttribute('data-company');
-
       if (!comp) return;
-
       popup.style.display = 'none';
-
       if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; }
-
       selectCompany(comp);
-
     });
-
   })();
-
 }
-
-
 
 function setF(type, val, btn) {
-
   if (type === 'company') activeCompany = val;
-
   else if (type === 'type') activeType = val;
-
   else activeSource = val;
-
   document.querySelectorAll(`#${type}Filter .filter-btn`).forEach(b => b.classList.remove('active'));
-
   btn.classList.add('active');
-
   render();
-
 }
-
-
 
 function selectCompany(comp) {
-
   if (activeCompany === comp) return;
-
-  // 澶勭悊鍏徃鍚嶆槧灏勶細濡傛灉comp涓嶆槸涓€涓暟鎹簱閲岀殑鍏徃鍚嶏紝灏濊瘯鍙嶅悜鏄犲皠
-
+  // 处理公司名映射：如果comp不是一个数据库里的公司名，尝试反向映射
   if (DATA.company_labels) {
-
     var found = false;
-
     for (var k in DATA.company_labels) {
-
       if (k === comp) { found = true; break; }
-
     }
-
     if (!found) {
-
       for (var k in DATA.company_labels) {
-
         if (DATA.company_labels[k] === comp) { comp = k; break; }
-
       }
-
     }
-
   }
-
   activeCompany = comp;
-
   activeType = 'all';
-
   activeSource = 'all';
-
-  // 鏇存柊鎵€鏈夋寜閽姸鎬?  document.querySelectorAll('#companyFilter .filter-btn').forEach(b => b.classList.remove('active'));
-
+  // 更新所有按钮状态
+  document.querySelectorAll('#companyFilter .filter-btn').forEach(b => b.classList.remove('active'));
   document.querySelectorAll('#sourceFilter .filter-btn').forEach(b => b.classList.remove('active'));
-
   document.querySelectorAll('#typeFilter .filter-btn').forEach(b => b.classList.remove('active'));
-
-  // 鎵惧埌瀵瑰簲鍏徃鎸夐挳
-
+  // 找到对应公司按钮
   const btns = document.querySelectorAll('#companyFilter .filter-btn');
-
   const idx = DATA.companies.indexOf(comp);
-
   if (idx >= 0 && btns[idx + 1]) btns[idx + 1].classList.add('active');
-
   document.querySelector('#sourceFilter .filter-btn:first-child').classList.add('active');
-
   document.querySelector('#typeFilter .filter-btn:first-child').classList.add('active');
-
   render();
-
-  // 婊氬姩鍒版柊闂诲垪琛?  document.querySelector('.card-grid')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
+  // 滚动到新闻列表
+  document.querySelector('.card-grid')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
-
-
 
 function getFiltered() {
-
   const kw = document.getElementById('searchBox').value.toLowerCase().trim();
-
   return DATA.news.filter(n => {
-
     if (activeCompany !== 'all' && n.company !== activeCompany) return false;
-
     if (activeSource !== 'all' && n.source !== activeSource) return false;
-
     if (activeType !== 'all' && n.type !== activeType) return false;
-
     if (kw) {
-
-      // 鎼滅储锛氭爣棰?+ 鎽樿 + 鏃ユ湡 + 鍏徃鍚?      var inTitle = n.title.toLowerCase().includes(kw);
-
+      // 搜索：标题 + 摘要 + 日期 + 公司名
+      var inTitle = n.title.toLowerCase().includes(kw);
       var inSummary = n.summary.toLowerCase().includes(kw);
-
       var inDate = n.date.includes(kw);
-
       var inCompany = n.company.toLowerCase().includes(kw);
-
-      // 澶勭悊鏃ユ湡绠€鍐欙細2026-5-3 鈫?鍖归厤 2026-05-03
-
+      // 处理日期简写：2026-5-3 → 匹配 2026-05-03
       if (kw.indexOf('-') > 0 && kw.length < 12) {
-
         var parts = kw.split('-');
-
         var padded = parts.map(function(p) { return p.length === 1 ? '0' + p : p; }).join('-');
-
         if (!inDate) inDate = n.date.includes(padded);
-
       }
-
       if (!inTitle && !inSummary && !inDate && !inCompany) return false;
-
     }
-
     return true;
-
   });
-
 }
-
-
 
 function cc(c) {
-
   const m = {'Waymo':'cc-Waymo','Tesla':'cc-Tesla','Zoox':'cc-Zoox','Wayve':'cc-Wayve','Aurora':'cc-Aurora',
-
-    'Nuro':'cc-Nuro','Motional':'cc-Motional','WeRide':'cc-WeRide','Uber':'cc-Uber','鐧惧害Apollo':'cc-鐧惧害Apollo','婊存淮鍑鸿':'cc-婊存淮鍑鸿','鏇规搷鍑鸿':'cc-鏇规搷鍑鸿','Momenta':'cc-Momenta'};
-
+    'Nuro':'cc-Nuro','Motional':'cc-Motional','WeRide':'cc-WeRide','Uber':'cc-Uber','百度Apollo':'cc-百度Apollo','滴滴出行':'cc-滴滴出行','曹操出行':'cc-曹操出行','Momenta':'cc-Momenta'};
   return m[c] || '';
-
 }
-
-
 
 function render() {
-
   const items = getFiltered();
-
   const grid = document.getElementById('cardGrid');
-
-  if (!items.length) { grid.innerHTML = '<div class="loading">娌℃湁绗﹀悎鏉′欢鐨勬柊闂?/div>'; }
-
+  if (!items.length) { grid.innerHTML = '<div class="loading">没有符合条件的新闻</div>'; }
   else {
-
     function cl(c) { const m = DATA.company_labels||{}; return m[c]||c; }
-
     function tc(t) { return 'ct-' + t.replace(/\s+/g,''); }
-
     grid.innerHTML = items.map(n => `
-
       <div class="card" onclick="window.open('${n.url}','_blank')">
-
         <div class="card-top">
-
           <span class="card-date">${n.date}</span>
-
           <span style="display:flex;gap:4px;align-items:center;">
-
             <span class="card-type ${tc(n.type)}">${n.type}</span>
-
             <span class="card-company ${cc(n.company)}">${cl(n.company)}</span>
-
           </span>
-
         </div>
-
         <div class="card-title">${n.title}</div>
-
         <div class="card-summary">${n.summary}</div>
-
         <div class="card-bottom">
-
           <span class="card-source">${n.source}</span>
-
-          <a class="card-link" href="${n.url}" target="_blank">鏌ョ湅鍘熸枃 鈫?/a>
-
+          <a class="card-link" href="${n.url}" target="_blank">查看原文 →</a>
         </div>
-
       </div>
-
     `).join('');
-
   }
-
-
 
   const tl = document.getElementById('timelineContent');
-
-  if (!items.length) { tl.innerHTML = '<div class="loading">娌℃湁绗﹀悎鏉′欢鐨勬柊闂?/div>'; }
-
+  if (!items.length) { tl.innerHTML = '<div class="loading">没有符合条件的新闻</div>'; }
   else {
-
     let lastDate = '';
-
     tl.innerHTML = items.map(function(n) {
-
       var h = n.date !== lastDate ? '<div class="tl-date-header">' + n.date + '</div>' : '';
-
       lastDate = n.date;
-
       return h + '<div class="tl-item" data-url="' + n.url.replace(/"/g,'&quot;') + '"><div class="tl-card">' +
-
         '<div class="tl-title">' + n.title + '</div>' +
-
-        '<div class="tl-meta">' + n.company + ' 路 ' + n.source + '</div>' +
-
+        '<div class="tl-meta">' + n.company + ' · ' + n.source + '</div>' +
         '<div class="tl-summary">' + n.summary + '</div></div></div>';
-
     }).join('');
-
-    // 鏃堕棿绾跨偣鍑昏烦杞?    tl.onclick = function(e) {
-
+    // 时间线点击跳转
+    tl.onclick = function(e) {
       var item = e.target.closest('.tl-item');
-
       if (!item) return;
-
       var url = item.getAttribute('data-url');
-
       if (url) window.open(url, '_blank');
-
     };
-
   }
-
 }
-
-
 
 function switchView(v, btn) {
-
   document.querySelectorAll('.view-tab').forEach(t => t.classList.remove('active'));
-
   btn.classList.add('active');
-
   document.querySelectorAll('.view-panel').forEach(p => p.classList.remove('active'));
-
   document.getElementById('view-' + v).classList.add('active');
-
 }
-
-
 
 function renderWeekly() {
-
   const r = DATA.weekly_report;
-
   const block = document.getElementById('weeklyBlock');
-
   if (!r || !r.summary) {
-
-    document.getElementById('weeklyHL').innerHTML = '<div class="hl-item">鏈懆鏆傛棤鏂板鏂伴椈</div>';
-
+    document.getElementById('weeklyHL').innerHTML = '<div class="hl-item">本周暂无新增新闻</div>';
     return;
-
   }
 
-
-
-  // 鏄剧ず鏃ユ湡鑼冨洿: 2026-05-04~2026-05-10 -> 2026-5-4~2026-5-10
-
+  // 显示日期范围: 2026-05-04~2026-05-10 -> 2026-5-4~2026-5-10
   var dr = (r.date_range || '');
-
   dr = dr.split('~').map(function(s) {
-
     var p = s.split('-');
-
     return p[0] + '-' + parseInt(p[1]) + '-' + parseInt(p[2]);
-
   }).join('~');
-
   document.getElementById('weekBadge').textContent = dr;
 
-
-
-  // Highlights - extract company from parentheses at end: "鍐呭锛堝叕鍙稿悕锛?
-
+  // Highlights - extract company from parentheses at end: "内容（公司名）"
   function extractCompany(hl) {
-
-    // 鍖归厤鍏ㄨ锛堬級鍜屽崐瑙?)锛屽彇鏈€鍚庝竴缁?    var m = hl.match(/[锛?]([^锛?]+)[锛?]\s*$/);
-
+    // 匹配全角（）和半角()，取最后一组
+    var m = hl.match(/[（(]([^）)]+)[）)]\s*$/);
     return m ? m[1].trim() : null;
-
   }
-
   function getMatchingNews(company, limit=3) {
-
     if (!company) return [];
-
     const weekAgo = new Date(); weekAgo.setDate(weekAgo.getDate()-7);
-
     const ws = weekAgo.toISOString().slice(0,10);
-
     return DATA.news.filter(n => n.company === company && n.date >= ws).slice(0, limit);
-
   }
-
   document.getElementById('weeklyHL').innerHTML =
-
     (r.highlights||[]).map(function(h) {
-
       var comp = extractCompany(h);
-
-      // 涓枃鍚嶁啋鏁版嵁搴撹嫳鏂囧悕鏄犲皠
-
+      // 中文名→数据库英文名映射
       if (comp && DATA.company_labels) {
-
         for (var k in DATA.company_labels) {
-
           if (DATA.company_labels[k] === comp) { comp = k; break; }
-
         }
-
       }
-
       var news = getMatchingNews(comp);
-
-      // 鏋勫缓寮瑰嚭鍗＄墖HTML锛岀敤data灞炴€?      var popupItems = news.map(function(n) {
-
+      // 构建弹出卡片HTML，用data属性
+      var popupItems = news.map(function(n) {
         var label = (DATA.company_labels||{})[n.company] || n.company;
-
         return '<div class="popup-item" data-url="' + n.url.replace(/"/g,'&quot;') + '">' +
-
           '<div class="pi-date">' + n.date + '</div>' +
-
           '<div class="pi-title">' + n.title.slice(0, 80) + '</div>' +
-
-          '<div class="pi-source">' + label + ' 路 ' + n.source + '</div></div>';
-
+          '<div class="pi-source">' + label + ' · ' + n.source + '</div></div>';
       }).join('');
-
       var popup = news.length ?
-
         '<div class="hl-popup" data-comp="' + (comp||'') + '">' +
-
-        '<div class="popup-title">鏈懆 ' + ((DATA.company_labels||{})[comp]||comp) + ' 鍔ㄦ€?/div>' +
-
+        '<div class="popup-title">本周 ' + ((DATA.company_labels||{})[comp]||comp) + ' 动态</div>' +
         popupItems + '</div>' : '';
-
       return '<div class="hl-item" data-company="' + (comp||'') + '">' +
-
-        '<span class="hl-icon">馃搶</span>' + h + popup + '</div>';
-
+        '<span class="hl-icon">📌</span>' + h + popup + '</div>';
     }).join('');
 
-
-
-  // 鍛ㄦ姤鍐呭 鈥?鏉″垪寮?  _currentReport = r;
-
+  // 周报内容 — 条列式
+  _currentReport = r;
   var body = (r.summary || '');
-
-  // 鍘绘帀markdown鍔犵矖
-
+  // 去掉markdown加粗
   body = body.replace(/\*\*/g, '');
-
   
-
-  // 鍏徃鍚嶆彁浜垪琛?  var companies = ['Waymo','Zoox','Tesla','鐗规柉鎷?,'Wayve','Aurora','Nuro','Motional','WeRide','Uber','灏忛┈鏅鸿','鏂囪繙鐭ヨ','Nvidia','Lucid','Rivian'];
-
+  // 公司名提亮列表
+  var companies = ['Waymo','Zoox','Tesla','特斯拉','Wayve','Aurora','Nuro','Motional','WeRide','Uber','小马智行','文远知行','Nvidia','Lucid','Rivian'];
   
-
-  // 姝ｆ枃锛氫竴娈垫祦鐣呯殑缁艰堪
-
-  body = body.replace(/\n+/g, ' ').replace(/^[\s鈥-]*/, '');
-
+  // 正文：一段流畅的综述
+  body = body.replace(/\n+/g, ' ').replace(/^[\s•\-]*/, '');
   companies.forEach(function(n) {
-
     body = body.replace(n, '<span class="company-mention">' + n + '</span>');
-
   });
-
   document.getElementById('weeklyBody').innerHTML = body;
-
-
 
   // Meta
-
   document.getElementById('weeklyFooter').textContent =
-
-    `${r.count || 0} 鏉℃柊闂籤;
-
-
+    `${r.count || 0} 条新闻`;
 
   // ===== Charts =====
-
   var parts = (r.date_range || '').split('~');
-
   if (parts.length === 2) {
-
     drawTrendChart(parts[0], parts[1]);
-
     drawCompanyChart(parts[0], parts[1]);
-
     drawTypeChart(parts[0], parts[1]);
-
   } else {
-
     drawTrendChart();
-
     drawCompanyChart();
-
     drawTypeChart();
-
   }
-
 }
 
-
-
-// ===== 鍛ㄦ姤鍘嗗彶鍒囨崲 =====
-
+// ===== 周报历史切换 =====
 function initWeekSelector() {
-
   var sel = document.getElementById('weekSelect');
-
   var history = DATA.weekly_history || [];
-
-  // 娓呯┖锛堜繚鐣欑涓€涓彁绀洪」锛?  sel.innerHTML = '<option value="">鍒囨崲鍘嗗彶鍛ㄦ姤...</option>';
-
+  // 清空（保留第一个提示项）
+  sel.innerHTML = '<option value="">切换历史周报...</option>';
   for (var i = 0; i < history.length; i++) {
-
     var h = history[i];
-
-    var dr = h.date_range || ('绗? + (i+1) + '鍛?);
-
+    var dr = h.date_range || ('第' + (i+1) + '周');
     var label = dr.replace(/-0/g, '-');
-
     var opt = document.createElement('option');
-
     opt.value = i;
-
-    opt.textContent = label + ' (' + (h.count||0) + '鏉?';
-
+    opt.textContent = label + ' (' + (h.count||0) + '条)';
     if (i === 0) opt.selected = true;
-
     sel.appendChild(opt);
-
   }
-
 }
-
-
 
 function switchWeek(idx) {
-
   if (idx === '') return;
-
   var history = DATA.weekly_history || [];
-
   var r = history[parseInt(idx)];
-
   if (!r) { console.warn('switchWeek: no report for idx', idx); return; }
-
   renderWeek(r);
-
 }
-
-
 
 function renderWeek(r) {
-
-  // 鏀规爣棰樻棩鏈?  var dr = (r.date_range || '').split('~').map(function(s) {
-
+  // 改标题日期
+  var dr = (r.date_range || '').split('~').map(function(s) {
     var p = s.split('-');
-
     return parseInt(p[0]) + '-' + parseInt(p[1]) + '-' + parseInt(p[2]);
-
   }).join('~');
-
   document.getElementById('weekBadge').textContent = dr;
-
   
-
-  // 鍏徃鍚嶆槧灏勶紙涓枃鏍囩鈫掓暟鎹簱鑻辨枃鍚嶏級
-
+  // 公司名映射（中文标签→数据库英文名）
   function mapCompany(comp) {
-
     if (!comp || !DATA.company_labels) return comp;
-
     for (var k in DATA.company_labels) {
-
       if (DATA.company_labels[k] === comp) return k;
-
     }
-
     return comp;
-
   }
-
   
-
-  // 楂樹寒
-
+  // 高亮
   document.getElementById('weeklyHL').innerHTML =
-
     (r.highlights||[]).map(function(h) {
-
-      var comp = (h.match(/[锛?]([^锛?]+)[锛?]\s*$/) || [])[1];
-
+      var comp = (h.match(/[（(]([^）)]+)[）)]\s*$/) || [])[1];
       if (comp) comp = mapCompany(comp);
-
       var news = comp ? DATA.news.filter(function(n) { return n.company === comp; }).slice(0, 3) : [];
-
       var tooltip = news.length ? '<div class="hl-popup" data-comp="' + comp + '">' +
-
-        '<div class="popup-title">鐩稿叧鏂伴椈</div>' +
-
+        '<div class="popup-title">相关新闻</div>' +
         news.map(function(n) { return '<div class="popup-item" data-url="' + n.url.replace(/"/g,'&quot;') + '"><div class="pi-date">' + n.date + '</div><div class="pi-title">' + n.title.slice(0,60) + '</div></div>'; }).join('') +
-
         '</div>' : '';
-
-      return '<div class="hl-item" data-company="' + (comp||'') + '"><span class="hl-icon">馃搶</span>' + h + tooltip + '</div>';
-
+      return '<div class="hl-item" data-company="' + (comp||'') + '"><span class="hl-icon">📌</span>' + h + tooltip + '</div>';
     }).join('');
-
   
-
-  // 姝ｆ枃
-
+  // 正文
   _currentReport = r;
-
   var body = (r.summary || '').replace(/\*\*/g, '');
-
-  var companies = ['Waymo','Zoox','Tesla','鐗规柉鎷?,'Wayve','Aurora','Nuro','Motional','WeRide','Uber','灏忛┈鏅鸿','鏂囪繙鐭ヨ','Pony.ai','Nvidia','Lucid','Rivian'];
-
+  var companies = ['Waymo','Zoox','Tesla','特斯拉','Wayve','Aurora','Nuro','Motional','WeRide','Uber','小马智行','文远知行','Pony.ai','Nvidia','Lucid','Rivian'];
   companies.forEach(function(n) {
-
     body = body.replace(n, '<span class="company-mention">' + n + '</span>');
-
   });
-
-  // 姝ｆ枃锛氫竴娈垫祦鐣呯殑缁艰堪
-
-  body = body.replace(/\n+/g, ' ').replace(/^[\s鈥-]*/, '');
-
+  // 正文：一段流畅的综述
+  body = body.replace(/\n+/g, ' ').replace(/^[\s•\-]*/, '');
   companies.forEach(function(n) {
-
     body = body.replace(n, '<span class="company-mention">' + n + '</span>');
-
   });
-
   document.getElementById('weeklyBody').innerHTML = body;
-
   
-
-  document.getElementById('weeklyFooter').textContent = (r.count || 0) + ' 鏉℃柊闂?;
-
+  document.getElementById('weeklyFooter').textContent = (r.count || 0) + ' 条新闻';
   
-
-  // 鏇存柊鍥捐〃涓哄巻鍙插懆鏁版嵁
-
+  // 更新图表为历史周数据
   var parts = (r.date_range || '').split('~');
-
   if (parts.length === 2) {
-
     drawTrendChart(parts[0], parts[1]);
-
     drawCompanyChart(parts[0], parts[1]);
-
     drawTypeChart(parts[0], parts[1]);
-
   }
-
 }
 
-
-
-// 鍏ㄥ眬鍥捐〃瀹炰緥锛岀敤浜庡垏鎹㈠懆鎶ユ椂閿€姣?var _chartTrend = null, _chartCompanies = null, _chartTypes = null;
-
-
+// 全局图表实例，用于切换周报时销毁
+var _chartTrend = null, _chartCompanies = null, _chartTypes = null;
 
 function destroyCharts() {
-
   if (_chartTrend) { _chartTrend.destroy(); _chartTrend = null; }
-
   if (_chartCompanies) { _chartCompanies.destroy(); _chartCompanies = null; }
-
   if (_chartTypes) { _chartTypes.destroy(); _chartTypes = null; }
-
 }
-
-
 
 function drawTrendChart(fromDate, toDate) {
-
   destroyCharts();
-
   
-
   var days = [], counts = [];
-
   if (fromDate && toDate) {
-
-    // 鍘嗗彶鍛細鏄剧ず璇ュ懆姣忓ぉ鐨勫垎甯?    var start = new Date(fromDate);
-
+    // 历史周：显示该周每天的分布
+    var start = new Date(fromDate);
     var end = new Date(toDate);
-
     for (var d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
-
       var ds = d.toISOString().slice(0,10);
-
       days.push((d.getMonth()+1)+'/'+d.getDate());
-
       counts.push(DATA.news.filter(function(n) { return n.date === ds; }).length);
-
     }
-
   } else {
-
-    // 榛樿锛氭渶杩?4澶?    var weekAgo = new Date();
-
+    // 默认：最近14天
+    var weekAgo = new Date();
     weekAgo.setDate(weekAgo.getDate() - 13);
-
     for (var i = 0; i < 14; i++) {
-
       var d = new Date(weekAgo);
-
       d.setDate(d.getDate() + i);
-
       var ds = d.toISOString().slice(0,10);
-
       days.push((i % 2 === 0) ? (d.getMonth()+1)+'/'+d.getDate() : '');
-
       counts.push(DATA.news.filter(function(n) { return n.date === ds; }).length);
-
     }
-
   }
-
-
 
   _chartTrend = new Chart(document.getElementById('chartTrend'), {
-
     type: 'line',
-
     data: {
-
       labels: days,
-
       datasets: [{
-
-        label: '鏂伴椈鏁?,
-
+        label: '新闻数',
         data: counts,
-
         borderColor: '#667eea',
-
         backgroundColor: 'rgba(102,126,234,0.08)',
-
         fill: true,
-
         tension: 0.4,
-
         pointRadius: 3,
-
         pointBackgroundColor: '#667eea',
-
         borderWidth: 2,
-
       }]
-
     },
-
     options: {
-
       responsive: true,
-
       maintainAspectRatio: false,
-
       plugins: {
-
         legend: { display: false },
-
         tooltip: {
-
           backgroundColor: '#1a1a2e',
-
           titleFont: { size: 11 },
-
           bodyFont: { size: 12 },
-
           padding: 8,
-
           callbacks: {
-
-            label: function(ctx) { return ctx.parsed.y + ' 鏉℃柊闂?; }
-
+            label: function(ctx) { return ctx.parsed.y + ' 条新闻'; }
           }
-
         }
-
       },
-
       scales: {
-
         x: { ticks: { font: { size: 10 }, color: '#a0aec0' }, grid: { display: false } },
-
         y: { ticks: { font: { size: 10 }, color: '#a0aec0', stepSize: 1 }, grid: { color: '#f0f2f5' } }
-
       },
-
       hover: { mode: 'index', intersect: false }
-
     }
-
   });
-
 }
-
-
 
 function drawTypeChart(fromDate, toDate) {
-
   var weekNews;
-
   if (fromDate && toDate) {
-
     weekNews = DATA.news.filter(function(n) { return n.date >= fromDate && n.date <= toDate; });
-
   } else {
-
     var weekAgo = new Date();
-
     weekAgo.setDate(weekAgo.getDate() - 7);
-
     weekNews = DATA.news.filter(function(n) { return n.date >= weekAgo.toISOString().slice(0,10); });
-
   }
-
   
-
   var byType = {};
-
   weekNews.forEach(function(n) {
-
     byType[n.type] = (byType[n.type] || 0) + 1;
-
   });
-
   
-
   var sorted = Object.entries(byType).sort(function(a,b) { return b[1] - a[1]; }).slice(0, 7);
-
   var typeColors = {
-
-    '鎶€鏈獊鐮?:'#667eea','鍟嗕笟鎷撳睍':'#38a169','琛屼笟鍔ㄦ€?:'#d69e2e',
-
-    '鍚堜綔':'#319795','铻嶈祫鎶曡祫':'#805ad5','瀹夊叏涓庣洃绠?:'#e53e3e',
-
-    '璐㈡姤':'#e07c3e','鍏朵粬':'#a0aec0'
-
+    '技术突破':'#667eea','商业拓展':'#38a169','行业动态':'#d69e2e',
+    '合作':'#319795','融资投资':'#805ad5','安全与监管':'#e53e3e',
+    '财报':'#e07c3e','其他':'#a0aec0'
   };
 
-
-
   _chartTypes = new Chart(document.getElementById('chartTypeDist'), {
-
     type: 'doughnut',
-
     data: {
-
       labels: sorted.map(function(s) { return s[0] + ' ' + s[1]; }),
-
       datasets: [{
-
         data: sorted.map(function(s) { return s[1]; }),
-
         backgroundColor: sorted.map(function(s) { return (typeColors[s[0]]||'#a0aec0') + '99'; }),
-
         borderColor: sorted.map(function(s) { return typeColors[s[0]]||'#a0aec0'; }),
-
         borderWidth: 1,
-
       }]
-
     },
-
     options: {
-
       responsive: true,
-
-      maintainAspectRatio: false,
-
+      maintainAspectRatio: true,
+      aspectRatio: 1,
       plugins: {
-
         legend: {
-
           position: 'right',
-
           labels: { font: { size: 10 }, color: '#4a5568', padding: 8 }
-
         },
-
         tooltip: {
-
           callbacks: {
-
-            label: function(ctx) { return ctx.parsed + ' 鏉?; }
-
+            label: function(ctx) { return ctx.parsed + ' 条'; }
           }
-
         }
-
       }
-
     }
-
   });
-
 }
-
-
 
 function drawCompanyChart(fromDate, toDate) {
-
   var weekNews;
-
   if (fromDate && toDate) {
-
     weekNews = DATA.news.filter(function(n) { return n.date >= fromDate && n.date <= toDate && n.company !== 'Sawyer Merritt'; });
-
   } else {
-
     var weekAgo = new Date();
-
     weekAgo.setDate(weekAgo.getDate() - 7);
-
     weekNews = DATA.news.filter(function(n) { return n.date >= weekAgo.toISOString().slice(0,10) && n.company !== 'Sawyer Merritt'; });
-
   }
-
   
-
   var byCompany = {};
-
   weekNews.forEach(function(n) {
-
     byCompany[n.company] = (byCompany[n.company] || 0) + 1;
-
   });
-
   
-
   var sorted = Object.entries(byCompany).sort(function(a,b) { return b[1] - a[1]; }).slice(0, 8);
-
   var colors = ['#667eea','#e53e3e','#805ad5','#38a169','#d69e2e','#319795','#e07c3e','#5277e6'];
 
-
-
   _chartCompanies = new Chart(document.getElementById('chartCompanies'), {
-
     type: 'bar',
-
     data: {
-
       labels: sorted.map(function(s) { return s[0]; }),
-
       datasets: [{
-
-        label: '鏂伴椈鏁?,
-
+        label: '新闻数',
         data: sorted.map(function(s) { return s[1]; }),
-
         backgroundColor: sorted.map(function(_, i) { return colors[i % colors.length] + '33'; }),
-
         borderColor: sorted.map(function(_, i) { return colors[i % colors.length]; }),
-
         borderWidth: 1,
-
         borderRadius: 3,
-
       }]
-
     },
-
     options: {
-
       indexAxis: 'y',
-
       responsive: true,
-
       maintainAspectRatio: false,
-
       plugins: {
-
         legend: { display: false },
-
         tooltip: {
-
           backgroundColor: '#1a1a2e',
-
           titleFont: { size: 11 },
-
           bodyFont: { size: 12 },
-
           padding: 8,
-
           callbacks: {
-
             label: function(ctx) {
-
               var c = ctx.label;
-
               var info = (DATA.company_info || {})[c] || '';
-
               var label = (DATA.company_labels || {})[c] || c;
-
-              return label + ' ' + ctx.parsed.x + '鏉?;
-
+              return label + ' ' + ctx.parsed.x + '条';
             },
-
             afterLabel: function(ctx) {
-
               var info = (DATA.company_info || {})[ctx.label] || '';
-
-              return info ? '鈥斺€? + info : '';
-
+              return info ? '——' + info : '';
             }
-
           }
-
         }
-
       },
-
       scales: {
-
         x: { ticks: { font: { size: 10 }, color: '#a0aec0', stepSize: 1 }, grid: { color: '#f0f2f5' } },
-
         y: { ticks: { font: { size: 10 }, color: '#4a5568' }, grid: { display: false } }
-
       }
-
     }
-
   });
-
 }
 
-
-
-// ===== 涓嬭浇鍛ㄦ姤 =====
-
+// ===== 下载周报 =====
 function downloadReport() {
-
   var r = _currentReport;
-
-  if (!r) { alert('娌℃湁鍙笅杞界殑鍛ㄦ姤'); return; }
-
+  if (!r) { alert('没有可下载的周报'); return; }
   var dr = r.date_range || '';
-
-  var label = dr.replace(/-0/g, '-').replace(/~/g, '鑷?);
-
+  var label = dr.replace(/-0/g, '-').replace(/~/g, '至');
   
-
   try {
-
     if (typeof html2canvas !== 'undefined') {
-
       var el = document.querySelector('.weekly');
-
       if (el) {
-
-        // 鎴浘锛氶殣钘忎氦浜掓帶浠讹紙涓嬫媺鑿滃崟鍜屼笅杞芥寜閽笉瀵煎嚭锛?        var sel = document.getElementById('weekSelect');
-
+        // 截图：隐藏交互控件（下拉菜单和下载按钮不导出）
+        var sel = document.getElementById('weekSelect');
         var dlWrap = document.querySelector('.dl-wrap');
-
         if (sel) sel.style.display = 'none';
-
         if (dlWrap) dlWrap.style.display = 'none';
-
         
-
-        // 鏀剁獎鍒?20px锛岃鍐呭鑷劧鍙橀暱锛岄€傚悎鎵嬫満娴忚
-
+        // 收窄到720px，让内容自然变长，适合手机浏览
         var origW = el.style.width;
-
         el.style.width = '720px';
-
         
-
         html2canvas(el, {
-
           scale: 2,
-
           backgroundColor: '#ffffff',
-
           useCORS: true,
-
         }).then(function(c) {
-
           el.style.width = origW || '';
-
           if (sel) sel.style.display = '';
-
           if (dlWrap) dlWrap.style.display = '';
-
           c.toBlob(function(b) {
-
             var a = document.createElement('a');
-
             a.href = URL.createObjectURL(b);
-
-            a.download = 'robotaxi_鍛ㄦ姤_' + label + '.png';
-
+            a.download = 'robotaxi_周报_' + label + '.png';
             a.click();
-
             URL.revokeObjectURL(a.href);
-
           });
-
         }).catch(function() {
-
           downloadText(r, label);
-
         });
-
         return;
-
       }
-
     }
-
   } catch(e) {}
-
   downloadText(r, label);
-
 }
-
-
 
 function downloadText(r, label) {
-
-  var text = 'Robotaxi 琛屼笟鍛ㄦ姤\r\n' + label + '\r\n';
-
+  var text = 'Robotaxi 行业周报\r\n' + label + '\r\n';
   text += '='.repeat(40) + '\r\n\r\n';
-
   if (r.highlights && r.highlights.length) {
-
-    text += '鏈懆瑕佺偣锛歕r\n';
-
+    text += '本周要点：\r\n';
     r.highlights.forEach(function(h) { text += '  ' + h + '\r\n'; });
-
     text += '\r\n';
-
   }
-
   text += (r.summary || '').replace(/\*\*/g, '') + '\r\n\r\n';
-
-  text += '鍏?' + (r.count || 0) + ' 鏉℃柊闂籠r\n';
-
-  text += '鐢熸垚鏃堕棿: ' + (DATA.updated_at || '');
-
+  text += '共 ' + (r.count || 0) + ' 条新闻\r\n';
+  text += '生成时间: ' + (DATA.updated_at || '');
   var blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
-
   var a = document.createElement('a');
-
   a.href = URL.createObjectURL(blob);
-
-  a.download = 'robotaxi_鍛ㄦ姤_' + label + '.txt';
-
+  a.download = 'robotaxi_周报_' + label + '.txt';
   a.click();
-
   URL.revokeObjectURL(a.href);
-
 }
 
-
-
-// ===== 涓嬭浇鑿滃崟鍒囨崲 =====
-
+// ===== 下载菜单切换 =====
 function toggleDL() {
-
   var menu = document.getElementById('dlMenu');
-
   menu.classList.toggle('show');
-
 }
-
 function hideDL() {
-
   document.getElementById('dlMenu').classList.remove('show');
-
 }
-
-// 鐐瑰嚮椤甸潰鍏朵粬鍦版柟鍏抽棴鑿滃崟
-
+// 点击页面其他地方关闭菜单
 document.addEventListener('click', function(e) {
-
   if (!e.target.closest('.dl-wrap')) {
-
     var menu = document.getElementById('dlMenu');
-
     if (menu) menu.classList.remove('show');
-
   }
-
 });
 
-
-
-// ===== 瀵煎嚭PDF =====
-
+// ===== 导出PDF =====
 function exportPDF() {
-
   var r = _currentReport;
-
-  if (!r) { alert('娌℃湁鍙鍑虹殑鍛ㄦ姤'); return; }
-
+  if (!r) { alert('没有可导出的周报'); return; }
   var dr = r.date_range || '';
-
-  var label = dr.replace(/-0/g, '-').replace(/~/g, '鑷?);
-
+  var label = dr.replace(/-0/g, '-').replace(/~/g, '至');
   
-
   var el = document.querySelector('.weekly');
-
   if (!el) return;
-
   
-
   var sel = document.getElementById('weekSelect');
-
   var dlWrap = document.querySelector('.dl-wrap');
-
   if (sel) sel.style.display = 'none';
-
   if (dlWrap) dlWrap.style.display = 'none';
-
   
-
   try {
-
     var origW = el.style.width;
-
     el.style.width = '720px';
-
     
-
     html2canvas(el, {
-
       scale: 2, backgroundColor: '#ffffff', useCORS: true
-
     }).then(function(canvas) {
-
       el.style.width = origW || '';
-
       if (sel) sel.style.display = '';
-
       if (dlWrap) dlWrap.style.display = '';
-
       
-
       if (typeof jspdf === 'undefined') {
-
-        // 闄嶇骇涓哄浘鐗囦笅杞?        canvas.toBlob(function(b) {
-
+        // 降级为图片下载
+        canvas.toBlob(function(b) {
           var a = document.createElement('a');
-
           a.href = URL.createObjectURL(b);
-
-          a.download = 'robotaxi_鍛ㄦ姤_' + label + '.png';
-
+          a.download = 'robotaxi_周报_' + label + '.png';
           a.click();
-
           URL.revokeObjectURL(a.href);
-
         });
-
         return;
-
       }
-
       
-
       var imgData = canvas.toDataURL('image/jpeg', 0.95);
-
       var pdf = new jspdf.jsPDF('p', 'mm', 'a4');
-
       var pw = 190;
-
       var ph = (canvas.height / canvas.width) * pw;
-
       pdf.addImage(imgData, 'JPEG', 10, 10, pw, ph);
-
-      pdf.save('robotaxi_鍛ㄦ姤_' + label + '.pdf');
-
+      pdf.save('robotaxi_周报_' + label + '.pdf');
     });
-
   } catch(e) {
-
     if (sel) sel.style.display = '';
-
     if (dlWrap) dlWrap.style.display = '';
-
-    alert('PDF鐢熸垚澶辫触');
-
+    alert('PDF生成失败');
   }
-
 }
 
-
-
 loadData();
-
 </script>
-
 </body>
-
 </html>
-
