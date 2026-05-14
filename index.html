@@ -172,12 +172,19 @@ body {
 /* Body text */
 .weekly-body {
   font-size:12.5px; line-height:1.9; color:#4a5568;
-  padding:16px 20px; border-top:1px solid #f0f2f5;
-  background:#f8f6ff; border-radius:8px; margin:0 8px 16px 8px;
+  padding:14px 20px 14px 22px;
+  border-left:4px solid #667eea;
+  background:linear-gradient(90deg,#f8f6ff,#fff);
+  border-radius:6px; margin:0 8px 16px 8px;
 }
 .weekly-body-label {
-  font-size:14px; font-weight:700; color:#667eea; margin-bottom:10px;
-  letter-spacing:0.5px;
+  display:inline-block;
+  font-size:11px; font-weight:700; color:#fff;
+  background:linear-gradient(135deg,#667eea,#764ba2);
+  padding:3px 14px; border-radius:4px;
+  margin-bottom:12px;
+  letter-spacing:0.8px;
+  text-transform:uppercase;
 }
 .weekly-body .company-mention {
   font-weight:600; padding:0 8px; border-radius:4px;
@@ -747,13 +754,24 @@ function renderWeekly() {
   // 去掉markdown加粗
   body = body.replace(/\*\*/g, '');
   
-  // 公司名提亮列表
-  var companies = ['Waymo','Zoox','Tesla','特斯拉','Wayve','Aurora','Nuro','Motional','WeRide','Uber','小马智行','文远知行','Nvidia','Lucid','Rivian'];
+  // 公司主题色映射
+  var companyColors = {
+    'Waymo':'#3182ce','Tesla':'#e53e3e','Zoox':'#805ad5','Wayve':'#38a169',
+    'Aurora':'#d69e2e','Nuro':'#319795','Motional':'#e07c3e','WeRide':'#5277e6',
+    'Uber':'#1c1c1c','小马智行':'#c53030','文远知行':'#5277e6','Nvidia':'#76b900','Lucid':'#4a5568','Rivian':'#38a169','百度Apollo':'#c53030','滴滴出行':'#38a169','曹操出行':'#d69e2e','Momenta':'#e53e3e'
+  };
   
   // 正文：一段流畅的综述
   body = body.replace(/\n+/g, ' ').replace(/^[\s•\-]*/, '');
+  
+  // 高亮数字（百分比、金额、数量等）
+  body = body.replace(/(\d+[\.,]?\d*[%倍%千百万亿+$]?)/g, '<span class="num-highlight">$1</span>');
+  
+  // 公司名高亮（使用对应主题色）
+  var companies = Object.keys(companyColors);
   companies.forEach(function(n) {
-    body = body.replace(n, '<span class="company-mention">' + n + '</span>');
+    var color = companyColors[n];
+    body = body.replace(n, '<span class="company-mention" style="background:' + color + '22;color:' + color + ';border:1px solid ' + color + '44;">' + n + '</span>');
   });
   document.getElementById('weeklyBody').innerHTML = body;
 
