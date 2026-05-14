@@ -158,22 +158,23 @@ body {
 
 /* Charts row */
 .weekly-charts {
-  display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; margin-bottom:20px;
+  display:grid; grid-template-columns:1fr 1fr 1fr; grid-template-rows:220px; gap:16px; margin-bottom:20px;
 }
 .weekly-chart-box {
   background:#fafbfc; border:1px solid #e8ecf1; border-radius:8px; padding:14px;
+  overflow:hidden;
 }
 .weekly-chart-box .chart-title {
   font-size:11px; color:#718096; font-weight:600; margin-bottom:8px;
   text-transform:uppercase; letter-spacing:0.3px;
 }
-.weekly-chart-box canvas { width:100% !important; min-height:180px; }
+.weekly-chart-box canvas { width:100% !important; min-height:180px; max-height:200px; }
 
 /* Body text */
 .weekly-body {
   font-size:12.5px; line-height:1.9; color:#4a5568;
   padding:16px 20px; border-top:1px solid #f0f2f5;
-  background:#f8f6ff; border-radius:8px; margin-top:4px;
+  background:#f8f6ff; border-radius:8px; margin:0 8px 16px 8px;
 }
 .weekly-body-label {
   font-size:14px; font-weight:700; color:#667eea; margin-bottom:10px;
@@ -965,8 +966,7 @@ function drawTypeChart(fromDate, toDate) {
     },
     options: {
       responsive: true,
-      maintainAspectRatio: true,
-      aspectRatio: 1,
+      maintainAspectRatio: false,
       plugins: {
         legend: {
           position: 'right',
