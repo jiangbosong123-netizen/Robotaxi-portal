@@ -1514,8 +1514,7 @@ function renderWeekly() {
   var companies = ['Waymo','Zoox','Tesla','特斯拉','Wayve','Aurora','Nuro','Motional','WeRide','Uber','小马智行','文远知行','Nvidia','Lucid','Rivian'];
   
   // 正文：一段流畅的综述
-  body = body.replace(/
-+/g, ' ').replace(/^[\s\u2022\-]*/, '');
+  body = body.replace(/\n+/g, ' ').replace(/^[\s\u2022\-]*/, '');
   companies.forEach(function(n) {
     body = body.replace(n, '<span class="company-mention">' + n + '</span>');
   });
