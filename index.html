@@ -1121,7 +1121,7 @@ function init() {
 
       if (hideTimer) clearTimeout(hideTimer);
 
-      hideTimer = setTimeout(function() { popup.style.display = 'none'; }, 150);
+      hideTimer = setTimeout(function() { popup.style.display = 'none'; }, 600);
 
     }
 
@@ -1553,13 +1553,11 @@ function renderWeekly() {
 
       }).join('');
 
-      var popup = news.length ?
-
-        '<div class="hl-popup" data-comp="' + (comp||'') + '">' +
+      var popup = '<div class="hl-popup" data-comp="' + (comp||'') + '">' +
 
         '<div class="popup-title">本周 ' + ((DATA.company_labels||{})[comp]||comp) + ' 动态</div>' +
 
-        popupItems + '</div>' : '';
+        (news.length ? popupItems : '<div class="popup-item" style="color:#a0aec0;font-size:12px;padding:8px 0;">暂无本周相关新闻</div>') + '</div>';
 
       return '<div class="hl-item" data-company="' + (comp||'') + '">' +
 
