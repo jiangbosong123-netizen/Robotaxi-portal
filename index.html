@@ -1566,18 +1566,17 @@ function renderWeekly() {
   var companies = ['百度Apollo','小马智行','文远知行','滴滴出行','曹操出行','Bot Auto','Waymo','Zoox','Tesla','Wayve','Aurora','Nuro','Motional','WeRide','Uber','滴滴','特斯拉','Rivian','Lucid','Pony.ai','Nvidia'];
   
   // 找出第一个匹配的公司名，每行只高亮一次
-  function highlightFirst(line, names) {
-    var idx = -1, match = '';
-    for (var k = 0; k < names.length; k++) {
-      var pos = line.indexOf(names[k]);
-      if (pos !== -1 && (idx === -1 || pos < idx)) {
-        idx = pos; match = names[k];
-      }
+  // 高亮段落中所有公司名（长名优先匹配，避免"滴滴"抢在"滴滴出行"前面）
+  function highlightAll(text, names) {
+    // 按长度降序排列，长名优先匹配
+    var sorted = names.slice().sort(function(a,b) { return b.length - a.length; });
+    var result = text;
+    for (var k = 0; k < sorted.length; k++) {
+      var esc = sorted[k].replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      var re = new RegExp(esc, 'g');
+      result = result.replace(re, '<span class="company-mention">' + sorted[k] + '</span>');
     }
-    if (match) {
-      return line.slice(0, idx) + '<span class="company-mention">' + match + '</span>' + line.slice(idx + match.length);
-    }
-    return line;
+    return result;
   }
   
   // 结构化综述：段落式渲染（每段一段话）
@@ -1588,19 +1587,18 @@ function renderWeekly() {
   for (var i = 0; i < lines.length; i++) {
     var line = lines[i].trim();
     if (line === '') {
-      if (para.length) { htmlLines.push('<div class="sec-para">' + highlightFirst(para.join(' '), companies) + '</div>'); para = []; }
+      if (para.length) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); para = []; }
       continue;
     }
     if (line.indexOf('<div class="sec-title"') === 0) {
-      if (para.length) { htmlLines.push('<div class="sec-para">' + highlightFirst(para.join(' '), companies) + '</div>'); para = []; }
+      if (para.length) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); para = []; }
       htmlLines.push(line);
       continue;
     }
     para.push(line);
   }
-  if (para.length) { htmlLines.push('<div class="sec-para">' + highlightFirst(para.join(' '), companies) + '</div>'); }
+  if (para.length) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); }
   document.getElementById('weeklyBody').innerHTML = htmlLines.join('\n');
-
 
   // Meta
 
@@ -1758,18 +1756,16 @@ function renderWeek(r) {
   var companies = ['百度Apollo','小马智行','文远知行','滴滴出行','曹操出行','Bot Auto','Waymo','Zoox','Tesla','Wayve','Aurora','Nuro','Motional','WeRide','Uber','滴滴','特斯拉','Rivian','Lucid','Pony.ai','Nvidia'];
 
   // 找出第一个匹配的公司名，每行只高亮一次
-  function highlightFirst(line, names) {
-    var idx = -1, match = '';
-    for (var k = 0; k < names.length; k++) {
-      var pos = line.indexOf(names[k]);
-      if (pos !== -1 && (idx === -1 || pos < idx)) {
-        idx = pos; match = names[k];
-      }
+  // 高亮段落中所有公司名
+  function highlightAll(text, names) {
+    var sorted = names.slice().sort(function(a,b) { return b.length - a.length; });
+    var result = text;
+    for (var k = 0; k < sorted.length; k++) {
+      var esc = sorted[k].replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      var re = new RegExp(esc, 'g');
+      result = result.replace(re, '<span class="company-mention">' + sorted[k] + '</span>');
     }
-    if (match) {
-      return line.slice(0, idx) + '<span class="company-mention">' + match + '</span>' + line.slice(idx + match.length);
-    }
-    return line;
+    return result;
   }
 
   // 正文：段落式渲染
@@ -1780,17 +1776,17 @@ function renderWeek(r) {
   for (var i = 0; i < lines.length; i++) {
     var line = lines[i].trim();
     if (line === '') {
-      if (para.length) { htmlLines.push('<div class="sec-para">' + highlightFirst(para.join(' '), companies) + '</div>'); para = []; }
+      if (para.length) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); para = []; }
       continue;
     }
     if (line.indexOf('<div class="sec-title"') === 0) {
-      if (para.length) { htmlLines.push('<div class="sec-para">' + highlightFirst(para.join(' '), companies) + '</div>'); para = []; }
+      if (para.length) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); para = []; }
       htmlLines.push(line);
       continue;
     }
     para.push(line);
   }
-  if (para.length) { htmlLines.push('<div class="sec-para">' + highlightFirst(para.join(' '), companies) + '</div>'); }
+  if (para.length) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); }
   document.getElementById('weeklyBody').innerHTML = htmlLines.join('\n');
 
   
