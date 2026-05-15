@@ -8,7 +8,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Robotaxi 行业动态</title>
+<title>【华泰互联网传媒Jonos】Robotaxi 行业动态</title>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 
@@ -50,9 +50,31 @@ body {
 
   line-height:1.2;
 
+  margin:0;
+
 }
 
 .top-bar h1 span { color:#667eea; }
+
+.brand-line {
+
+  font-size:14px; font-weight:500; color:#667eea;
+
+  letter-spacing:0.5px;
+
+  margin-bottom:-2px;
+
+}
+
+.analyst-line {
+
+  font-size:12px; color:#718096;
+
+  margin-top:1px;
+
+  letter-spacing:0.3px;
+
+}
 
 .top-bar .update-badge {
 
@@ -381,6 +403,28 @@ body {
   display:inline; font-size:12px;
 
   background:#ede9fe; color:#4c51bf;
+
+}
+
+.sec-title {
+
+  font-size:13px; font-weight:700; color:#4c51bf;
+
+  margin:14px 0 6px 0; padding:0;
+
+  letter-spacing:0.5px;
+
+}
+
+.sec-title:first-of-type { margin-top:0; }
+
+.sec-line {
+
+  font-size:12.5px; color:#2d3748; line-height:1.8;
+
+  padding-left:4px;
+
+  margin:0;
 
 }
 
@@ -730,7 +774,11 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
 
 <div class="top-bar">
 
-  <h1><span>Robotaxi</span> 行业动态</h1>
+  <div>
+    <div class="brand-line">【华泰互联网传媒Jonos】</div>
+    <h1><span>Robotaxi</span> 行业动态</h1>
+    <div class="analyst-line">苏燕妮 13148866768 / 邵浩岚 15195381655</div>
+  </div>
 
   <div class="update-badge" id="updateBadge">加载中...</div>
 
@@ -1500,27 +1548,39 @@ function renderWeekly() {
 
 
 
-  // 周报内容 — 条列式
+  // 周报内容 — 结构化综述
 
   _currentReport = r;
 
   var body = (r.summary || '');
 
-  // 去掉markdown加粗
+  // 去掉markdown加粗和标题标记
 
   body = body.replace(/\*\*/g, '').replace(/^#{1,3}\s*/gm, '');
 
   
 
   // 公司名提亮列表
-  var companies = ['Waymo','Zoox','Tesla','特斯拉','Wayve','Aurora','Nuro','Motional','WeRide','Uber','小马智行','文远知行','Nvidia','Lucid','Rivian'];
+  var companies = ['Waymo','Zoox','Tesla','特斯拉','Wayve','Aurora','Nuro','Motional','WeRide','Uber','小马智行','文远知行','Pony.ai','Nvidia','Lucid','Rivian'];
   
-  // 正文：一段流畅的综述
-  body = body.replace(/\n+/g, ' ').replace(/^[\s\u2022\-]*/, '');
-  companies.forEach(function(n) {
-    body = body.replace(n, '<span class="company-mention">' + n + '</span>');
-  });
-  document.getElementById('weeklyBody').innerHTML = body;
+  // 结构化综述：保留换行，高亮段标题，逐行处理
+  body = body.replace(/【(.+?)】/g, '<div class="sec-title">【$1】</div>');
+  var lines = body.split('\n');
+  var htmlLines = [];
+  for (var i = 0; i < lines.length; i++) {
+    var line = lines[i].trim();
+    if (line === '') continue;
+    if (line.indexOf('<div class="sec-title"') === 0) {
+      htmlLines.push(line);
+      continue;
+    }
+    var processed = line;
+    companies.forEach(function(n) {
+      processed = processed.replace(n, '<span class="company-mention">' + n + '</span>');
+    });
+    htmlLines.push('<div class="sec-line">' + processed + '</div>');
+  }
+  document.getElementById('weeklyBody').innerHTML = htmlLines.join('\n');
 
 
 
@@ -1684,17 +1744,41 @@ function renderWeek(r) {
 
   });
 
-  // 正文：一段流畅的综述
+  // 正文：结构化综述
 
-  body = body.replace(/\n+/g, ' ').replace(/^[\s•\-]*/, '');
+  body = body.replace(/【(.+?)】/g, '<div class="sec-title">【$1】</div>');
 
-  companies.forEach(function(n) {
+  var lines = body.split('\n');
 
-    body = body.replace(n, '<span class="company-mention">' + n + '</span>');
+  var htmlLines = [];
 
-  });
+  for (var i = 0; i < lines.length; i++) {
 
-  document.getElementById('weeklyBody').innerHTML = body;
+    var line = lines[i].trim();
+
+    if (line === '') continue;
+
+    if (line.indexOf('<div class="sec-title"') === 0) {
+
+      htmlLines.push(line);
+
+      continue;
+
+    }
+
+    var processed = line;
+
+    companies.forEach(function(n) {
+
+      processed = processed.replace(n, '<span class="company-mention">' + n + '</span>');
+
+    });
+
+    htmlLines.push('<div class="sec-line">' + processed + '</div>');
+
+  }
+
+  document.getElementById('weeklyBody').innerHTML = htmlLines.join('\n');
 
   
 
