@@ -418,13 +418,13 @@ body {
 
 .sec-title:first-of-type { margin-top:0; }
 
-.sec-line {
+.sec-para {
 
-  font-size:12.5px; color:#2d3748; line-height:1.8;
+  font-size:12.5px; color:#2d3748; line-height:1.9;
 
   padding-left:4px;
 
-  margin:0;
+  margin:0 0 6px 0;
 
 }
 
@@ -1580,21 +1580,26 @@ function renderWeekly() {
     return line;
   }
   
-  // 结构化综述：保留换行，高亮段标题，逐行处理
+  // 结构化综述：段落式渲染（每段一段话）
   body = body.replace(/【(.+?)】/g, '<div class="sec-title">【$1】</div>');
   var lines = body.split('\n');
   var htmlLines = [];
+  var para = [];
   for (var i = 0; i < lines.length; i++) {
     var line = lines[i].trim();
-    if (line === '') continue;
+    if (line === '') {
+      if (para.length) { htmlLines.push('<div class="sec-para">' + highlightFirst(para.join(' '), companies) + '</div>'); para = []; }
+      continue;
+    }
     if (line.indexOf('<div class="sec-title"') === 0) {
+      if (para.length) { htmlLines.push('<div class="sec-para">' + highlightFirst(para.join(' '), companies) + '</div>'); para = []; }
       htmlLines.push(line);
       continue;
     }
-    htmlLines.push('<div class="sec-line">' + highlightFirst(line, companies) + '</div>');
+    para.push(line);
   }
+  if (para.length) { htmlLines.push('<div class="sec-para">' + highlightFirst(para.join(' '), companies) + '</div>'); }
   document.getElementById('weeklyBody').innerHTML = htmlLines.join('\n');
-
 
 
   // Meta
@@ -1767,19 +1772,25 @@ function renderWeek(r) {
     return line;
   }
 
-  // 正文：结构化综述
+  // 正文：段落式渲染
   body = body.replace(/【(.+?)】/g, '<div class="sec-title">【$1】</div>');
   var lines = body.split('\n');
   var htmlLines = [];
+  var para = [];
   for (var i = 0; i < lines.length; i++) {
     var line = lines[i].trim();
-    if (line === '') continue;
+    if (line === '') {
+      if (para.length) { htmlLines.push('<div class="sec-para">' + highlightFirst(para.join(' '), companies) + '</div>'); para = []; }
+      continue;
+    }
     if (line.indexOf('<div class="sec-title"') === 0) {
+      if (para.length) { htmlLines.push('<div class="sec-para">' + highlightFirst(para.join(' '), companies) + '</div>'); para = []; }
       htmlLines.push(line);
       continue;
     }
-    htmlLines.push('<div class="sec-line">' + highlightFirst(line, companies) + '</div>');
+    para.push(line);
   }
+  if (para.length) { htmlLines.push('<div class="sec-para">' + highlightFirst(para.join(' '), companies) + '</div>'); }
   document.getElementById('weeklyBody').innerHTML = htmlLines.join('\n');
 
   
