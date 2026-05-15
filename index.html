@@ -2244,43 +2244,65 @@ function downloadReport() {
 
         if (dlWrap) dlWrap.style.display = 'none';
 
-        // 按元素实际宽截图（内容已足够长，自然呈竖版）
+        // 设1050px适中竖版宽，导出比例接近A4
 
-        html2canvas(el, {
+        el.style.width = '1050px';
 
-          scale: 2,
+        el.style.margin = '0 auto';
 
-          backgroundColor: '#ffffff',
+        if (_chartTrend) _chartTrend.resize();
 
-          useCORS: true,
+        if (_chartCompanies) _chartCompanies.resize();
 
-        }).then(function(c) {
+        if (_chartTypes) _chartTypes.resize();
 
-          if (sel) sel.style.display = '';
+        requestAnimationFrame(function() {
 
-          if (dlWrap) dlWrap.style.display = '';
+          requestAnimationFrame(function() {
 
-          c.toBlob(function(b) {
+            html2canvas(el, {
 
-            var a = document.createElement('a');
+              scale: 2,
 
-            a.href = URL.createObjectURL(b);
+              backgroundColor: '#ffffff',
 
-            a.download = 'robotaxi_周报_' + label + '.png';
+              useCORS: true,
 
-            a.click();
+            }).then(function(c) {
 
-            URL.revokeObjectURL(a.href);
+              el.style.width = '';
+
+              if (sel) sel.style.display = '';
+
+              if (dlWrap) dlWrap.style.display = '';
+
+              c.toBlob(function(b) {
+
+                var a = document.createElement('a');
+
+                a.href = URL.createObjectURL(b);
+
+                a.download = 'robotaxi_周报_' + label + '.png';
+
+                a.click();
+
+                URL.revokeObjectURL(a.href);
+
+              });
+
+            }).catch(function() {
+
+              el.style.width = '';
+
+              if (sel) sel.style.display = '';
+
+              if (dlWrap) dlWrap.style.display = '';
+
+              downloadText(r, label);
+
+            });
 
           });
-
-        }).catch(function() {
-
-          if (sel) sel.style.display = '';
-
-          if (dlWrap) dlWrap.style.display = '';
-
-          downloadText(r, label);
 
         });
 
@@ -2394,53 +2416,75 @@ function exportPDF() {
 
   if (dlWrap) dlWrap.style.display = 'none';
 
+  el.style.width = '1050px';
+
+  el.style.margin = '0 auto';
+
+  if (_chartTrend) _chartTrend.resize();
+
+  if (_chartCompanies) _chartCompanies.resize();
+
+  if (_chartTypes) _chartTypes.resize();
+
   try {
 
-    html2canvas(el, {
+    requestAnimationFrame(function() {
 
-      scale: 2, backgroundColor: '#ffffff', useCORS: true
+      requestAnimationFrame(function() {
 
-    }).then(function(canvas) {
+        html2canvas(el, {
 
-      if (sel) sel.style.display = '';
+          scale: 2, backgroundColor: '#ffffff', useCORS: true
 
-      if (dlWrap) dlWrap.style.display = '';
+        }).then(function(canvas) {
 
-      if (typeof jspdf === 'undefined') {
+          el.style.width = '';
 
-        canvas.toBlob(function(b) {
+          if (sel) sel.style.display = '';
 
-          var a = document.createElement('a');
+          if (dlWrap) dlWrap.style.display = '';
 
-          a.href = URL.createObjectURL(b);
+          if (typeof jspdf === 'undefined') {
 
-          a.download = 'robotaxi_周报_' + label + '.png';
+            canvas.toBlob(function(b) {
 
-          a.click();
+              var a = document.createElement('a');
 
-          URL.revokeObjectURL(a.href);
+              a.href = URL.createObjectURL(b);
+
+              a.download = 'robotaxi_周报_' + label + '.png';
+
+              a.click();
+
+              URL.revokeObjectURL(a.href);
+
+            });
+
+            return;
+
+          }
+
+          var imgData = canvas.toDataURL('image/png');
+
+          var pdf = new jspdf.jsPDF('p', 'mm', 'a4');
+
+          var pw = 190;
+
+          var ph = (canvas.height / canvas.width) * pw;
+
+          pdf.addImage(imgData, 'PNG', 10, 10, pw, ph);
+
+          pdf.save('robotaxi_周报_' + label + '.pdf');
 
         });
 
-        return;
-
-      }
-
-      var imgData = canvas.toDataURL('image/png');
-
-      var pdf = new jspdf.jsPDF('p', 'mm', 'a4');
-
-      var pw = 190;
-
-      var ph = (canvas.height / canvas.width) * pw;
-
-      pdf.addImage(imgData, 'PNG', 10, 10, pw, ph);
-
-      pdf.save('robotaxi_周报_' + label + '.pdf');
+      });
 
     });
 
   } catch(e) {
+
+    el.style.width = '';
 
     if (sel) sel.style.display = '';
 
