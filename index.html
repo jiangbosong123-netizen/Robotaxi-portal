@@ -2244,85 +2244,63 @@ function downloadReport() {
 
         if (dlWrap) dlWrap.style.display = 'none';
 
-        // 记录原宽，设竖版宽
+        // 原宽截图，确保图表完整
 
-        var origW = el.style.width;
+        html2canvas(el, {
 
-        el.style.width = '800px';
+          scale: 2,
 
-        el.style.margin = '0 auto';
+          backgroundColor: '#ffffff',
 
-        // 通知图表重绘
+          useCORS: true,
 
-        if (_chartTrend) _chartTrend.resize();
+        }).then(function(c) {
 
-        if (_chartCompanies) _chartCompanies.resize();
+          if (sel) sel.style.display = '';
 
-        if (_chartTypes) _chartTypes.resize();
+          if (dlWrap) dlWrap.style.display = '';
 
-        
+          // 合成到A4竖版画布
 
-        setTimeout(function() {
+          var vw = 800; var vh = Math.round(vw * 297 / 210);
 
-          html2canvas(el, {
+          var vc = document.createElement('canvas');
 
-            scale: 2,
+          vc.width = vw * 2; vc.height = vh * 2;
 
-            backgroundColor: '#ffffff',
+          var ctx = vc.getContext('2d');
 
-            useCORS: true,
+          ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, vc.width, vc.height);
 
-          }).then(function(c) {
+          var iw = vc.width; var ih = Math.round(c.height / c.width * iw);
 
-            el.style.width = origW;
+          if (ih > vc.height) { ih = vc.height; iw = Math.round(c.width / c.height * ih); }
 
-            if (sel) sel.style.display = '';
+          ctx.drawImage(c, (vc.width - iw)/2, 0, iw, ih);
 
-            if (dlWrap) dlWrap.style.display = '';
+          vc.toBlob(function(b) {
 
-            // 合成到竖版画布（A4比例）
+            var a = document.createElement('a');
 
-            var vw = 800; var vh = Math.round(vw * 297 / 210);
+            a.href = URL.createObjectURL(b);
 
-            var vc = document.createElement('canvas');
+            a.download = 'robotaxi_周报_' + label + '.png';
 
-            vc.width = vw * 2; vc.height = vh * 2;
+            a.click();
 
-            var ctx = vc.getContext('2d');
-
-            ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, vc.width, vc.height);
-
-            var iw = vc.width; var ih = Math.round(c.height / c.width * iw);
-
-            ctx.drawImage(c, 0, 0, iw, ih);
-
-            vc.toBlob(function(b) {
-
-              var a = document.createElement('a');
-
-              a.href = URL.createObjectURL(b);
-
-              a.download = 'robotaxi_周报_' + label + '.png';
-
-              a.click();
-
-              URL.revokeObjectURL(a.href);
-
-            });
-
-          }).catch(function() {
-
-            el.style.width = origW;
-
-            if (sel) sel.style.display = '';
-
-            if (dlWrap) dlWrap.style.display = '';
-
-            downloadText(r, label);
+            URL.revokeObjectURL(a.href);
 
           });
 
-        }, 100);
+        }).catch(function() {
+
+          if (sel) sel.style.display = '';
+
+          if (dlWrap) dlWrap.style.display = '';
+
+          downloadText(r, label);
+
+        });
 
         return;
 
@@ -2434,79 +2412,53 @@ function exportPDF() {
 
   if (dlWrap) dlWrap.style.display = 'none';
 
-  // 设竖版宽
-
-  var origW = el.style.width;
-
-  el.style.width = '800px';
-
-  el.style.margin = '0 auto';
-
-  // 通知图表重绘
-
-  if (_chartTrend) _chartTrend.resize();
-
-  if (_chartCompanies) _chartCompanies.resize();
-
-  if (_chartTypes) _chartTypes.resize();
-
-  
-
   try {
 
-    setTimeout(function() {
+    html2canvas(el, {
 
-      html2canvas(el, {
+      scale: 2, backgroundColor: '#ffffff', useCORS: true
 
-        scale: 2, backgroundColor: '#ffffff', useCORS: true
+    }).then(function(canvas) {
 
-      }).then(function(canvas) {
+      if (sel) sel.style.display = '';
 
-        el.style.width = origW;
+      if (dlWrap) dlWrap.style.display = '';
 
-        if (sel) sel.style.display = '';
+      if (typeof jspdf === 'undefined') {
 
-        if (dlWrap) dlWrap.style.display = '';
+        canvas.toBlob(function(b) {
 
-        if (typeof jspdf === 'undefined') {
+          var a = document.createElement('a');
 
-          canvas.toBlob(function(b) {
+          a.href = URL.createObjectURL(b);
 
-            var a = document.createElement('a');
+          a.download = 'robotaxi_周报_' + label + '.png';
 
-            a.href = URL.createObjectURL(b);
+          a.click();
 
-            a.download = 'robotaxi_周报_' + label + '.png';
+          URL.revokeObjectURL(a.href);
 
-            a.click();
+        });
 
-            URL.revokeObjectURL(a.href);
+        return;
 
-          });
+      }
 
-          return;
+      var imgData = canvas.toDataURL('image/png');
 
-        }
+      var pdf = new jspdf.jsPDF('p', 'mm', 'a4');
 
-        var imgData = canvas.toDataURL('image/png');
+      var pw = 190;
 
-        var pdf = new jspdf.jsPDF('p', 'mm', 'a4');
+      var ph = (canvas.height / canvas.width) * pw;
 
-        var pw = 190;
+      pdf.addImage(imgData, 'PNG', 10, 10, pw, ph);
 
-        var ph = (canvas.height / canvas.width) * pw;
+      pdf.save('robotaxi_周报_' + label + '.pdf');
 
-        pdf.addImage(imgData, 'PNG', 10, 10, pw, ph);
-
-        pdf.save('robotaxi_周报_' + label + '.pdf');
-
-      });
-
-    }, 100);
+    });
 
   } catch(e) {
-
-    el.style.width = origW;
 
     if (sel) sel.style.display = '';
 
