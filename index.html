@@ -38,15 +38,19 @@ body {
 
 .top-bar {
 
-  display:flex; align-items:baseline; gap:16px;
+  display:flex; align-items:center; justify-content:center; gap:20px;
 
-  padding:10px 0 14px; margin-bottom:20px; border-bottom:2px solid #e2e8f0;
+  padding:16px 0 16px; margin-bottom:20px; border-bottom:2px solid #e2e8f0;
+
+  position:relative;
 
 }
 
+.top-bar-center { text-align:center; }
+
 .top-bar h1 {
 
-  font-size:38px; font-weight:700; color:#1a1a2e; letter-spacing:0.5px;
+  font-size:48px; font-weight:800; color:#1a1a2e; letter-spacing:1px;
 
   line-height:1.2;
 
@@ -58,25 +62,27 @@ body {
 
 .brand-line {
 
-  font-size:14px; font-weight:500; color:#667eea;
+  font-size:22px; font-weight:600; color:#667eea;
 
-  letter-spacing:0.5px;
+  letter-spacing:1.5px;
 
-  margin-bottom:-2px;
+  margin-bottom:0;
 
 }
 
 .analyst-line {
 
-  font-size:13px; color:#718096;
+  font-size:16px; color:#718096;
 
-  margin-top:1px;
+  margin-top:6px;
 
-  letter-spacing:0.3px;
+  letter-spacing:0.5px;
 
 }
 
 .top-bar .update-badge {
+
+  position:absolute; right:10px; top:50%; transform:translateY(-50%);
 
   font-size:11px; color:#718096; background:#f0f2f5;
 
@@ -121,6 +127,8 @@ body {
   position:relative;
 
 }
+
+.top-bar-center { text-align:center; }
 
 .weekly .header {
 
@@ -263,6 +271,8 @@ body {
   cursor:pointer; transition:all .15s; position:relative;
 
 }
+
+.top-bar-center { text-align:center; }
 
 .weekly-hl .hl-item:hover {
 
@@ -785,7 +795,7 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
 
 <div class="top-bar">
 
-  <div>
+  <div class="top-bar-center">
     <div class="brand-line">【华泰互联网传媒Jonos】</div>
     <h1><span>Robotaxi</span> 行业动态</h1>
     <div class="analyst-line">苏燕妮 13148866768 / 邵浩岚 15195381655</div>
