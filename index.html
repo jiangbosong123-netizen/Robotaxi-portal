@@ -2248,6 +2248,8 @@ function downloadReport() {
 
         el.style.margin = '0 auto';
 
+        addExportTitle(el);
+
         if (_chartTrend) _chartTrend.resize();
 
         if (_chartCompanies) _chartCompanies.resize();
@@ -2270,6 +2272,8 @@ function downloadReport() {
 
               el.style.width = '';
 
+              removeExportTitle(el);
+
               if (sel) sel.style.display = '';
 
               if (dlWrap) dlWrap.style.display = '';
@@ -2291,6 +2295,8 @@ function downloadReport() {
             }).catch(function() {
 
               el.style.width = '';
+
+              removeExportTitle(el);
 
               if (sel) sel.style.display = '';
 
@@ -2356,6 +2362,23 @@ function downloadText(r, label) {
 
 
 
+// ===== 导出辅助：添加标题 =====
+
+function addExportTitle(el) {
+  var div = document.createElement('div');
+  div.id = 'exportTitle';
+  div.style.cssText = 'text-align:center; padding:30px 20px 10px 20px; margin-bottom:16px; border-bottom:2px solid #e2e8f0;';
+  div.innerHTML = '<div style="font-size:12px; color:#667eea; letter-spacing:1px; font-weight:500; margin-bottom:2px;">【华泰互联网传媒Jonos】</div>'
+    + '<div style="font-size:28px; font-weight:700; color:#1a1a2e; letter-spacing:1px;">Robotaxi 行业动态</div>'
+    + '<div style="font-size:11px; color:#718096; margin-top:6px; letter-spacing:0.3px;">苏燕妮 13148866768 / 邵浩岚 15195381655</div>';
+  el.insertBefore(div, el.firstChild);
+}
+
+function removeExportTitle(el) {
+  var t = document.getElementById('exportTitle');
+  if (t) t.remove();
+}
+
 // ===== 下载菜单切换 =====
 
 function toggleDL() {
@@ -2418,6 +2441,8 @@ function exportPDF() {
 
   el.style.margin = '0 auto';
 
+  addExportTitle(el);
+
   if (_chartTrend) _chartTrend.resize();
 
   if (_chartCompanies) _chartCompanies.resize();
@@ -2437,6 +2462,8 @@ function exportPDF() {
         }).then(function(canvas) {
 
           el.style.width = '';
+
+          removeExportTitle(el);
 
           if (sel) sel.style.display = '';
 
@@ -2483,6 +2510,8 @@ function exportPDF() {
   } catch(e) {
 
     el.style.width = '';
+
+    removeExportTitle(el);
 
     if (sel) sel.style.display = '';
 
