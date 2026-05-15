@@ -2367,10 +2367,10 @@ function downloadText(r, label) {
 function addExportTitle(el) {
   var div = document.createElement('div');
   div.id = 'exportTitle';
-  div.style.cssText = 'text-align:center; padding:40px 30px 16px 30px; margin-bottom:20px; border-bottom:3px solid #667eea; background:linear-gradient(180deg,#f8f6ff,#fff); border-radius:8px 8px 0 0;';
-  div.innerHTML = '<div style="font-size:20px; color:#667eea; letter-spacing:2px; font-weight:600; margin-bottom:4px;">【华泰互联网传媒Jonos】</div>'
-    + '<div style="font-size:36px; font-weight:800; color:#1a1a2e; letter-spacing:1.5px; margin-bottom:8px;">Robotaxi 行业动态</div>'
-    + '<div style="font-size:14px; color:#718096; letter-spacing:0.5px; border-top:1px solid #e2e8f0; padding-top:10px; margin-top:4px;">分析师 苏燕妮 13148866768 / 邵浩岚 15195381655</div>';
+  div.style.cssText = 'text-align:center; padding:12px 20px 8px 20px; margin-bottom:10px; border-bottom:2px solid #667eea; background:linear-gradient(180deg,#f8f6ff,#fff); border-radius:6px 6px 0 0;';
+  div.innerHTML = '<div style="font-size:20px; color:#667eea; letter-spacing:2px; font-weight:600; margin-bottom:2px;">【华泰互联网传媒Jonos】</div>'
+    + '<div style="font-size:36px; font-weight:800; color:#1a1a2e; letter-spacing:1.5px; margin-bottom:4px;">Robotaxi 行业动态</div>'
+    + '<div style="font-size:14px; color:#718096; letter-spacing:0.5px;">分析师 苏燕妮 13148866768 / 邵浩岚 15195381655</div>';
   el.insertBefore(div, el.firstChild);
 }
 
@@ -2496,6 +2496,12 @@ function exportPDF() {
           var pw = 190;
 
           var ph = (canvas.height / canvas.width) * pw;
+
+          // 如果超出一页，按高度缩放
+
+          var maxPh = 277;
+
+          if (ph > maxPh) { ph = maxPh; pw = (canvas.width / canvas.height) * ph; }
 
           pdf.addImage(imgData, 'PNG', 10, 10, pw, ph);
 
