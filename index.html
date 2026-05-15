@@ -358,7 +358,7 @@ body {
 
 }
 
-.weekly-chart-box canvas { width:100% !important; min-height:180px; max-height:200px; }
+.weekly-chart-box canvas { width:100% !important; min-height:180px; max-height:200px; aspect-ratio:2/1; }
 
 
 
@@ -425,6 +425,16 @@ body {
   padding-left:4px;
 
   margin:0 0 6px 0;
+
+}
+
+.sec-line {
+
+  font-size:12.5px; color:#2d3748; line-height:1.8;
+
+  padding-left:4px;
+
+  margin:0;
 
 }
 
@@ -1566,41 +1576,46 @@ function renderWeekly() {
   var companies = ['百度Apollo','小马智行','文远知行','滴滴出行','曹操出行','Bot Auto','Waymo','Zoox','Tesla','Wayve','Aurora','Nuro','Motional','WeRide','Uber','滴滴','特斯拉','Rivian','Lucid','Pony.ai','Nvidia'];
   
   // 找出第一个匹配的公司名，每行只高亮一次
-  function highlightFirst(line, names) {
-    var idx = -1, match = '';
-    for (var k = 0; k < names.length; k++) {
-      var pos = line.indexOf(names[k]);
-      if (pos !== -1 && (idx === -1 || pos < idx)) {
-        idx = pos; match = names[k];
-      }
+  // 高亮段落中所有公司名（长名优先匹配，避免"滴滴"抢在"滴滴出行"前面）
+  function highlightAll(text, names) {
+    // 按长度降序排列，长名优先匹配
+    var sorted = names.slice().sort(function(a,b) { return b.length - a.length; });
+    var result = text;
+    for (var k = 0; k < sorted.length; k++) {
+      var esc = sorted[k].replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      var re = new RegExp(esc, 'g');
+      result = result.replace(re, '<span class="company-mention">' + sorted[k] + '</span>');
     }
-    if (match) {
-      return line.slice(0, idx) + '<span class="company-mention">' + match + '</span>' + line.slice(idx + match.length);
-    }
-    return line;
+    return result;
   }
   
-  // 结构化综述：段落式渲染（每段一段话）
+  // 结构化综述：段落式渲染，关键数据一览单独分行
   body = body.replace(/【(.+?)】/g, '<div class="sec-title">【$1】</div>');
   var lines = body.split('\n');
   var htmlLines = [];
   var para = [];
+  var inKpi = false;  // 是否在关键数据一览段
   for (var i = 0; i < lines.length; i++) {
     var line = lines[i].trim();
     if (line === '') {
-      if (para.length) { htmlLines.push('<div class="sec-para">' + highlightFirst(para.join(' '), companies) + '</div>'); para = []; }
+      if (para.length && !inKpi) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); para = []; }
       continue;
     }
     if (line.indexOf('<div class="sec-title"') === 0) {
-      if (para.length) { htmlLines.push('<div class="sec-para">' + highlightFirst(para.join(' '), companies) + '</div>'); para = []; }
+      if (para.length && !inKpi) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); para = []; }
+      inKpi = (line.indexOf('关键数据一览') !== -1);
       htmlLines.push(line);
       continue;
     }
-    para.push(line);
+    if (inKpi) {
+      // 关键数据一览：每条单独一行
+      htmlLines.push('<div class="sec-line">' + highlightAll(line, companies) + '</div>');
+    } else {
+      para.push(line);
+    }
   }
-  if (para.length) { htmlLines.push('<div class="sec-para">' + highlightFirst(para.join(' '), companies) + '</div>'); }
+  if (para.length && !inKpi) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); }
   document.getElementById('weeklyBody').innerHTML = htmlLines.join('\n');
-
 
   // Meta
 
@@ -1758,39 +1773,43 @@ function renderWeek(r) {
   var companies = ['百度Apollo','小马智行','文远知行','滴滴出行','曹操出行','Bot Auto','Waymo','Zoox','Tesla','Wayve','Aurora','Nuro','Motional','WeRide','Uber','滴滴','特斯拉','Rivian','Lucid','Pony.ai','Nvidia'];
 
   // 找出第一个匹配的公司名，每行只高亮一次
-  function highlightFirst(line, names) {
-    var idx = -1, match = '';
-    for (var k = 0; k < names.length; k++) {
-      var pos = line.indexOf(names[k]);
-      if (pos !== -1 && (idx === -1 || pos < idx)) {
-        idx = pos; match = names[k];
-      }
+  // 高亮段落中所有公司名
+  function highlightAll(text, names) {
+    var sorted = names.slice().sort(function(a,b) { return b.length - a.length; });
+    var result = text;
+    for (var k = 0; k < sorted.length; k++) {
+      var esc = sorted[k].replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      var re = new RegExp(esc, 'g');
+      result = result.replace(re, '<span class="company-mention">' + sorted[k] + '</span>');
     }
-    if (match) {
-      return line.slice(0, idx) + '<span class="company-mention">' + match + '</span>' + line.slice(idx + match.length);
-    }
-    return line;
+    return result;
   }
 
-  // 正文：段落式渲染
+  // 正文：段落式渲染，关键数据一览单独分行
   body = body.replace(/【(.+?)】/g, '<div class="sec-title">【$1】</div>');
   var lines = body.split('\n');
   var htmlLines = [];
   var para = [];
+  var inKpi = false;
   for (var i = 0; i < lines.length; i++) {
     var line = lines[i].trim();
     if (line === '') {
-      if (para.length) { htmlLines.push('<div class="sec-para">' + highlightFirst(para.join(' '), companies) + '</div>'); para = []; }
+      if (para.length && !inKpi) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); para = []; }
       continue;
     }
     if (line.indexOf('<div class="sec-title"') === 0) {
-      if (para.length) { htmlLines.push('<div class="sec-para">' + highlightFirst(para.join(' '), companies) + '</div>'); para = []; }
+      if (para.length && !inKpi) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); para = []; }
+      inKpi = (line.indexOf('关键数据一览') !== -1);
       htmlLines.push(line);
       continue;
     }
-    para.push(line);
+    if (inKpi) {
+      htmlLines.push('<div class="sec-line">' + highlightAll(line, companies) + '</div>');
+    } else {
+      para.push(line);
+    }
   }
-  if (para.length) { htmlLines.push('<div class="sec-para">' + highlightFirst(para.join(' '), companies) + '</div>'); }
+  if (para.length && !inKpi) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); }
   document.getElementById('weeklyBody').innerHTML = htmlLines.join('\n');
 
   
@@ -2209,8 +2228,6 @@ function downloadReport() {
 
   var label = dr.replace(/-0/g, '-').replace(/~/g, '至');
 
-  
-
   try {
 
     if (typeof html2canvas !== 'undefined') {
@@ -2218,8 +2235,6 @@ function downloadReport() {
       var el = document.querySelector('.weekly');
 
       if (el) {
-
-        // 截图：隐藏交互控件（下拉菜单和下载按钮不导出）
 
         var sel = document.getElementById('weekSelect');
 
@@ -2229,45 +2244,65 @@ function downloadReport() {
 
         if (dlWrap) dlWrap.style.display = 'none';
 
-        
+        // 设1050px适中竖版宽，导出比例接近A4
 
-        // 保持原始宽度导出，图表比例不失真
+        el.style.width = '1050px';
 
-        
+        el.style.margin = '0 auto';
 
-        html2canvas(el, {
+        if (_chartTrend) _chartTrend.resize();
 
-          scale: 3,
+        if (_chartCompanies) _chartCompanies.resize();
 
-          backgroundColor: '#ffffff',
+        if (_chartTypes) _chartTypes.resize();
 
-          useCORS: true,
+        requestAnimationFrame(function() {
 
-        }).then(function(c) {
+          requestAnimationFrame(function() {
 
-          /* export at natural width */
+            html2canvas(el, {
 
-          if (sel) sel.style.display = '';
+              scale: 2,
 
-          if (dlWrap) dlWrap.style.display = '';
+              backgroundColor: '#ffffff',
 
-          c.toBlob(function(b) {
+              useCORS: true,
 
-            var a = document.createElement('a');
+            }).then(function(c) {
 
-            a.href = URL.createObjectURL(b);
+              el.style.width = '';
 
-            a.download = 'robotaxi_周报_' + label + '.png';
+              if (sel) sel.style.display = '';
 
-            a.click();
+              if (dlWrap) dlWrap.style.display = '';
 
-            URL.revokeObjectURL(a.href);
+              c.toBlob(function(b) {
+
+                var a = document.createElement('a');
+
+                a.href = URL.createObjectURL(b);
+
+                a.download = 'robotaxi_周报_' + label + '.png';
+
+                a.click();
+
+                URL.revokeObjectURL(a.href);
+
+              });
+
+            }).catch(function() {
+
+              el.style.width = '';
+
+              if (sel) sel.style.display = '';
+
+              if (dlWrap) dlWrap.style.display = '';
+
+              downloadText(r, label);
+
+            });
 
           });
-
-        }).catch(function() {
-
-          downloadText(r, label);
 
         });
 
@@ -2367,8 +2402,6 @@ function exportPDF() {
 
   var label = dr.replace(/-0/g, '-').replace(/~/g, '至');
 
-  
-
   var el = document.querySelector('.weekly');
 
   if (!el) return;
@@ -2383,67 +2416,75 @@ function exportPDF() {
 
   if (dlWrap) dlWrap.style.display = 'none';
 
-  
+  el.style.width = '1050px';
+
+  el.style.margin = '0 auto';
+
+  if (_chartTrend) _chartTrend.resize();
+
+  if (_chartCompanies) _chartCompanies.resize();
+
+  if (_chartTypes) _chartTypes.resize();
 
   try {
 
-    /* use natural width */
+    requestAnimationFrame(function() {
 
-    
+      requestAnimationFrame(function() {
 
-    html2canvas(el, {
+        html2canvas(el, {
 
-      scale: 3, backgroundColor: '#ffffff', useCORS: true
+          scale: 2, backgroundColor: '#ffffff', useCORS: true
 
-    }).then(function(canvas) {
+        }).then(function(canvas) {
 
-      /* width preserved */
+          el.style.width = '';
 
-      if (sel) sel.style.display = '';
+          if (sel) sel.style.display = '';
 
-      if (dlWrap) dlWrap.style.display = '';
+          if (dlWrap) dlWrap.style.display = '';
 
-      
+          if (typeof jspdf === 'undefined') {
 
-      if (typeof jspdf === 'undefined') {
+            canvas.toBlob(function(b) {
 
-        // 降级为图片下载
+              var a = document.createElement('a');
 
-        canvas.toBlob(function(b) {
+              a.href = URL.createObjectURL(b);
 
-          var a = document.createElement('a');
+              a.download = 'robotaxi_周报_' + label + '.png';
 
-          a.href = URL.createObjectURL(b);
+              a.click();
 
-          a.download = 'robotaxi_周报_' + label + '.png';
+              URL.revokeObjectURL(a.href);
 
-          a.click();
+            });
 
-          URL.revokeObjectURL(a.href);
+            return;
+
+          }
+
+          var imgData = canvas.toDataURL('image/png');
+
+          var pdf = new jspdf.jsPDF('p', 'mm', 'a4');
+
+          var pw = 190;
+
+          var ph = (canvas.height / canvas.width) * pw;
+
+          pdf.addImage(imgData, 'PNG', 10, 10, pw, ph);
+
+          pdf.save('robotaxi_周报_' + label + '.pdf');
 
         });
 
-        return;
-
-      }
-
-      
-
-      var imgData = canvas.toDataURL('image/png');
-
-      var pdf = new jspdf.jsPDF('p', 'mm', 'a4');
-
-      var pw = 190;
-
-      var ph = (canvas.height / canvas.width) * pw;
-
-      pdf.addImage(imgData, 'PNG', 10, 10, pw, ph);
-
-      pdf.save('robotaxi_周报_' + label + '.pdf');
+      });
 
     });
 
   } catch(e) {
+
+    el.style.width = '';
 
     if (sel) sel.style.display = '';
 
