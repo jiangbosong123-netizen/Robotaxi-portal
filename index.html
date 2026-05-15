@@ -1589,32 +1589,31 @@ function renderWeekly() {
     return result;
   }
   
-  // 结构化综述：段落式渲染，关键数据一览单独分行
+  // 结构化综述：带•的分开行，不带•的合段落
   body = body.replace(/【(.+?)】/g, '<div class="sec-title">【$1】</div>');
   var lines = body.split('\n');
   var htmlLines = [];
   var para = [];
-  var inKpi = false;  // 是否在关键数据一览段
   for (var i = 0; i < lines.length; i++) {
     var line = lines[i].trim();
     if (line === '') {
-      if (para.length && !inKpi) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); para = []; }
+      if (para.length) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); para = []; }
       continue;
     }
     if (line.indexOf('<div class="sec-title"') === 0) {
-      if (para.length && !inKpi) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); para = []; }
-      inKpi = (line.indexOf('关键数据一览') !== -1);
+      if (para.length) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); para = []; }
       htmlLines.push(line);
       continue;
     }
-    if (inKpi) {
-      // 关键数据一览：每条单独一行
+    if (line.indexOf('•') === 0 || line.indexOf('- ') === 0) {
+      // 带•的行单独渲染，合段落时公司名高亮会错位
+      if (para.length) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); para = []; }
       htmlLines.push('<div class="sec-line">' + highlightAll(line, companies) + '</div>');
     } else {
       para.push(line);
     }
   }
-  if (para.length && !inKpi) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); }
+  if (para.length) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); }
   document.getElementById('weeklyBody').innerHTML = htmlLines.join('\n');
 
   // Meta
@@ -1785,31 +1784,30 @@ function renderWeek(r) {
     return result;
   }
 
-  // 正文：段落式渲染，关键数据一览单独分行
+  // 正文：带•的分开行，不带•的合段落
   body = body.replace(/【(.+?)】/g, '<div class="sec-title">【$1】</div>');
   var lines = body.split('\n');
   var htmlLines = [];
   var para = [];
-  var inKpi = false;
   for (var i = 0; i < lines.length; i++) {
     var line = lines[i].trim();
     if (line === '') {
-      if (para.length && !inKpi) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); para = []; }
+      if (para.length) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); para = []; }
       continue;
     }
     if (line.indexOf('<div class="sec-title"') === 0) {
-      if (para.length && !inKpi) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); para = []; }
-      inKpi = (line.indexOf('关键数据一览') !== -1);
+      if (para.length) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); para = []; }
       htmlLines.push(line);
       continue;
     }
-    if (inKpi) {
+    if (line.indexOf('•') === 0 || line.indexOf('- ') === 0) {
+      if (para.length) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); para = []; }
       htmlLines.push('<div class="sec-line">' + highlightAll(line, companies) + '</div>');
     } else {
       para.push(line);
     }
   }
-  if (para.length && !inKpi) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); }
+  if (para.length) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); }
   document.getElementById('weeklyBody').innerHTML = htmlLines.join('\n');
 
   
