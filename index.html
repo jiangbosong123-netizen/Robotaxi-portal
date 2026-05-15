@@ -1562,7 +1562,23 @@ function renderWeekly() {
   
 
   // 公司名提亮列表
-  var companies = ['Waymo','Zoox','Tesla','特斯拉','Wayve','Aurora','Nuro','Motional','WeRide','Uber','小马智行','文远知行','Pony.ai','Nvidia','Lucid','Rivian'];
+  // 公司名（按长度排序，长名优先匹配）
+  var companies = ['百度Apollo','小马智行','文远知行','滴滴出行','曹操出行','Bot Auto','Waymo','Zoox','Tesla','Wayve','Aurora','Nuro','Motional','WeRide','Uber','滴滴','特斯拉','Rivian','Lucid','Pony.ai','Nvidia'];
+  
+  // 找出第一个匹配的公司名，每行只高亮一次
+  function highlightFirst(line, names) {
+    var idx = -1, match = '';
+    for (var k = 0; k < names.length; k++) {
+      var pos = line.indexOf(names[k]);
+      if (pos !== -1 && (idx === -1 || pos < idx)) {
+        idx = pos; match = names[k];
+      }
+    }
+    if (match) {
+      return line.slice(0, idx) + '<span class="company-mention">' + match + '</span>' + line.slice(idx + match.length);
+    }
+    return line;
+  }
   
   // 结构化综述：保留换行，高亮段标题，逐行处理
   body = body.replace(/【(.+?)】/g, '<div class="sec-title">【$1】</div>');
@@ -1575,11 +1591,7 @@ function renderWeekly() {
       htmlLines.push(line);
       continue;
     }
-    var processed = line;
-    companies.forEach(function(n) {
-      processed = processed.replace(n, '<span class="company-mention">' + n + '</span>');
-    });
-    htmlLines.push('<div class="sec-line">' + processed + '</div>');
+    htmlLines.push('<div class="sec-line">' + highlightFirst(line, companies) + '</div>');
   }
   document.getElementById('weeklyBody').innerHTML = htmlLines.join('\n');
 
@@ -1737,48 +1749,37 @@ function renderWeek(r) {
 
   var body = (r.summary || '').replace(/\*\*/g, '');
 
-  var companies = ['Waymo','Zoox','Tesla','特斯拉','Wayve','Aurora','Nuro','Motional','WeRide','Uber','小马智行','文远知行','Pony.ai','Nvidia','Lucid','Rivian'];
+  // 公司名（按长度排序，长名优先匹配）
+  var companies = ['百度Apollo','小马智行','文远知行','滴滴出行','曹操出行','Bot Auto','Waymo','Zoox','Tesla','Wayve','Aurora','Nuro','Motional','WeRide','Uber','滴滴','特斯拉','Rivian','Lucid','Pony.ai','Nvidia'];
 
-  companies.forEach(function(n) {
-
-    body = body.replace(n, '<span class="company-mention">' + n + '</span>');
-
-  });
-
-  // 正文：结构化综述
-
-  body = body.replace(/【(.+?)】/g, '<div class="sec-title">【$1】</div>');
-
-  var lines = body.split('\n');
-
-  var htmlLines = [];
-
-  for (var i = 0; i < lines.length; i++) {
-
-    var line = lines[i].trim();
-
-    if (line === '') continue;
-
-    if (line.indexOf('<div class="sec-title"') === 0) {
-
-      htmlLines.push(line);
-
-      continue;
-
+  // 找出第一个匹配的公司名，每行只高亮一次
+  function highlightFirst(line, names) {
+    var idx = -1, match = '';
+    for (var k = 0; k < names.length; k++) {
+      var pos = line.indexOf(names[k]);
+      if (pos !== -1 && (idx === -1 || pos < idx)) {
+        idx = pos; match = names[k];
+      }
     }
-
-    var processed = line;
-
-    companies.forEach(function(n) {
-
-      processed = processed.replace(n, '<span class="company-mention">' + n + '</span>');
-
-    });
-
-    htmlLines.push('<div class="sec-line">' + processed + '</div>');
-
+    if (match) {
+      return line.slice(0, idx) + '<span class="company-mention">' + match + '</span>' + line.slice(idx + match.length);
+    }
+    return line;
   }
 
+  // 正文：结构化综述
+  body = body.replace(/【(.+?)】/g, '<div class="sec-title">【$1】</div>');
+  var lines = body.split('\n');
+  var htmlLines = [];
+  for (var i = 0; i < lines.length; i++) {
+    var line = lines[i].trim();
+    if (line === '') continue;
+    if (line.indexOf('<div class="sec-title"') === 0) {
+      htmlLines.push(line);
+      continue;
+    }
+    htmlLines.push('<div class="sec-line">' + highlightFirst(line, companies) + '</div>');
+  }
   document.getElementById('weeklyBody').innerHTML = htmlLines.join('\n');
 
   
