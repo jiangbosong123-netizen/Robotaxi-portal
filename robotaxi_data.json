@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-05-15 10:05",
-  "total": 224,
-  "week_count": 46,
+  "updated_at": "2026-05-15 10:08",
+  "total": 233,
+  "week_count": 49,
   "date_from": "2026-02-10",
   "date_to": "2026-05-14",
   "companies": [
@@ -68,14 +68,14 @@
     "财报"
   ],
   "company_stats": {
-    "Tesla": 37,
+    "Tesla": 40,
     "Waymo": 31,
     "小马智行": 30,
     "WeRide": 24,
     "Zoox": 19,
-    "Uber": 16,
-    "Nuro": 15,
-    "Wayve": 14,
+    "Uber": 17,
+    "Nuro": 16,
+    "Wayve": 15,
     "Aurora": 11,
     "曹操出行": 5,
     "Motional": 5,
@@ -85,12 +85,102 @@
     "Lucid": 1
   },
   "source_stats": {
-    "Twitter": 112,
+    "Twitter": 120,
     "微信公众号(WeWeRSS)": 49,
-    "TechCrunch": 46,
+    "TechCrunch": 47,
     "The Driverless Digest": 17
   },
   "news": [
+    {
+      "id": 469,
+      "date": "2026-05-14",
+      "company": "Sawyer Merritt",
+      "title": "德国艾费尔地区试点：特斯拉FSD车辆服务乡村学生与老人",
+      "summary": "德国艾费尔地区启动试点项目，使用配备FSD（受监督）功能的特斯拉车辆，为公共交通有限的乡村社区接送学生和老年人。两名乘客反馈称乘坐体验“非常放松”，感觉比自驾更安全。目前，两辆由Giga Berlin生产的特斯拉Model Y正在免费运营该路线。",
+      "source": "Twitter",
+      "url": "https://x.com/SawyerMerritt/status/2054984386039165413",
+      "type": "技术突破"
+    },
+    {
+      "id": 468,
+      "date": "2026-05-14",
+      "company": "Sawyer Merritt",
+      "title": "特斯拉被曝在拉斯维加斯提交Robotaxi专用洗车场建设计划",
+      "summary": "特斯拉据报已向克拉克县提交规划，拟在拉斯维加斯建设专为Robotaxi服务的洗车设施。该许可申请于5月12日提交，项目名称为“Tesla Center Cybercab Phase 2 Car Wash”。根据项目描述，工程包括对现有设施进行内外改造，新建洗车围护结构、搬迁轮胎服务设备并安装电力线槽。这表明特斯拉正在打造一个专为自动驾驶车队需求设计的全功能维护中心。",
+      "source": "Twitter",
+      "url": "https://x.com/SawyerMerritt/status/2055035846433391061",
+      "type": "技术突破"
+    },
+    {
+      "id": 467,
+      "date": "2026-05-14",
+      "company": "Sawyer Merritt",
+      "title": "Uber与Waymo关系紧张：高管公开批评其robotaxi合作伙伴",
+      "summary": "近几个月来，Uber及其高管对robotaxi合作伙伴Waymo频频发出直接或间接的批评，警告自动驾驶运营商不要试图自行扩张，同时指责Waymo的部署策略和技术问题。一位Uber高管甚至在X平台上分享了一段“Waymo惊险时刻”的视频。观点认为，Waymo应彻底停止依赖Uber，转而通过自有应用接单，这将使Google获得更多控制权。只要体验良好、价格合理，用户不会介意再下载一个应用。",
+      "source": "Twitter",
+      "url": "https://x.com/SawyerMerritt/status/2055062000384827767",
+      "type": "技术突破"
+    },
+    {
+      "id": 466,
+      "date": "2026-05-14",
+      "company": "Tesla",
+      "title": "FSD Supervised 可穿透极端眩光看清路况",
+      "summary": "特斯拉FSD Supervised系统展现出在极端眩光条件下的视觉穿透能力。用户Scott Dembraski分享了一段视频，展示FSD在强光干扰下仍能清晰识别前方路况，而人眼则难以看清。这一表现凸显了FSD在复杂光照环境下的感知优势。",
+      "source": "Twitter",
+      "url": "https://x.com/Tesla/status/2054782298579751261",
+      "type": "行业动态"
+    },
+    {
+      "id": 465,
+      "date": "2026-05-14",
+      "company": "Tesla",
+      "title": "Cybertruck试驾体验获赞：FSD长途平稳，线控转向与后轮转向让手动驾驶轻松舒适",
+      "summary": "特斯拉Cybertruck试驾活动引发好评，用户Wes（wmorrill3）表示强烈认同。该车型在FSD（全自动驾驶）模式下长途行驶平稳流畅，线控转向（SbW）和后轮转向系统使手动驾驶在舒适模式下轻松自如，运动模式下则充满驾驶乐趣。此外，Cybertruck的越野能力令人印象深刻，坚固耐用的外观设计让用户无需担忧，整体造型极具视觉冲击力。",
+      "source": "Twitter",
+      "url": "https://x.com/Tesla/status/2055050614296785267",
+      "type": "行业动态"
+    },
+    {
+      "id": 464,
+      "date": "2026-05-14",
+      "company": "Tesla",
+      "title": "第172期第1部分上线！Zuby从迪拜飞抵奥斯汀，首次体验监督版FSD",
+      "summary": "第172期第1部分已上线！刚从迪拜飞抵奥斯汀的Zuby（ZubyMusic）首次体验了监督版FSD（全自动驾驶）行程。他在节目中分享了全球见闻，并探讨了关于男性气概的最大误解。快来收听吧❤️（第2部分即将上线！）",
+      "source": "Twitter",
+      "url": "https://x.com/gailalfaratx/status/2055059751780647341",
+      "type": "技术突破"
+    },
+    {
+      "id": 463,
+      "date": "2026-05-14",
+      "company": "Nuro",
+      "title": "Nuro进军欧洲，在德国设立运营基地！",
+      "summary": "Nuro宣布将业务拓展至欧洲，在德国慕尼黑设立新的欧洲基地。该基地将支持工程研发、运营及合作伙伴对接，助力Nuro在全球范围内实现适用于所有道路和所有出行场景的通用L4级自动驾驶技术。",
+      "source": "Twitter",
+      "url": "https://x.com/nuro/status/2054939802483441906",
+      "type": "技术突破"
+    },
+    {
+      "id": 462,
+      "date": "2026-05-14",
+      "company": "Wayve",
+      "title": "一年内从1到100：日本团队快速扩张，与日产汽车合作覆盖消费车型及robotaxi项目",
+      "summary": "日本正成为具身AI的重要市场。我们的日本团队在一年内实现从1到100的快速扩张，目前已与日产汽车在消费车型和robotaxi领域展开量产项目合作。今天我在东京主持AI开放日活动，我们正在招聘！",
+      "source": "Twitter",
+      "url": "https://x.com/alexgkendall/status/2054905313690870059",
+      "type": "技术突破"
+    },
+    {
+      "id": 461,
+      "date": "2026-05-14",
+      "company": "Uber",
+      "title": "Uber将在印度开设两大园区，助力产品研发与运营",
+      "summary": "Uber宣布将在印度开设两个新园区，以支持其产品开发和运营业务。此举正值Uber在网约车业务之外寻求新的增长领域，并加大对人工智能、自动化和自动驾驶技术的投资。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/05/14/uber-to-open-2-campuses-in-india-to-support-product-development-operations/",
+      "type": "技术突破"
+    },
     {
       "id": 456,
       "date": "2026-05-14",
@@ -2333,28 +2423,28 @@
     }
   ],
   "weekly_report": {
-    "summary": "本周行业动态聚焦于商业化落地与技术突破两大主线。小马智行以五一假期544%的订单量增长和超3000人次的演唱会护送服务，验证了中国Robotaxi在高峰场景下的运营能力与公众接受度。Aurora则加速推进无人驾驶卡车商业化，计划于2026年Q2推出基于第二代硬件的车队，并与McLane等合作伙伴在德州启动运输服务，凸显货运领域的规模化潜力。Uber CEO重申“万能应用”战略，公司财务表现从亏损45亿美元转向近100亿美元自由现金流，同时通过与Waymo、Nuro等合作强化其在自动驾驶生态中的平台角色。技术层面，Wayve发布的LA-Pose自监督位姿估计方法，有望降低自动驾驶对高成本标注数据的依赖，推动L4级技术泛化。此外，Zoox在拉斯维加斯扩展服务站点并推出个性化识别功能，文远知行则在阿布扎比和瑞士同步展示其L4级全无人车队，显示全球Robotaxi运营正从试点向多城市、多场景扩展。",
+    "summary": "本周Robotaxi行业呈现商业化加速与生态整合两大主线。小马智行在中国市场表现亮眼，五一假期订单量同比飙升544%，并首次作为官方交通疏导方案参与大型活动，验证了Robotaxi在复杂场景下的运营能力。Aurora则在美国货运领域取得突破，计划于2026年Q2推出第二代无人驾驶卡车车队，并与分销巨头McLane达成合作，在德州启动无人驾驶运输，标志着自动驾驶卡车正从测试走向规模化部署。与此同时，Uber正加速向“万能应用”转型，其与Nuro、Motional等公司的合作布局，以及自身从亏损到近百亿美元自由现金流的财务表现，凸显了平台方在整合自动驾驶技术中的关键角色。Zoox和文远知行则分别在拉斯维加斯和阿布扎比拓展服务范围，通过功能创新与区域深耕，推动Robotaxi的日常化应用。整体来看，行业正从技术验证阶段全面迈入商业化落地与生态协同的新阶段。",
     "highlights": [
       "小马智行五一假期订单量飙升544%，Robotaxi护送超3000名演唱会歌迷（小马智行）",
-      "Aurora加速商业化：2026年Q2推出无人驾驶卡车车队，合作Hirschbach计划部署500辆（Aurora）",
-      "Uber CEO提出“万能应用”愿景，公司从亏损45亿美元到近100亿美元自由现金流（Uber）",
-      "Zoox在拉斯维加斯新增5个站点，并推出“Find My Zoox”个性化识别功能（Zoox）",
-      "Wayve发布LA-Pose自监督位姿估计技术，降低对昂贵3D标签的依赖（Wayve）",
-      "文远知行在阿布扎比Yas Island运营全无人Robotaxi，并亮相瑞士苏黎世峰会（文远知行）"
+      "Aurora加速驶向商业化：2026年Q2推出无人驾驶卡车车队，合作Hirschbach计划部署500辆（Aurora）",
+      "Uber CEO Dara Khosrowshahi：打造“万能应用”，从亏损45亿美元到近100亿美元自由现金流（Uber）",
+      "Zoox在拉斯维加斯新增两大接送点，并推出“Find My Zoox”功能（Zoox）",
+      "Nuro获加州无人驾驶测试许可，为Uber robotaxi服务上线铺路（Nuro）",
+      "文远知行全无人Robotaxi在阿布扎比Yas Island运营，并参展瑞士苏黎世自动化出行峰会（文远知行）"
     ],
     "count": 45,
     "date_range": "2026-05-04~2026-05-10"
   },
   "weekly_history": [
     {
-      "summary": "本周行业动态聚焦于商业化落地与技术突破两大主线。小马智行以五一假期544%的订单量增长和超3000人次的演唱会护送服务，验证了中国Robotaxi在高峰场景下的运营能力与公众接受度。Aurora则加速推进无人驾驶卡车商业化，计划于2026年Q2推出基于第二代硬件的车队，并与McLane等合作伙伴在德州启动运输服务，凸显货运领域的规模化潜力。Uber CEO重申“万能应用”战略，公司财务表现从亏损45亿美元转向近100亿美元自由现金流，同时通过与Waymo、Nuro等合作强化其在自动驾驶生态中的平台角色。技术层面，Wayve发布的LA-Pose自监督位姿估计方法，有望降低自动驾驶对高成本标注数据的依赖，推动L4级技术泛化。此外，Zoox在拉斯维加斯扩展服务站点并推出个性化识别功能，文远知行则在阿布扎比和瑞士同步展示其L4级全无人车队，显示全球Robotaxi运营正从试点向多城市、多场景扩展。",
+      "summary": "本周Robotaxi行业呈现商业化加速与生态整合两大主线。小马智行在中国市场表现亮眼，五一假期订单量同比飙升544%，并首次作为官方交通疏导方案参与大型活动，验证了Robotaxi在复杂场景下的运营能力。Aurora则在美国货运领域取得突破，计划于2026年Q2推出第二代无人驾驶卡车车队，并与分销巨头McLane达成合作，在德州启动无人驾驶运输，标志着自动驾驶卡车正从测试走向规模化部署。与此同时，Uber正加速向“万能应用”转型，其与Nuro、Motional等公司的合作布局，以及自身从亏损到近百亿美元自由现金流的财务表现，凸显了平台方在整合自动驾驶技术中的关键角色。Zoox和文远知行则分别在拉斯维加斯和阿布扎比拓展服务范围，通过功能创新与区域深耕，推动Robotaxi的日常化应用。整体来看，行业正从技术验证阶段全面迈入商业化落地与生态协同的新阶段。",
       "highlights": [
         "小马智行五一假期订单量飙升544%，Robotaxi护送超3000名演唱会歌迷（小马智行）",
-        "Aurora加速商业化：2026年Q2推出无人驾驶卡车车队，合作Hirschbach计划部署500辆（Aurora）",
-        "Uber CEO提出“万能应用”愿景，公司从亏损45亿美元到近100亿美元自由现金流（Uber）",
-        "Zoox在拉斯维加斯新增5个站点，并推出“Find My Zoox”个性化识别功能（Zoox）",
-        "Wayve发布LA-Pose自监督位姿估计技术，降低对昂贵3D标签的依赖（Wayve）",
-        "文远知行在阿布扎比Yas Island运营全无人Robotaxi，并亮相瑞士苏黎世峰会（文远知行）"
+        "Aurora加速驶向商业化：2026年Q2推出无人驾驶卡车车队，合作Hirschbach计划部署500辆（Aurora）",
+        "Uber CEO Dara Khosrowshahi：打造“万能应用”，从亏损45亿美元到近100亿美元自由现金流（Uber）",
+        "Zoox在拉斯维加斯新增两大接送点，并推出“Find My Zoox”功能（Zoox）",
+        "Nuro获加州无人驾驶测试许可，为Uber robotaxi服务上线铺路（Nuro）",
+        "文远知行全无人Robotaxi在阿布扎比Yas Island运营，并参展瑞士苏黎世自动化出行峰会（文远知行）"
       ],
       "count": 45,
       "date_range": "2026-05-04~2026-05-10"
