@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-05-16 00:50",
-  "total": 233,
-  "week_count": 49,
+  "updated_at": "2026-05-16 11:36",
+  "total": 242,
+  "week_count": 48,
   "date_from": "2026-02-10",
-  "date_to": "2026-05-14",
+  "date_to": "2026-05-16",
   "companies": [
     "小马智行",
     "WeRide",
@@ -13,6 +13,7 @@
     "黑芝麻智能",
     "Momenta",
     "Aurora",
+    "Bot Auto",
     "Lucid",
     "Motional",
     "Nuro",
@@ -31,8 +32,7 @@
     "滴滴出行": "滴滴出行",
     "曹操出行": "曹操出行",
     "黑芝麻智能": "黑芝麻智能",
-    "Momenta": "Momenta",
-    "Bot Auto": "Bot Auto"
+    "Momenta": "Momenta"
   },
   "company_info": {
     "Waymo": "Google旗下自动驾驶公司，行业龙头",
@@ -69,29 +69,120 @@
     "财报"
   ],
   "company_stats": {
-    "Tesla": 40,
-    "Waymo": 31,
+    "Tesla": 41,
+    "Waymo": 32,
     "小马智行": 30,
     "WeRide": 24,
-    "Zoox": 19,
-    "Uber": 17,
+    "Zoox": 20,
+    "Uber": 18,
     "Nuro": 16,
     "Wayve": 15,
     "Aurora": 11,
+    "Motional": 7,
     "曹操出行": 5,
-    "Motional": 5,
-    "Rivian": 4,
+    "Rivian": 5,
     "百度Apollo": 2,
     "滴滴出行": 2,
-    "Lucid": 1
+    "Lucid": 1,
+    "Bot Auto": 1
   },
   "source_stats": {
-    "Twitter": 120,
+    "Twitter": 125,
+    "TechCrunch": 50,
     "微信公众号(WeWeRSS)": 49,
-    "TechCrunch": 47,
-    "The Driverless Digest": 17
+    "The Driverless Digest": 18
   },
   "news": [
+    {
+      "id": 478,
+      "date": "2026-05-16",
+      "company": "Sawyer Merritt",
+      "title": "特斯拉FSD行驶近7万英里，几乎全程自动驾驶，相当于绕地球近3圈！",
+      "summary": "特斯拉车主Keith Wisner在社交媒体上分享，其车辆在FSD（全自动驾驶）模式下行驶了近7万英里（约11.27万公里），其中几乎100%的里程由系统完成。这一距离相当于绕地球近3圈，且几乎无需人工干预。他感叹“难以置信”，并标注了相关账号。该数据展示了特斯拉FSD在实际道路中的高使用率和可靠性，但需注意，FSD仍为L2级辅助驾驶系统，驾驶员需保持监控。",
+      "source": "Twitter",
+      "url": "https://x.com/SawyerMerritt/status/2055439144046801219",
+      "type": "行业动态"
+    },
+    {
+      "id": 474,
+      "date": "2026-05-16",
+      "company": "Waymo",
+      "title": "Waymo车辆换上BTS阿狸郎红色宣传涂装，粉丝激动不已",
+      "summary": "一位BTS粉丝在社交媒体上分享，下班途中看到多辆VTA公交车和Waymo自动驾驶汽车披上了BTS阿狸郎（Arirang）宣传的红色涂装，令其感动又兴奋。",
+      "source": "Twitter",
+      "url": "https://x.com/Waymo/status/2055473006718132491",
+      "type": "行业动态"
+    },
+    {
+      "id": 477,
+      "date": "2026-05-15",
+      "company": "Motional",
+      "title": "Motional robotaxi现已登陆Uber，购物餐饮出行全包揽",
+      "summary": "Motional的自动驾驶出租车现已通过Uber平台提供服务。用户可在Uber应用中前往设置，选择乘车偏好，并在自动驾驶车辆部分选择加入，以增加匹配到Motional robotaxi的机会。该服务目前已在拉斯维加斯上线。",
+      "source": "Twitter",
+      "url": "https://x.com/motionaldrive/status/2055332380509093916",
+      "type": "技术突破"
+    },
+    {
+      "id": 476,
+      "date": "2026-05-15",
+      "company": "Motional",
+      "title": "Motional robotaxi上线Uber，拉斯维加斯EDC周可乘自动驾驶回家",
+      "summary": "Motional的自动驾驶出租车现已通过Uber在拉斯维加斯提供服务。在EDC音乐节期间，乘客可以选择在车内小憩，享受自动驾驶带来的便利。该服务特别适合音乐节后疲惫的观众，无需自己驾驶即可安全返家。",
+      "source": "Twitter",
+      "url": "https://x.com/motionaldrive/status/2055387226448462285",
+      "type": "技术突破"
+    },
+    {
+      "id": 475,
+      "date": "2026-05-15",
+      "company": "Zoox",
+      "title": "Zoox新增拉斯维加斯会展中心站点，robotaxi服务再扩容",
+      "summary": "Zoox宣布其robotaxi服务新增拉斯维加斯会展中心（LVCC）站点，具体位置在西厅北大厅外。此前，Zoox已在曼德勒海湾酒店及拉斯维加斯大道等热门地点开通服务。目前，Zoox在拉斯维加斯共有13个活跃运营站点，另有2个站点在特殊活动期间开放。",
+      "source": "Twitter",
+      "url": "https://x.com/seventensuited/status/2055331669792723152",
+      "type": "商业拓展"
+    },
+    {
+      "id": 473,
+      "date": "2026-05-15",
+      "company": "Waymo",
+      "title": "Waymo在美国11座城市运营面积超1400平方英里",
+      "summary": "Uber合作伙伴Avride因自动驾驶事故正接受调查；旧金山居民对自动驾驶汽车的真实态度曝光；Waymo召回3800辆robotaxi。",
+      "source": "The Driverless Digest",
+      "url": "https://www.thedriverlessdigest.com/p/waymo-now-operates-across-1400-square",
+      "type": "商业拓展"
+    },
+    {
+      "id": 472,
+      "date": "2026-05-15",
+      "company": "Rivian",
+      "title": "RJ Scaringe三家公司累计融资超120亿美元，投资者仍趋之若鹜",
+      "summary": "投资者对RJ Scaringe及其创意的热情似乎永无止境。据早期加入Rivian的员工Jiten Behl透露，讲故事与沟通能力是Scaringe的超级强项之一。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/05/15/rj-scaringe-has-raised-more-than-12-billion-across-three-startups-and-investors-still-want-more/",
+      "type": "技术突破"
+    },
+    {
+      "id": 471,
+      "date": "2026-05-15",
+      "company": "Tesla",
+      "title": "特斯拉披露两起涉及远程操作员的Robotaxi事故",
+      "summary": "最新解密的碰撞报告揭示了特斯拉在扩大其robotaxi规模过程中遇到的一些问题。报告显示，两起事故均涉及远程操作员介入，其中一起发生在2023年，另一起在2024年。这些事故暴露了特斯拉在自动驾驶技术商业化道路上的挑战，尤其是在远程监控和应急响应机制方面。尽管特斯拉一直强调其FSD系统的自主性，但事故表明，在复杂或异常路况下，远程操作员的干预仍不可或缺。这些细节的公开可能影响公众对特斯拉robotaxi安全性的信心，并引发对行业监管标准的进一步讨论。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/05/15/tesla-reveals-two-robotaxi-crashes-involving-teleoperators/",
+      "type": "商业拓展"
+    },
+    {
+      "id": 470,
+      "date": "2026-05-15",
+      "company": "Uber",
+      "title": "印度Uber竞争对手Rapido以30亿美元估值融资2.4亿美元",
+      "summary": "Rapido通过提供摩托车和自动人力车等低成本、更灵活的出行方式，推动了其业务增长。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/05/15/indian-uber-rival-rapido-raises-240m-at-3b-valuation/",
+      "type": "技术突破"
+    },
     {
       "id": 469,
       "date": "2026-05-14",
@@ -565,7 +656,7 @@
     {
       "id": 154,
       "date": "2026-05-08",
-      "company": "Waymo",
+      "company": "Bot Auto",
       "title": "Bot Auto完成首次商业无人驾驶货运任务",
       "summary": "Bot Auto的无人驾驶卡车成功完成首次美国商业货运，从休斯顿东北部出发，行驶230英里至德克萨斯州哈钦斯。此次夜间运输由首席执行官侯晓迪（Xiaodi Hou）主导，展示了robotaxi和FSD技术之外的自动驾驶货运潜力，但未使用lidar。",
       "source": "The Driverless Digest",
@@ -2424,28 +2515,28 @@
     }
   ],
   "weekly_report": {
-    "summary": "【本周核心】\n商业化落地加速，卡车与Robotaxi并行推进\n• 商业化——Aurora推出新一代无人驾驶卡车，计划2026年底前在Sun Belt部署超200辆；小马智行五一假期Robotaxi订单量飙升544%，并首次作为官方交通疏导方案。\n• 商业化——Bot Auto完成首次商业无人驾驶货运任务，从休斯顿行驶230英里至德克萨斯州哈钦斯。\n• 融资——Nuro获加州两项关键许可，推进与Uber和Lucid Motors合作的Robotaxi项目。\n【国际动态】\n• Aurora于5月6日至7日宣布多项进展：推出基于International® LT®系列的新一代无人驾驶卡车，计划2026年底前在Sun Belt部署超200辆；与分销巨头McLane签署协议，将在德州启动无人驾驶运输；并计划2026年Q2与Hirschbach合作推出由500辆卡车组成的无人驾驶车队。\n• Bot Auto于5月8日宣布，其无人驾驶卡车成功完成首次美国商业货运任务，从休斯顿东北部出发，行驶230英里至德克萨斯州哈钦斯，展示了自动驾驶货运的商业化潜力。\n• Nuro于5月8日宣布，已获得加州DMV无人驾驶许可和CPUC许可，可在无安全驾驶员的情况下扩大验证并启动载客试点，为其与Uber和Lucid Motors合作的Robotaxi项目铺平道路。\n• Zoox于5月7日宣布在拉斯维加斯新增5个Robotaxi服务目的地，包括Bellagio、MGM Grand等，使其在该地区的接送站点总数达到8个。\n• Uber CEO Dara Khosrowshahi于5月8日表示，公司正致力于打造“万能应用”，并回顾了从2017年亏损45亿美元到如今实现近100亿美元自由现金流的转变。\n【国内要闻】\n• 小马智行于5月8日公布数据，2026年五一假期期间，其Robotaxi订单量同比增长544%，并在时代少年团广州南沙演唱会期间，累计护送歌迷超3000人次，首次作为官方交通疏导方案的一部分被写入政府发布。\n• 文远知行于5月6日强调，其全无人Robotaxi在阿布扎比Yas Island的运营将安全设计贯穿每一趟行程，采用先进的感知与决策系统。\n• 滴滴自动驾驶于5月8日宣布，其论文入选全球人工智能顶会ICLR 2026。\n【政策动态】\n本周暂无重要政策动态\n【关键数据一览】\n• Aurora—新一代卡车设计寿命100万英里，成本降低50%以上\n• Bot Auto—首次商业货运行驶230英里\n• 小马智行—五一假期订单量同比增长544%，护送超3000名歌迷\n• Uber—从2017年亏损45亿美元到实现近100亿美元自由现金流\n• Zoox—在拉斯维加斯新增5个站点，总数达8个\n• Aurora—与McLane合作累计行驶28万英里自动驾驶里程",
+    "summary": "【本周核心】\n商业化落地加速，卡车与Robotaxi并行推进\n• 商业化——Aurora宣布2026年Q2推出无人驾驶卡车车队，并与McLane Co.在德州启动无人驾驶运输；小马智行五一假期Robotaxi订单量飙升544%。\n• 商业化——Bot Auto完成首次商业无人驾驶货运任务，从休斯顿行驶230英里至达拉斯。\n• 融资——Nuro获得加州无人驾驶测试许可，为与Uber和Lucid Motors合作的Robotaxi项目铺路。\n【国际动态】\n• Aurora 5月6-7日宣布推出新一代无人驾驶卡车车队，计划2026年底前在Sun Belt地区部署超200辆。同时，与美国最大分销商之一McLane Co.达成协议，将在德州启动无人驾驶运输服务。\n• Bot Auto 5月8日完成首次美国商业无人驾驶货运任务，从休斯顿东北部出发，行驶230英里至德克萨斯州哈钦斯，展示了自动驾驶货运的商业化潜力。\n• Nuro 5月8日宣布获得加州DMV和CPUC两项关键许可，可在无安全驾驶员的情况下扩大验证并启动载客试点，标志着其与Uber和Lucid Motors合作的Robotaxi项目取得关键进展。\n• Zoox 5月7日在拉斯维加斯新增5个Robotaxi服务目的地，包括Bellagio、MGM Grand等，使其在拉斯维加斯大道附近的接送站点总数达到8个，持续扩大服务网络。\n• Uber 5月8日CEO Dara Khosrowshahi在接受专访时阐述了打造“万能应用”的愿景，并透露公司已从2017年亏损45亿美元转变为如今实现近100亿美元自由现金流。\n【国内要闻】\n• 小马智行 5月8日公布五一假期运营数据，Robotaxi订单量同比增长544%。在时代少年团广州南沙演唱会期间，累计护送歌迷超3000人次，并首次作为官方交通疏导方案的一部分被写入政府发布。\n• 文远知行 5月6日强调其全无人Robotaxi在阿布扎比Yas Island的安全运营，展示了其在海外市场的商业化进展。\n• 滴滴出行 5月8日宣布其自动驾驶相关论文入选全球人工智能顶会ICLR 2026。\n【政策动态】\n本周暂无重要政策动态。\n【关键数据一览】\n• Aurora—计划2026年底前部署超200辆无人驾驶卡车，与McLane合作累计行驶28万英里自动驾驶里程\n• 小马智行—五一假期订单量同比增长544%，累计护送超3000名歌迷\n• Bot Auto—完成首次商业货运，行驶230英里\n• Uber—从亏损45亿美元到实现近100亿美元自由现金流\n• Zoox—在拉斯维加斯新增5个站点，总数达8个\n• Nuro—获加州无人驾驶测试许可和CPUC载客试点许可",
     "highlights": [
-      "推出新一代无人驾驶卡车，计划2026年底前部署超200辆（Aurora）",
-      "完成首次商业无人驾驶货运任务，行驶230英里（Bot Auto）",
-      "五一假期Robotaxi订单量飙升544%，护送超3000名歌迷（小马智行）",
-      "获加州无人驾驶及载客试点许可，推进与Uber合作项目（Nuro）",
-      "在拉斯维加斯新增多个Robotaxi服务站点（Zoox）",
-      "与分销巨头McLane合作，将在德州启动无人驾驶运输（Aurora）"
+      "加速驶向商业化，计划2026年Q2推出无人驾驶卡车车队（Aurora）",
+      "完成首次商业无人驾驶货运任务，从休斯顿至达拉斯（Bot Auto）",
+      "五一假期订单量飙升544%，并首次作为官方交通疏导方案（小马智行）",
+      "获加州无人驾驶测试许可，为与Uber合作的Robotaxi服务铺路（Nuro）",
+      "在拉斯维加斯新增多个热门目的地，持续扩大服务覆盖（Zoox）",
+      "CEO阐述“万能应用”愿景，公司从亏损45亿美元到近100亿美元自由现金流（Uber）"
     ],
     "count": 45,
     "date_range": "2026-05-04~2026-05-10"
   },
   "weekly_history": [
     {
-      "summary": "【本周核心】\n商业化落地加速，卡车与Robotaxi并行推进\n• 商业化——Aurora推出新一代无人驾驶卡车，计划2026年底前在Sun Belt部署超200辆；小马智行五一假期Robotaxi订单量飙升544%，并首次作为官方交通疏导方案。\n• 商业化——Bot Auto完成首次商业无人驾驶货运任务，从休斯顿行驶230英里至德克萨斯州哈钦斯。\n• 融资——Nuro获加州两项关键许可，推进与Uber和Lucid Motors合作的Robotaxi项目。\n【国际动态】\n• Aurora于5月6日至7日宣布多项进展：推出基于International® LT®系列的新一代无人驾驶卡车，计划2026年底前在Sun Belt部署超200辆；与分销巨头McLane签署协议，将在德州启动无人驾驶运输；并计划2026年Q2与Hirschbach合作推出由500辆卡车组成的无人驾驶车队。\n• Bot Auto于5月8日宣布，其无人驾驶卡车成功完成首次美国商业货运任务，从休斯顿东北部出发，行驶230英里至德克萨斯州哈钦斯，展示了自动驾驶货运的商业化潜力。\n• Nuro于5月8日宣布，已获得加州DMV无人驾驶许可和CPUC许可，可在无安全驾驶员的情况下扩大验证并启动载客试点，为其与Uber和Lucid Motors合作的Robotaxi项目铺平道路。\n• Zoox于5月7日宣布在拉斯维加斯新增5个Robotaxi服务目的地，包括Bellagio、MGM Grand等，使其在该地区的接送站点总数达到8个。\n• Uber CEO Dara Khosrowshahi于5月8日表示，公司正致力于打造“万能应用”，并回顾了从2017年亏损45亿美元到如今实现近100亿美元自由现金流的转变。\n【国内要闻】\n• 小马智行于5月8日公布数据，2026年五一假期期间，其Robotaxi订单量同比增长544%，并在时代少年团广州南沙演唱会期间，累计护送歌迷超3000人次，首次作为官方交通疏导方案的一部分被写入政府发布。\n• 文远知行于5月6日强调，其全无人Robotaxi在阿布扎比Yas Island的运营将安全设计贯穿每一趟行程，采用先进的感知与决策系统。\n• 滴滴自动驾驶于5月8日宣布，其论文入选全球人工智能顶会ICLR 2026。\n【政策动态】\n本周暂无重要政策动态\n【关键数据一览】\n• Aurora—新一代卡车设计寿命100万英里，成本降低50%以上\n• Bot Auto—首次商业货运行驶230英里\n• 小马智行—五一假期订单量同比增长544%，护送超3000名歌迷\n• Uber—从2017年亏损45亿美元到实现近100亿美元自由现金流\n• Zoox—在拉斯维加斯新增5个站点，总数达8个\n• Aurora—与McLane合作累计行驶28万英里自动驾驶里程",
+      "summary": "【本周核心】\n商业化落地加速，卡车与Robotaxi并行推进\n• 商业化——Aurora宣布2026年Q2推出无人驾驶卡车车队，并与McLane Co.在德州启动无人驾驶运输；小马智行五一假期Robotaxi订单量飙升544%。\n• 商业化——Bot Auto完成首次商业无人驾驶货运任务，从休斯顿行驶230英里至达拉斯。\n• 融资——Nuro获得加州无人驾驶测试许可，为与Uber和Lucid Motors合作的Robotaxi项目铺路。\n【国际动态】\n• Aurora 5月6-7日宣布推出新一代无人驾驶卡车车队，计划2026年底前在Sun Belt地区部署超200辆。同时，与美国最大分销商之一McLane Co.达成协议，将在德州启动无人驾驶运输服务。\n• Bot Auto 5月8日完成首次美国商业无人驾驶货运任务，从休斯顿东北部出发，行驶230英里至德克萨斯州哈钦斯，展示了自动驾驶货运的商业化潜力。\n• Nuro 5月8日宣布获得加州DMV和CPUC两项关键许可，可在无安全驾驶员的情况下扩大验证并启动载客试点，标志着其与Uber和Lucid Motors合作的Robotaxi项目取得关键进展。\n• Zoox 5月7日在拉斯维加斯新增5个Robotaxi服务目的地，包括Bellagio、MGM Grand等，使其在拉斯维加斯大道附近的接送站点总数达到8个，持续扩大服务网络。\n• Uber 5月8日CEO Dara Khosrowshahi在接受专访时阐述了打造“万能应用”的愿景，并透露公司已从2017年亏损45亿美元转变为如今实现近100亿美元自由现金流。\n【国内要闻】\n• 小马智行 5月8日公布五一假期运营数据，Robotaxi订单量同比增长544%。在时代少年团广州南沙演唱会期间，累计护送歌迷超3000人次，并首次作为官方交通疏导方案的一部分被写入政府发布。\n• 文远知行 5月6日强调其全无人Robotaxi在阿布扎比Yas Island的安全运营，展示了其在海外市场的商业化进展。\n• 滴滴出行 5月8日宣布其自动驾驶相关论文入选全球人工智能顶会ICLR 2026。\n【政策动态】\n本周暂无重要政策动态。\n【关键数据一览】\n• Aurora—计划2026年底前部署超200辆无人驾驶卡车，与McLane合作累计行驶28万英里自动驾驶里程\n• 小马智行—五一假期订单量同比增长544%，累计护送超3000名歌迷\n• Bot Auto—完成首次商业货运，行驶230英里\n• Uber—从亏损45亿美元到实现近100亿美元自由现金流\n• Zoox—在拉斯维加斯新增5个站点，总数达8个\n• Nuro—获加州无人驾驶测试许可和CPUC载客试点许可",
       "highlights": [
-        "推出新一代无人驾驶卡车，计划2026年底前部署超200辆（Aurora）",
-        "完成首次商业无人驾驶货运任务，行驶230英里（Bot Auto）",
-        "五一假期Robotaxi订单量飙升544%，护送超3000名歌迷（小马智行）",
-        "获加州无人驾驶及载客试点许可，推进与Uber合作项目（Nuro）",
-        "在拉斯维加斯新增多个Robotaxi服务站点（Zoox）",
-        "与分销巨头McLane合作，将在德州启动无人驾驶运输（Aurora）"
+        "加速驶向商业化，计划2026年Q2推出无人驾驶卡车车队（Aurora）",
+        "完成首次商业无人驾驶货运任务，从休斯顿至达拉斯（Bot Auto）",
+        "五一假期订单量飙升544%，并首次作为官方交通疏导方案（小马智行）",
+        "获加州无人驾驶测试许可，为与Uber合作的Robotaxi服务铺路（Nuro）",
+        "在拉斯维加斯新增多个热门目的地，持续扩大服务覆盖（Zoox）",
+        "CEO阐述“万能应用”愿景，公司从亏损45亿美元到近100亿美元自由现金流（Uber）"
       ],
       "count": 45,
       "date_range": "2026-05-04~2026-05-10"
