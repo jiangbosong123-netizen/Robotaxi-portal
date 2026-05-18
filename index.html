@@ -376,7 +376,7 @@ body {
 
 .weekly-body {
 
-  font-size:15px; line-height:1.7; color:#4a5568;
+  font-size:15px; line-height:1.5; color:#4a5568;
 
   padding:14px 20px 14px 22px;
 
@@ -440,7 +440,7 @@ body {
 
 .sec-line {
 
-  font-size:15px; color:#2d3748; line-height:1.6;
+  font-size:15px; color:#2d3748; line-height:1.4;
 
   padding-left:4px;
 
@@ -1599,6 +1599,8 @@ function renderWeekly() {
   
   // 结构化综述：带•的分开行，不带•的合段落
   body = body.replace(/【(.+?)】/g, '<div class="sec-title">【$1】</div>');
+  // 去除<br>空行，避免生成多余间距
+  body = body.replace(/<br\s*\/?>\s*/g, '');
   var lines = body.split('\n');
   var htmlLines = [];
   var para = [];
@@ -1794,6 +1796,8 @@ function renderWeek(r) {
 
   // 正文：带•的分开行，不带•的合段落
   body = body.replace(/【(.+?)】/g, '<div class="sec-title">【$1】</div>');
+  // 去除<br>空行，避免生成多余间距
+  body = body.replace(/<br\s*\/?>\s*/g, '');
   var lines = body.split('\n');
   var htmlLines = [];
   var para = [];
