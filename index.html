@@ -8,7 +8,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>【华泰互联网传媒Jonos】Robotaxi 行业动态</title>
+<title>銆愬崕娉颁簰鑱旂綉浼犲獟Jonos銆慠obotaxi 琛屼笟鍔ㄦ€?/title>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 
@@ -204,7 +204,7 @@ body {
 
 
 
-/* ===== 打印/PDF样式 ===== */
+/* ===== 鎵撳嵃/PDF鏍峰紡 ===== */
 
 @media print {
 
@@ -298,7 +298,7 @@ body {
 
 }
 
-/* 默认隐藏popup，由JS控制浮动弹出 */
+/* 榛樿闅愯棌popup锛岀敱JS鎺у埗娴姩寮瑰嚭 */
 
 .hl-popup { display: none; }
 
@@ -468,11 +468,21 @@ body {
 
   padding-top:10px; border-top:1px solid #f0f2f5;
 
+  text-align:left; line-height:1.5;
+
+}
+
+.weekly .footer .disclaimer {
+
+  font-size:9px; color:#718096; margin-top:6px;
+
+  text-align:justify;
+
 }
 
 
 
-/* ===== 周报综述样式 ===== */
+/* ===== 鍛ㄦ姤缁艰堪鏍峰紡 ===== */
 
 #weeklyBody {
 
@@ -600,11 +610,11 @@ input.search::placeholder { color:#a0aec0; }
 
 .cc-Uber { background:#1c1c1c22; color:#1c1c1c; }
 
-.cc-百度Apollo { background:#e53e3e22; color:#c53030; }
+.cc-鐧惧害Apollo { background:#e53e3e22; color:#c53030; }
 
-.cc-滴滴出行 { background:#38a16922; color:#276749; }
+.cc-婊存淮鍑鸿 { background:#38a16922; color:#276749; }
 
-.cc-曹操出行 { background:#d69e2e22; color:#975a16; }
+.cc-鏇规搷鍑鸿 { background:#d69e2e22; color:#975a16; }
 
 .cc-Momenta { background:#e53e3e22; color:#c53030; }
 .cc-Lucid { background:#d53f8c22; color:#97266d; }
@@ -665,21 +675,21 @@ input.search::placeholder { color:#a0aec0; }
 
 }
 
-.ct-技术突破 { background:#667eea22; color:#4c51bf; }
+.ct-鎶€鏈獊鐮?{ background:#667eea22; color:#4c51bf; }
 
-.ct-商业拓展 { background:#38a16922; color:#276749; }
+.ct-鍟嗕笟鎷撳睍 { background:#38a16922; color:#276749; }
 
-.ct-行业动态 { background:#d69e2e22; color:#975a16; }
+.ct-琛屼笟鍔ㄦ€?{ background:#d69e2e22; color:#975a16; }
 
-.ct-合作     { background:#31979522; color:#285e61; }
+.ct-鍚堜綔     { background:#31979522; color:#285e61; }
 
-.ct-融资投资 { background:#805ad522; color:#6b46c1; }
+.ct-铻嶈祫鎶曡祫 { background:#805ad522; color:#6b46c1; }
 
-.ct-安全与监管 { background:#e53e3e22; color:#c53030; }
+.ct-瀹夊叏涓庣洃绠?{ background:#e53e3e22; color:#c53030; }
 
-.ct-财报     { background:#e07c3e22; color:#b3622e; }
+.ct-璐㈡姤     { background:#e07c3e22; color:#b3622e; }
 
-.ct-其他     { background:#a0aec022; color:#718096; }
+.ct-鍏朵粬     { background:#a0aec022; color:#718096; }
 
 
 
@@ -796,12 +806,12 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
 <div class="top-bar">
 
   <div class="top-bar-center">
-    <div class="brand-line">【华泰互联网传媒Jonos】</div>
-    <h1><span>Robotaxi</span> 行业动态</h1>
-    <div class="analyst-line">苏燕妮 13148866768 / 邵浩岚 15195381655</div>
+    <div class="brand-line">銆愬崕娉颁簰鑱旂綉浼犲獟Jonos銆?/div>
+    <h1><span>Robotaxi</span> 琛屼笟鍔ㄦ€?/h1>
+    <div class="analyst-line">鑻忕嚂濡?13148866768 / 閭垫旦宀?15195381655</div>
   </div>
 
-  <div class="update-badge" id="updateBadge">加载中...</div>
+  <div class="update-badge" id="updateBadge">鍔犺浇涓?..</div>
 
   <!-- v1.2.0 -->
 
@@ -823,25 +833,25 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
 
     <div class="title">
 
-      Robotaxi行业周报
+      Robotaxi琛屼笟鍛ㄦ姤
 
-      <span class="title-badge" id="weekBadge">第19周</span>
+      <span class="title-badge" id="weekBadge">绗?9鍛?/span>
 
       <select class="week-select" id="weekSelect" onchange="switchWeek(this.value)">
 
-        <option value="">选择历史周报...</option>
+        <option value="">閫夋嫨鍘嗗彶鍛ㄦ姤...</option>
 
       </select>
 
       <div class="dl-wrap">
 
-        <button class="dl-btn" onclick="toggleDL()">下载 ▾</button>
+        <button class="dl-btn" onclick="toggleDL()">涓嬭浇 鈻?/button>
 
         <div class="dl-menu" id="dlMenu">
 
-          <div class="dl-option" onclick="downloadReport();hideDL()">导出为图片</div>
+          <div class="dl-option" onclick="downloadReport();hideDL()">瀵煎嚭涓哄浘鐗?/div>
 
-          <div class="dl-option" onclick="exportPDF();hideDL()">导出为PDF</div>
+          <div class="dl-option" onclick="exportPDF();hideDL()">瀵煎嚭涓篜DF</div>
 
         </div>
 
@@ -853,7 +863,7 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
 
   <div class="weekly-body">
 
-    <div class="weekly-body-label">本周综述</div>
+    <div class="weekly-body-label">鏈懆缁艰堪</div>
 
     <div id="weeklyBody"></div>
 
@@ -865,7 +875,7 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
 
     <div class="weekly-chart-box">
 
-      <div class="chart-title">新闻趋势</div>
+      <div class="chart-title">鏂伴椈瓒嬪娍</div>
 
       <canvas id="chartTrend"></canvas>
 
@@ -873,7 +883,7 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
 
     <div class="weekly-chart-box">
 
-      <div class="chart-title">公司覆盖</div>
+      <div class="chart-title">鍏徃瑕嗙洊</div>
 
       <canvas id="chartCompanies"></canvas>
 
@@ -881,7 +891,7 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
 
     <div class="weekly-chart-box">
 
-      <div class="chart-title">分类分布</div>
+      <div class="chart-title">鍒嗙被鍒嗗竷</div>
 
       <canvas id="chartTypeDist"></canvas>
 
@@ -901,7 +911,7 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
 
   <div class="filter-row">
 
-    <span class="filter-label">公司</span>
+    <span class="filter-label">鍏徃</span>
 
     <div class="filter-group" id="companyFilter"></div>
 
@@ -909,7 +919,7 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
 
   <div class="filter-row">
 
-    <span class="filter-label">来源</span>
+    <span class="filter-label">鏉ユ簮</span>
 
     <div class="filter-group" id="sourceFilter"></div>
 
@@ -917,7 +927,7 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
 
   <div class="filter-row">
 
-    <span class="filter-label">分类</span>
+    <span class="filter-label">鍒嗙被</span>
 
     <div class="filter-group" id="typeFilter"></div>
 
@@ -925,11 +935,11 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
 
   <div class="filter-row">
 
-    <span class="filter-label">搜索</span>
+    <span class="filter-label">鎼滅储</span>
 
     <div class="search-wrap">
 
-      <input class="search" id="searchBox" placeholder="日期（年-月-日）、公司名、关键词" oninput="render()">
+      <input class="search" id="searchBox" placeholder="鏃ユ湡锛堝勾-鏈?鏃ワ級銆佸叕鍙稿悕銆佸叧閿瘝" oninput="render()">
 
 
 
@@ -945,9 +955,9 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
 
 <div class="view-tabs">
 
-  <div class="view-tab active" onclick="switchView('cards',this)">卡片视图</div>
+  <div class="view-tab active" onclick="switchView('cards',this)">鍗＄墖瑙嗗浘</div>
 
-  <div class="view-tab" onclick="switchView('timeline',this)">时间线</div>
+  <div class="view-tab" onclick="switchView('timeline',this)">鏃堕棿绾?/div>
 
 </div>
 
@@ -959,7 +969,7 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
 
 
 
-<footer>Robotaxi 行业动态 | 数据每日更新</footer>
+<footer>Robotaxi 琛屼笟鍔ㄦ€?| 鏁版嵁姣忔棩鏇存柊</footer>
 
 </div>
 
@@ -977,7 +987,7 @@ let activeCompany = 'all', activeSource = 'all', activeType = 'all';
 
 async function loadData() {
 
-  document.getElementById('cardGrid').innerHTML = '<div class="loading"><div class="spinner"></div><div>加载数据中...</div></div>';
+  document.getElementById('cardGrid').innerHTML = '<div class="loading"><div class="spinner"></div><div>鍔犺浇鏁版嵁涓?..</div></div>';
 
   try {
 
@@ -989,7 +999,7 @@ async function loadData() {
 
   } catch(e) {
 
-    document.getElementById('cardGrid').innerHTML = '<div class="loading">加载失败，请确认 robotaxi_data.json 存在</div>';
+    document.getElementById('cardGrid').innerHTML = '<div class="loading">鍔犺浇澶辫触锛岃纭 robotaxi_data.json 瀛樺湪</div>';
 
   }
 
@@ -1001,17 +1011,17 @@ function init() {
 
   document.getElementById('updateBadge').textContent =
 
-    `更新于 ${DATA.updated_at}`;
+    `鏇存柊浜?${DATA.updated_at}`;
 
   
 
   document.getElementById('statBar').innerHTML = [
 
-    [DATA.total, '总新闻'], [DATA.week_count, '本周新增'],
+    [DATA.total, '鎬绘柊闂?], [DATA.week_count, '鏈懆鏂板'],
 
-    [DATA.companies.length, '覆盖公司'],
+    [DATA.companies.length, '瑕嗙洊鍏徃'],
 
-    [DATA.news.filter(n=>n.date>=((d=>{d.setDate(d.getDate()-7);return d.toISOString().slice(0,10)})(new Date()))).length, '本周更新']
+    [DATA.news.filter(n=>n.date>=((d=>{d.setDate(d.getDate()-7);return d.toISOString().slice(0,10)})(new Date()))).length, '鏈懆鏇存柊']
 
   ].map(s => `<div class="stat-card"><span class="num">${s[0]}</span><span class="label">${s[1]}</span></div>`).join('');
 
@@ -1027,7 +1037,7 @@ function init() {
 
   document.getElementById('companyFilter').innerHTML =
 
-    '<button class="filter-btn active" onclick="setF(\'company\',\'all\',this)">全部</button>' +
+    '<button class="filter-btn active" onclick="setF(\'company\',\'all\',this)">鍏ㄩ儴</button>' +
 
     DATA.companies.map(function(c) {
 
@@ -1035,7 +1045,7 @@ function init() {
 
       var info = (DATA.company_info || {})[c] || '';
 
-      return '<button class="filter-btn" onclick="setF(\'company\',\''+c+'\',this)" title="' + label + ' — ' + info + '">' + label + '</button>';
+      return '<button class="filter-btn" onclick="setF(\'company\',\''+c+'\',this)" title="' + label + ' 鈥?' + info + '">' + label + '</button>';
 
     }).join('');
 
@@ -1043,7 +1053,7 @@ function init() {
 
   document.getElementById('sourceFilter').innerHTML =
 
-    '<button class="filter-btn active" onclick="setF(\'source\',\'all\',this)">全部</button>' +
+    '<button class="filter-btn active" onclick="setF(\'source\',\'all\',this)">鍏ㄩ儴</button>' +
 
     DATA.sources.map(s => `<button class="filter-btn" onclick="setF('source','${s}',this)">${s}</button>`).join('');
 
@@ -1051,7 +1061,7 @@ function init() {
 
   document.getElementById('typeFilter').innerHTML =
 
-    '<button class="filter-btn active" onclick="setF(\'type\',\'all\',this)">全部</button>' +
+    '<button class="filter-btn active" onclick="setF(\'type\',\'all\',this)">鍏ㄩ儴</button>' +
 
     DATA.types.map(t => `<button class="filter-btn" onclick="setF('type','${t}',this)">${t}</button>`).join('');
 
@@ -1065,7 +1075,7 @@ function init() {
 
 
 
-  // 高亮卡片弹出交互（逐项绑定，简单直接）
+  // 楂樹寒鍗＄墖寮瑰嚭浜や簰锛堥€愰」缁戝畾锛岀畝鍗曠洿鎺ワ級
 
   (function() {
 
@@ -1133,7 +1143,7 @@ function init() {
 
     
 
-    // 事件委托：绑在容器上，DOM替换后依然有效
+    // 浜嬩欢濮旀墭锛氱粦鍦ㄥ鍣ㄤ笂锛孌OM鏇挎崲鍚庝緷鐒舵湁鏁?
 
     hlContainer.addEventListener('mouseover', function(e) {
 
@@ -1157,7 +1167,7 @@ function init() {
 
     
 
-    // popup本身：移入取消隐藏，移出延时隐藏
+    // popup鏈韩锛氱Щ鍏ュ彇娑堥殣钘忥紝绉诲嚭寤舵椂闅愯棌
 
     popup.addEventListener('mouseenter', function() { cancelHide(); });
 
@@ -1165,7 +1175,7 @@ function init() {
 
     
 
-    // popup内点击新闻跳转
+    // popup鍐呯偣鍑绘柊闂昏烦杞?
 
     popup.addEventListener('click', function(e) {
 
@@ -1183,7 +1193,7 @@ function init() {
 
     
 
-    // 点击高亮卡筛选
+    // 鐐瑰嚮楂樹寒鍗＄瓫閫?
 
     document.getElementById('weeklyHL').addEventListener('click', function(e) {
 
@@ -1231,7 +1241,7 @@ function selectCompany(comp) {
 
   if (activeCompany === comp) return;
 
-  // 处理公司名映射：如果comp不是一个数据库里的公司名，尝试反向映射
+  // 澶勭悊鍏徃鍚嶆槧灏勶細濡傛灉comp涓嶆槸涓€涓暟鎹簱閲岀殑鍏徃鍚嶏紝灏濊瘯鍙嶅悜鏄犲皠
 
   if (DATA.company_labels) {
 
@@ -1261,7 +1271,7 @@ function selectCompany(comp) {
 
   activeSource = 'all';
 
-  // 更新所有按钮状态
+  // 鏇存柊鎵€鏈夋寜閽姸鎬?
 
   document.querySelectorAll('#companyFilter .filter-btn').forEach(b => b.classList.remove('active'));
 
@@ -1269,7 +1279,7 @@ function selectCompany(comp) {
 
   document.querySelectorAll('#typeFilter .filter-btn').forEach(b => b.classList.remove('active'));
 
-  // 找到对应公司按钮
+  // 鎵惧埌瀵瑰簲鍏徃鎸夐挳
 
   const btns = document.querySelectorAll('#companyFilter .filter-btn');
 
@@ -1283,7 +1293,7 @@ function selectCompany(comp) {
 
   render();
 
-  // 滚动到新闻列表
+  // 婊氬姩鍒版柊闂诲垪琛?
 
   document.querySelector('.card-grid')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
@@ -1305,7 +1315,7 @@ function getFiltered() {
 
     if (kw) {
 
-      // 搜索：标题 + 摘要 + 日期 + 公司名
+      // 鎼滅储锛氭爣棰?+ 鎽樿 + 鏃ユ湡 + 鍏徃鍚?
 
       var inTitle = n.title.toLowerCase().includes(kw);
 
@@ -1315,7 +1325,7 @@ function getFiltered() {
 
       var inCompany = n.company.toLowerCase().includes(kw);
 
-      // 处理日期简写：2026-5-3 → 匹配 2026-05-03
+      // 澶勭悊鏃ユ湡绠€鍐欙細2026-5-3 鈫?鍖归厤 2026-05-03
 
       if (kw.indexOf('-') > 0 && kw.length < 12) {
 
@@ -1343,7 +1353,7 @@ function cc(c) {
 
   const m = {'Waymo':'cc-Waymo','Tesla':'cc-Tesla','Zoox':'cc-Zoox','Wayve':'cc-Wayve','Aurora':'cc-Aurora',
 
-    'Nuro':'cc-Nuro','Motional':'cc-Motional','WeRide':'cc-WeRide','Uber':'cc-Uber','百度Apollo':'cc-百度Apollo','滴滴出行':'cc-滴滴出行','曹操出行':'cc-曹操出行','Momenta':'cc-Momenta','Lucid':'cc-Lucid','Rivian':'cc-Rivian'};
+    'Nuro':'cc-Nuro','Motional':'cc-Motional','WeRide':'cc-WeRide','Uber':'cc-Uber','鐧惧害Apollo':'cc-鐧惧害Apollo','婊存淮鍑鸿':'cc-婊存淮鍑鸿','鏇规搷鍑鸿':'cc-鏇规搷鍑鸿','Momenta':'cc-Momenta','Lucid':'cc-Lucid','Rivian':'cc-Rivian'};
 
   return m[c] || '';
 
@@ -1357,7 +1367,7 @@ function render() {
 
   const grid = document.getElementById('cardGrid');
 
-  if (!items.length) { grid.innerHTML = '<div class="loading">没有符合条件的新闻</div>'; }
+  if (!items.length) { grid.innerHTML = '<div class="loading">娌℃湁绗﹀悎鏉′欢鐨勬柊闂?/div>'; }
 
   else {
 
@@ -1391,7 +1401,7 @@ function render() {
 
           <span class="card-source">${n.source}</span>
 
-          <a class="card-link" href="${n.url}" target="_blank">查看原文 →</a>
+          <a class="card-link" href="${n.url}" target="_blank">鏌ョ湅鍘熸枃 鈫?/a>
 
         </div>
 
@@ -1405,7 +1415,7 @@ function render() {
 
   const tl = document.getElementById('timelineContent');
 
-  if (!items.length) { tl.innerHTML = '<div class="loading">没有符合条件的新闻</div>'; }
+  if (!items.length) { tl.innerHTML = '<div class="loading">娌℃湁绗﹀悎鏉′欢鐨勬柊闂?/div>'; }
 
   else {
 
@@ -1421,13 +1431,13 @@ function render() {
 
         '<div class="tl-title">' + n.title + '</div>' +
 
-        '<div class="tl-meta">' + n.company + ' · ' + n.source + '</div>' +
+        '<div class="tl-meta">' + n.company + ' 路 ' + n.source + '</div>' +
 
         '<div class="tl-summary">' + n.summary + '</div></div></div>';
 
     }).join('');
 
-    // 时间线点击跳转
+    // 鏃堕棿绾跨偣鍑昏烦杞?
 
     tl.onclick = function(e) {
 
@@ -1469,7 +1479,7 @@ function renderWeekly() {
 
   if (!r || !r.summary) {
 
-    document.getElementById('weeklyHL').innerHTML = '<div class="hl-item">本周暂无新增新闻</div>';
+    document.getElementById('weeklyHL').innerHTML = '<div class="hl-item">鏈懆鏆傛棤鏂板鏂伴椈</div>';
 
     return;
 
@@ -1477,7 +1487,7 @@ function renderWeekly() {
 
 
 
-  // 显示日期范围: 2026-05-04~2026-05-10 -> 2026-5-4~2026-5-10
+  // 鏄剧ず鏃ユ湡鑼冨洿: 2026-05-04~2026-05-10 -> 2026-5-4~2026-5-10
 
   var dr = (r.date_range || '');
 
@@ -1493,13 +1503,13 @@ function renderWeekly() {
 
 
 
-  // Highlights - extract company from parentheses at end: "内容（公司名）"
+  // Highlights - extract company from parentheses at end: "鍐呭锛堝叕鍙稿悕锛?
 
   function extractCompany(hl) {
 
-    // 匹配全角（）和半角()，取最后一组
+    // 鍖归厤鍏ㄨ锛堬級鍜屽崐瑙?)锛屽彇鏈€鍚庝竴缁?
 
-    var m = hl.match(/[（(]([^）)]+)[）)]\s*$/);
+    var m = hl.match(/[锛?]([^锛?]+)[锛?]\s*$/);
 
     return m ? m[1].trim() : null;
 
@@ -1523,7 +1533,7 @@ function renderWeekly() {
 
       var comp = extractCompany(h);
 
-      // 中文名→数据库英文名映射
+      // 涓枃鍚嶁啋鏁版嵁搴撹嫳鏂囧悕鏄犲皠
 
       if (comp && DATA.company_labels) {
 
@@ -1537,7 +1547,7 @@ function renderWeekly() {
 
       var news = getMatchingNews(comp);
 
-      // 构建弹出卡片HTML，用data属性
+      // 鏋勫缓寮瑰嚭鍗＄墖HTML锛岀敤data灞炴€?
 
       var popupItems = news.map(function(n) {
 
@@ -1549,44 +1559,44 @@ function renderWeekly() {
 
           '<div class="pi-title">' + n.title.slice(0, 80) + '</div>' +
 
-          '<div class="pi-source">' + label + ' · ' + n.source + '</div></div>';
+          '<div class="pi-source">' + label + ' 路 ' + n.source + '</div></div>';
 
       }).join('');
 
       var popup = '<div class="hl-popup" data-comp="' + (comp||'') + '">' +
 
-        '<div class="popup-title">本周 ' + ((DATA.company_labels||{})[comp]||comp) + ' 动态</div>' +
+        '<div class="popup-title">鏈懆 ' + ((DATA.company_labels||{})[comp]||comp) + ' 鍔ㄦ€?/div>' +
 
-        (news.length ? popupItems : '<div class="popup-item" style="color:#a0aec0;font-size:12px;padding:8px 0;">暂无本周相关新闻</div>') + '</div>';
+        (news.length ? popupItems : '<div class="popup-item" style="color:#a0aec0;font-size:12px;padding:8px 0;">鏆傛棤鏈懆鐩稿叧鏂伴椈</div>') + '</div>';
 
       return '<div class="hl-item" data-company="' + (comp||'') + '">' +
 
-        '<span class="hl-icon">📌</span>' + h + popup + '</div>';
+        '<span class="hl-icon">馃搶</span>' + h + popup + '</div>';
 
     }).join('');
 
 
 
-  // 周报内容 — 结构化综述
+  // 鍛ㄦ姤鍐呭 鈥?缁撴瀯鍖栫患杩?
 
   _currentReport = r;
 
   var body = (r.summary || '');
 
-  // 去掉markdown加粗和标题标记
+  // 鍘绘帀markdown鍔犵矖鍜屾爣棰樻爣璁?
 
   body = body.replace(/\*\*/g, '').replace(/^#{1,3}\s*/gm, '');
 
   
 
-  // 公司名提亮列表
-  // 公司名（按长度排序，长名优先匹配）
-  var companies = ['百度Apollo','小马智行','文远知行','滴滴出行','曹操出行','Bot Auto','Waymo','Zoox','Tesla','Wayve','Aurora','Nuro','Motional','WeRide','Uber','滴滴','特斯拉','Rivian','Lucid','Pony.ai','Nvidia'];
+  // 鍏徃鍚嶆彁浜垪琛?
+  // 鍏徃鍚嶏紙鎸夐暱搴︽帓搴忥紝闀垮悕浼樺厛鍖归厤锛?
+  var companies = ['鐧惧害Apollo','灏忛┈鏅鸿','鏂囪繙鐭ヨ','婊存淮鍑鸿','鏇规搷鍑鸿','Bot Auto','Waymo','Zoox','Tesla','Wayve','Aurora','Nuro','Motional','WeRide','Uber','婊存淮','鐗规柉鎷?,'Rivian','Lucid','Pony.ai','Nvidia'];
   
-  // 找出第一个匹配的公司名，每行只高亮一次
-  // 高亮段落中所有公司名（长名优先匹配，避免"滴滴"抢在"滴滴出行"前面）
+  // 鎵惧嚭绗竴涓尮閰嶇殑鍏徃鍚嶏紝姣忚鍙珮浜竴娆?
+  // 楂樹寒娈佃惤涓墍鏈夊叕鍙稿悕锛堥暱鍚嶄紭鍏堝尮閰嶏紝閬垮厤"婊存淮"鎶㈠湪"婊存淮鍑鸿"鍓嶉潰锛?
   function highlightAll(text, names) {
-    // 按长度降序排列，长名优先匹配
+    // 鎸夐暱搴﹂檷搴忔帓鍒楋紝闀垮悕浼樺厛鍖归厤
     var sorted = names.slice().sort(function(a,b) { return b.length - a.length; });
     var result = text;
     for (var k = 0; k < sorted.length; k++) {
@@ -1597,9 +1607,9 @@ function renderWeekly() {
     return result;
   }
   
-  // 结构化综述：带•的分开行，不带•的合段落
-  body = body.replace(/【(.+?)】/g, '<div class="sec-title">【$1】</div>');
-  // 去除<br>空行，避免生成多余间距
+  // 缁撴瀯鍖栫患杩帮細甯︹€㈢殑鍒嗗紑琛岋紝涓嶅甫鈥㈢殑鍚堟钀?
+  body = body.replace(/銆?.+?)銆?g, '<div class="sec-title">銆?1銆?/div>');
+  // 鍘婚櫎<br>绌鸿锛岄伩鍏嶇敓鎴愬浣欓棿璺?
   body = body.replace(/<br\s*\/?>\s*/g, '');
   var lines = body.split('\n');
   var htmlLines = [];
@@ -1615,8 +1625,8 @@ function renderWeekly() {
       htmlLines.push(line);
       continue;
     }
-    if (line.indexOf('•') === 0 || line.indexOf('- ') === 0) {
-      // 带•的行单独渲染，合段落时公司名高亮会错位
+    if (line.indexOf('鈥?) === 0 || line.indexOf('- ') === 0) {
+      // 甯︹€㈢殑琛屽崟鐙覆鏌擄紝鍚堟钀芥椂鍏徃鍚嶉珮浜細閿欎綅
       if (para.length) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); para = []; }
       htmlLines.push('<div class="sec-line">' + highlightAll(line, companies) + '</div>');
     } else {
@@ -1628,9 +1638,11 @@ function renderWeekly() {
 
   // Meta
 
-  document.getElementById('weeklyFooter').textContent =
+  document.getElementById('weeklyFooter').innerHTML =
 
-    `${r.count || 0} 条新闻`;
+    '<div class="fc-count">' + (r.count || 0) + ' 鏉℃柊闂?/div>' +
+
+    '<div class="disclaimer">鍏嶈矗澹版槑锛氭湰璧勬枡鐢卞崕娉拌瘉鍒哥爺绌舵墍浜掕仈缃戝洟闃熷埗浣滐紙鍗庢嘲璇佸埜鑲′唤鏈夐檺鍏徃宸插叿澶囦腑鍥借瘉鐩戜細鎵瑰噯鐨勮瘉鍒告姇璧勫挩璇笟鍔¤祫鏍硷級銆傛湰璧勬枡浠呬緵鏈叕鍙稿強鍏跺鎴峰拰鍏跺叧鑱旀満鏋勪娇鐢ㄣ€傛湰鍏徃涓嶅洜鎺ユ敹浜烘敹鍒版湰璧勬枡鑰岃鍏朵负瀹㈡埛銆傛湰璧勬枡鍩轰簬鏈叕鍙歌涓哄彲闈犵殑銆佸凡鍏紑鐨勪俊鎭紪鍒讹紝浣嗘湰鍏徃鍙婂叾鍏宠仈鏈烘瀯瀵硅绛変俊鎭殑鍑嗙‘鎬у強瀹屾暣鎬т笉浣滀换浣曚繚璇侊紝鎶曡祫鑰呭簲渚濊禆鑷韩鐙珛鐨勫垽鏂仛鍑烘姇璧勫喅绛栧苟鑷鎵挎媴鎶曡祫椋庨櫓銆?/div>';
 
 
 
@@ -1660,7 +1672,7 @@ function renderWeekly() {
 
 
 
-// ===== 周报历史切换 =====
+// ===== 鍛ㄦ姤鍘嗗彶鍒囨崲 =====
 
 function initWeekSelector() {
 
@@ -1668,15 +1680,15 @@ function initWeekSelector() {
 
   var history = DATA.weekly_history || [];
 
-  // 清空（保留第一个提示项）
+  // 娓呯┖锛堜繚鐣欑涓€涓彁绀洪」锛?
 
-  sel.innerHTML = '<option value="">切换历史周报...</option>';
+  sel.innerHTML = '<option value="">鍒囨崲鍘嗗彶鍛ㄦ姤...</option>';
 
   for (var i = 0; i < history.length; i++) {
 
     var h = history[i];
 
-    var dr = h.date_range || ('第' + (i+1) + '周');
+    var dr = h.date_range || ('绗? + (i+1) + '鍛?);
 
     var label = dr.replace(/-0/g, '-');
 
@@ -1684,7 +1696,7 @@ function initWeekSelector() {
 
     opt.value = i;
 
-    opt.textContent = label + ' (' + (h.count||0) + '条)';
+    opt.textContent = label + ' (' + (h.count||0) + '鏉?';
 
     if (i === 0) opt.selected = true;
 
@@ -1714,7 +1726,7 @@ function switchWeek(idx) {
 
 function renderWeek(r) {
 
-  // 改标题日期
+  // 鏀规爣棰樻棩鏈?
 
   var dr = (r.date_range || '').split('~').map(function(s) {
 
@@ -1728,7 +1740,7 @@ function renderWeek(r) {
 
   
 
-  // 公司名映射（中文标签→数据库英文名）
+  // 鍏徃鍚嶆槧灏勶紙涓枃鏍囩鈫掓暟鎹簱鑻辨枃鍚嶏級
 
   function mapCompany(comp) {
 
@@ -1746,13 +1758,13 @@ function renderWeek(r) {
 
   
 
-  // 高亮
+  // 楂樹寒
 
   document.getElementById('weeklyHL').innerHTML =
 
     (r.highlights||[]).map(function(h) {
 
-      var comp = (h.match(/[（(]([^）)]+)[）)]\s*$/) || [])[1];
+      var comp = (h.match(/[锛?]([^锛?]+)[锛?]\s*$/) || [])[1];
 
       if (comp) comp = mapCompany(comp);
 
@@ -1760,29 +1772,29 @@ function renderWeek(r) {
 
       var tooltip = news.length ? '<div class="hl-popup" data-comp="' + comp + '">' +
 
-        '<div class="popup-title">相关新闻</div>' +
+        '<div class="popup-title">鐩稿叧鏂伴椈</div>' +
 
         news.map(function(n) { return '<div class="popup-item" data-url="' + n.url.replace(/"/g,'&quot;') + '"><div class="pi-date">' + n.date + '</div><div class="pi-title">' + n.title.slice(0,60) + '</div></div>'; }).join('') +
 
         '</div>' : '';
 
-      return '<div class="hl-item" data-company="' + (comp||'') + '"><span class="hl-icon">📌</span>' + h + tooltip + '</div>';
+      return '<div class="hl-item" data-company="' + (comp||'') + '"><span class="hl-icon">馃搶</span>' + h + tooltip + '</div>';
 
     }).join('');
 
   
 
-  // 正文
+  // 姝ｆ枃
 
   _currentReport = r;
 
   var body = (r.summary || '').replace(/\*\*/g, '');
 
-  // 公司名（按长度排序，长名优先匹配）
-  var companies = ['百度Apollo','小马智行','文远知行','滴滴出行','曹操出行','Bot Auto','Waymo','Zoox','Tesla','Wayve','Aurora','Nuro','Motional','WeRide','Uber','滴滴','特斯拉','Rivian','Lucid','Pony.ai','Nvidia'];
+  // 鍏徃鍚嶏紙鎸夐暱搴︽帓搴忥紝闀垮悕浼樺厛鍖归厤锛?
+  var companies = ['鐧惧害Apollo','灏忛┈鏅鸿','鏂囪繙鐭ヨ','婊存淮鍑鸿','鏇规搷鍑鸿','Bot Auto','Waymo','Zoox','Tesla','Wayve','Aurora','Nuro','Motional','WeRide','Uber','婊存淮','鐗规柉鎷?,'Rivian','Lucid','Pony.ai','Nvidia'];
 
-  // 找出第一个匹配的公司名，每行只高亮一次
-  // 高亮段落中所有公司名
+  // 鎵惧嚭绗竴涓尮閰嶇殑鍏徃鍚嶏紝姣忚鍙珮浜竴娆?
+  // 楂樹寒娈佃惤涓墍鏈夊叕鍙稿悕
   function highlightAll(text, names) {
     var sorted = names.slice().sort(function(a,b) { return b.length - a.length; });
     var result = text;
@@ -1794,9 +1806,9 @@ function renderWeek(r) {
     return result;
   }
 
-  // 正文：带•的分开行，不带•的合段落
-  body = body.replace(/【(.+?)】/g, '<div class="sec-title">【$1】</div>');
-  // 去除<br>空行，避免生成多余间距
+  // 姝ｆ枃锛氬甫鈥㈢殑鍒嗗紑琛岋紝涓嶅甫鈥㈢殑鍚堟钀?
+  body = body.replace(/銆?.+?)銆?g, '<div class="sec-title">銆?1銆?/div>');
+  // 鍘婚櫎<br>绌鸿锛岄伩鍏嶇敓鎴愬浣欓棿璺?
   body = body.replace(/<br\s*\/?>\s*/g, '');
   var lines = body.split('\n');
   var htmlLines = [];
@@ -1812,7 +1824,7 @@ function renderWeek(r) {
       htmlLines.push(line);
       continue;
     }
-    if (line.indexOf('•') === 0 || line.indexOf('- ') === 0) {
+    if (line.indexOf('鈥?) === 0 || line.indexOf('- ') === 0) {
       if (para.length) { htmlLines.push('<div class="sec-para">' + highlightAll(para.join(' '), companies) + '</div>'); para = []; }
       htmlLines.push('<div class="sec-line">' + highlightAll(line, companies) + '</div>');
     } else {
@@ -1824,11 +1836,15 @@ function renderWeek(r) {
 
   
 
-  document.getElementById('weeklyFooter').textContent = (r.count || 0) + ' 条新闻';
+  document.getElementById('weeklyFooter').innerHTML =
+
+    '<div class="fc-count">' + (r.count || 0) + ' 鏉℃柊闂?/div>' +
+
+    '<div class="disclaimer">鍏嶈矗澹版槑锛氭湰璧勬枡鐢卞崕娉拌瘉鍒哥爺绌舵墍浜掕仈缃戝洟闃熷埗浣滐紙鍗庢嘲璇佸埜鑲′唤鏈夐檺鍏徃宸插叿澶囦腑鍥借瘉鐩戜細鎵瑰噯鐨勮瘉鍒告姇璧勫挩璇笟鍔¤祫鏍硷級銆傛湰璧勬枡浠呬緵鏈叕鍙稿強鍏跺鎴峰拰鍏跺叧鑱旀満鏋勪娇鐢ㄣ€傛湰鍏徃涓嶅洜鎺ユ敹浜烘敹鍒版湰璧勬枡鑰岃鍏朵负瀹㈡埛銆傛湰璧勬枡鍩轰簬鏈叕鍙歌涓哄彲闈犵殑銆佸凡鍏紑鐨勪俊鎭紪鍒讹紝浣嗘湰鍏徃鍙婂叾鍏宠仈鏈烘瀯瀵硅绛変俊鎭殑鍑嗙‘鎬у強瀹屾暣鎬т笉浣滀换浣曚繚璇侊紝鎶曡祫鑰呭簲渚濊禆鑷韩鐙珛鐨勫垽鏂仛鍑烘姇璧勫喅绛栧苟鑷鎵挎媴鎶曡祫椋庨櫓銆?/div>';
 
   
 
-  // 更新图表为历史周数据
+  // 鏇存柊鍥捐〃涓哄巻鍙插懆鏁版嵁
 
   var parts = (r.date_range || '').split('~');
 
@@ -1846,7 +1862,7 @@ function renderWeek(r) {
 
 
 
-// 全局图表实例，用于切换周报时销毁
+// 鍏ㄥ眬鍥捐〃瀹炰緥锛岀敤浜庡垏鎹㈠懆鎶ユ椂閿€姣?
 
 var _chartTrend = null, _chartCompanies = null, _chartTypes = null;
 
@@ -1874,7 +1890,7 @@ function drawTrendChart(fromDate, toDate) {
 
   if (fromDate && toDate) {
 
-    // 历史周：显示该周每天的分布
+    // 鍘嗗彶鍛細鏄剧ず璇ュ懆姣忓ぉ鐨勫垎甯?
 
     var start = new Date(fromDate);
 
@@ -1892,7 +1908,7 @@ function drawTrendChart(fromDate, toDate) {
 
   } else {
 
-    // 默认：最近14天
+    // 榛樿锛氭渶杩?4澶?
 
     var weekAgo = new Date();
 
@@ -1926,7 +1942,7 @@ function drawTrendChart(fromDate, toDate) {
 
       datasets: [{
 
-        label: '新闻数',
+        label: '鏂伴椈鏁?,
 
         data: counts,
 
@@ -1970,7 +1986,7 @@ function drawTrendChart(fromDate, toDate) {
 
           callbacks: {
 
-            label: function(ctx) { return ctx.parsed.y + ' 条新闻'; }
+            label: function(ctx) { return ctx.parsed.y + ' 鏉℃柊闂?; }
 
           }
 
@@ -2030,11 +2046,11 @@ function drawTypeChart(fromDate, toDate) {
 
   var typeColors = {
 
-    '技术突破':'#667eea','商业拓展':'#38a169','行业动态':'#d69e2e',
+    '鎶€鏈獊鐮?:'#667eea','鍟嗕笟鎷撳睍':'#38a169','琛屼笟鍔ㄦ€?:'#d69e2e',
 
-    '合作':'#319795','融资投资':'#805ad5','安全与监管':'#e53e3e',
+    '鍚堜綔':'#319795','铻嶈祫鎶曡祫':'#805ad5','瀹夊叏涓庣洃绠?:'#e53e3e',
 
-    '财报':'#e07c3e','其他':'#a0aec0'
+    '璐㈡姤':'#e07c3e','鍏朵粬':'#a0aec0'
 
   };
 
@@ -2082,7 +2098,7 @@ function drawTypeChart(fromDate, toDate) {
 
           callbacks: {
 
-            label: function(ctx) { return ctx.parsed + ' 条'; }
+            label: function(ctx) { return ctx.parsed + ' 鏉?; }
 
           }
 
@@ -2144,7 +2160,7 @@ function drawCompanyChart(fromDate, toDate) {
 
       datasets: [{
 
-        label: '新闻数',
+        label: '鏂伴椈鏁?,
 
         data: sorted.map(function(s) { return s[1]; }),
 
@@ -2192,7 +2208,7 @@ function drawCompanyChart(fromDate, toDate) {
 
               var label = (DATA.company_labels || {})[c] || c;
 
-              return label + ' ' + ctx.parsed.x + '条';
+              return label + ' ' + ctx.parsed.x + '鏉?;
 
             },
 
@@ -2200,7 +2216,7 @@ function drawCompanyChart(fromDate, toDate) {
 
               var info = (DATA.company_info || {})[ctx.label] || '';
 
-              return info ? '——' + info : '';
+              return info ? '鈥斺€? + info : '';
 
             }
 
@@ -2226,17 +2242,17 @@ function drawCompanyChart(fromDate, toDate) {
 
 
 
-// ===== 下载周报 =====
+// ===== 涓嬭浇鍛ㄦ姤 =====
 
 function downloadReport() {
 
   var r = _currentReport;
 
-  if (!r) { alert('没有可下载的周报'); return; }
+  if (!r) { alert('娌℃湁鍙笅杞界殑鍛ㄦ姤'); return; }
 
   var dr = r.date_range || '';
 
-  var label = dr.replace(/-0/g, '-').replace(/~/g, '至');
+  var label = dr.replace(/-0/g, '-').replace(/~/g, '鑷?);
 
   try {
 
@@ -2254,7 +2270,7 @@ function downloadReport() {
 
         if (dlWrap) dlWrap.style.display = 'none';
 
-        // 设1050px适中竖版宽，导出比例接近A4
+        // 璁?050px閫備腑绔栫増瀹斤紝瀵煎嚭姣斾緥鎺ヨ繎A4
 
         el.style.width = '1050px';
 
@@ -2296,7 +2312,7 @@ function downloadReport() {
 
                 a.href = URL.createObjectURL(b);
 
-                a.download = 'robotaxi_周报_' + label + '.png';
+                a.download = 'robotaxi_鍛ㄦ姤_' + label + '.png';
 
                 a.click();
 
@@ -2338,13 +2354,13 @@ function downloadReport() {
 
 function downloadText(r, label) {
 
-  var text = 'Robotaxi 行业周报\r\n' + label + '\r\n';
+  var text = 'Robotaxi 琛屼笟鍛ㄦ姤\r\n' + label + '\r\n';
 
   text += '='.repeat(40) + '\r\n\r\n';
 
   if (r.highlights && r.highlights.length) {
 
-    text += '本周要点：\r\n';
+    text += '鏈懆瑕佺偣锛歕r\n';
 
     r.highlights.forEach(function(h) { text += '  ' + h + '\r\n'; });
 
@@ -2354,9 +2370,9 @@ function downloadText(r, label) {
 
   text += (r.summary || '').replace(/\*\*/g, '') + '\r\n\r\n';
 
-  text += '共 ' + (r.count || 0) + ' 条新闻\r\n';
+  text += '鍏?' + (r.count || 0) + ' 鏉℃柊闂籠r\n';
 
-  text += '生成时间: ' + (DATA.updated_at || '');
+  text += '鐢熸垚鏃堕棿: ' + (DATA.updated_at || '');
 
   var blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
 
@@ -2364,7 +2380,7 @@ function downloadText(r, label) {
 
   a.href = URL.createObjectURL(blob);
 
-  a.download = 'robotaxi_周报_' + label + '.txt';
+  a.download = 'robotaxi_鍛ㄦ姤_' + label + '.txt';
 
   a.click();
 
@@ -2374,15 +2390,15 @@ function downloadText(r, label) {
 
 
 
-// ===== 导出辅助：添加标题 =====
+// ===== 瀵煎嚭杈呭姪锛氭坊鍔犳爣棰?=====
 
 function addExportTitle(el) {
   var div = document.createElement('div');
   div.id = 'exportTitle';
   div.style.cssText = 'text-align:center; padding:12px 20px 8px 20px; margin-bottom:10px; border-bottom:2px solid #667eea; background:linear-gradient(180deg,#f8f6ff,#fff); border-radius:6px 6px 0 0;';
-  div.innerHTML = '<div style="font-size:20px; color:#667eea; letter-spacing:2px; font-weight:600; margin-bottom:2px;">【华泰互联网传媒Jonos】</div>'
-    + '<div style="font-size:36px; font-weight:800; color:#1a1a2e; letter-spacing:1.5px; margin-bottom:4px;">Robotaxi 行业动态</div>'
-    + '<div style="font-size:14px; color:#718096; letter-spacing:0.5px;">分析师 苏燕妮 13148866768 / 邵浩岚 15195381655</div>';
+  div.innerHTML = '<div style="font-size:20px; color:#667eea; letter-spacing:2px; font-weight:600; margin-bottom:2px;">銆愬崕娉颁簰鑱旂綉浼犲獟Jonos銆?/div>'
+    + '<div style="font-size:36px; font-weight:800; color:#1a1a2e; letter-spacing:1.5px; margin-bottom:4px;">Robotaxi 琛屼笟鍔ㄦ€?/div>'
+    + '<div style="font-size:14px; color:#718096; letter-spacing:0.5px;">鍒嗘瀽甯?鑻忕嚂濡?13148866768 / 閭垫旦宀?15195381655</div>';
   el.insertBefore(div, el.firstChild);
 }
 
@@ -2391,7 +2407,7 @@ function removeExportTitle(el) {
   if (t) t.remove();
 }
 
-// ===== 下载菜单切换 =====
+// ===== 涓嬭浇鑿滃崟鍒囨崲 =====
 
 function toggleDL() {
 
@@ -2407,7 +2423,7 @@ function hideDL() {
 
 }
 
-// 点击页面其他地方关闭菜单
+// 鐐瑰嚮椤甸潰鍏朵粬鍦版柟鍏抽棴鑿滃崟
 
 document.addEventListener('click', function(e) {
 
@@ -2423,17 +2439,17 @@ document.addEventListener('click', function(e) {
 
 
 
-// ===== 导出PDF =====
+// ===== 瀵煎嚭PDF =====
 
 function exportPDF() {
 
   var r = _currentReport;
 
-  if (!r) { alert('没有可导出的周报'); return; }
+  if (!r) { alert('娌℃湁鍙鍑虹殑鍛ㄦ姤'); return; }
 
   var dr = r.date_range || '';
 
-  var label = dr.replace(/-0/g, '-').replace(/~/g, '至');
+  var label = dr.replace(/-0/g, '-').replace(/~/g, '鑷?);
 
   var el = document.querySelector('.weekly');
 
@@ -2489,7 +2505,7 @@ function exportPDF() {
 
               a.href = URL.createObjectURL(b);
 
-              a.download = 'robotaxi_周报_' + label + '.png';
+              a.download = 'robotaxi_鍛ㄦ姤_' + label + '.png';
 
               a.click();
 
@@ -2509,7 +2525,7 @@ function exportPDF() {
 
           var ph = (canvas.height / canvas.width) * pw;
 
-          // 如果超出一页，按高度缩放
+          // 濡傛灉瓒呭嚭涓€椤碉紝鎸夐珮搴︾缉鏀?
 
           var maxPh = 277;
 
@@ -2517,7 +2533,7 @@ function exportPDF() {
 
           pdf.addImage(imgData, 'PNG', 10, 10, pw, ph);
 
-          pdf.save('robotaxi_周报_' + label + '.pdf');
+          pdf.save('robotaxi_鍛ㄦ姤_' + label + '.pdf');
 
         });
 
@@ -2535,7 +2551,7 @@ function exportPDF() {
 
     if (dlWrap) dlWrap.style.display = '';
 
-    alert('PDF生成失败');
+    alert('PDF鐢熸垚澶辫触');
 
   }
 
