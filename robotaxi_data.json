@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-05-21 09:40",
-  "total": 259,
-  "week_count": 36,
+  "updated_at": "2026-05-22 10:06",
+  "total": 262,
+  "week_count": 29,
   "date_from": "2026-02-10",
-  "date_to": "2026-05-20",
+  "date_to": "2026-05-22",
   "companies": [
     "小马智行",
     "WeRide",
@@ -70,13 +70,13 @@
   ],
   "company_stats": {
     "Tesla": 45,
-    "Waymo": 32,
+    "Waymo": 34,
     "小马智行": 30,
     "WeRide": 25,
     "Zoox": 20,
     "Uber": 18,
+    "Wayve": 16,
     "Nuro": 16,
-    "Wayve": 15,
     "Aurora": 11,
     "Motional": 7,
     "Rivian": 6,
@@ -88,11 +88,41 @@
   },
   "source_stats": {
     "Twitter": 140,
-    "TechCrunch": 52,
+    "TechCrunch": 55,
     "微信公众号(WeWeRSS)": 49,
     "The Driverless Digest": 18
   },
   "news": [
+    {
+      "id": 496,
+      "date": "2026-05-22",
+      "company": "Waymo",
+      "title": "Waymo在四个城市暂停运营，robotaxi持续遭遇洪水问题",
+      "summary": "Waymo已暂停其在亚特兰大和圣安东尼奥的robotaxi服务，以解决其自动驾驶车辆驶入积水道路的问题。此前，该公司已在其他两个城市采取了类似措施。Waymo表示，正在努力改进其系统，确保车辆能够准确识别并避开洪水区域，避免潜在的安全风险。这一系列暂停运营事件凸显了自动驾驶技术在应对复杂天气条件时面临的挑战。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/05/21/waymo-pauses-service-in-four-cities-as-robotaxis-keep-driving-into-floods/",
+      "type": "商业拓展"
+    },
+    {
+      "id": 498,
+      "date": "2026-05-21",
+      "company": "Wayve",
+      "title": "Wayve自动驾驶技术将于2028年搭载于Stellantis美国车型",
+      "summary": "英国自动驾驶初创公司Wayve宣布，其L4级自动驾驶技术将于2028年首次应用于Stellantis集团旗下美国市场车型。此次合作标志着Wayve的AI驱动驾驶系统（基于端到端深度学习，无需高精地图）首次进入北美市场。Stellantis计划在2028年推出的特定车型中集成Wayve的\"Embodied AI\"技术，该技术通过摄像头和雷达数据实现城市道路与高速公路的自主导航。Wayve此前已获得软银、微软等投资者注资，估值超10亿美元。双方未披露具体车型及财务细节，但强调该技术将首先面向消费级乘用车，而非robotaxi车队。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/05/21/wayves-self-driving-tech-is-headed-to-us-cars-made-by-stellantis/",
+      "type": "行业动态"
+    },
+    {
+      "id": 497,
+      "date": "2026-05-21",
+      "company": "Waymo",
+      "title": "Waymo因robotaxi在施工区域表现不佳暂停高速服务",
+      "summary": "Waymo宣布暂停其robotaxi在高速公路上的运营服务，原因是其自动驾驶车辆在施工区域遇到困难。此次服务暂停之前，Waymo在亚特兰大和圣安东尼奥的运营也已暂停，原因是其robotaxi驶入了积水街道。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/05/21/waymo-halts-freeway-rides-after-robotaxis-struggle-in-construction-zones/",
+      "type": "商业拓展"
+    },
     {
       "id": 495,
       "date": "2026-05-20",
@@ -2685,28 +2715,28 @@
     }
   ],
   "weekly_report": {
-    "summary": "【本周核心】\n商业化落地加速，Robotaxi与货运并行推进\n• 商业化——Waymo在美11城运营面积超1400平方英里，Zoox拉斯维加斯新增会展中心站点\n• 商业化——Motional robotaxi正式登陆Uber平台，在拉斯维加斯提供服务\n• 融资——Rivian旗下Mind Robotics再获4亿美元融资，累计超10亿美元\n• 监管——Waymo因积水安全隐患发布软件召回，涉及3800辆robotaxi\n【国际动态】\n• Waymo5月12日因积水问题发布软件召回，涉及3800辆robotaxi，通过远程更新完成。5月15日宣布在美11座城市运营面积超1400平方英里，计划扩展至奥斯汀、亚特兰大等城市。\n• Zoox5月15日新增拉斯维加斯会展中心站点，目前共有13个活跃运营站点。5月11日新增Aria酒店站点，服务仍为免费。\n• Motional5月15日宣布robotaxi正式登陆Uber平台，在拉斯维加斯提供服务，EDC音乐节期间可免费乘坐。\n• Nuro5月14日宣布进军欧洲，在德国慕尼黑设立运营基地，支持工程研发、运营及合作伙伴对接。\n• Rivian旗下Mind Robotics5月13日再获4亿美元融资，累计融资超10亿美元。创始人RJ Scaringe三家公司累计融资超120亿美元。\n【国内要闻】\n• WeRide发布2026年Q1财报：营收同比增长58%至1650万美元，业务覆盖12个国家40余座城市，Robotaxi大规模商业化稳步推进。\n• 百度Apollo亮相2026北京车展，定位为智能座舱和智能驾驶的关键基建与桥梁。\n【政策动态】\n本周暂无重要政策动态\n【关键数据一览】\n• WeRide—Q1营收1650万美元（同比+58%），覆盖12国40余城\n• Waymo—运营覆盖11城、面积超1400平方英里，召回3800辆robotaxi\n• Zoox—拉斯维加斯13个活跃运营站点\n• Rivian/Mind Robotics—累计融资超10亿美元，最新一轮4亿美元\n• Uber/Rapido—估值30亿美元，融资2.4亿美元\n• Nuro—在德国慕尼黑设立欧洲基地\n• Aurora—Sun Belt地区12条路线，新增达拉斯至拉雷多、达拉斯至俄克拉荷马城",
+    "summary": "【本周核心】\n商业化与融资并行，Robotaxi全球扩张加速\n• 商业化——Waymo运营面积超1400平方英里覆盖11城；Zoox在拉斯维加斯新增会展中心站点，活跃站点达13个；Motional通过Uber平台在拉斯维加斯上线robotaxi服务\n• 融资——Rivian旗下Mind Robotics再获4亿美元融资；Uber竞争对手Rapido以30亿美元估值融资2.4亿美元\n• 监管——Waymo因积水安全隐患召回3800辆robotaxi；特斯拉披露两起涉及远程操作员的Robotaxi事故\n• 财报——WeRide Q1营收同比增长58%至1650万美元，业务覆盖12国40余城\n【国际动态】\n• Waymo5月12日因积水安全隐患发布软件召回，涉及3800辆robotaxi，通过远程更新完成。5月15日运营面积超1400平方英里，覆盖美国11座城市。\n• Tesla5月15日披露两起涉及远程操作员的Robotaxi事故，暴露远程监控与应急响应挑战。5月17日推送FSD 14.3.3春季更新，智能召唤最高速度提升至8英里/小时。\n• Zoox5月15日在拉斯维加斯新增会展中心站点，目前共有13个活跃运营站点。服务仍为免费开放。\n• Motional5月15日通过Uber平台在拉斯维加斯上线robotaxi服务，EDC音乐节期间用户可免费乘坐。\n• Nuro5月14日宣布进军欧洲，在德国慕尼黑设立运营基地，支持工程研发、运营及合作伙伴对接。\n【国内要闻】\n• WeRide5月14日发布Q1 2026财报，营收同比增长58%至1650万美元，业务已覆盖12个国家40余座城市，Robotaxi大规模商业化稳步推进。\n• 百度Apollo5月11日亮相2026北京车展，定位为智能座舱和智能驾驶的关键基建与桥梁。\n【政策动态】\n本周暂无重要政策动态\n【关键数据一览】\n• WeRide—Q1营收1650万美元，同比增长58%，覆盖12国40余城\n• Waymo—运营面积超1400平方英里，覆盖11城，召回3800辆robotaxi\n• Rivian—Mind Robotics累计融资超10亿美元，最新一轮4亿美元\n• Uber—Rapido以30亿美元估值融资2.4亿美元\n• Zoox—拉斯维加斯13个活跃运营站点\n• Tesla—FSD 14.3.3推送，智能召唤最高速度提升至8英里/小时",
     "highlights": [
       "Q1营收同比增长58%至1650万美元，全球业务覆盖12国40余城（WeRide）",
-      "在美国11座城市运营面积超1400平方英里，因积水问题发布软件召回（Waymo）",
-      "RJ Scaringe旗下三家公司累计融资超120亿美元，投资者持续追捧（Rivian）",
-      "印度竞争对手Rapido以30亿美元估值融资2.4亿美元（Uber）",
-      "旗下Mind Robotics再获4亿美元融资，累计超10亿美元（Rivian）",
-      "进军欧洲，在德国慕尼黑设立运营基地（Nuro）"
+      "运营面积超1400平方英里，覆盖美国11座城市（Waymo）",
+      "旗下Mind Robotics再获4亿美元融资，累计融资超10亿美元（Rivian）",
+      "印度竞争对手Rapido以30亿美元估值完成2.4亿美元融资（Uber）",
+      "宣布进军欧洲，在德国慕尼黑设立运营基地（Nuro）",
+      "因积水安全隐患发布软件召回，涉及3800辆robotaxi（Waymo）"
     ],
     "count": 38,
     "date_range": "2026-05-11~2026-05-17"
   },
   "weekly_history": [
     {
-      "summary": "【本周核心】\n商业化落地加速，Robotaxi与货运并行推进\n• 商业化——Waymo在美11城运营面积超1400平方英里，Zoox拉斯维加斯新增会展中心站点\n• 商业化——Motional robotaxi正式登陆Uber平台，在拉斯维加斯提供服务\n• 融资——Rivian旗下Mind Robotics再获4亿美元融资，累计超10亿美元\n• 监管——Waymo因积水安全隐患发布软件召回，涉及3800辆robotaxi\n【国际动态】\n• Waymo5月12日因积水问题发布软件召回，涉及3800辆robotaxi，通过远程更新完成。5月15日宣布在美11座城市运营面积超1400平方英里，计划扩展至奥斯汀、亚特兰大等城市。\n• Zoox5月15日新增拉斯维加斯会展中心站点，目前共有13个活跃运营站点。5月11日新增Aria酒店站点，服务仍为免费。\n• Motional5月15日宣布robotaxi正式登陆Uber平台，在拉斯维加斯提供服务，EDC音乐节期间可免费乘坐。\n• Nuro5月14日宣布进军欧洲，在德国慕尼黑设立运营基地，支持工程研发、运营及合作伙伴对接。\n• Rivian旗下Mind Robotics5月13日再获4亿美元融资，累计融资超10亿美元。创始人RJ Scaringe三家公司累计融资超120亿美元。\n【国内要闻】\n• WeRide发布2026年Q1财报：营收同比增长58%至1650万美元，业务覆盖12个国家40余座城市，Robotaxi大规模商业化稳步推进。\n• 百度Apollo亮相2026北京车展，定位为智能座舱和智能驾驶的关键基建与桥梁。\n【政策动态】\n本周暂无重要政策动态\n【关键数据一览】\n• WeRide—Q1营收1650万美元（同比+58%），覆盖12国40余城\n• Waymo—运营覆盖11城、面积超1400平方英里，召回3800辆robotaxi\n• Zoox—拉斯维加斯13个活跃运营站点\n• Rivian/Mind Robotics—累计融资超10亿美元，最新一轮4亿美元\n• Uber/Rapido—估值30亿美元，融资2.4亿美元\n• Nuro—在德国慕尼黑设立欧洲基地\n• Aurora—Sun Belt地区12条路线，新增达拉斯至拉雷多、达拉斯至俄克拉荷马城",
+      "summary": "【本周核心】\n商业化与融资并行，Robotaxi全球扩张加速\n• 商业化——Waymo运营面积超1400平方英里覆盖11城；Zoox在拉斯维加斯新增会展中心站点，活跃站点达13个；Motional通过Uber平台在拉斯维加斯上线robotaxi服务\n• 融资——Rivian旗下Mind Robotics再获4亿美元融资；Uber竞争对手Rapido以30亿美元估值融资2.4亿美元\n• 监管——Waymo因积水安全隐患召回3800辆robotaxi；特斯拉披露两起涉及远程操作员的Robotaxi事故\n• 财报——WeRide Q1营收同比增长58%至1650万美元，业务覆盖12国40余城\n【国际动态】\n• Waymo5月12日因积水安全隐患发布软件召回，涉及3800辆robotaxi，通过远程更新完成。5月15日运营面积超1400平方英里，覆盖美国11座城市。\n• Tesla5月15日披露两起涉及远程操作员的Robotaxi事故，暴露远程监控与应急响应挑战。5月17日推送FSD 14.3.3春季更新，智能召唤最高速度提升至8英里/小时。\n• Zoox5月15日在拉斯维加斯新增会展中心站点，目前共有13个活跃运营站点。服务仍为免费开放。\n• Motional5月15日通过Uber平台在拉斯维加斯上线robotaxi服务，EDC音乐节期间用户可免费乘坐。\n• Nuro5月14日宣布进军欧洲，在德国慕尼黑设立运营基地，支持工程研发、运营及合作伙伴对接。\n【国内要闻】\n• WeRide5月14日发布Q1 2026财报，营收同比增长58%至1650万美元，业务已覆盖12个国家40余座城市，Robotaxi大规模商业化稳步推进。\n• 百度Apollo5月11日亮相2026北京车展，定位为智能座舱和智能驾驶的关键基建与桥梁。\n【政策动态】\n本周暂无重要政策动态\n【关键数据一览】\n• WeRide—Q1营收1650万美元，同比增长58%，覆盖12国40余城\n• Waymo—运营面积超1400平方英里，覆盖11城，召回3800辆robotaxi\n• Rivian—Mind Robotics累计融资超10亿美元，最新一轮4亿美元\n• Uber—Rapido以30亿美元估值融资2.4亿美元\n• Zoox—拉斯维加斯13个活跃运营站点\n• Tesla—FSD 14.3.3推送，智能召唤最高速度提升至8英里/小时",
       "highlights": [
         "Q1营收同比增长58%至1650万美元，全球业务覆盖12国40余城（WeRide）",
-        "在美国11座城市运营面积超1400平方英里，因积水问题发布软件召回（Waymo）",
-        "RJ Scaringe旗下三家公司累计融资超120亿美元，投资者持续追捧（Rivian）",
-        "印度竞争对手Rapido以30亿美元估值融资2.4亿美元（Uber）",
-        "旗下Mind Robotics再获4亿美元融资，累计超10亿美元（Rivian）",
-        "进军欧洲，在德国慕尼黑设立运营基地（Nuro）"
+        "运营面积超1400平方英里，覆盖美国11座城市（Waymo）",
+        "旗下Mind Robotics再获4亿美元融资，累计融资超10亿美元（Rivian）",
+        "印度竞争对手Rapido以30亿美元估值完成2.4亿美元融资（Uber）",
+        "宣布进军欧洲，在德国慕尼黑设立运营基地（Nuro）",
+        "因积水安全隐患发布软件召回，涉及3800辆robotaxi（Waymo）"
       ],
       "count": 38,
       "date_range": "2026-05-11~2026-05-17"
