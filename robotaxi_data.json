@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-05-22 10:08",
-  "total": 262,
-  "week_count": 29,
+  "updated_at": "2026-05-23 16:38",
+  "total": 275,
+  "week_count": 35,
   "date_from": "2026-02-10",
-  "date_to": "2026-05-22",
+  "date_to": "2026-05-23",
   "companies": [
     "小马智行",
     "WeRide",
@@ -70,15 +70,15 @@
   ],
   "company_stats": {
     "Tesla": 45,
-    "Waymo": 34,
+    "Waymo": 35,
     "小马智行": 30,
-    "WeRide": 25,
-    "Zoox": 20,
+    "WeRide": 27,
+    "Zoox": 21,
+    "Wayve": 19,
     "Uber": 18,
-    "Wayve": 16,
-    "Nuro": 16,
+    "Nuro": 17,
     "Aurora": 11,
-    "Motional": 7,
+    "Motional": 8,
     "Rivian": 6,
     "曹操出行": 5,
     "百度Apollo": 2,
@@ -87,12 +87,92 @@
     "Bot Auto": 1
   },
   "source_stats": {
-    "Twitter": 140,
+    "Twitter": 153,
     "TechCrunch": 55,
     "微信公众号(WeWeRSS)": 49,
     "The Driverless Digest": 18
   },
   "news": [
+    {
+      "id": 509,
+      "date": "2026-05-23",
+      "company": "Sawyer Merritt",
+      "title": "特斯拉为庆祝FIFA世界杯推出特别系列商品",
+      "summary": "特斯拉在其官方在线商店上架了FIFA世界杯主题系列商品，包括：带有Cybercab金色细节和超级工厂徽标的Tesla FC足球（55美元）、Tesla FC球衣（95美元）、Tesla FC棒球帽（35美元）以及Tesla FC袜子（30美元）。购买链接：shop.tesla.com/category/spec…",
+      "source": "Twitter",
+      "url": "https://x.com/SawyerMerritt/status/2058021387529224421",
+      "type": "技术突破"
+    },
+    {
+      "id": 508,
+      "date": "2026-05-23",
+      "company": "Sawyer Merritt",
+      "title": "特斯拉FSD欧洲新里程碑：荷兰与立陶宛车主累计行驶达2000万公里",
+      "summary": "特斯拉欧洲官方宣布，荷兰和立陶宛的FSD（完全自动驾驶）监督模式车主累计行驶里程已突破2000万公里。值得注意的是，就在两天前这一数字刚达到1500万公里，意味着过去48小时内，两地车主日均行驶超250万公里（约155万英里），展现出FSD在欧洲市场的强劲增长势头。",
+      "source": "Twitter",
+      "url": "https://x.com/SawyerMerritt/status/2058023090941026634",
+      "type": "行业动态"
+    },
+    {
+      "id": 511,
+      "date": "2026-05-22",
+      "company": "Sawyer Merritt",
+      "title": "特斯拉在欧洲终止FSD一次性购买，仅提供月订阅服务",
+      "summary": "特斯拉已在欧洲全面终止FSD（全自动驾驶）的一次性购买选项，仅保留月订阅模式。在英国，订阅费用为每月99英镑，而在欧洲其他大部分国家，月费为99欧元。此举标志着特斯拉在欧洲市场进一步转向订阅制商业模式。",
+      "source": "Twitter",
+      "url": "https://x.com/SawyerMerritt/status/2057830857050607640",
+      "type": "技术突破"
+    },
+    {
+      "id": 510,
+      "date": "2026-05-22",
+      "company": "Sawyer Merritt",
+      "title": "特斯拉FSD在佛兰德斯道路测试里程已超2000公里",
+      "summary": "特斯拉FSD（全自动驾驶系统）在比利时佛兰德斯地区的测试里程已突破2000公里。原计划5000公里的测试目标将很快完成，旨在系统性地对比佛兰德斯与荷兰道路基础设施的差异，为快速获得当地认证铺平道路。",
+      "source": "Twitter",
+      "url": "https://x.com/AnnickDeRidder/status/2057789342760722893",
+      "type": "行业动态"
+    },
+    {
+      "id": 506,
+      "date": "2026-05-22",
+      "company": "WeRide",
+      "title": "阿联酋网红Yasmine在迪拜体验首次全无人驾驶Robotaxi，称“真正感受到未来！”WeRide在阿布扎比和迪拜运营全无人Robotaxi服务",
+      "summary": "阿联酋网红Yasmine在迪拜首次乘坐全无人驾驶Robotaxi，感叹“真正感受到未来！”中国自动驾驶公司WeRide（文远知行）目前已在阿布扎比和迪拜提供全无人Robotaxi服务，并计划与Uber合作，在该地区部署超过1200辆Robotaxi。$WRD股价受此消息提振。",
+      "source": "Twitter",
+      "url": "https://x.com/WeRide_ai/status/2057724615334764827",
+      "type": "技术突破"
+    },
+    {
+      "id": 505,
+      "date": "2026-05-22",
+      "company": "Motional",
+      "title": "拉斯维加斯市中心探索之旅：通过Uber App匹配Motional robotaxi，尽享旅程",
+      "summary": "拉斯维加斯市中心充满探索乐趣。用户可通过Uber应用匹配Motional的robotaxi，轻松享受自动驾驶出行体验。",
+      "source": "Twitter",
+      "url": "https://x.com/motionaldrive/status/2057869095270306086",
+      "type": "商业拓展"
+    },
+    {
+      "id": 501,
+      "date": "2026-05-22",
+      "company": "Wayve",
+      "title": "英国自动驾驶车辆试点计划启动，迈向大规模无人客运服务的重要一步",
+      "summary": "英国自动驾驶车辆试点计划正式启动，这是实现英国大规模自动驾驶客运服务的关键里程碑。我们自豪地支持英国政府及交通部（transportgovuk）共同制定相关法规，助力释放自动驾驶技术在英国跨时代的机遇。今年晚些时候，我们将从伦敦的首次商业部署开始，推动这一进程。",
+      "source": "Twitter",
+      "url": "https://x.com/wayve_ai/status/2057750969673228769",
+      "type": "技术突破"
+    },
+    {
+      "id": 500,
+      "date": "2026-05-22",
+      "company": "Zoox",
+      "title": "Zoox CEO Aicha Evans谈robotaxi竞赛：“我们正处于验证阶段”",
+      "summary": "Zoox CEO Aicha Evans在接受采访时表示，robotaxi行业已从概念验证进入实际运营的“验证阶段”。她强调，Zoox专注于打造完全自主的、双向行驶的定制化车辆，而非改装现有车型。Evans指出，尽管Waymo和Tesla等竞争对手在商业化上领先，但Zoox的独特设计和技术路线将在长期竞争中占据优势。她透露，Zoox计划在2025年启动付费robotaxi服务，并逐步扩大运营范围。Evans还提到，行业需要更多实际数据来证明安全性和经济可行性，而Zoox正在通过有限测试积累关键里程。",
+      "source": "Twitter",
+      "url": "https://x.com/FastCompany/status/2057704526832967807",
+      "type": "技术突破"
+    },
     {
       "id": 496,
       "date": "2026-05-22",
@@ -102,6 +182,56 @@
       "source": "TechCrunch",
       "url": "https://techcrunch.com/2026/05/21/waymo-pauses-service-in-four-cities-as-robotaxis-keep-driving-into-floods/",
       "type": "商业拓展"
+    },
+    {
+      "id": 507,
+      "date": "2026-05-21",
+      "company": "WeRide",
+      "title": "瑞士苏黎世机场Robobus服务移除前排安全驾驶员，迈向全无人驾驶",
+      "summary": "瑞士自动驾驶公司宣布，在苏黎世机场（zrh_airport）的Robobus服务中已移除前排安全驾驶员。目前车辆由远程操作支持，方向盘后无人，仅在后排保留一名安全人员。此举为欧洲全面实现无人驾驶Robobus服务铺平道路。相关公司股票代码为$WRD。",
+      "source": "Twitter",
+      "url": "https://x.com/WeRide_ai/status/2057295587385704779",
+      "type": "技术突破"
+    },
+    {
+      "id": 504,
+      "date": "2026-05-21",
+      "company": "Nuro",
+      "title": "Nuro新任CFO盛赞公司文化：人才、韧性与专注成就非凡",
+      "summary": "Nuro新任首席财务官Mike Mancini表示，Nuro的成功并非偶然，而是源于人才、坚韧不拔的精神以及对正确做事方式的持续专注。他认为这种机构特质非常罕见，正是他在Nuro所看到的。",
+      "source": "Twitter",
+      "url": "https://x.com/nuro/status/2057479143860871252",
+      "type": "技术突破"
+    },
+    {
+      "id": 503,
+      "date": "2026-05-21",
+      "company": "Wayve",
+      "title": "Wayve与Stellantis达成战略技术合作，将AI Driver引入STLA AutoDrive平台",
+      "summary": "今日，Wayve宣布与Stellantis建立战略技术合作伙伴关系，将其AI Driver集成至STLA AutoDrive平台。该合作将实现城市街道和高速公路上的免提、门到门监督式自动驾驶功能。该技术计划于2028年在北美率先推出，并基于可跨车辆平台和市场扩展的AI架构构建。",
+      "source": "Twitter",
+      "url": "https://x.com/wayve_ai/status/2057442534557704365",
+      "type": "技术突破"
+    },
+    {
+      "id": 502,
+      "date": "2026-05-21",
+      "company": "Wayve",
+      "title": "Wayve与Stellantis达成合作，2028年起在北美车型集成AI驾驶系统",
+      "summary": "Wayve创始人今日在底特律宣布重大消息，将与Stellantis合作，自2028年起在北美市场将Wayve AI Driver集成至Stellantis旗下车型。Wayve表示，Stellantis的规模化生产能力结合Wayve的全球AI技术，将为客户带来“魔法般”的驾驶体验。",
+      "source": "Twitter",
+      "url": "https://x.com/alexgkendall/status/2057449890825830724",
+      "type": "技术突破"
+    },
+    {
+      "id": 499,
+      "date": "2026-05-21",
+      "company": "Waymo",
+      "title": "Waymo乘客们：副驾还是后排？",
+      "summary": "Waymo在社交媒体上发起了一个趣味投票，询问其乘客在乘坐自动驾驶出租车时更偏好副驾驶座还是后排座位。这一互动不仅增加了用户参与度，也反映了Waymo在提升乘客体验方面的细致考量。",
+      "source": "Twitter",
+      "url": "https://x.com/Mike_Pevzner/status/2057480303359480199",
+      "type": "行业动态"
     },
     {
       "id": 498,
@@ -2715,28 +2845,28 @@
     }
   ],
   "weekly_report": {
-    "summary": "【本周核心】\n商业化与融资并行，Robotaxi全球扩张加速\n• 商业化——Waymo运营面积超1400平方英里覆盖11城；Zoox在拉斯维加斯新增会展中心站点，活跃站点达13个；Motional通过Uber平台在拉斯维加斯上线robotaxi服务\n• 融资——Rivian旗下Mind Robotics再获4亿美元融资；Uber竞争对手Rapido以30亿美元估值融资2.4亿美元\n• 监管——Waymo因积水安全隐患召回3800辆robotaxi；特斯拉披露两起涉及远程操作员的Robotaxi事故\n• 财报——WeRide Q1营收同比增长58%至1650万美元，业务覆盖12国40余城\n【国际动态】\n• Waymo5月12日因积水安全隐患发布软件召回，涉及3800辆robotaxi，通过远程更新完成。5月15日运营面积超1400平方英里，覆盖美国11座城市。\n• Tesla5月15日披露两起涉及远程操作员的Robotaxi事故，暴露远程监控与应急响应挑战。5月17日推送FSD 14.3.3春季更新，智能召唤最高速度提升至8英里/小时。\n• Zoox5月15日在拉斯维加斯新增会展中心站点，目前共有13个活跃运营站点。服务仍为免费开放。\n• Motional5月15日通过Uber平台在拉斯维加斯上线robotaxi服务，EDC音乐节期间用户可免费乘坐。\n• Nuro5月14日宣布进军欧洲，在德国慕尼黑设立运营基地，支持工程研发、运营及合作伙伴对接。\n【国内要闻】\n• WeRide5月14日发布Q1 2026财报，营收同比增长58%至1650万美元，业务已覆盖12个国家40余座城市，Robotaxi大规模商业化稳步推进。\n• 百度Apollo5月11日亮相2026北京车展，定位为智能座舱和智能驾驶的关键基建与桥梁。\n【政策动态】\n本周暂无重要政策动态\n【关键数据一览】\n• WeRide—Q1营收1650万美元，同比增长58%，覆盖12国40余城\n• Waymo—运营面积超1400平方英里，覆盖11城，召回3800辆robotaxi\n• Rivian—Mind Robotics累计融资超10亿美元，最新一轮4亿美元\n• Uber—Rapido以30亿美元估值融资2.4亿美元\n• Zoox—拉斯维加斯13个活跃运营站点\n• Tesla—FSD 14.3.3推送，智能召唤最高速度提升至8英里/小时",
+    "summary": "【本周核心】\n商业化落地加速，Robotaxi与货运并行推进\n• 商业化——Waymo在美11城运营面积超1400平方英里，Zoox新增拉斯维加斯会展中心站点，Motional robotaxi上线Uber平台\n• 融资——Rivian旗下Mind Robotics再获4亿美元融资，Uber竞争对手Rapido以30亿美元估值融资2.4亿美元\n• 监管——Waymo因积水问题发布软件召回，特斯拉披露两起涉及远程操作员的Robotaxi事故\n• 财报——WeRide Q1营收同比增长58%至1650万美元，全球业务覆盖12国40余城\n【国际动态】\n• Waymo5月12日因积水安全隐患发布软件召回，通过远程更新完成；5月15日宣布在美11城运营面积超1400平方英里，计划扩展至奥斯汀、亚特兰大等城市。\n• Zoox5月15日新增拉斯维加斯会展中心站点，目前共有13个活跃运营站点；服务仍为免费。\n• Motional5月15日宣布robotaxi正式上线Uber平台，在拉斯维加斯提供服务，EDC Week期间可免费乘坐。\n• Tesla5月15日披露两起涉及远程操作员的Robotaxi事故（2023年及2024年各一起），暴露远程监控挑战；5月17日推送FSD 14.3.3春季更新，智能召唤最高速度提升至8英里/小时。\n• Nuro5月14日宣布进军欧洲，在德国慕尼黑设立运营基地，支持工程研发及合作伙伴对接。\n【国内要闻】\n• 百度Apollo5月11日亮相2026北京车展，定位为智能座舱和智能驾驶的关键基建与桥梁。\n• 小马智行、文远知行、滴滴出行、曹操出行、黑芝麻智能本周暂无重要动态。\n【政策动态】\n本周暂无重要政策动态\n【关键数据一览】\n• WeRide—Q1营收1650万美元，同比增长58%，覆盖12国40余城\n• Waymo—美国11城运营面积超1400平方英里，召回3800辆robotaxi\n• Zoox—拉斯维加斯13个活跃运营站点\n• Rivian—旗下Mind Robotics累计融资超10亿美元，最新一轮4亿美元\n• Uber—印度竞争对手Rapido估值30亿美元，融资2.4亿美元\n• Tesla—FSD 14.3.3推送，智能召唤最高速度提升至8英里/小时\n• Aurora—Sun Belt地区12条路线，新增达拉斯至拉雷多、达拉斯至俄克拉荷马城两条线路\n• Wayve—AI驾驶员已覆盖500+城市",
     "highlights": [
       "Q1营收同比增长58%至1650万美元，全球业务覆盖12国40余城（WeRide）",
-      "运营面积超1400平方英里，覆盖美国11座城市（Waymo）",
-      "旗下Mind Robotics再获4亿美元融资，累计融资超10亿美元（Rivian）",
-      "印度竞争对手Rapido以30亿美元估值完成2.4亿美元融资（Uber）",
-      "宣布进军欧洲，在德国慕尼黑设立运营基地（Nuro）",
-      "因积水安全隐患发布软件召回，涉及3800辆robotaxi（Waymo）"
+      "美国11城运营面积超1400平方英里，因积水问题发布软件召回（Waymo）",
+      "RJ Scaringe旗下三家公司累计融资超120亿美元，投资者持续追捧（Rivian）",
+      "印度竞争对手Rapido以30亿美元估值融资2.4亿美元（Uber）",
+      "旗下Mind Robotics再获4亿美元融资，累计超10亿美元（Rivian）",
+      "进军欧洲，在德国慕尼黑设立运营基地（Nuro）"
     ],
     "count": 38,
     "date_range": "2026-05-11~2026-05-17"
   },
   "weekly_history": [
     {
-      "summary": "【本周核心】\n商业化与融资并行，Robotaxi全球扩张加速\n• 商业化——Waymo运营面积超1400平方英里覆盖11城；Zoox在拉斯维加斯新增会展中心站点，活跃站点达13个；Motional通过Uber平台在拉斯维加斯上线robotaxi服务\n• 融资——Rivian旗下Mind Robotics再获4亿美元融资；Uber竞争对手Rapido以30亿美元估值融资2.4亿美元\n• 监管——Waymo因积水安全隐患召回3800辆robotaxi；特斯拉披露两起涉及远程操作员的Robotaxi事故\n• 财报——WeRide Q1营收同比增长58%至1650万美元，业务覆盖12国40余城\n【国际动态】\n• Waymo5月12日因积水安全隐患发布软件召回，涉及3800辆robotaxi，通过远程更新完成。5月15日运营面积超1400平方英里，覆盖美国11座城市。\n• Tesla5月15日披露两起涉及远程操作员的Robotaxi事故，暴露远程监控与应急响应挑战。5月17日推送FSD 14.3.3春季更新，智能召唤最高速度提升至8英里/小时。\n• Zoox5月15日在拉斯维加斯新增会展中心站点，目前共有13个活跃运营站点。服务仍为免费开放。\n• Motional5月15日通过Uber平台在拉斯维加斯上线robotaxi服务，EDC音乐节期间用户可免费乘坐。\n• Nuro5月14日宣布进军欧洲，在德国慕尼黑设立运营基地，支持工程研发、运营及合作伙伴对接。\n【国内要闻】\n• WeRide5月14日发布Q1 2026财报，营收同比增长58%至1650万美元，业务已覆盖12个国家40余座城市，Robotaxi大规模商业化稳步推进。\n• 百度Apollo5月11日亮相2026北京车展，定位为智能座舱和智能驾驶的关键基建与桥梁。\n【政策动态】\n本周暂无重要政策动态\n【关键数据一览】\n• WeRide—Q1营收1650万美元，同比增长58%，覆盖12国40余城\n• Waymo—运营面积超1400平方英里，覆盖11城，召回3800辆robotaxi\n• Rivian—Mind Robotics累计融资超10亿美元，最新一轮4亿美元\n• Uber—Rapido以30亿美元估值融资2.4亿美元\n• Zoox—拉斯维加斯13个活跃运营站点\n• Tesla—FSD 14.3.3推送，智能召唤最高速度提升至8英里/小时",
+      "summary": "【本周核心】\n商业化落地加速，Robotaxi与货运并行推进\n• 商业化——Waymo在美11城运营面积超1400平方英里，Zoox新增拉斯维加斯会展中心站点，Motional robotaxi上线Uber平台\n• 融资——Rivian旗下Mind Robotics再获4亿美元融资，Uber竞争对手Rapido以30亿美元估值融资2.4亿美元\n• 监管——Waymo因积水问题发布软件召回，特斯拉披露两起涉及远程操作员的Robotaxi事故\n• 财报——WeRide Q1营收同比增长58%至1650万美元，全球业务覆盖12国40余城\n【国际动态】\n• Waymo5月12日因积水安全隐患发布软件召回，通过远程更新完成；5月15日宣布在美11城运营面积超1400平方英里，计划扩展至奥斯汀、亚特兰大等城市。\n• Zoox5月15日新增拉斯维加斯会展中心站点，目前共有13个活跃运营站点；服务仍为免费。\n• Motional5月15日宣布robotaxi正式上线Uber平台，在拉斯维加斯提供服务，EDC Week期间可免费乘坐。\n• Tesla5月15日披露两起涉及远程操作员的Robotaxi事故（2023年及2024年各一起），暴露远程监控挑战；5月17日推送FSD 14.3.3春季更新，智能召唤最高速度提升至8英里/小时。\n• Nuro5月14日宣布进军欧洲，在德国慕尼黑设立运营基地，支持工程研发及合作伙伴对接。\n【国内要闻】\n• 百度Apollo5月11日亮相2026北京车展，定位为智能座舱和智能驾驶的关键基建与桥梁。\n• 小马智行、文远知行、滴滴出行、曹操出行、黑芝麻智能本周暂无重要动态。\n【政策动态】\n本周暂无重要政策动态\n【关键数据一览】\n• WeRide—Q1营收1650万美元，同比增长58%，覆盖12国40余城\n• Waymo—美国11城运营面积超1400平方英里，召回3800辆robotaxi\n• Zoox—拉斯维加斯13个活跃运营站点\n• Rivian—旗下Mind Robotics累计融资超10亿美元，最新一轮4亿美元\n• Uber—印度竞争对手Rapido估值30亿美元，融资2.4亿美元\n• Tesla—FSD 14.3.3推送，智能召唤最高速度提升至8英里/小时\n• Aurora—Sun Belt地区12条路线，新增达拉斯至拉雷多、达拉斯至俄克拉荷马城两条线路\n• Wayve—AI驾驶员已覆盖500+城市",
       "highlights": [
         "Q1营收同比增长58%至1650万美元，全球业务覆盖12国40余城（WeRide）",
-        "运营面积超1400平方英里，覆盖美国11座城市（Waymo）",
-        "旗下Mind Robotics再获4亿美元融资，累计融资超10亿美元（Rivian）",
-        "印度竞争对手Rapido以30亿美元估值完成2.4亿美元融资（Uber）",
-        "宣布进军欧洲，在德国慕尼黑设立运营基地（Nuro）",
-        "因积水安全隐患发布软件召回，涉及3800辆robotaxi（Waymo）"
+        "美国11城运营面积超1400平方英里，因积水问题发布软件召回（Waymo）",
+        "RJ Scaringe旗下三家公司累计融资超120亿美元，投资者持续追捧（Rivian）",
+        "印度竞争对手Rapido以30亿美元估值融资2.4亿美元（Uber）",
+        "旗下Mind Robotics再获4亿美元融资，累计超10亿美元（Rivian）",
+        "进军欧洲，在德国慕尼黑设立运营基地（Nuro）"
       ],
       "count": 38,
       "date_range": "2026-05-11~2026-05-17"
