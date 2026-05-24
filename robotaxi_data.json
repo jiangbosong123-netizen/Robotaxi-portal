@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-05-25 01:06",
-  "total": 280,
+  "updated_at": "2026-05-25 01:12",
+  "total": 278,
   "week_count": 25,
   "date_from": "2026-02-10",
   "date_to": "2026-05-24",
@@ -91,16 +91,6 @@
     "The Driverless Digest": 19
   },
   "news": [
-    {
-      "id": 512,
-      "date": "2026-05-23",
-      "company": "Tesla",
-      "title": "Elon Musk 已放弃（地球上的）太阳能业务",
-      "summary": "Elon Muks's xAI has gone all in on natural gas, while SpaceX is obsessed with orbital data centers. What happened to the \"solar-electric economy\" he promised?",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/05/23/elon-musk-has-given-up-on-solar-power-on-earth/",
-      "type": "技术突破"
-    },
     {
       "id": 509,
       "date": "2026-05-23",
@@ -770,16 +760,6 @@
       "source": "Twitter",
       "url": "https://x.com/zoox/status/2054229680300146688",
       "type": "商业拓展"
-    },
-    {
-      "id": 435,
-      "date": "2026-05-12",
-      "company": "Tesla",
-      "title": "前特斯拉高管Drew Baglino创立热泵初创公司Sadi Thermal Machines",
-      "summary": "前特斯拉高管Drew Baglino在2024年离开特斯拉后，创立了第二家初创公司Sadi Thermal Machines，专注于热泵技术。该公司旨在开发高效热泵系统，以替代传统化石燃料供暖方案。Baglino此前曾担任特斯拉动力总成与能源工程高级副总裁，并在Heron Power担任CEO。Sadi Thermal Machines的成立标志着他在清洁能源领域的持续深耕，目前尚未披露具体融资或产品发布时间表。",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/05/12/former-tesla-exec-and-heron-power-ceo-drew-baglino-has-founded-a-heat-pump-startup/",
-      "type": "技术突破"
     },
     {
       "id": 434,
