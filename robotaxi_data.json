@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-05-23 16:38",
-  "total": 275,
-  "week_count": 35,
+  "updated_at": "2026-05-24 15:10",
+  "total": 277,
+  "week_count": 33,
   "date_from": "2026-02-10",
   "date_to": "2026-05-23",
   "companies": [
@@ -69,8 +69,8 @@
     "财报"
   ],
   "company_stats": {
-    "Tesla": 45,
-    "Waymo": 35,
+    "Tesla": 46,
+    "Waymo": 36,
     "小马智行": 30,
     "WeRide": 27,
     "Zoox": 21,
@@ -88,11 +88,21 @@
   },
   "source_stats": {
     "Twitter": 153,
-    "TechCrunch": 55,
+    "TechCrunch": 56,
     "微信公众号(WeWeRSS)": 49,
-    "The Driverless Digest": 18
+    "The Driverless Digest": 19
   },
   "news": [
+    {
+      "id": 512,
+      "date": "2026-05-23",
+      "company": "Tesla",
+      "title": "Elon Musk has given up on solar power (on Earth)",
+      "summary": "Elon Muks's xAI has gone all in on natural gas, while SpaceX is obsessed with orbital data centers. What happened to the \"solar-electric economy\" he promised?",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/05/23/elon-musk-has-given-up-on-solar-power-on-earth/",
+      "type": "技术突破"
+    },
     {
       "id": 509,
       "date": "2026-05-23",
@@ -112,6 +122,16 @@
       "source": "Twitter",
       "url": "https://x.com/SawyerMerritt/status/2058023090941026634",
       "type": "行业动态"
+    },
+    {
+      "id": 513,
+      "date": "2026-05-22",
+      "company": "Waymo",
+      "title": "Wayve and Stellantis Partner on Autonomous Driving",
+      "summary": "Waymo halts freeway rides and suspends service in Atlanta and Texas, Tesla reveals two Robotaxi crashes involving teleoperators, and why it might not make sense for you to own a self-driving car",
+      "source": "The Driverless Digest",
+      "url": "https://www.thedriverlessdigest.com/p/wayve-and-stellantis-partner-on-autonomous",
+      "type": "商业拓展"
     },
     {
       "id": 511,
