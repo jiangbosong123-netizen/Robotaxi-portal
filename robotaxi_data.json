@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-05-25 01:04",
-  "total": 277,
-  "week_count": 33,
+  "updated_at": "2026-05-25 01:06",
+  "total": 280,
+  "week_count": 25,
   "date_from": "2026-02-10",
-  "date_to": "2026-05-23",
+  "date_to": "2026-05-24",
   "companies": [
     "Aurora",
     "Bot Auto",
@@ -200,6 +200,36 @@
       "source": "TechCrunch",
       "url": "https://techcrunch.com/2026/05/21/waymo-pauses-service-in-four-cities-as-robotaxis-keep-driving-into-floods/",
       "type": "商业拓展"
+    },
+    {
+      "id": 516,
+      "date": "2026-05-21",
+      "company": "Tesla",
+      "title": "华尔街见闻：FSD监督版将入华，特斯拉再次'狼来了'？",
+      "summary": "5月21日特斯拉更新FSD监督版全球可用市场地图，中国在列。市场反应热烈，'特斯拉监督版FSD入华'登上当日微博热搜。此前特斯拉获批节奏多次跳票：2025年推城市道路Autopilot后仅一个月暂停推送，2026年初马斯克预测2月获批却无新进展。此次官宣虽为里程碑但距离'全面获批'仍有距离。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://wallstreetcn.com/articles/3772856",
+      "type": "行业动态"
+    },
+    {
+      "id": 515,
+      "date": "2026-05-21",
+      "company": "Tesla",
+      "title": "虎嗅：特斯拉官宣FSD入华——一场迟到的突围与未竟的征途",
+      "summary": "特斯拉FSD入华历经多年坎坷，根本原因在于美国芯片出口管制与中国数据安全法规形成的'算力-数据'困局。特斯拉在美国拥有约100 ExaFLOPS算力集群，但无法用于中国市场训练；中国算力因芯片供应受限。特斯拉已在上海建本地化数据中心、获得乙级测绘资质、与百度合作定制高精地图。当前FSD仅限约5000台HW4.0车辆，HW3.0老款车型因算力仅144TOPS无法运行最新端侧模型，成普及最大障碍。",
+      "source": "微信公众号(WeWeRSS)",
+      "url": "https://www.huxiu.com/article/4860127.html",
+      "type": "行业动态"
+    },
+    {
+      "id": 514,
+      "date": "2026-05-21",
+      "company": "Tesla",
+      "title": "特斯拉官宣FSD监督版登陆中国：10国可用地区名单中首次列入中国",
+      "summary": "2026年5月21日，特斯拉官方X账号宣布FSD监督版在10个国家/地区上线，中国首次被列入可用地区名单。特斯拉CFO Taneja在Q1财报会议表示已获得部分批准，正推进更广泛审批，预计Q3获批。特斯拉同时在九大核心城市发布约90个智能驾驶测试岗位，加速FSD本土化落地。FSD中国售价6.4万元，目前仅限约5000台HW4.0车辆推送。",
+      "source": "Twitter",
+      "url": "https://x.com/Tesla/status/2056000000000000000",
+      "type": "技术突破"
     },
     {
       "id": 507,
