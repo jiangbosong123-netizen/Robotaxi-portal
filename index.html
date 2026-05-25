@@ -350,7 +350,7 @@ body {
 
 .weekly-charts {
 
-  display:grid; grid-template-columns:1fr 1fr 1fr; grid-template-rows:260px; gap:16px; margin-bottom:20px;
+  display:grid; grid-template-columns:1fr 1fr 1fr; grid-template-rows:auto; gap:16px; margin-bottom:20px;
 
 }
 
@@ -369,6 +369,18 @@ body {
 }
 
 .weekly-chart-box canvas { width:100% !important; min-height:180px; max-height:200px; aspect-ratio:2/1; }
+
+/* City table */
+.city-table { width:100%; border-collapse:collapse; font-size:12px; }
+.city-table th { text-align:left; padding:3px 4px; color:#718096; font-weight:600; font-size:10px; text-transform:uppercase; letter-spacing:0.3px; border-bottom:1px solid #e2e8f0; }
+.city-table td { padding:4px 4px; border-bottom:1px solid #f0f2f5; color:#4a5568; }
+.city-table tr:last-child td { border-bottom:none; }
+.city-table .company-name { font-weight:600; color:#1a1a2e; }
+.city-table .city-count { font-weight:700; color:#667eea; font-size:14px; }
+.city-table .city-tag { display:inline-block; background:#edf2f7; color:#4a5568; padding:1px 6px; border-radius:3px; font-size:10px; }
+.city-table .city-flag { display:inline-block; padding:1px 5px; border-radius:3px; font-size:10px; font-weight:500; }
+.city-table .flag-global { background:#e8f5e9; color:#2e7d32; }
+.city-table .flag-us { background:#e3f2fd; color:#1565c0; }
 
 
 
@@ -875,17 +887,17 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
 
     <div class="weekly-chart-box">
 
-      <div class="chart-title">新闻趋势</div>
+      <div class="chart-title">城市覆盖</div>
 
-      <canvas id="chartTrend"></canvas>
+      <div id="cityTableContainer"></div>
 
     </div>
 
     <div class="weekly-chart-box">
 
-      <div class="chart-title">公司覆盖</div>
+      <div class="chart-title">自动驾驶里程对比</div>
 
-      <canvas id="chartCompanies"></canvas>
+      <canvas id="chartMileage"></canvas>
 
     </div>
 
@@ -991,9 +1003,21 @@ async function loadData() {
 
   try {
 
-    const r = await fetch('robotaxi_data.json');
+    const [r, s] = await Promise.all([
+
+      fetch('robotaxi_data.json'),
+
+      fetch('company_stats.json').catch(function() { return null; })
+
+    ]);
 
     DATA = await r.json();
+
+    if (s) {
+
+      try { _companyStats = await s.json(); } catch(e) { _companyStats = null; }
+
+    }
 
     init();
 
@@ -1650,19 +1674,17 @@ function renderWeekly() {
 
   var parts = (r.date_range || '').split('~');
 
+  renderCityTable();
+
   if (parts.length === 2) {
 
-    drawTrendChart(parts[0], parts[1]);
-
-    drawCompanyChart(parts[0], parts[1]);
+    drawMileageChart();
 
     drawTypeChart(parts[0], parts[1]);
 
   } else {
 
-    drawTrendChart();
-
-    drawCompanyChart();
+    drawMileageChart();
 
     drawTypeChart();
 
@@ -1848,11 +1870,11 @@ function renderWeek(r) {
 
   var parts = (r.date_range || '').split('~');
 
+  renderCityTable();
+
   if (parts.length === 2) {
 
-    drawTrendChart(parts[0], parts[1]);
-
-    drawCompanyChart(parts[0], parts[1]);
+    drawMileageChart();
 
     drawTypeChart(parts[0], parts[1]);
 
@@ -1864,15 +1886,14 @@ function renderWeek(r) {
 
 // 全局图表实例，用于切换周报时销毁
 
-var _chartTrend = null, _chartCompanies = null, _chartTypes = null;
+var _chartMileage = null, _chartTypes = null;
+var _companyStats = null;
 
 
 
 function destroyCharts() {
 
-  if (_chartTrend) { _chartTrend.destroy(); _chartTrend = null; }
-
-  if (_chartCompanies) { _chartCompanies.destroy(); _chartCompanies = null; }
+  if (_chartMileage) { _chartMileage.destroy(); _chartMileage = null; }
 
   if (_chartTypes) { _chartTypes.destroy(); _chartTypes = null; }
 
@@ -1880,139 +1901,71 @@ function destroyCharts() {
 
 
 
-function drawTrendChart(fromDate, toDate) {
+function renderCityTable() {
 
-  destroyCharts();
+  if (!_companyStats || !_companyStats.companies) return;
+
+  var container = document.getElementById('cityTableContainer');
+
+  if (!container) return;
 
   
 
-  var days = [], counts = [];
+  // Sort by city count descending, companies without cities at bottom
 
-  if (fromDate && toDate) {
+  var list = _companyStats.companies.slice().sort(function(a, b) {
 
-    // 历史周：显示该周每天的分布
-
-    var start = new Date(fromDate);
-
-    var end = new Date(toDate);
-
-    for (var d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
-
-      var ds = d.toISOString().slice(0,10);
-
-      days.push((d.getMonth()+1)+'/'+d.getDate());
-
-      counts.push(DATA.news.filter(function(n) { return n.date === ds; }).length);
-
-    }
-
-  } else {
-
-    // 默认：最近14天
-
-    var weekAgo = new Date();
-
-    weekAgo.setDate(weekAgo.getDate() - 13);
-
-    for (var i = 0; i < 14; i++) {
-
-      var d = new Date(weekAgo);
-
-      d.setDate(d.getDate() + i);
-
-      var ds = d.toISOString().slice(0,10);
-
-      days.push((i % 2 === 0) ? (d.getMonth()+1)+'/'+d.getDate() : '');
-
-      counts.push(DATA.news.filter(function(n) { return n.date === ds; }).length);
-
-    }
-
-  }
-
-
-
-  _chartTrend = new Chart(document.getElementById('chartTrend'), {
-
-    type: 'line',
-
-    data: {
-
-      labels: days,
-
-      datasets: [{
-
-        label: '新闻数',
-
-        data: counts,
-
-        borderColor: '#667eea',
-
-        backgroundColor: 'rgba(102,126,234,0.08)',
-
-        fill: true,
-
-        tension: 0.4,
-
-        pointRadius: 3,
-
-        pointBackgroundColor: '#667eea',
-
-        borderWidth: 2,
-
-      }]
-
-    },
-
-    options: {
-
-      responsive: true,
-
-      maintainAspectRatio: false,
-
-      plugins: {
-
-        legend: { display: false },
-
-        tooltip: {
-
-          backgroundColor: '#1a1a2e',
-
-          titleFont: { size: 11 },
-
-          bodyFont: { size: 12 },
-
-          padding: 8,
-
-          callbacks: {
-
-            label: function(ctx) { return ctx.parsed.y + ' 条新闻'; }
-
-          }
-
-        }
-
-      },
-
-      scales: {
-
-        x: { ticks: { font: { size: 10 }, color: '#a0aec0' }, grid: { display: false } },
-
-        y: { ticks: { font: { size: 10 }, color: '#a0aec0', stepSize: 1 }, grid: { color: '#f0f2f5' } }
-
-      },
-
-      hover: { mode: 'index', intersect: false }
-
-    }
+    return (b.cities || 0) - (a.cities || 0);
 
   });
+
+  
+
+  var html = '<table class="city-table">';
+
+  html += '<tr><th>公司</th><th style="text-align:center;">覆盖城市</th><th>业务范围</th></tr>';
+
+  list.forEach(function(c) {
+
+    if (!c.cities && !c.cities_label) return;
+
+    var cityDisplay = c.cities > 0 ? '<span class="city-count">' + c.cities + '</span>城' : '';
+
+    var flagClass = (c.cities_label && c.cities_label.indexOf('国') >= 0) ? 'flag-global' : 'flag-us';
+
+    var scopeLabel = c.cities_label || '';
+
+    if (scopeLabel) {
+
+      scopeLabel = '<span class="city-flag ' + flagClass + '">' + scopeLabel + '</span>';
+
+    } else if (c.cities > 0) {
+
+      scopeLabel = '<span class="city-tag">' + c.cities + '个城市</span>';
+
+    }
+
+    html += '<tr><td class="company-name">' + c.label + '</td>'
+
+      + '<td style="text-align:center;">' + cityDisplay + '</td>'
+
+      + '<td>' + scopeLabel + '</td></tr>';
+
+  });
+
+  html += '</table>';
+
+  
+
+  container.innerHTML = html;
 
 }
 
 
 
 function drawTypeChart(fromDate, toDate) {
+
+  if (_chartTypes) { _chartTypes.destroy(); _chartTypes = null; }
 
   var weekNews;
 
@@ -2114,59 +2067,89 @@ function drawTypeChart(fromDate, toDate) {
 
 
 
-function drawCompanyChart(fromDate, toDate) {
+function drawMileageChart() {
 
-  var weekNews;
+  if (!_companyStats || !_companyStats.companies) return;
 
-  if (fromDate && toDate) {
+  var canvas = document.getElementById('chartMileage');
 
-    weekNews = DATA.news.filter(function(n) { return n.date >= fromDate && n.date <= toDate && n.company !== 'Sawyer Merritt'; });
+  if (!canvas) return;
 
-  } else {
-
-    var weekAgo = new Date();
-
-    weekAgo.setDate(weekAgo.getDate() - 7);
-
-    weekNews = DATA.news.filter(function(n) { return n.date >= weekAgo.toISOString().slice(0,10) && n.company !== 'Sawyer Merritt'; });
-
-  }
+  if (_chartMileage) { _chartMileage.destroy(); _chartMileage = null; }
 
   
 
-  var byCompany = {};
+  var companyColors = {
 
-  weekNews.forEach(function(n) {
+    '百度Apollo': '#e53e3e',
 
-    byCompany[n.company] = (byCompany[n.company] || 0) + 1;
+    'Waymo': '#3182ce',
+
+    'WeRide': '#5277e6',
+
+    'Zoox': '#805ad5',
+
+    'Nuro': '#319795',
+
+    'Aurora': '#d69e2e'
+
+  };
+
+  
+
+  // Sort by total_km descending, take top 8
+
+  var sorted = _companyStats.companies.slice().sort(function(a, b) {
+
+    return (b.total_km || 0) - (a.total_km || 0);
+
+  }).slice(0, 8);
+
+  
+
+  // Format labels: 萝卜快跑 2.4亿km
+
+  var labels = sorted.map(function(c) {
+
+    return c.label + '  ' + c.total_km_formatted;
+
+  });
+
+  var values = sorted.map(function(c) { return c.total_km || 0; });
+
+  var bgColors = sorted.map(function(c) {
+
+    var color = companyColors[c.name] || '#667eea';
+
+    return color + '44';
+
+  });
+
+  var borderColors = sorted.map(function(c) {
+
+    return companyColors[c.name] || '#667eea';
 
   });
 
   
 
-  var sorted = Object.entries(byCompany).sort(function(a,b) { return b[1] - a[1]; }).slice(0, 8);
-
-  var colors = ['#667eea','#e53e3e','#805ad5','#38a169','#d69e2e','#319795','#e07c3e','#5277e6'];
-
-
-
-  _chartCompanies = new Chart(document.getElementById('chartCompanies'), {
+  _chartMileage = new Chart(canvas, {
 
     type: 'bar',
 
     data: {
 
-      labels: sorted.map(function(s) { return s[0]; }),
+      labels: labels,
 
       datasets: [{
 
-        label: '新闻数',
+        label: '自动驾驶里程',
 
-        data: sorted.map(function(s) { return s[1]; }),
+        data: values,
 
-        backgroundColor: sorted.map(function(_, i) { return colors[i % colors.length] + '33'; }),
+        backgroundColor: bgColors,
 
-        borderColor: sorted.map(function(_, i) { return colors[i % colors.length]; }),
+        borderColor: borderColors,
 
         borderWidth: 1,
 
@@ -2202,21 +2185,17 @@ function drawCompanyChart(fromDate, toDate) {
 
             label: function(ctx) {
 
-              var c = ctx.label;
+              var c = sorted[ctx.dataIndex];
 
-              var info = (DATA.company_info || {})[c] || '';
-
-              var label = (DATA.company_labels || {})[c] || c;
-
-              return label + ' ' + ctx.parsed.x + '条';
+              return c.details || '';
 
             },
 
             afterLabel: function(ctx) {
 
-              var info = (DATA.company_info || {})[ctx.label] || '';
+              var c = sorted[ctx.dataIndex];
 
-              return info ? '——' + info : '';
+              return '数据来源: ' + (c.source || '') + '（截至' + (c.as_of || '') + '）';
 
             }
 
@@ -2228,7 +2207,29 @@ function drawCompanyChart(fromDate, toDate) {
 
       scales: {
 
-        x: { ticks: { font: { size: 10 }, color: '#a0aec0', stepSize: 1 }, grid: { color: '#f0f2f5' } },
+        x: {
+
+          ticks: {
+
+            font: { size: 9 },
+
+            color: '#a0aec0',
+
+            callback: function(val) {
+
+              if (val >= 100000000) return (val/100000000).toFixed(1) + '亿';
+
+              if (val >= 10000) return (val/10000).toFixed(1) + '万';
+
+              return val;
+
+            }
+
+          },
+
+          grid: { color: '#f0f2f5' }
+
+        },
 
         y: { ticks: { font: { size: 10 }, color: '#4a5568' }, grid: { display: false } }
 
@@ -2278,9 +2279,7 @@ function downloadReport() {
 
         addExportTitle(el);
 
-        if (_chartTrend) _chartTrend.resize();
-
-        if (_chartCompanies) _chartCompanies.resize();
+        if (_chartMileage) _chartMileage.resize();
 
         if (_chartTypes) _chartTypes.resize();
 
@@ -2471,9 +2470,7 @@ function exportPDF() {
 
   addExportTitle(el);
 
-  if (_chartTrend) _chartTrend.resize();
-
-  if (_chartCompanies) _chartCompanies.resize();
+  if (_chartMileage) _chartMileage.resize();
 
   if (_chartTypes) _chartTypes.resize();
 
