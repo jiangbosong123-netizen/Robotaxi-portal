@@ -1,0 +1,77 @@
+{
+  "updated_at": "2026-05-25",
+  "source": "公开数据整理（公司公告/财报/新闻报道）",
+  "note": "由翻译流水线自动更新，新数字覆盖旧数字",
+  "companies": [
+    {
+      "name": "百度Apollo",
+      "label": "萝卜快跑",
+      "total_km": 240000000,
+      "total_km_formatted": "2.4亿公里",
+      "cities": 22,
+      "cities_label": "全球22城",
+      "as_of": "2025-10",
+      "source": "百度世界2025大会",
+      "details": "累计自动驾驶里程超2.4亿公里（其中全无人1.4亿+公里），每周全无人订单超25万单"
+    },
+    {
+      "name": "Waymo",
+      "label": "Waymo",
+      "total_miles": 100000000,
+      "total_km": 160000000,
+      "total_km_formatted": "1.6亿公里",
+      "cities": 5,
+      "cities_label": "5城",
+      "as_of": "2025-06",
+      "source": "Waymo官方",
+      "details": "无人驾驶里程1亿miles（约1.6亿km），每周付费出行超25万次"
+    },
+    {
+      "name": "WeRide",
+      "label": "WeRide",
+      "total_km": 40000000,
+      "total_km_formatted": "4000万公里",
+      "cities": 7,
+      "cities_label": "7国+",
+      "as_of": "2025",
+      "source": "WeRide官方",
+      "details": "L4自动驾驶公共道路里程超4000万公里，全球7+国家运营"
+    },
+    {
+      "name": "Zoox",
+      "label": "Zoox",
+      "total_miles": 2000000,
+      "total_km": 3200000,
+      "total_km_formatted": "320万公里",
+      "cities": 4,
+      "cities_label": "4城",
+      "as_of": "2025-12",
+      "source": "Zoox官方",
+      "details": "累计自动驾驶里程近200万miles（约320万km），在LV/SF/Miami/Austin运营"
+    },
+    {
+      "name": "Nuro",
+      "label": "Nuro",
+      "total_miles": 1700000,
+      "total_km": 2700000,
+      "total_km_formatted": "270万公里",
+      "cities": 3,
+      "cities_label": "3城",
+      "as_of": "2025",
+      "source": "Nuro官方",
+      "details": "170万autonomous miles（约270万km），零事故，专注自动驾驶配送"
+    },
+    {
+      "name": "Aurora",
+      "label": "Aurora",
+      "total_miles": 250000,
+      "total_km": 400000,
+      "total_km_formatted": "40万公里",
+      "cities": 0,
+      "cities_label": "10条货运路线",
+      "as_of": "2026-01",
+      "source": "Aurora官方",
+      "details": "25万+ driverless miles（约40万km），零事故，干线货运自动驾驶"
+    }
+  ]
+}
