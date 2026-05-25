@@ -371,16 +371,13 @@ body {
 .weekly-chart-box canvas { width:100% !important; min-height:180px; max-height:200px; aspect-ratio:2/1; }
 
 /* City table */
-.city-table { width:100%; border-collapse:collapse; font-size:12px; }
-.city-table th { text-align:left; padding:3px 4px; color:#718096; font-weight:600; font-size:10px; text-transform:uppercase; letter-spacing:0.3px; border-bottom:1px solid #e2e8f0; }
-.city-table td { padding:4px 4px; border-bottom:1px solid #f0f2f5; color:#4a5568; }
+.city-table { width:100%; border-collapse:collapse; font-size:14px; }
+.city-table th { text-align:left; padding:5px 6px; color:#718096; font-weight:600; font-size:12px; text-transform:uppercase; letter-spacing:0.3px; border-bottom:1px solid #e2e8f0; }
+.city-table td { padding:6px 6px; border-bottom:1px solid #f0f2f5; color:#4a5568; }
 .city-table tr:last-child td { border-bottom:none; }
-.city-table .company-name { font-weight:600; color:#1a1a2e; }
-.city-table .city-count { font-weight:700; color:#667eea; font-size:14px; }
-.city-table .city-tag { display:inline-block; background:#edf2f7; color:#4a5568; padding:1px 6px; border-radius:3px; font-size:10px; }
-.city-table .city-flag { display:inline-block; padding:1px 5px; border-radius:3px; font-size:10px; font-weight:500; }
-.city-table .flag-global { background:#e8f5e9; color:#2e7d32; }
-.city-table .flag-us { background:#e3f2fd; color:#1565c0; }
+.city-table .company-name { font-weight:600; color:#1a1a2e; font-size:14px; }
+.city-table .city-count { font-weight:700; color:#667eea; font-size:18px; }
+.city-table .city-unit { font-size:13px; color:#667eea; }
 
 
 
@@ -1911,7 +1908,7 @@ function renderCityTable() {
 
   
 
-  // Sort by city count descending, companies without cities at bottom
+  // Sort by city count descending, companies without city count at bottom
 
   var list = _companyStats.companies.slice().sort(function(a, b) {
 
@@ -1923,33 +1920,25 @@ function renderCityTable() {
 
   var html = '<table class="city-table">';
 
-  html += '<tr><th>公司</th><th style="text-align:center;">覆盖城市</th><th>业务范围</th></tr>';
+  html += '<tr><th>公司</th><th style="text-align:center;">覆盖城市</th></tr>';
 
   list.forEach(function(c) {
 
-    if (!c.cities && !c.cities_label) return;
+    if (c.cities > 0) {
 
-    var cityDisplay = c.cities > 0 ? '<span class="city-count">' + c.cities + '</span>城' : '';
+      var cityDisplay = '<span class="city-count">' + c.cities + '</span><span class="city-unit"> 城</span>';
 
-    var flagClass = (c.cities_label && c.cities_label.indexOf('国') >= 0) ? 'flag-global' : 'flag-us';
+      html += '<tr><td class="company-name">' + c.label + '</td>'
 
-    var scopeLabel = c.cities_label || '';
+        + '<td style="text-align:center;">' + cityDisplay + '</td></tr>';
 
-    if (scopeLabel) {
+    } else if (c.cities_label) {
 
-      scopeLabel = '<span class="city-flag ' + flagClass + '">' + scopeLabel + '</span>';
+      html += '<tr><td class="company-name">' + c.label + '</td>'
 
-    } else if (c.cities > 0) {
-
-      scopeLabel = '<span class="city-tag">' + c.cities + '个城市</span>';
+        + '<td style="text-align:center;"><span class="city-unit">' + c.cities_label + '</span></td></tr>';
 
     }
-
-    html += '<tr><td class="company-name">' + c.label + '</td>'
-
-      + '<td style="text-align:center;">' + cityDisplay + '</td>'
-
-      + '<td>' + scopeLabel + '</td></tr>';
 
   });
 
