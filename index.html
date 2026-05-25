@@ -358,6 +358,8 @@ body {
 
   background:#fafbfc; border:1px solid #e8ecf1; border-radius:8px; padding:14px;
 
+  display:flex; flex-direction:column;
+
 }
 
 .weekly-chart-box .chart-title {
@@ -366,11 +368,16 @@ body {
 
   text-transform:uppercase; letter-spacing:0.3px;
 
+  flex-shrink:0;
+
 }
+
+.weekly-chart-box .chart-content { flex:1; display:flex; align-items:center; }
 
 .weekly-chart-box canvas { width:100% !important; min-height:180px; max-height:200px; aspect-ratio:2/1; }
 
 /* City table */
+#cityTableContainer { width:100%; }
 .city-table { width:100%; border-collapse:collapse; font-size:14px; }
 .city-table th { text-align:left; padding:5px 6px; color:#718096; font-weight:600; font-size:12px; text-transform:uppercase; letter-spacing:0.3px; border-bottom:1px solid #e2e8f0; }
 .city-table td { padding:6px 6px; border-bottom:1px solid #f0f2f5; color:#4a5568; }
@@ -828,6 +835,12 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
 
 
 
+<!-- Stats -->
+
+<div class="stats" id="statBar"></div>
+
+
+
 <!-- Weekly Report -->
 
 <div class="weekly" id="weeklyBlock">
@@ -872,15 +885,13 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
 
   </div>
 
-  <div class="weekly-hl" id="weeklyHL"></div>
-
   <div class="weekly-charts">
 
     <div class="weekly-chart-box">
 
       <div class="chart-title">城市覆盖</div>
 
-      <div id="cityTableContainer"></div>
+      <div class="chart-content"><div id="cityTableContainer"></div></div>
 
     </div>
 
@@ -888,7 +899,7 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
 
       <div class="chart-title">自动驾驶里程对比</div>
 
-      <canvas id="chartMileage"></canvas>
+      <div class="chart-content"><canvas id="chartMileage"></canvas></div>
 
     </div>
 
@@ -896,7 +907,7 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
 
       <div class="chart-title">分类分布</div>
 
-      <canvas id="chartTypeDist"></canvas>
+      <div class="chart-content"><canvas id="chartTypeDist"></canvas></div>
 
     </div>
 
@@ -908,9 +919,9 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
 
 
 
-<!-- Stats -->
+<!-- Highlights -->
 
-<div class="stats" id="statBar"></div>
+<div class="weekly-hl" id="weeklyHL"></div>
 
 
 
