@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-05-29 10:06",
-  "total": 274,
-  "week_count": 22,
+  "updated_at": "2026-05-30 11:00",
+  "total": 300,
+  "week_count": 40,
   "date_from": "2026-02-10",
-  "date_to": "2026-05-28",
+  "date_to": "2026-05-30",
   "companies": [
     "小马智行",
     "WeRide",
@@ -69,16 +69,16 @@
     "财报"
   ],
   "company_stats": {
-    "Tesla": 47,
-    "Waymo": 39,
+    "Tesla": 52,
+    "Waymo": 44,
     "小马智行": 30,
     "WeRide": 28,
-    "Zoox": 21,
-    "Wayve": 19,
-    "Nuro": 17,
+    "Wayve": 26,
+    "Zoox": 22,
+    "Nuro": 18,
     "Uber": 15,
-    "Aurora": 11,
-    "Motional": 8,
+    "Aurora": 12,
+    "Motional": 9,
     "曹操出行": 3,
     "百度Apollo": 2,
     "滴滴出行": 2,
@@ -87,12 +87,272 @@
     "Bot Auto": 1
   },
   "source_stats": {
-    "Twitter": 158,
+    "Twitter": 182,
     "微信公众号(WeWeRSS)": 49,
-    "TechCrunch": 47,
-    "The Driverless Digest": 20
+    "TechCrunch": 48,
+    "The Driverless Digest": 21
   },
   "news": [
+    {
+      "id": 553,
+      "date": "2026-05-30",
+      "company": "Sawyer Merritt",
+      "title": "Tesla发布Robotaxi应用更新，支持按名称或地址搜索上车点",
+      "summary": "Tesla近日对其Robotaxi应用进行了更新，新增了按名称或地址搜索上车点的功能。用户现在可以更便捷地定位和选择自己的上车位置，提升了整体使用体验。",
+      "source": "Twitter",
+      "url": "https://x.com/SawyerMerritt/status/2060520657234907567",
+      "type": "技术突破"
+    },
+    {
+      "id": 556,
+      "date": "2026-05-29",
+      "company": "Sawyer Merritt",
+      "title": "德州达拉斯金色夕阳下，一批金色Cybercab亮相",
+      "summary": "今日，在德克萨斯州达拉斯，一批金色涂装的Cybercab在金色夕阳中亮相。",
+      "source": "Twitter",
+      "url": "https://x.com/SawyerMerritt/status/2060193677129990315",
+      "type": "行业动态"
+    },
+    {
+      "id": 555,
+      "date": "2026-05-29",
+      "company": "Sawyer Merritt",
+      "title": "特斯拉FSD（监督版）完成加拿大首次零干预横穿之旅",
+      "summary": "特斯拉FSD（监督版）首次零干预横穿加拿大驾驶正式完成。全程3,760英里（6,051公里），耗时4天21小时，从温哥华马蹄湾码头出发，终点为哈利法克斯特斯拉展厅。该行程使用特斯拉FSD v14.3.3版本，全程零次脱离，包括所有停车场及特斯拉超级充电站。David Moss、DevinOlsenn和Scotsrule08共同宣布完成这一世界首次加拿大海岸至海岸全自动驾驶。",
+      "source": "Twitter",
+      "url": "https://x.com/SawyerMerritt/status/2060366307183194229",
+      "type": "行业动态"
+    },
+    {
+      "id": 554,
+      "date": "2026-05-29",
+      "company": "Sawyer Merritt",
+      "title": "FSD Supervised已在三个欧洲国家获批，更多国家即将加入！",
+      "summary": "特斯拉欧洲、中东及非洲地区官方宣布，FSD Supervised（监督版全自动驾驶）已在爱沙尼亚获得批准，即将开始推送。目前该功能已在三个欧洲国家获批，更多国家正在推进中。",
+      "source": "Twitter",
+      "url": "https://x.com/SawyerMerritt/status/2060366996890341689",
+      "type": "行业动态"
+    },
+    {
+      "id": 549,
+      "date": "2026-05-29",
+      "company": "Tesla",
+      "title": "特斯拉FSD完成加拿大横穿之旅：温哥华至哈利法克斯3,760英里零干预",
+      "summary": "特斯拉车主David Moss及其团队宣布，成功完成全球首次加拿大全自动驾驶横穿之旅。他们驾驶搭载FSD v14.3.3系统的特斯拉，从温哥华马蹄湾出发，历时4天21小时，行驶3,760英里（6,051公里）抵达哈利法克斯特斯拉展厅。全程包括超级充电站停车在内，实现零次人工干预，标志着FSD在长距离复杂路况下的重大突破。",
+      "source": "Twitter",
+      "url": "https://x.com/Tesla/status/2060368096695832688",
+      "type": "行业动态"
+    },
+    {
+      "id": 548,
+      "date": "2026-05-29",
+      "company": "Tesla",
+      "title": "特斯拉FSD在爱沙尼亚获批，成为继荷兰、立陶宛后第三个欧洲国家",
+      "summary": "特斯拉FSD（完全自动驾驶能力）已正式获得爱沙尼亚监管批准。爱沙尼亚成为继荷兰和立陶宛之后，欧洲第三个批准该功能的国家。",
+      "source": "Twitter",
+      "url": "https://x.com/Tslachan/status/2060324693119553858",
+      "type": "行业动态"
+    },
+    {
+      "id": 547,
+      "date": "2026-05-29",
+      "company": "Motional",
+      "title": "CVPR下周见！Motional在401展位等你，IONIQ 5 robotaxi现场展示",
+      "summary": "Motional团队将参加下周的CVPR大会，在401展位与参会者交流，并开放最新职位机会。现场还将展出IONIQ 5 robotaxi，欢迎前来参观互动。🤖🚕 #CVPR2026",
+      "source": "Twitter",
+      "url": "https://x.com/motionaldrive/status/2060362125881532435",
+      "type": "商业拓展"
+    },
+    {
+      "id": 543,
+      "date": "2026-05-29",
+      "company": "Wayve",
+      "title": "Wayve成立前沿研究实验室Wayve Labs，专注具身AI与机器学习难题",
+      "summary": "Wayve宣布成立前沿研究部门Wayve Labs，致力于推动具身AI发展，并解决机器学习领域中最具挑战性和最重要的开放性问题。该实验室将专注于自动驾驶等领域的核心技术突破。",
+      "source": "Twitter",
+      "url": "https://x.com/wayve_ai/status/2060331657647755317",
+      "type": "技术突破"
+    },
+    {
+      "id": 542,
+      "date": "2026-05-29",
+      "company": "Wayve",
+      "title": "Wayve成立近十年：坚信AI将在现实世界产生最大影响，研究是保持领先的关键",
+      "summary": "Wayve成立于近十年前，其核心理念是人工智能将在现实世界中发挥最大作用。自成立以来，该公司一直将研究作为保持技术领先地位、将这一愿景变为现实的关键驱动力。",
+      "source": "Twitter",
+      "url": "https://x.com/wayve_ai/status/2060331661909225624",
+      "type": "技术突破"
+    },
+    {
+      "id": 541,
+      "date": "2026-05-29",
+      "company": "Wayve",
+      "title": "Wayve成立Wayve Labs，聚焦AI物理世界规模化难题",
+      "summary": "Wayve宣布成立Wayve Labs，由Jamie_Shotton领导，专注于将AI规模化应用于物理世界中最具挑战性的问题，包括世界与奖励建模、时空物理智能、跨实体学习等领域。此举旨在深化公司对AI驱动自动驾驶技术的长期愿景。",
+      "source": "Twitter",
+      "url": "https://x.com/wayve_ai/status/2060331663909859656",
+      "type": "技术突破"
+    },
+    {
+      "id": 540,
+      "date": "2026-05-29",
+      "company": "Wayve",
+      "title": "Wayve Labs：从驾驶起步，迈向通用机器人世界模型与空间智能",
+      "summary": "Wayve Labs认为，驾驶只是其技术应用的起点，而非终点。该公司致力于将世界建模、空间智能和策略学习系统推广至多种不同的机器人平台和环境，而其在自动驾驶领域积累的经验将成为实现这一泛化能力的关键。",
+      "source": "Twitter",
+      "url": "https://x.com/wayve_ai/status/2060331666225176839",
+      "type": "技术突破"
+    },
+    {
+      "id": 539,
+      "date": "2026-05-29",
+      "company": "Wayve",
+      "title": "Wayve详解具身AI工作进展及未来展望",
+      "summary": "Wayve发布最新文章，深入探讨其具身AI（Embodied AI）技术研发成果，并展望该技术对未来自动驾驶及机器人领域的深远影响。文章链接：wayve.ai/thinking/building-i…",
+      "source": "Twitter",
+      "url": "https://x.com/wayve_ai/status/2060331668292964424",
+      "type": "技术突破"
+    },
+    {
+      "id": 538,
+      "date": "2026-05-29",
+      "company": "Wayve",
+      "title": "Wayve成立新研究部门Wayve Labs，借力AI拓展机器人应用领域",
+      "summary": "英国自动驾驶初创公司Wayve宣布成立全新研究部门Wayve Labs，旨在将其AI技术从自动驾驶领域拓展至更广泛的机器人应用。首席科学家Jamie Shotton将领导该部门，利用新获得的融资和顶尖人才，推动AI在机器人领域的创新。Wayve Labs将专注于开发通用AI模型，使机器人能够像人类一样学习和适应复杂环境，而非局限于特定任务。此举标志着Wayve从自动驾驶向通用机器人平台转型的战略升级。",
+      "source": "Twitter",
+      "url": "https://x.com/BusinessInsider/status/2060331162296356940",
+      "type": "技术突破"
+    },
+    {
+      "id": 533,
+      "date": "2026-05-29",
+      "company": "Waymo",
+      "title": "Waymo在Ojai正式向乘客开放Robotaxi服务",
+      "summary": "Waymo在加州Ojai地区正式向公众开放其robotaxi服务，标志着该自动驾驶出租车运营商在扩大运营范围方面迈出重要一步。与此同时，电动汽车充电网络公司Revel与Voltera宣布合并，旨在加速充电基础设施部署。底特律城市自主峰会公布演讲嘉宾名单，聚焦自动驾驶技术在城市交通中的应用。此外，欧洲自动驾驶技术公司Bliq获得欧洲首个全无人驾驶道路运营批准，为L4级自动驾驶在欧洲的落地铺平道路。",
+      "source": "The Driverless Digest",
+      "url": "https://www.thedriverlessdigest.com/p/waymo-finally-opens-ojai-robotaxis",
+      "type": "技术突破"
+    },
+    {
+      "id": 532,
+      "date": "2026-05-29",
+      "company": "Waymo",
+      "title": "Waymo主导自动驾驶车辆注册量，特斯拉落后",
+      "summary": "一项新法律和自动驾驶车辆追踪工具首次清晰揭示了德克萨斯州robotaxi和自动驾驶卡车的数量。数据显示，Waymo在注册量上占据绝对优势，而特斯拉则明显落后。该工具基于德克萨斯州交通部的数据，提供了截至2025年3月的详细统计，包括各公司的车辆数量、运营区域和测试许可状态。Waymo的注册量远超其他公司，而特斯拉的FSD系统尚未在德克萨斯州获得大规模部署许可。这一对比凸显了Waymo在商业化自动驾驶领域的领先地位，同时也反映了特斯拉在实现全自动驾驶目标上的挑战。",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/05/28/waymo-dominates-texas-autonomous-vehicle-registrations-as-tesla-trails-behind/",
+      "type": "技术突破"
+    },
+    {
+      "id": 557,
+      "date": "2026-05-28",
+      "company": "Sawyer Merritt",
+      "title": "Cybercab自动驾驶驶出GigaTexas工厂，即将奔赴奥斯汀“报到”",
+      "summary": "Elon Musk发布推文，展示Cybercab自动驾驶驶出GigaTexas工厂的画面，并宣布该车即将在奥斯汀市区投入运营。",
+      "source": "Twitter",
+      "url": "https://x.com/aelluswamy/status/2060127622072602905",
+      "type": "行业动态"
+    },
+    {
+      "id": 552,
+      "date": "2026-05-28",
+      "company": "Tesla",
+      "title": "FSD通过数百万次观察人类并线及出口操作，能快速预测并应对不良驾驶行为，常能防患于未然",
+      "summary": "Dirty Tesla表示，FSD在观察人类处理并线和出口操作数百万次后，能够快速预测并应对不良驾驶行为，往往在事故发生前就做出反应。有时甚至感觉FSD能读懂其他驾驶员的意图。",
+      "source": "Twitter",
+      "url": "https://x.com/Tesla/status/2060084306861867023",
+      "type": "行业动态"
+    },
+    {
+      "id": 551,
+      "date": "2026-05-28",
+      "company": "Tesla",
+      "title": "特斯拉FSD助老年人保持独立生活，老年用户因FSD功能购车",
+      "summary": "一位老年女性在Cybertruck旁向车主表示，她将于6月提车标准版Model 3，购车唯一原因是FSD（完全自动驾驶能力）。她在网上了解到FSD后，前往特斯拉试驾并体验了该功能，认为这能帮助她在晚年保持独立生活。",
+      "source": "Twitter",
+      "url": "https://x.com/tesla_na/status/2060085819474665835",
+      "type": "技术突破"
+    },
+    {
+      "id": 550,
+      "date": "2026-05-28",
+      "company": "Tesla",
+      "title": "Cybercab从GigaTexas工厂自动驾驶出厂",
+      "summary": "特斯拉Cybercab在GigaTexas工厂实现自动驾驶出厂，标志着其robotaxi项目取得新进展。该车辆无需人工干预即可从生产线驶出，展示了特斯拉在FSD（全自动驾驶）技术上的持续突破。此举进一步巩固了特斯拉在自动驾驶领域的领先地位，并为未来大规模部署robotaxi车队奠定基础。",
+      "source": "Twitter",
+      "url": "https://x.com/elonmusk/status/2060092313150611851",
+      "type": "行业动态"
+    },
+    {
+      "id": 546,
+      "date": "2026-05-28",
+      "company": "Aurora",
+      "title": "Aurora Driver不止是高速专家：在休斯顿复杂地面街道精准行驶7英里",
+      "summary": "Aurora的自动驾驶系统Aurora Driver展示了其在复杂城市地面街道上的能力，在休斯顿7英里的路线上精准导航，涵盖多变天气条件。这证明其不仅擅长高速公路驾驶，也能应对低速环境，是实现端到端自动驾驶的关键一步。$AUR",
+      "source": "Twitter",
+      "url": "https://x.com/aurora_inno/status/2060018565651079242",
+      "type": "行业动态"
+    },
+    {
+      "id": 545,
+      "date": "2026-05-28",
+      "company": "Nuro",
+      "title": "Nuro工程师走进洛杉矶高中，与下一代开发者互动交流",
+      "summary": "Nuro的工程师团队受邀前往洛杉矶高中和MVLAHSD学区，与AP计算机科学CTE课程的学生们进行了一场精彩的展示与交流活动。工程师们与这些未来的开发者、研究人员和技术专家深入互动，分享了自动驾驶技术的前沿知识。此次活动体现了Nuro对社区教育的重视，通过#autonomousvehicles #selfdriving #drivenbynuro等话题，激发了学生们对自动驾驶领域的兴趣。",
+      "source": "Twitter",
+      "url": "https://x.com/nuro/status/2060013226801475756",
+      "type": "行业动态"
+    },
+    {
+      "id": 544,
+      "date": "2026-05-28",
+      "company": "Wayve",
+      "title": "Wayve、Nissan与Uber加入PAVE UK，推动英国自动驾驶公众信任建设",
+      "summary": "Wayve宣布与Nissan Motor和Uber共同成为PAVE UK的首批成员，致力于围绕英国自动驾驶车辆部署开展开放、透明的公众参与活动。三方将携手PAVE UK，通过公开透明的沟通方式，提升公众对自动驾驶技术的信任，支持英国自动驾驶车辆的安全、负责任部署。完整公告详见链接。",
+      "source": "Twitter",
+      "url": "https://x.com/wayve_ai/status/2059954147420471327",
+      "type": "技术突破"
+    },
+    {
+      "id": 537,
+      "date": "2026-05-28",
+      "company": "Zoox",
+      "title": "在robotaxi里搞乐队排练？旧金山又整新活儿了！🎶🚕🌉",
+      "summary": "Waymo的robotaxi在旧金山又解锁新场景——一支乐队直接在车内进行排练。视频中，乐手们带着乐器挤在自动驾驶的Waymo里演奏，场面既荒诞又充满创意。这再次印证了旧金山作为科技与艺术融合之都的独特魅力。Waymo官方也发文致敬这支乐队的创意精神。",
+      "source": "Twitter",
+      "url": "https://x.com/zoox/status/2060021545087709254",
+      "type": "商业拓展"
+    },
+    {
+      "id": 536,
+      "date": "2026-05-28",
+      "company": "Waymo",
+      "title": "Waymo车队再扩容！第六代Waymo Driver驱动Ojai即将登陆洛杉矶、凤凰城和旧金山",
+      "summary": "Waymo宣布其自动驾驶车队迎来新成员——Ojai，该车型搭载第六代Waymo Driver系统。Ojai将很快在洛杉矶、凤凰城和旧金山三个城市开始接载乘客，标志着Waymo在robotaxi领域的持续扩张。",
+      "source": "Twitter",
+      "url": "https://x.com/Waymo/status/2060013225006010467",
+      "type": "技术突破"
+    },
+    {
+      "id": 535,
+      "date": "2026-05-28",
+      "company": "Waymo",
+      "title": "完美收尾：“paula”猜猜谁送我回家",
+      "summary": "这是一条社交媒体风格的简短推文，内容为“完美收尾。‘paula’（paularambles）猜猜谁送我回家”，未涉及自动驾驶行业具体信息。",
+      "source": "Twitter",
+      "url": "https://x.com/Waymo/status/2060036460313563591",
+      "type": "行业动态"
+    },
+    {
+      "id": 534,
+      "date": "2026-05-28",
+      "company": "Waymo",
+      "title": "Waymo即将登陆旧金山、洛杉矶和凤凰城！",
+      "summary": "Waymo宣布其robotaxi服务即将扩展至旧金山、洛杉矶和凤凰城。Waymo发言人Sandy Karp在社交媒体上分享了这一消息，并幽默地提到Ojai的一个被低估的特色——Costco烤鸡架，期待Waymo乘客能亲自体验这一乐趣。",
+      "source": "Twitter",
+      "url": "https://x.com/Waymo/status/2060084431897989222",
+      "type": "技术突破"
+    },
     {
       "id": 531,
       "date": "2026-05-28",
@@ -2835,28 +3095,28 @@
     }
   ],
   "weekly_report": {
-    "summary": "【本周核心】\n商业化与挑战并存，Robotaxi进入验证期\n• 商业化——特斯拉官宣FSD监督版登陆中国，首次列入10国可用地区名单，市场反应热烈。（Tesla）\n• 商业化——Wayve与Stellantis达成战略技术合作，将AI Driver引入STLA AutoDrive平台，计划2028年在北美率先推出。（Wayve）\n• 监管/运营——Waymo因Robotaxi在施工区域表现不佳及驶入积水街道等问题，暂停高速公路服务及亚特兰大、圣安东尼奥等四个城市运营。（Waymo）\n• 运营里程碑——文远知行在迪拜运营的全无人Robotaxi获当地网红体验好评，并在瑞士苏黎世机场Robobus服务中移除前排安全驾驶员。（WeRide）\n【国际动态】\n• Waymo本周遭遇商业化挑战，因Robotaxi在施工区域表现不佳及驶入积水街道等问题，暂停了高速公路服务，并中止了亚特兰大、圣安东尼奥等四个城市的运营，凸显了自动驾驶在复杂场景下的技术瓶颈。\n• Wayve宣布与Stellantis达成战略技术合作，将把其AI Driver集成至STLA AutoDrive平台。该合作计划于2028年在北美率先推出，实现城市道路和高速公路上的免提、门到门监督式自动驾驶，标志着其技术商业化迈出关键一步。\n• WeRide在海外运营取得进展，其全无人Robotaxi服务在迪拜获得网红体验好评，同时其Robobus服务在瑞士苏黎世机场成功移除前排安全驾驶员，仅保留一名后排安全人员，为欧洲实现全无人驾驶服务铺平道路。\n• Zoox CEO Aicha Evans在谈及Robotaxi竞赛时表示，公司“正处于验证阶段”，反映了行业当前从技术研发向大规模商业化过渡的核心挑战。\n【国内要闻】\n• 特斯拉于5月21日官宣FSD监督版登陆中国，首次将中国列入10国可用地区名单。市场反应热烈，相关话题登上微博热搜。此举历经多年坎坷，面临芯片出口管制与数据安全法规的“算力-数据”困局，特斯拉已在上海建立本地化数据中心。\n• 文远知行（WeRide）本周动态积极，其全无人Robotaxi服务在迪拜获当地网红体验好评，并计划与Uber合作在该地区部署超过1200辆Robotaxi。此外，其在瑞士苏黎世机场的Robobus服务已移除前排安全驾驶员，向全无人驾驶迈进。\n【政策动态】\n本周暂无重要政策动态。\n【关键数据一览】\n• Tesla—FSD监督版可用国家/地区：10个，首次列入中国\n• Wayve—与Stellantis合作量产时间：2028年，率先在北美推出\n• WeRide—计划与Uber在迪拜部署Robotaxi数量：超过1200辆\n• Waymo—因技术问题暂停运营城市数量：4个\n• WeRide—中国城市智能驾驶竞赛：五连胜",
+    "summary": "【本周核心】\nFSD入华与Robotaxi运营挑战并存\n• 商业化——特斯拉官宣FSD监督版登陆中国，首次列入全球可用名单，市场反应热烈。\n• 商业化——Wayve与Stellantis达成战略合作，计划2028年在北美车型上集成其AI Driver。\n• 监管/运营——Waymo因车辆在施工区域和积水路段表现不佳，暂停了高速公路服务及亚特兰大、圣安东尼奥等四个城市的运营。\n• 商业化——文远知行在迪拜的全无人Robotaxi服务获当地网红体验，并计划与Uber合作部署超1200辆车。\n【国际动态】\n• Waymo本周遭遇运营挫折，因Robotaxi在施工区域表现不佳，暂停了高速公路服务；同时，为解决车辆驶入积水路段的问题，暂停了亚特兰大和圣安东尼奥的运营，使暂停运营的城市增至四个。\n• Wayve于5月21日宣布与Stellantis达成战略技术合作，将AI Driver引入STLA AutoDrive平台，计划于2028年在北美率先推出免提、门到门的监督式自动驾驶功能。\n• Wayve支持英国政府启动自动驾驶车辆试点计划，称这是实现英国大规模自动驾驶客运服务的重要一步。\n• Zoox CEO Aicha Evans在5月22日表示，公司“正处于验证关键节点的阶段”，强调了当前Robotaxi竞赛的核心是技术验证。\n【国内要闻】\n• Tesla于5月21日官宣FSD监督版登陆中国，首次将中国列入10国可用地区名单。该消息登上微博热搜，但媒体评论指出其入华之路历经坎坷，面临“算力-数据”困局。\n• WeRide在迪拜的全无人驾驶Robotaxi服务于5月22日获阿联酋网红体验，其计划与Uber合作在该地区部署超过1200辆Robotaxi。此外，其在瑞士苏黎世机场的Robobus服务于5月21日移除前排安全驾驶员，仅保留后排安全人员，向全无人驾驶迈进。\n• WeRide的端到端ADAS方案WRD 3.0于5月18日再次夺得中国城市智能驾驶大赛第一名，搭载于奇瑞星途ES，成为首个达成此里程碑的ADAS解决方案。\n【政策动态】\n本周暂无重要政策动态。\n【关键数据一览】\n• Tesla—FSD监督版可用地区：10个国家/地区，中国首次列入\n• Waymo—暂停运营城市：4个\n• Wayve—与Stellantis合作量产时间：2028年\n• WeRide—计划在阿联酋部署Robotaxi数量：超1200辆，ADAS方案夺冠次数：5连冠",
     "highlights": [
-      "特斯拉FSD监督版正式登陆中国，市场反应热烈（Tesla）",
-      "Waymo因技术问题暂停多个城市运营，商业化进程遇阻（Waymo）",
-      "Wayve与Stellantis达成战略合作，计划2028年量产上车（Wayve）",
-      "文远知行在迪拜运营全无人Robotaxi，获当地网红体验好评（WeRide）",
-      "英国启动自动驾驶车辆试点计划，推动大规模无人客运服务（Wayve）",
-      "文远知行Robobus在瑞士苏黎世机场移除前排安全员，迈向全无人（WeRide）"
+      "FSD监督版正式登陆中国，商业化版图扩张（Tesla）",
+      "因积水与施工区域问题，Waymo暂停多城运营及高速服务（Waymo）",
+      "Wayve与Stellantis达成战略合作，计划2028年量产（Wayve）",
+      "文远知行在迪拜运营全无人Robotaxi，获网红体验好评（WeRide）",
+      "文远知行Robobus在瑞士移除前排安全员，推进欧洲全无人化（WeRide）",
+      "文远知行ADAS方案再夺中国城市智能驾驶大赛冠军（WeRide）"
     ],
     "count": 23,
     "date_range": "2026-05-18~2026-05-24"
   },
   "weekly_history": [
     {
-      "summary": "【本周核心】\n商业化与挑战并存，Robotaxi进入验证期\n• 商业化——特斯拉官宣FSD监督版登陆中国，首次列入10国可用地区名单，市场反应热烈。（Tesla）\n• 商业化——Wayve与Stellantis达成战略技术合作，将AI Driver引入STLA AutoDrive平台，计划2028年在北美率先推出。（Wayve）\n• 监管/运营——Waymo因Robotaxi在施工区域表现不佳及驶入积水街道等问题，暂停高速公路服务及亚特兰大、圣安东尼奥等四个城市运营。（Waymo）\n• 运营里程碑——文远知行在迪拜运营的全无人Robotaxi获当地网红体验好评，并在瑞士苏黎世机场Robobus服务中移除前排安全驾驶员。（WeRide）\n【国际动态】\n• Waymo本周遭遇商业化挑战，因Robotaxi在施工区域表现不佳及驶入积水街道等问题，暂停了高速公路服务，并中止了亚特兰大、圣安东尼奥等四个城市的运营，凸显了自动驾驶在复杂场景下的技术瓶颈。\n• Wayve宣布与Stellantis达成战略技术合作，将把其AI Driver集成至STLA AutoDrive平台。该合作计划于2028年在北美率先推出，实现城市道路和高速公路上的免提、门到门监督式自动驾驶，标志着其技术商业化迈出关键一步。\n• WeRide在海外运营取得进展，其全无人Robotaxi服务在迪拜获得网红体验好评，同时其Robobus服务在瑞士苏黎世机场成功移除前排安全驾驶员，仅保留一名后排安全人员，为欧洲实现全无人驾驶服务铺平道路。\n• Zoox CEO Aicha Evans在谈及Robotaxi竞赛时表示，公司“正处于验证阶段”，反映了行业当前从技术研发向大规模商业化过渡的核心挑战。\n【国内要闻】\n• 特斯拉于5月21日官宣FSD监督版登陆中国，首次将中国列入10国可用地区名单。市场反应热烈，相关话题登上微博热搜。此举历经多年坎坷，面临芯片出口管制与数据安全法规的“算力-数据”困局，特斯拉已在上海建立本地化数据中心。\n• 文远知行（WeRide）本周动态积极，其全无人Robotaxi服务在迪拜获当地网红体验好评，并计划与Uber合作在该地区部署超过1200辆Robotaxi。此外，其在瑞士苏黎世机场的Robobus服务已移除前排安全驾驶员，向全无人驾驶迈进。\n【政策动态】\n本周暂无重要政策动态。\n【关键数据一览】\n• Tesla—FSD监督版可用国家/地区：10个，首次列入中国\n• Wayve—与Stellantis合作量产时间：2028年，率先在北美推出\n• WeRide—计划与Uber在迪拜部署Robotaxi数量：超过1200辆\n• Waymo—因技术问题暂停运营城市数量：4个\n• WeRide—中国城市智能驾驶竞赛：五连胜",
+      "summary": "【本周核心】\nFSD入华与Robotaxi运营挑战并存\n• 商业化——特斯拉官宣FSD监督版登陆中国，首次列入全球可用名单，市场反应热烈。\n• 商业化——Wayve与Stellantis达成战略合作，计划2028年在北美车型上集成其AI Driver。\n• 监管/运营——Waymo因车辆在施工区域和积水路段表现不佳，暂停了高速公路服务及亚特兰大、圣安东尼奥等四个城市的运营。\n• 商业化——文远知行在迪拜的全无人Robotaxi服务获当地网红体验，并计划与Uber合作部署超1200辆车。\n【国际动态】\n• Waymo本周遭遇运营挫折，因Robotaxi在施工区域表现不佳，暂停了高速公路服务；同时，为解决车辆驶入积水路段的问题，暂停了亚特兰大和圣安东尼奥的运营，使暂停运营的城市增至四个。\n• Wayve于5月21日宣布与Stellantis达成战略技术合作，将AI Driver引入STLA AutoDrive平台，计划于2028年在北美率先推出免提、门到门的监督式自动驾驶功能。\n• Wayve支持英国政府启动自动驾驶车辆试点计划，称这是实现英国大规模自动驾驶客运服务的重要一步。\n• Zoox CEO Aicha Evans在5月22日表示，公司“正处于验证关键节点的阶段”，强调了当前Robotaxi竞赛的核心是技术验证。\n【国内要闻】\n• Tesla于5月21日官宣FSD监督版登陆中国，首次将中国列入10国可用地区名单。该消息登上微博热搜，但媒体评论指出其入华之路历经坎坷，面临“算力-数据”困局。\n• WeRide在迪拜的全无人驾驶Robotaxi服务于5月22日获阿联酋网红体验，其计划与Uber合作在该地区部署超过1200辆Robotaxi。此外，其在瑞士苏黎世机场的Robobus服务于5月21日移除前排安全驾驶员，仅保留后排安全人员，向全无人驾驶迈进。\n• WeRide的端到端ADAS方案WRD 3.0于5月18日再次夺得中国城市智能驾驶大赛第一名，搭载于奇瑞星途ES，成为首个达成此里程碑的ADAS解决方案。\n【政策动态】\n本周暂无重要政策动态。\n【关键数据一览】\n• Tesla—FSD监督版可用地区：10个国家/地区，中国首次列入\n• Waymo—暂停运营城市：4个\n• Wayve—与Stellantis合作量产时间：2028年\n• WeRide—计划在阿联酋部署Robotaxi数量：超1200辆，ADAS方案夺冠次数：5连冠",
       "highlights": [
-        "特斯拉FSD监督版正式登陆中国，市场反应热烈（Tesla）",
-        "Waymo因技术问题暂停多个城市运营，商业化进程遇阻（Waymo）",
-        "Wayve与Stellantis达成战略合作，计划2028年量产上车（Wayve）",
-        "文远知行在迪拜运营全无人Robotaxi，获当地网红体验好评（WeRide）",
-        "英国启动自动驾驶车辆试点计划，推动大规模无人客运服务（Wayve）",
-        "文远知行Robobus在瑞士苏黎世机场移除前排安全员，迈向全无人（WeRide）"
+        "FSD监督版正式登陆中国，商业化版图扩张（Tesla）",
+        "因积水与施工区域问题，Waymo暂停多城运营及高速服务（Waymo）",
+        "Wayve与Stellantis达成战略合作，计划2028年量产（Wayve）",
+        "文远知行在迪拜运营全无人Robotaxi，获网红体验好评（WeRide）",
+        "文远知行Robobus在瑞士移除前排安全员，推进欧洲全无人化（WeRide）",
+        "文远知行ADAS方案再夺中国城市智能驾驶大赛冠军（WeRide）"
       ],
       "count": 23,
       "date_range": "2026-05-18~2026-05-24"
