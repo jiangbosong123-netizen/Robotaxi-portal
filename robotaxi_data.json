@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-03 09:29",
-  "total": 323,
-  "week_count": 49,
+  "updated_at": "2026-06-03 09:37",
+  "total": 324,
+  "week_count": 50,
   "date_from": "2026-02-10",
   "date_to": "2026-06-02",
   "companies": [
@@ -70,6 +70,7 @@
     "行业动态",
     "财报",
     "财报/数据",
+    "资本市场",
     "运营里程碑"
   ],
   "company_stats": {
@@ -83,7 +84,7 @@
     "Uber": 16,
     "Aurora": 12,
     "Motional": 9,
-    "曹操出行": 3,
+    "曹操出行": 4,
     "百度Apollo": 2,
     "滴滴出行": 2,
     "Rivian": 1,
@@ -96,7 +97,7 @@
     "微信公众号(WeWeRSS)": 51,
     "TechCrunch": 50,
     "The Driverless Digest": 21,
-    "微信公众号": 2
+    "微信公众号": 3
   },
   "news": [
     {
@@ -128,6 +129,16 @@
       "source": "TechCrunch",
       "url": "https://techcrunch.com/2026/06/02/squishmallows-dentures-and-an-i-heart-hot-dads-bag-uber-has-found-thousands-of-items-left-in-robotaxis/",
       "type": "商业拓展"
+    },
+    {
+      "id": 583,
+      "date": "2026-06-01",
+      "company": "曹操出行",
+      "title": "曹操出行获纳入香港交易所科技100指数，Robotaxi及AI战略获资本市场认可",
+      "summary": "曹操出行被正式纳入香港交易所科技100指数，标志着其Robotaxi及AI战略获得资本市场认可。曹操出行在Robotaxi领域的布局——包括中国首款原生开发Robotaxi原型车的发布及计划2027年量产——以及AI驱动的出行服务创新，使公司获得投资界关注。此次入选港交所科技100指数，将进一步增强曹操出行在资本市场的品牌影响力。",
+      "source": "微信公众号",
+      "url": "https://mp.weixin.qq.com/s/MIVl9M2piJa-mN6YTlV0WA",
+      "type": "资本市场"
     },
     {
       "id": 577,
