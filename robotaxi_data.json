@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-03 09:12",
-  "total": 321,
-  "week_count": 47,
+  "updated_at": "2026-06-03 09:29",
+  "total": 323,
+  "week_count": 49,
   "date_from": "2026-02-10",
   "date_to": "2026-06-02",
   "companies": [
@@ -15,6 +15,7 @@
     "Aurora",
     "Bot Auto",
     "Lucid",
+    "Momenta",
     "Motional",
     "Nuro",
     "Rivian",
@@ -57,6 +58,7 @@
     "TechCrunch",
     "The Driverless Digest",
     "Twitter",
+    "微信公众号",
     "微信公众号(WeWeRSS)"
   ],
   "types": [
@@ -74,7 +76,7 @@
     "Tesla": 56,
     "Waymo": 45,
     "小马智行": 31,
-    "WeRide": 30,
+    "WeRide": 31,
     "Wayve": 28,
     "Zoox": 24,
     "Nuro": 18,
@@ -85,6 +87,7 @@
     "百度Apollo": 2,
     "滴滴出行": 2,
     "Rivian": 1,
+    "Momenta": 1,
     "Lucid": 1,
     "Bot Auto": 1
   },
@@ -92,9 +95,30 @@
     "Twitter": 199,
     "微信公众号(WeWeRSS)": 51,
     "TechCrunch": 50,
-    "The Driverless Digest": 21
+    "The Driverless Digest": 21,
+    "微信公众号": 2
   },
   "news": [
+    {
+      "id": 580,
+      "date": "2026-06-02",
+      "company": "Momenta",
+      "title": "再获一城！Momenta高阶自动驾驶示范应用许可落地新城市",
+      "summary": "Momenta获得无锡市智能网联汽车道路测试与示范应用许可，并于2026年1月已落地测试。Momenta计划今年在全球多个新城市及区域落地高阶自动驾驶。Momenta R7强化学习世界模型已发布并应用于L4级自动驾驶。Momenta Robotaxi已落地上海、苏州、慕尼黑、阿布扎比等城市。",
+      "source": "微信公众号",
+      "url": "https://mp.weixin.qq.com/s/G012K3BcbE4lnL8emrhBxg",
+      "type": "商业拓展"
+    },
+    {
+      "id": 579,
+      "date": "2026-06-02",
+      "company": "WeRide",
+      "title": "文远知行Robotaxi驶入全球第12城，携手Uber落地西班牙首个Robotaxi服务",
+      "summary": "文远知行WeRide与Uber宣布计划在马德里推出西班牙首个商业化Robotaxi试点服务。马德里成为文远知行Robotaxi全球第12座城市，也是其进入的第五个欧洲市场。商业化Robotaxi服务将于今年内正式启动，当地用户可通过Uber App一键呼叫。运营初期配备安全员，未来计划投放数百辆纯无人Robotaxi覆盖马德里核心城区。",
+      "source": "微信公众号",
+      "url": "https://mp.weixin.qq.com/s/Orp9ly8Ok1Xr9plWR41v3g",
+      "type": "商业拓展"
+    },
     {
       "id": 578,
       "date": "2026-06-02",
