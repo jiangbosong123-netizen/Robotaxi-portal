@@ -804,6 +804,7 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
 
 </style>
 
+<script src="chart.umd.min.js"></script>
 </head>
 
 <body>
@@ -886,7 +887,7 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
 
       <div class="chart-title">城市覆盖</div>
 
-      <div class="chart-content"><img id="chartTrend" style="width:100%;height:190px;object-fit:contain;" alt="城市覆盖图"></div>
+      <div class="chart-content"><div id="cityTableContainer"></div></div>
 
     </div>
 
@@ -894,7 +895,7 @@ footer { text-align:center; color:#a0aec0; font-size:11px; margin-top:40px; padd
 
       <div class="chart-title">自动驾驶里程对比</div>
 
-      <div class="chart-content"><img id="chartCompanies" style="width:100%;height:190px;object-fit:contain;" alt="公司覆盖图">
+      <div class="chart-content"><canvas id="chartMileage"></canvas>
 
     </div>
 
@@ -1645,11 +1646,20 @@ function renderWeekly() {
 
 
     // ===== Charts (static images) =====
-  try { setChartImages(r.date_range); } catch(e) {}
+    // ===== Charts =====
+  renderCityTable();
+  var parts = (r.date_range || "").split("~");
+  if (parts.length === 2) {
+    drawMileageChart(parts[0], parts[1]);
+    drawTypeChart(parts[0], parts[1]);
+  } else {
+    drawMileageChart();
+    drawTypeChart();
+  }
 
 }
 
-// ===== 周报历史切换// ===== 周报历史切换 =====
+// ===== 周报历史切换 =====
 
 function initWeekSelector() {
 
@@ -1822,10 +1832,104 @@ function renderWeek(r) {
   
 
     // 更新图表为历史周数据
-  try { setChartImages(r.date_range); } catch(e) {}
+    // 更新图表为历史周数据
+  renderCityTable();
+  var parts = (r.date_range || "").split("~");
+  if (parts.length === 2) {
+    drawMileageChart(parts[0], parts[1]);
+    drawTypeChart(parts[0], parts[1]);
+  }
 }
 
 // 图表由服务端生成（charts/*.png）
+/* Chart rendering functions to be inserted into index.html */
+/* These replace the static image approach with proper Chart.js canvases */
+
+function drawMileageChart(fromDate, toDate) {
+  var canvas = document.getElementById('chartMileage');
+  if (!canvas || typeof Chart === 'undefined') return;
+  var ctx = canvas.getContext('2d');
+  
+  // Get weekly news by company
+  var weekNews = DATA.news.filter(function(n) {
+    return n.date >= fromDate && n.date <= toDate && n.company !== 'Sawyer Merritt';
+  });
+  var counts = {};
+  weekNews.forEach(function(n) {
+    counts[n.company] = (counts[n.company] || 0) + 1;
+  });
+  var sorted = Object.entries(counts).sort(function(a,b) { return b[1] - a[1]; }).slice(0, 8);
+  
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: sorted.map(function(s) { return DATA.company_labels && DATA.company_labels[s[0]] ? DATA.company_labels[s[0]].substring(0,4) : s[0]; }),
+      datasets: [{
+        label: '\u672c\u5468\u65b0\u95fb\u6570',
+        data: sorted.map(function(s) { return s[1]; }),
+        backgroundColor: ['#3182ce','#e53e3e','#805ad5','#38a169','#d69e2e','#319795','#e07c3e','#5277e6'],
+        borderRadius: 4,
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        y: { beginAtZero: true, ticks: { stepSize: 1, font: { size: 11 } } },
+        x: { ticks: { font: { size: 10 } } }
+      }
+    }
+  });
+}
+
+function drawTypeChart(fromDate, toDate) {
+  var canvas = document.getElementById('chartTypeDist');
+  if (!canvas || typeof Chart === 'undefined') return;
+  var ctx = canvas.getContext('2d');
+  
+  var weekNews = DATA.news.filter(function(n) {
+    return n.date >= fromDate && n.date <= toDate;
+  });
+  var counts = {};
+  weekNews.forEach(function(n) {
+    counts[n.type] = (counts[n.type] || 0) + 1;
+  });
+  var sorted = Object.entries(counts).sort(function(a,b) { return b[1] - a[1]; }).slice(0, 7);
+  
+  new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: sorted.map(function(s) { return s[0]; }),
+      datasets: [{
+        data: sorted.map(function(s) { return s[1]; }),
+        backgroundColor: ['#4c51bf','#276749','#975a16','#285e61','#6b46c1','#c53030','#b3622e','#718096'],
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'right', labels: { font: { size: 11 }, boxWidth: 12, padding: 8 } }
+      }
+    }
+  });
+}
+
+function renderCityTable() {
+  var container = document.getElementById('cityTableContainer');
+  if (!container || !_companyStats || !_companyStats.companies) return;
+  var sorted = _companyStats.companies.slice().sort(function(a, b) { return b.cities - a.cities; });
+  var html = '<table class="city-table"><tr><th style="text-align:center;">\u516c\u53f8</th><th style="text-align:center;">\u8986\u76d6\u57ce\u5e02</th></tr>';
+  sorted.forEach(function(c) {
+    html += '<tr><td class="company-name">' + c.label + '</td><td style="text-align:center;">' +
+      (c.cities ? '<span class="city-count">' + c.cities + '</span><span class="city-unit"> \u57ce</span>' : '<span class="city-unit">' + c.cities_label + '</span>') +
+      '</td></tr>';
+  });
+  html += '</table>';
+  container.innerHTML = html;
+  container.style.display = '';
+}
+
+
 function setChartImages(dateRange) {
   var parts = (dateRange || '').split('~');
   if (parts.length === 2) {
