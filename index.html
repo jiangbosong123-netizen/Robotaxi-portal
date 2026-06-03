@@ -1644,31 +1644,12 @@ function renderWeekly() {
 
 
 
-  // ===== Charts =====
-
-  var parts = (r.date_range || '').split('~');
-
-  renderCityTable();
-
-  if (parts.length === 2) {
-
-    drawMileageChart();
-
-    drawTypeChart(parts[0], parts[1]);
-
-  } else {
-
-    drawMileageChart();
-
-    drawTypeChart();
-
-  }
+    // ===== Charts (static images) =====
+  try { setChartImages(r.date_range); } catch(e) {}
 
 }
 
-
-
-// ===== 周报历史切换 =====
+// ===== 周报历史切换// ===== 周报历史切换 =====
 
 function initWeekSelector() {
 
@@ -1840,23 +1821,9 @@ function renderWeek(r) {
 
   
 
-  // 更新图表为历史周数据
-
-  var parts = (r.date_range || '').split('~');
-
-  renderCityTable();
-
-  if (parts.length === 2) {
-
-    drawMileageChart();
-
-    drawTypeChart(parts[0], parts[1]);
-
-  }
-
+    // 更新图表为历史周数据
+  try { setChartImages(r.date_range); } catch(e) {}
 }
-
-
 
 // 图表由服务端生成（charts/*.png）
 function setChartImages(dateRange) {
