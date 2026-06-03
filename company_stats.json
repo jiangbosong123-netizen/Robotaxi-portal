@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-25",
+  "updated_at": "2026-06-03",
   "source": "公开数据整理（公司公告/财报/新闻报道）",
   "note": "由翻译流水线自动更新，新数字覆盖旧数字",
   "companies": [
@@ -31,11 +31,12 @@
       "label": "WeRide",
       "total_km": 40000000,
       "total_km_formatted": "4000万公里",
-      "cities": 7,
-      "cities_label": "7国+",
-      "as_of": "2025",
-      "source": "WeRide官方",
-      "details": "L4自动驾驶公共道路里程超4000万公里，全球7+国家运营"
+      "cities": 12,
+      "cities_label": "全球12城",
+      "as_of": "2026-06",
+      "source": "文远知行官方公众号2026-06-02",
+      "details": "商业化Robotaxi进入马德里（西班牙），全球第12座城市。覆盖12个国家超40个城市，在8个国家拥有自动驾驶牌照。",
+      "updated_at": "2026-06-03"
     },
     {
       "name": "Zoox",
@@ -72,6 +73,16 @@
       "as_of": "2026-01",
       "source": "Aurora官方",
       "details": "25万+ driverless miles（约40万km），零事故，干线货运自动驾驶"
+    },
+    {
+      "name": "Momenta",
+      "label": "Momenta",
+      "cities": 5,
+      "cities_label": "5城",
+      "as_of": "2026-06",
+      "source": "Momenta官方公众号2026-06-02",
+      "details": "Robotaxi已落地上海、苏州、慕尼黑、阿布扎比、无锡。获无锡示范应用许可。Momenta R7强化学习世界模型已发布。",
+      "updated_at": "2026-06-03"
     }
   ]
 }
