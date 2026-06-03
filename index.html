@@ -11,33 +11,6 @@
 <title>【华泰互联网传媒Jonos】Robotaxi 行业动态</title>
 
 
-<script>
-// 按需加载CDN脚本（导出功能用），不影响主体数据加载
-var _cdnsLoaded = false;
-function ensureCDN(callback) {
-  if (_cdnsLoaded) { callback(); return; }
-  var scripts = [
-    'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js',
-    'https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js'
-  ];
-  var loaded = 0;
-  scripts.forEach(function(url) {
-    var s = document.createElement('script');
-    s.src = url;
-    s.async = true;
-    s.onload = function() {
-      loaded++;
-      if (loaded === scripts.length) { _cdnsLoaded = true; callback(); }
-    };
-    s.onerror = function() { 
-      loaded++;
-      if (loaded === scripts.length) { _cdnsLoaded = true; callback(); }
-    };
-    document.head.appendChild(s);
-  });
-}
-</script>
-
 <style>
 
 /* ===== Reset & Base ===== */
@@ -1027,7 +1000,9 @@ let activeCompany = 'all', activeSource = 'all', activeType = 'all';
 
 
 
-async function loadData() {
+async function loadData(retries) {
+
+  retries = retries || 0;
 
   document.getElementById('cardGrid').innerHTML = '<div class="loading"><div class="spinner"></div><div>加载数据中...</div></div>';
 
@@ -1035,9 +1010,9 @@ async function loadData() {
 
     const [r, s] = await Promise.all([
 
-      fetch('robotaxi_data.json'),
+      fetch('robotaxi_data.json?_=' + Date.now()),
 
-      fetch('company_stats.json').catch(function() { return null; })
+      fetch('company_stats.json?_=' + Date.now()).catch(function() { return null; })
 
     ]);
 
@@ -1053,7 +1028,19 @@ async function loadData() {
 
   } catch(e) {
 
-    document.getElementById('cardGrid').innerHTML = '<div class="loading">加载失败，请确认 robotaxi_data.json 存在</div>';
+    if (retries < 2) {
+
+      // 重试，最多2次
+
+      setTimeout(function() { loadData(retries + 1); }, 2000);
+
+      document.getElementById('cardGrid').innerHTML = '<div class="loading"><div class="spinner"></div><div>正在重试... (' + (retries+1) + '/2)</div></div>';
+
+    } else {
+
+      document.getElementById('cardGrid').innerHTML = '<div class="loading">数据加载失败，请检查网络后刷新页面</div>';
+
+    }
 
   }
 
