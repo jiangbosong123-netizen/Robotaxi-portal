@@ -1537,79 +1537,32 @@ function renderWeekly() {
 
   // Highlights - extract company from parentheses at end: "内容（公司名）"
 
-  function extractCompany(hl) {
+  // ===== 日更高亮卡片（最近3天TOP6） =====
+var today = new Date();
+var c = new Date(today); c.setDate(c.getDate() - 3);
+var cStr = c.toISOString().slice(0,10);
+var cw = {Waymo:3,Tesla:3,小马智行:3,WeRide:3};
+var tw = {商业拓展:3,技术突破:3};
 
-    // 匹配全角（）和半角()，取最后一组
+var filtered = DATA.news.filter(function(n) {
+  return n.date >= cStr && n.company !== 'Sawyer Merritt' && n.company !== '其他';
+}).map(function(n) {
+  var d = Math.floor((today - new Date(n.date)) / 86400000);
+  var ts = d === 0 ? 100 : d === 1 ? 75 : d === 2 ? 50 : 25;
+  n._s = ts * (cw[n.company] || 1) * (tw[n.type] || 1);
+  n._cl = (DATA.company_labels || {})[n.company] || n.company;
+  return n;
+}).sort(function(a,b) { return b._s - a._s; }).slice(0, 6);
 
-    var m = hl.match(/[（(]([^）)]+)[）)]\s*$/);
-
-    return m ? m[1].trim() : null;
-
-  }
-
-  function getMatchingNews(company, limit=3) {
-
-    if (!company) return [];
-
-    const weekAgo = new Date(); weekAgo.setDate(weekAgo.getDate()-7);
-
-    const ws = weekAgo.toISOString().slice(0,10);
-
-    return DATA.news.filter(n => n.company === company && n.date >= ws).slice(0, limit);
-
-  }
-
-  document.getElementById('weeklyHL').innerHTML =
-
-    (r.highlights||[]).map(function(h) {
-
-      var comp = extractCompany(h);
-
-      // 中文名→数据库英文名映射
-
-      if (comp && DATA.company_labels) {
-
-        for (var k in DATA.company_labels) {
-
-          if (DATA.company_labels[k] === comp) { comp = k; break; }
-
-        }
-
-      }
-
-      var news = getMatchingNews(comp);
-
-      // 构建弹出卡片HTML，用data属性
-
-      var popupItems = news.map(function(n) {
-
-        var label = (DATA.company_labels||{})[n.company] || n.company;
-
-        return '<div class="popup-item" data-url="' + n.url.replace(/"/g,'&quot;') + '">' +
-
-          '<div class="pi-date">' + n.date + '</div>' +
-
-          '<div class="pi-title">' + n.title.slice(0, 80) + '</div>' +
-
-          '<div class="pi-source">' + label + ' · ' + n.source + '</div></div>';
-
-      }).join('');
-
-      var popup = '<div class="hl-popup" data-comp="' + (comp||'') + '">' +
-
-        '<div class="popup-title">本周 ' + ((DATA.company_labels||{})[comp]||comp) + ' 动态</div>' +
-
-        (news.length ? popupItems : '<div class="popup-item" style="color:#a0aec0;font-size:12px;padding:8px 0;">暂无本周相关新闻</div>') + '</div>';
-
-      return '<div class="hl-item" data-company="' + (comp||'') + '">' +
-
-        '<span class="hl-icon">📌</span>' + h + popup + '</div>';
-
-    }).join('');
-
-
-
-  // 周报内容 — 结构化综述
+document.getElementById("weeklyHL").innerHTML = filtered.map(function(n, i) {
+  var ic = i === 0 ? '🔥' : i === 1 ? '⭐' : i === 2 ? '📈' : '📍';
+  return '<div class="hl-item" data-company="' + n.company + '">' +
+    '<span class="hl-icon">' + ic + '</span>' +
+    '「' + n.date + '」' +
+    ' <a href="' + n.url + '" target="_blank">' + n.title.slice(0, 50) + '</a>' +
+    ' <span class="hl-source">(' + n._cl + ' · ' + n.source + ')</span>' +
+  '</div>';
+}).join('') || '<div class="hl-item">近期无新增新闻</div>';// 周报内容 — 结构化综述
 
   _currentReport = r;
 
